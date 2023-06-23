@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<ESBSubscriber xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>8df80d94-7ac7-4218-a32e-788e41a41250</Id>
+  <Version>ddd7d273-aac3-44b3-983d-3cfb4dbc0830</Version>
+  <Name>ContactReceiverObjectLead</Name>
+  <Description />
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <AllowMultipleInstances>true</AllowMultipleInstances>
+  <UseUniqueWmiCounterName>true</UseUniqueWmiCounterName>
+  <SubscriberId>ContactReceiverObjectLead</SubscriberId>
+  <ClientGroup>General</ClientGroup>
+  <Zone>Enterprise</Zone>
+  <Enabled>true</Enabled>
+  <Anonymous>true</Anonymous>
+  <Subscriptions>
+    <Subscription>
+      <TopicName>Contacts.*</TopicName>
+      <CanRead>true</CanRead>
+      <CanWrite>false</CanWrite>
+      <Condition>
+        <Conditions>
+          <ConditionElement>
+            <PrefixOperator>None</PrefixOperator>
+            <Expression1>Object</Expression1>
+            <NotOperator>false</NotOperator>
+            <RelationalOperator>TextEquals</RelationalOperator>
+            <Expression2>Lead</Expression2>
+            <SuffixOperator>None</SuffixOperator>
+            <LogicalOperator>End</LogicalOperator>
+          </ConditionElement>
+        </Conditions>
+      </Condition>
+      <SubscriptionType>Topic</SubscriptionType>
+    </Subscription>
+  </Subscriptions>
+  <LogActivity>false</LogActivity>
+  <LogFile />
+  <LogSession>true</LogSession>
+</ESBSubscriber>

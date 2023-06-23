@@ -1,0 +1,7 @@
+﻿<Root>
+  <Row>
+    <CustomerID>1001</CustomerID>
+    <Name>Northwind Traders</Name>
+    <EmailAddress>orders@northwind.com</EmailAddress>
+  </Row>
+</Root>

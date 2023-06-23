@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<ESBMessagePipelineStorage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>c1e7d61e-257e-42b4-b1d5-4ed9430d3d89</Id>
+  <Version>7dd98861-3bed-4c1e-849f-7ae6c589986e</Version>
+  <BusinessFlows />
+  <Description />
+  <Name>Scatter Gather</Name>
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <IsEncrypted>true</IsEncrypted>
+  <PipelineBlob>&lt;ESBMessagePipeline xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.neuronesb.com/pipelines/"&gt;&lt;Category i:nil="true" /&gt;&lt;Description i:nil="true" /&gt;&lt;GlobalProperties xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;Name&gt;Scatter Gather&lt;/Name&gt;&lt;Properties xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;ReferencedAssemblies xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" /&gt;&lt;Steps&gt;&lt;ESBMessagePipelineStep i:type="ESBMessageCodePipelineStep"&gt;&lt;Bindings xmlns:d4p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Id&gt;3922e770-7d3e-41a6-a6bb-678fa178c5cf&lt;/Id&gt;&lt;Name&gt;Get List of Services&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;BreakPointLines xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;Code&gt;// *******************************************************************************
+// First retrieve the list of services to call.  This could come in via soap headers,
+// through an external database call, lookup, or from wherever is appropriate for 
+// the scenario.
+// In Neuron, each service is represented by a topic, making this essentially a list of 
+// topics (or sub topics) to route to, which in turn results in a service call.
+
+// In the last step, we add the list of services as a property to the existing pipeline 
+// context so that it can be retrieved in the next pipeline step
+// *******************************************************************************
+
+string nameSpace = "urn:xmlns:neuronesb-com:soapheaders";
+string prefix = "n";
+string serviceList = 
+   @"&amp;lt;NeuronServiceList xmlns='urn:xmlns:neuronesb-com:soapheaders'&amp;gt;
+	   &amp;lt;services&amp;gt;
+		  &amp;lt;service serviceEndpoint='OldMartQuoteService' action='http://schema.neuron.sample/oldmart/broadcast/IQuote/RequestQuote' transform='QuoteRequest_To_OldMartQuote'&amp;gt;&amp;lt;/service&amp;gt;
+		  &amp;lt;service serviceEndpoint='NewMartQuoteService' action='http://schema.neuron.sample/newmart/broadcast/IBid/RequestBid' transform='QuoteRequest_To_NewMartQuote'&amp;gt;&amp;lt;/service&amp;gt;
+	   &amp;lt;/services&amp;gt;
+   &amp;lt;/NeuronServiceList&amp;gt;";
+
+// Load the list of services into an XML Document, add the namespace and retrieve the service nodes,
+// persisting the node list into the pipeline's context property
+System.Xml.XmlDocument xmlDoc = new System.Xml.XmlDocument();
+xmlDoc.LoadXml(serviceList);
+
+System.Xml.XmlNamespaceManager nsMgr = new System.Xml.XmlNamespaceManager(xmlDoc.NameTable);
+nsMgr.AddNamespace(prefix, nameSpace); 
+
+System.Xml.XmlNodeList nodeList = xmlDoc.SelectNodes("//n:service", nsMgr);
+context.Properties.Add("ServiceConfigurations",nodeList);&lt;/Code&gt;&lt;ReferencedAssemblies xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"&gt;&lt;d4p1:string&gt;mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;d4p1:string&gt;Neuron, Version=3.0.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d4p1:string&gt;&lt;d4p1:string&gt;Neuron.Pipelines, Version=3.0.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d4p1:string&gt;&lt;d4p1:string&gt;Neuron.Esb, Version=3.0.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d4p1:string&gt;&lt;d4p1:string&gt;System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;d4p1:string&gt;System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;d4p1:string&gt;System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;d4p1:string&gt;System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;d4p1:string&gt;System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;d4p1:string&gt;System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;/ReferencedAssemblies&gt;&lt;TypeName&gt;Type6add30793d8491a9461f1edfa5de71&lt;/TypeName&gt;&lt;/ESBMessagePipelineStep&gt;&lt;ESBMessagePipelineStep i:type="SplitterPipelineStepOfESBMessageESBMessageu6r3vdAt"&gt;&lt;Bindings xmlns:d4p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Id&gt;94cfbc2f-a92d-4882-bb88-0000ef571225&lt;/Id&gt;&lt;Name&gt;Broadcast and Aggregate&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;Aggregator xmlns:d4p1="http://schemas.neuronesb.com/pipelines/esb/" i:type="d4p1:XmlWrapperEsbMessageAggregator"&gt;&lt;WrapperElementName i:nil="true" /&gt;&lt;WrapperElementNamespace i:nil="true" /&gt;&lt;d4p1:WrapperElementName&gt;QuoteCollection&lt;/d4p1:WrapperElementName&gt;&lt;d4p1:WrapperElementNamespace&gt;http://schema.neuron.sample/broadcast/result&lt;/d4p1:WrapperElementNamespace&gt;&lt;/Aggregator&gt;&lt;Executor i:type="AsynchronousSplitExecutorOfESBMessagexAPWb1W4"&gt;&lt;MaxThreadCount&gt;10&lt;/MaxThreadCount&gt;&lt;/Executor&gt;&lt;ForEach&gt;&lt;Bindings xmlns:d5p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Id&gt;ce5d338d-1645-4eca-92d7-148b49933030&lt;/Id&gt;&lt;Name&gt;Group&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;Children&gt;&lt;ESBMessagePipelineStep i:type="DecisionPipelineStepOfESBMessagexAPWb1W4"&gt;&lt;Bindings xmlns:d7p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Id&gt;a01c65b1-1658-4188-b72f-2fc751a57467&lt;/Id&gt;&lt;Name&gt;Requires Transform?&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;Branches&gt;&lt;BranchOfESBMessagexAPWb1W4&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Condition i:type="CodeBranchConditionOfESBMessagexAPWb1W4"&gt;&lt;Code&gt;return context.Data.GetProperty("neuron","xsltName","").Length &amp;gt; 1;
+
+&lt;/Code&gt;&lt;ReferencedAssemblies xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"&gt;&lt;d10p1:string&gt;mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d10p1:string&gt;&lt;d10p1:string&gt;Neuron, Version=3.0.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d10p1:string&gt;&lt;d10p1:string&gt;Neuron.Pipelines, Version=3.0.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d10p1:string&gt;&lt;d10p1:string&gt;Neuron.Esb, Version=3.0.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d10p1:string&gt;&lt;d10p1:string&gt;System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d10p1:string&gt;&lt;d10p1:string&gt;System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d10p1:string&gt;&lt;d10p1:string&gt;System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d10p1:string&gt;&lt;d10p1:string&gt;System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d10p1:string&gt;&lt;d10p1:string&gt;System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d10p1:string&gt;&lt;d10p1:string&gt;System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d10p1:string&gt;&lt;/ReferencedAssemblies&gt;&lt;/Condition&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;EndJoined&gt;false&lt;/EndJoined&gt;&lt;Name&gt;Yes&lt;/Name&gt;&lt;Steps&gt;&lt;Bindings xmlns:d10p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Id&gt;56c61bda-1501-4226-9471-cd5fa5af795c&lt;/Id&gt;&lt;Name&gt;Group&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;Children&gt;&lt;ESBMessagePipelineStep xmlns:d11p1="http://schemas.neuronesb.com/pipelines/esb/" i:type="d11p1:EsbMessageBodyXslTransformPipelineStep"&gt;&lt;Bindings xmlns:d12p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Id&gt;49a4e81f-7ab5-42fe-b623-35217a64ce42&lt;/Id&gt;&lt;Name&gt;Dynamic Transform&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;EnableDocumentFunction&gt;false&lt;/EnableDocumentFunction&gt;&lt;EnableScript&gt;false&lt;/EnableScript&gt;&lt;Parameters /&gt;&lt;TransformXml i:nil="true" /&gt;&lt;d11p1:XsltLocation i:nil="true" /&gt;&lt;d11p1:XsltName i:nil="true" /&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Children&gt;&lt;/Steps&gt;&lt;/BranchOfESBMessagexAPWb1W4&gt;&lt;BranchOfESBMessagexAPWb1W4&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Condition i:type="AlwaysBranchConditionOfESBMessagexAPWb1W4" /&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;EndJoined&gt;false&lt;/EndJoined&gt;&lt;Name&gt;No&lt;/Name&gt;&lt;Steps&gt;&lt;Bindings xmlns:d10p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Id&gt;21ea087b-2ca3-460c-b2d2-0ccfd0766a6c&lt;/Id&gt;&lt;Name&gt;Group&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;Children /&gt;&lt;/Steps&gt;&lt;/BranchOfESBMessagexAPWb1W4&gt;&lt;/Branches&gt;&lt;/ESBMessagePipelineStep&gt;&lt;ESBMessagePipelineStep xmlns:d6p1="http://schemas.neuronesb.com/pipelines/esb/" i:type="d6p1:EsbMessageServiceEndpointPipelineStep"&gt;&lt;Bindings xmlns:d7p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Id&gt;2dfd6d53-a967-4c69-8e49-2cee4e3e26e9&lt;/Id&gt;&lt;Name&gt;Dynamic Service Endpoint&lt;/Name&gt;&lt;Uniquename /&gt;&lt;d6p1:Category i:nil="true" /&gt;&lt;d6p1:Description i:nil="true" /&gt;&lt;d6p1:MaxServiceInstances&gt;100&lt;/d6p1:MaxServiceInstances&gt;&lt;d6p1:MessagePattern i:nil="true" /&gt;&lt;d6p1:Policy i:nil="true" /&gt;&lt;d6p1:ServiceBinding i:nil="true" /&gt;&lt;d6p1:ServiceConnector i:nil="true" /&gt;&lt;d6p1:ServicePoolTimeout&gt;PT1M&lt;/d6p1:ServicePoolTimeout&gt;&lt;d6p1:ServiceUrl i:nil="true" /&gt;&lt;d6p1:ThrowExceptionOnFault&gt;false&lt;/d6p1:ThrowExceptionOnFault&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Children&gt;&lt;/ForEach&gt;&lt;MaxThreadCount&gt;10&lt;/MaxThreadCount&gt;&lt;Splitter i:type="CodeSplitterOfESBMessageESBMessageu6r3vdAt"&gt;&lt;Code&gt;//Create a list of process contexts to be filled and returned to the aggregator
+List&amp;lt;PipelineContext&amp;lt;ESBMessage&amp;gt;&amp;gt; contexts = new List&amp;lt;PipelineContext&amp;lt;ESBMessage&amp;gt;&amp;gt;();
+ 
+// Retrieve the list of services previously saved to the process context property bag,
+System.Xml.XmlNodeList nodeList = (System.Xml.XmlNodeList)context.Properties["ServiceConfigurations"];
+ 
+// Loop through the list of services, we'll create a new message from the original, adding the
+// topic to the message's property bag so it can later be retrieved in the Steps block.
+foreach(System.Xml.XmlNode node in nodeList)
+{        
+    Neuron.Esb.ESBMessage msg = context.Data.Clone(false);
+    msg.Header.Action = node.SelectSingleNode("@action").InnerText; 
+	msg.Header.Service = node.SelectSingleNode("@serviceEndpoint").InnerText;
+         
+    // if there is a translation required, retrieve the xslt and set the property
+    if(!System.String.IsNullOrEmpty(node.SelectSingleNode("@transform").InnerText))
+    {
+        msg.SetProperty("neuron","xsltName", node.SelectSingleNode("@transform").InnerText);
+    }
+     
+    //create new context for the message
+    PipelineContext&amp;lt;ESBMessage&amp;gt; splitContext = new PipelineContext&amp;lt;ESBMessage&amp;gt; (context.Runtime, context.Pipeline, context.Instance, msg);
+    splitContext.Properties.Add("__ClientContext", Neuron.Esb.Internal.PipelineRuntimeHelper.ClientContext);
+     
+    // add the context to the result
+    contexts.Add(splitContext);
+}
+ 
+// Return the batch of messages to be processed by the STEP block
+return contexts;&lt;/Code&gt;&lt;ReferencedAssemblies xmlns:d5p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"&gt;&lt;d5p1:string&gt;mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d5p1:string&gt;&lt;d5p1:string&gt;System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d5p1:string&gt;&lt;d5p1:string&gt;System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d5p1:string&gt;&lt;d5p1:string&gt;System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d5p1:string&gt;&lt;d5p1:string&gt;System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d5p1:string&gt;&lt;d5p1:string&gt;System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d5p1:string&gt;&lt;d5p1:string&gt;Neuron, Version=3.0.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d5p1:string&gt;&lt;d5p1:string&gt;Neuron.Esb, Version=3.0.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d5p1:string&gt;&lt;d5p1:string&gt;Neuron.Pipelines, Version=3.0.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d5p1:string&gt;&lt;d5p1:string&gt;System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d5p1:string&gt;&lt;/ReferencedAssemblies&gt;&lt;/Splitter&gt;&lt;TurnOffTrackExecution&gt;false&lt;/TurnOffTrackExecution&gt;&lt;/ESBMessagePipelineStep&gt;&lt;ESBMessagePipelineStep i:type="CancelPipelineStepOfESBMessagexAPWb1W4"&gt;&lt;Bindings xmlns:d4p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Id&gt;bb511369-b608-4afa-b24e-974f24473353&lt;/Id&gt;&lt;Name&gt;Return Result&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Steps&gt;&lt;/ESBMessagePipeline&gt;</PipelineBlob>
+  <IsProcessFlow>false</IsProcessFlow>
+</ESBMessagePipelineStorage>

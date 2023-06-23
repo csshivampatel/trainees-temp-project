@@ -1,0 +1,12 @@
+﻿<Contact type="Sales">
+	<LastName>Smith</LastName> 
+	<FirstName>John</FirstName>
+	<Street>100 Main St</Street> 
+	<Street2></Street2>
+	<City>Los Angeles</City> 
+	<Region>CA</Region>
+	<PostalCode>99433</PostalCode>
+	<Country>USA</Country>
+	<Phone>555-123-1234</Phone>
+	<Email>john.smith@acme.com</Email>
+</Contact>

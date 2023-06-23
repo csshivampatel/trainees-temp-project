@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<ServiceRoutingTable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>b0e0a865-de98-4fa9-a56d-e67800915111</Id>
+  <Version>db716bec-4812-4faf-88fb-9e88abc99ee2</Version>
+  <BusinessFlows />
+  <Description>Routes incoming request to different endpoints based on the City contained in the Body.</Description>
+  <Name>Routing_Conditional</Name>
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <ServiceRoutingItems>
+    <ServiceRoutingItem>
+      <IsTestEnabled>false</IsTestEnabled>
+      <EndpointName>Order_Local</EndpointName>
+      <SoapAction>http://PeregrineConnnect.ServiceModel.Samples/IOrder/PlaceOrder</SoapAction>
+      <Request>
+        <Method />
+        <URI />
+        <Body />
+        <BodyType>Raw</BodyType>
+        <DeleteMessageBody>false</DeleteMessageBody>
+        <Parameters />
+        <Headers />
+        <BodyProperties />
+        <TestBody />
+        <TestEnabled>FALSE</TestEnabled>
+        <TestFormat>TEXT</TestFormat>
+        <MaxPoolSize>1</MaxPoolSize>
+        <PoolTimeOut>1000</PoolTimeOut>
+        <AuditRequest>false</AuditRequest>
+        <AuditResponses>false</AuditResponses>
+        <AuditFailures>false</AuditFailures>
+      </Request>
+      <ServiceRoutingType>Service</ServiceRoutingType>
+      <RequestDataMap />
+      <ResponseDataMap />
+      <RoutingConditions>
+        <Id>cddde787-1bb5-44a0-a33c-24a874cfcf3c</Id>
+        <Version>9b605ee7-a6e1-4fb7-81d8-427c2daa7f62</Version>
+        <BusinessFlows />
+        <Description />
+        <IsSystemObject>false</IsSystemObject>
+        <IsPrivate>false</IsPrivate>
+        <Condition>
+          <Conditions>
+            <ConditionElement>
+              <PrefixOperator>None</PrefixOperator>
+              <Expression1>Body</Expression1>
+              <NotOperator>false</NotOperator>
+              <RelationalOperator>Contains</RelationalOperator>
+              <Expression2>NewYork</Expression2>
+              <SuffixOperator>None</SuffixOperator>
+              <LogicalOperator>End</LogicalOperator>
+            </ConditionElement>
+          </Conditions>
+        </Condition>
+      </RoutingConditions>
+    </ServiceRoutingItem>
+    <ServiceRoutingItem>
+      <IsTestEnabled>false</IsTestEnabled>
+      <EndpointName>Order_National</EndpointName>
+      <SoapAction>http://PeregrineConnnect.ServiceModel.Samples/IOrder/PlaceOrder</SoapAction>
+      <Request>
+        <Method />
+        <URI />
+        <Body />
+        <BodyType>Raw</BodyType>
+        <DeleteMessageBody>false</DeleteMessageBody>
+        <Parameters />
+        <Headers />
+        <BodyProperties />
+        <TestBody />
+        <TestEnabled>FALSE</TestEnabled>
+        <TestFormat>TEXT</TestFormat>
+        <MaxPoolSize>1</MaxPoolSize>
+        <PoolTimeOut>1000</PoolTimeOut>
+        <AuditRequest>false</AuditRequest>
+        <AuditResponses>false</AuditResponses>
+        <AuditFailures>false</AuditFailures>
+      </Request>
+      <ServiceRoutingType>Service</ServiceRoutingType>
+      <RequestDataMap />
+      <ResponseDataMap />
+      <RoutingConditions>
+        <Id>48353039-eda1-4ba2-a230-7f13fa595f05</Id>
+        <Version>c9781308-aea2-4419-84f5-424f97de4b25</Version>
+        <BusinessFlows />
+        <Description />
+        <IsSystemObject>false</IsSystemObject>
+        <IsPrivate>false</IsPrivate>
+        <Condition>
+          <Conditions>
+            <ConditionElement>
+              <PrefixOperator>None</PrefixOperator>
+              <Expression1>Body</Expression1>
+              <NotOperator>false</NotOperator>
+              <RelationalOperator>Contains</RelationalOperator>
+              <Expression2>Los Angles</Expression2>
+              <SuffixOperator>None</SuffixOperator>
+              <LogicalOperator>End</LogicalOperator>
+            </ConditionElement>
+          </Conditions>
+        </Condition>
+      </RoutingConditions>
+    </ServiceRoutingItem>
+  </ServiceRoutingItems>
+  <Zone>Enterprise</Zone>
+</ServiceRoutingTable>

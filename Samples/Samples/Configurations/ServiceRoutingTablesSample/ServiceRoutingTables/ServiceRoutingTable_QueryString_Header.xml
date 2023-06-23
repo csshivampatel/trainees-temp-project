@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<ServiceRoutingTable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>e0106184-e2c7-48d0-94ca-18de77be701e</Id>
+  <Version>f4dee8bc-62fe-4846-94ce-37404e1a68bb</Version>
+  <BusinessFlows />
+  <Description>Maps localpath of incoming request to Query String (URL Parameters) of the outgoing request.</Description>
+  <Name>ServiceRoutingTable_QueryString_Header</Name>
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <ServiceRoutingItems>
+    <ServiceRoutingItem>
+      <IsTestEnabled>false</IsTestEnabled>
+      <EndpointName>OrderQuoteService_REST</EndpointName>
+      <Request>
+        <Method>GET</Method>
+        <URI>/OldOrders</URI>
+        <Body />
+        <BodyType>Raw</BodyType>
+        <DeleteMessageBody>false</DeleteMessageBody>
+        <Parameters>
+          <ParameterDataElement>
+            <Key>id</Key>
+            <Value>{#HTTPLocalPath[0]}</Value>
+          </ParameterDataElement>
+          <ParameterDataElement>
+            <Key>city</Key>
+            <Value>{#HTTPLocalPath[1]}</Value>
+          </ParameterDataElement>
+        </Parameters>
+        <Headers />
+        <BodyProperties />
+        <TestBody />
+        <TestEnabled>FALSE</TestEnabled>
+        <TestFormat>TEXT</TestFormat>
+        <MaxPoolSize>1</MaxPoolSize>
+        <PoolTimeOut>1000</PoolTimeOut>
+        <AuditRequest>false</AuditRequest>
+        <AuditResponses>false</AuditResponses>
+        <AuditFailures>false</AuditFailures>
+      </Request>
+      <ServiceRoutingType>Service</ServiceRoutingType>
+      <RequestDataMap />
+      <ResponseDataMap />
+      <RoutingConditions>
+        <Id>381436b8-dec2-48bf-96aa-5587688994d4</Id>
+        <Version>81c60a3a-90b6-4d0e-8b28-ccec418441bb</Version>
+        <BusinessFlows />
+        <Description />
+        <IsSystemObject>false</IsSystemObject>
+        <IsPrivate>false</IsPrivate>
+      </RoutingConditions>
+    </ServiceRoutingItem>
+  </ServiceRoutingItems>
+  <Zone>Enterprise</Zone>
+</ServiceRoutingTable>

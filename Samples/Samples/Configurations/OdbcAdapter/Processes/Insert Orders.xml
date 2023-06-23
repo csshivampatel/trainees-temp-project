@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<ESBMessagePipelineStorage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>ed7cad39-23ab-4f28-b785-12ec67d5b256</Id>
+  <Version>8ce1d855-ea57-4a43-9e8c-6ec187e372ff</Version>
+  <BusinessFlows />
+  <Description />
+  <Name>Insert Orders</Name>
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <IsEncrypted>true</IsEncrypted>
+  <PipelineBlob>&lt;ESBMessagePipeline xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.neuronesb.com/pipelines/"&gt;&lt;Category i:nil="true" /&gt;&lt;Description i:nil="true" /&gt;&lt;GlobalProperties xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;Name&gt;Insert Orders&lt;/Name&gt;&lt;Properties xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;ReferencedAssemblies xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" /&gt;&lt;Steps&gt;&lt;ESBMessagePipelineStep i:type="ExceptionPipelineStepOfESBMessagexAPWb1W4"&gt;&lt;Bindings xmlns:d4p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Id&gt;8c012cb9-bdbb-4bf7-b5c7-06c206929597&lt;/Id&gt;&lt;Name&gt;Try&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;Catch&gt;&lt;Bindings xmlns:d5p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Id&gt;20cc124e-056e-4f93-8eca-9076396294e2&lt;/Id&gt;&lt;Name&gt;Group&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;Children&gt;&lt;ESBMessagePipelineStep i:type="ESBMessageCodePipelineStep"&gt;&lt;Bindings xmlns:d7p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Id&gt;9a55535b-f52a-4136-9c6c-bffb23b70490&lt;/Id&gt;&lt;Name&gt;Trace Exception&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;BreakPointLines xmlns:d7p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" /&gt;&lt;Code&gt;//get the pipeline exception
+Exception ex = (PipelineException)context.Properties["PipelineException"];
+
+string msg = "Exception: ";
+if(ex.InnerException != null)
+{
+	msg += ex.InnerException.Message;
+}
+else
+{
+	msg += ex.Message;
+}
+
+//trace to designer window
+context.Instance.TraceError(msg);&lt;/Code&gt;&lt;ReferencedAssemblies xmlns:d7p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"&gt;&lt;d7p1:string&gt;mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;Neuron, Version=3.0.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d7p1:string&gt;&lt;d7p1:string&gt;Neuron.Pipelines, Version=3.0.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d7p1:string&gt;&lt;d7p1:string&gt;Neuron.Esb, Version=3.0.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;/ReferencedAssemblies&gt;&lt;TypeName&gt;Typefbbb7ff929f499896caa8d75bc15c5&lt;/TypeName&gt;&lt;/ESBMessagePipelineStep&gt;&lt;ESBMessagePipelineStep xmlns:d6p1="http://schemas.neuronesb.com/pipelines/esb/" i:type="d6p1:EsbMessagePipelineExecutionPipelineStep"&gt;&lt;Bindings xmlns:d7p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Id&gt;8a0ae8fb-f2a2-4ca0-97a1-c8432a4bda51&lt;/Id&gt;&lt;Name&gt;Process Exception&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;d6p1:FileName i:nil="true" /&gt;&lt;d6p1:MaxInstances&gt;100&lt;/d6p1:MaxInstances&gt;&lt;d6p1:PipelineName&gt;Exception Handling&lt;/d6p1:PipelineName&gt;&lt;d6p1:PoolTimeout&gt;PT1M&lt;/d6p1:PoolTimeout&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Children&gt;&lt;/Catch&gt;&lt;Finally&gt;&lt;Bindings xmlns:d5p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Id&gt;bd85d62a-2440-4d48-a990-48b972f1116b&lt;/Id&gt;&lt;Name&gt;Group&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;Children&gt;&lt;ESBMessagePipelineStep i:type="CancelPipelineStepOfESBMessagexAPWb1W4"&gt;&lt;Bindings xmlns:d7p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Id&gt;4e738e10-b02f-4a51-997d-68a4a78bc1c5&lt;/Id&gt;&lt;Name&gt;Cancel&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Children&gt;&lt;/Finally&gt;&lt;Try&gt;&lt;Bindings xmlns:d5p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Id&gt;b25e3d58-3bb0-4aeb-8f50-7ad7f7093407&lt;/Id&gt;&lt;Name&gt;Group&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;Children&gt;&lt;ESBMessagePipelineStep i:type="TransactionPipelineStepOfESBMessagexAPWb1W4"&gt;&lt;Bindings xmlns:d7p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Id&gt;c35a796e-d3b3-4ac1-bc6a-1615542a2e74&lt;/Id&gt;&lt;Name&gt;Transaction&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;Children&gt;&lt;ESBMessagePipelineStep i:type="SplitterPipelineStepOfESBMessageESBMessageu6r3vdAt"&gt;&lt;Bindings xmlns:d9p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Id&gt;4ffd1b9f-24b3-4626-a24b-f8be3245c033&lt;/Id&gt;&lt;Name&gt;Splitter`2&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;Aggregator i:type="NullAggregatorOfESBMessageESBMessageu6r3vdAt" /&gt;&lt;Executor i:type="SynchronousSplitExecutorOfESBMessagexAPWb1W4" /&gt;&lt;ForEach&gt;&lt;Bindings xmlns:d10p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Id&gt;9adc2387-9029-4f70-8eec-a34c41b74860&lt;/Id&gt;&lt;Name&gt;Group&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;Children&gt;&lt;ESBMessagePipelineStep xmlns:d11p1="http://schemas.neuronesb.com/pipelines/esb/" i:type="d11p1:EsbMessageBodyXslTransformPipelineStep"&gt;&lt;Bindings xmlns:d12p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Id&gt;4877f86a-c66d-4453-a349-8bdad824cea0&lt;/Id&gt;&lt;Name&gt;BodyXslTransform&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;EnableDocumentFunction&gt;false&lt;/EnableDocumentFunction&gt;&lt;EnableScript&gt;false&lt;/EnableScript&gt;&lt;Parameters /&gt;&lt;TransformXml&gt;&amp;lt;?xml version="1.0" encoding="utf-16"?&amp;gt;
+&amp;lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" version="1.0"&amp;gt;
+  &amp;lt;xsl:output omit-xml-declaration="yes" method="xml" version="1.0" /&amp;gt;
+  &amp;lt;xsl:template match="/"&amp;gt;
+    &amp;lt;xsl:apply-templates select="/Order" /&amp;gt;
+  &amp;lt;/xsl:template&amp;gt;
+  &amp;lt;xsl:template match="/Order"&amp;gt;
+    &amp;lt;Statement&amp;gt;
+      &amp;lt;xsl:attribute name="type"&amp;gt;
+        &amp;lt;xsl:text&amp;gt;StoredProcedure&amp;lt;/xsl:text&amp;gt;
+      &amp;lt;/xsl:attribute&amp;gt;
+      &amp;lt;xsl:attribute name="sql"&amp;gt;
+        &amp;lt;xsl:text&amp;gt;{Call StoreOrderItem(?,?,?)}&amp;lt;/xsl:text&amp;gt;
+      &amp;lt;/xsl:attribute&amp;gt;
+      &amp;lt;Parameters&amp;gt;
+        &amp;lt;Parameter&amp;gt;
+          &amp;lt;xsl:attribute name="type"&amp;gt;
+            &amp;lt;xsl:text&amp;gt;int&amp;lt;/xsl:text&amp;gt;
+          &amp;lt;/xsl:attribute&amp;gt;
+          &amp;lt;xsl:attribute name="name"&amp;gt;
+            &amp;lt;xsl:text&amp;gt;@OrderID&amp;lt;/xsl:text&amp;gt;
+          &amp;lt;/xsl:attribute&amp;gt;
+          &amp;lt;xsl:attribute name="value"&amp;gt;
+            &amp;lt;xsl:value-of select="OrderID/text()" /&amp;gt;
+          &amp;lt;/xsl:attribute&amp;gt;
+        &amp;lt;/Parameter&amp;gt;
+        &amp;lt;Parameter&amp;gt;
+          &amp;lt;xsl:attribute name="type"&amp;gt;
+            &amp;lt;xsl:text&amp;gt;datetime&amp;lt;/xsl:text&amp;gt;
+          &amp;lt;/xsl:attribute&amp;gt;
+          &amp;lt;xsl:attribute name="name"&amp;gt;
+            &amp;lt;xsl:text&amp;gt;@OrderDate&amp;lt;/xsl:text&amp;gt;
+          &amp;lt;/xsl:attribute&amp;gt;
+          &amp;lt;xsl:attribute name="value"&amp;gt;
+            &amp;lt;xsl:value-of select="OrderDate/text()" /&amp;gt;
+          &amp;lt;/xsl:attribute&amp;gt;
+        &amp;lt;/Parameter&amp;gt;
+        &amp;lt;Parameter&amp;gt;
+          &amp;lt;xsl:attribute name="type"&amp;gt;
+            &amp;lt;xsl:text&amp;gt;money&amp;lt;/xsl:text&amp;gt;
+          &amp;lt;/xsl:attribute&amp;gt;
+          &amp;lt;xsl:attribute name="name"&amp;gt;
+            &amp;lt;xsl:text&amp;gt;@OrderAmount&amp;lt;/xsl:text&amp;gt;
+          &amp;lt;/xsl:attribute&amp;gt;
+          &amp;lt;xsl:attribute name="value"&amp;gt;
+            &amp;lt;xsl:value-of select="OrderAmount/text()" /&amp;gt;
+          &amp;lt;/xsl:attribute&amp;gt;
+        &amp;lt;/Parameter&amp;gt;
+      &amp;lt;/Parameters&amp;gt;
+    &amp;lt;/Statement&amp;gt;
+  &amp;lt;/xsl:template&amp;gt;
+&amp;lt;/xsl:stylesheet&amp;gt;&lt;/TransformXml&gt;&lt;d11p1:XsltLocation i:nil="true" /&gt;&lt;d11p1:XsltName i:nil="true" /&gt;&lt;/ESBMessagePipelineStep&gt;&lt;ESBMessagePipelineStep xmlns:d11p1="http://schemas.neuronesb.com/pipelines/esb/" i:type="d11p1:ExecuteAdapterPipelineStep"&gt;&lt;Bindings xmlns:d12p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Id&gt;0fc60c7c-0b79-416e-a072-c3faa4762c95&lt;/Id&gt;&lt;Name&gt;Call ODBC Adapter Endpoint&lt;/Name&gt;&lt;Uniquename /&gt;&lt;d11p1:AdapterName&gt;ODBCOrderInserts&lt;/d11p1:AdapterName&gt;&lt;d11p1:AdapterPoolTimeout&gt;PT1M&lt;/d11p1:AdapterPoolTimeout&gt;&lt;d11p1:MaxAdapterInstances&gt;100&lt;/d11p1:MaxAdapterInstances&gt;&lt;d11p1:Timeout&gt;PT1M&lt;/d11p1:Timeout&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Children&gt;&lt;/ForEach&gt;&lt;MaxThreadCount&gt;10&lt;/MaxThreadCount&gt;&lt;Splitter xmlns:d9p1="http://schemas.neuronesb.com/pipelines/esb/" i:type="d9p1:XPathEsbMessageSplitter"&gt;&lt;d9p1:XPath&gt;Orders/Order&lt;/d9p1:XPath&gt;&lt;/Splitter&gt;&lt;TurnOffTrackExecution&gt;false&lt;/TurnOffTrackExecution&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Children&gt;&lt;IsolationLevel&gt;Serializable&lt;/IsolationLevel&gt;&lt;Timeout&gt;PT0S&lt;/Timeout&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Children&gt;&lt;/Try&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Steps&gt;&lt;/ESBMessagePipeline&gt;</PipelineBlob>
+  <IsProcessFlow>false</IsProcessFlow>
+</ESBMessagePipelineStorage>

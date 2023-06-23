@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<ESBService xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>512050db-071d-4a89-93b2-158b738cd3b5</Id>
+  <Version>a664d6d3-8dd7-48da-8c7c-03864c8b2b79</Version>
+  <BusinessFlows />
+  <Description />
+  <Name>Request-Reply Client Connector</Name>
+  <Group />
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <Bindings />
+  <RequestReplyActionPairs>
+    <item>
+      <key>
+        <string>http://Neudesic.EnterpriseServiceBus.Samples/ICalculator/Add</string>
+      </key>
+      <value>
+        <string>http://Neudesic.EnterpriseServiceBus.Samples/ICalculator/AddResponse</string>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>http://Neudesic.EnterpriseServiceBus.Samples/ICalculator/Subtract</string>
+      </key>
+      <value>
+        <string>http://Neudesic.EnterpriseServiceBus.Samples/ICalculator/SubtractResponse</string>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>http://Neudesic.EnterpriseServiceBus.Samples/ICalculator/Multiply</string>
+      </key>
+      <value>
+        <string>http://Neudesic.EnterpriseServiceBus.Samples/ICalculator/MultiplyResponse</string>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>http://Neudesic.EnterpriseServiceBus.Samples/ICalculator/Divide</string>
+      </key>
+      <value>
+        <string>http://Neudesic.EnterpriseServiceBus.Samples/ICalculator/DivideResponse</string>
+      </value>
+    </item>
+  </RequestReplyActionPairs>
+  <Pattern>0</Pattern>
+  <Properties />
+  <MessagingPattern>Request-Reply</MessagingPattern>
+  <ProxySettings>
+    <HostConfigType>Default</HostConfigType>
+    <CredentialConfigType>NotSpecified</CredentialConfigType>
+    <Credential>&lt;Default&gt;</Credential>
+    <Host />
+    <Port>0</Port>
+    <BypassLocalAddress>false</BypassLocalAddress>
+  </ProxySettings>
+  <Zone>Enterprise</Zone>
+  <Enabled>true</Enabled>
+  <ServiceName>Request-Reply Client Connector</ServiceName>
+  <ServiceGroup />
+  <Binding>WSHttp</Binding>
+  <AvailabilityGroupId>Neuron ESB Default Host</AvailabilityGroupId>
+  <Behavior />
+  <KeepAlive>true</KeepAlive>
+  <HostNameComparisonModeIsExact>false</HostNameComparisonModeIsExact>
+  <TransactionType>None</TransactionType>
+  <MaxMessageSize>1000000</MaxMessageSize>
+  <ReliableMessaging>false</ReliableMessaging>
+  <ConfigFile />
+  <InboundPolling>false</InboundPolling>
+  <OptimizeForLargeMessages>false</OptimizeForLargeMessages>
+  <RawBody>false</RawBody>
+  <ServiceThrottles>
+    <MaxConcurrentCalls>208</MaxConcurrentCalls>
+    <MaxConcurrentInstances>1008</MaxConcurrentInstances>
+    <MaxConcurrentSessions>800</MaxConcurrentSessions>
+  </ServiceThrottles>
+  <CertificateValidationMode>None</CertificateValidationMode>
+  <CertificateRevocationMode>NoCheck</CertificateRevocationMode>
+  <NegotiateServiceCredential>true</NegotiateServiceCredential>
+  <EstablishSecurityContext>true</EstablishSecurityContext>
+  <Contract>http://Neudesic.EnterpriseServiceBus.SamplesICalculator</Contract>
+  <Security>None</Security>
+  <ServiceIdentityType>None</ServiceIdentityType>
+  <ServicePrincipal />
+  <ServiceType>Business</ServiceType>
+  <ClientCredentialtype>Certificate</ClientCredentialtype>
+  <Impersonation>false</Impersonation>
+  <RelayAccessToken>true</RelayAccessToken>
+  <ClientConnectorId>cec66e53-8088-4c19-b405-26b91a039cab</ClientConnectorId>
+  <ClientUrl>http://localhost:8005/esb/patterns/requestreply</ClientUrl>
+  <RouteClientTraffic>true</RouteClientTraffic>
+  <ClientTopic>Inquiries</ClientTopic>
+  <UpdateMetadata>true</UpdateMetadata>
+  <UseHttps>false</UseHttps>
+  <EnableClientMetadataHttpEndpoint>false</EnableClientMetadataHttpEndpoint>
+  <EnableClientMetadataHttpsEndpoint>false</EnableClientMetadataHttpsEndpoint>
+  <ClientSubscriberId>InquiryRequester</ClientSubscriberId>
+  <CaptureHeaders>false</CaptureHeaders>
+  <CaptureHTTPHeaders>false</CaptureHTTPHeaders>
+  <HttpConnectionLimit>100</HttpConnectionLimit>
+  <EnableCors>false</EnableCors>
+  <ClientCertName />
+  <ACL />
+  <AccessUrl />
+  <RouteServiceTraffic>false</RouteServiceTraffic>
+  <RestoreHeaders>false</RestoreHeaders>
+  <RestoreHTTPHeaders>false</RestoreHTTPHeaders>
+  <ServiceTopic />
+  <ServiceSubscriberId />
+  <ReuseServiceConnection>true</ReuseServiceConnection>
+  <ServerCertName />
+  <ServicePolicy>Default</ServicePolicy>
+  <FailoverAddresses />
+  <FarmSingleInstance>false</FarmSingleInstance>
+  <ProcessList />
+  <ProcessMode>Messaging</ProcessMode>
+  <ServiceRoutes />
+  <ServiceProcessMode>true</ServiceProcessMode>
+  <ServiceServiceRateEnable>false</ServiceServiceRateEnable>
+  <ClientServiceRateEnable>false</ClientServiceRateEnable>
+</ESBService>

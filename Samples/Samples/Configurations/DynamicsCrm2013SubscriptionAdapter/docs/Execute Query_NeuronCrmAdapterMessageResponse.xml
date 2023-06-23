@@ -1,0 +1,1 @@
+﻿<?xml version="1.0" encoding="utf-16"?><NeuronCrmAdapterMessageResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://neuronesb.adapters.dynamicscrm2013"><GetCrmRecordResult numRecords="1"><any_element>anyType</any_element></GetCrmRecordResult></NeuronCrmAdapterMessageResponse>

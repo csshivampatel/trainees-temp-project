@@ -1,0 +1,23 @@
+﻿<html>
+	<body>
+		<h2>Being a Dog Is a Full-Time Job</h2>
+		<h3>Charles M. Schulz</h3>
+		<table border="1">
+			<tr bgcolor="#9acd32">
+				<th align="left">Name</th>
+				<th align="left">Since</th>
+				<th align="left">Qualification</th>
+			</tr>
+			<tr>
+				<td>Snoopy</td>
+				<td>1950-10-04</td>
+				<td>extroverted beagle</td>
+			</tr>
+			<tr>
+				<td>Peppermint Patty</td>
+				<td>1966-08-22</td>
+				<td>bold, brash and tomboyish</td>
+			</tr>
+		</table>
+	</body>
+</html>

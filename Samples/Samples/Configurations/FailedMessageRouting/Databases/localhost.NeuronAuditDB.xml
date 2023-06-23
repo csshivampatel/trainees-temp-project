@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<ESBDatabase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>3a579f7b-bafb-486c-ba95-2ad5ceb4ae52</Id>
+  <Version>3dae3ac6-8688-4314-b51a-e0d8cdf02152</Version>
+  <BusinessFlows />
+  <Description>The Neuron Audit database. Uses environmental variable: NeuronAuditDatabaseConnectionString</Description>
+  <Name>localhost.NeuronAuditDB</Name>
+  <IsSystemObject>false</IsSystemObject>
+  <Bindings>
+    <ExpressionBoundProperty>
+      <PropertyName>ConnectionString</PropertyName>
+      <Expression>{$NeuronAuditDatabaseConnectionString}</Expression>
+    </ExpressionBoundProperty>
+  </Bindings>
+  <Accounts>
+    <Id>8b49c0bb-9578-4625-8b77-98a19eebd271</Id>
+    <Version>2924b677-0886-4c07-8658-b8c7478657e6</Version>
+    <BusinessFlows />
+    <Description />
+    <IsSystemObject>false</IsSystemObject>
+    <AccessCheckType>Unknown</AccessCheckType>
+    <AccessCheckItems>
+      <ESBAccessCheckItem>
+        <AccessCheckType>WindowsGroup</AccessCheckType>
+        <AccessCheckMode>Default</AccessCheckMode>
+        <AccessPermission>ReadWrite</AccessPermission>
+        <Credential>
+          <Id>948f7953-4169-4f5b-865a-fa196770040a</Id>
+          <Version>edaedeb9-af26-4040-9030-8ebedca581e1</Version>
+          <BusinessFlows />
+          <Description />
+          <IsSystemObject>false</IsSystemObject>
+          <Type>None</Type>
+          <AccessCheckType>Unknown</AccessCheckType>
+          <SID>S-1-5-18</SID>
+          <Username>NT AUTHORITY\SYSTEM</Username>
+          <CertStoreLocation>LocalMachine</CertStoreLocation>
+          <CertStoreName>My</CertStoreName>
+          <CertFindType>FindByThumbprint</CertFindType>
+        </Credential>
+      </ESBAccessCheckItem>
+    </AccessCheckItems>
+  </Accounts>
+  <CatalogName>NeuronAuditDB</CatalogName>
+  <ConnectionString>10dc3vgWBmJ+wt1TDJcaGWyA1gwTbkZAarpoEBdPhGQJ2Ls9wnl2djoc/eqBBiW21iO3M9L0+pHR2EBydkhMqFKCHBOZrtDC2Z+39zAMLW8=</ConnectionString>
+  <Zone>(All Zones)</Zone>
+  <DatabaseType>SQLServer</DatabaseType>
+</ESBDatabase>

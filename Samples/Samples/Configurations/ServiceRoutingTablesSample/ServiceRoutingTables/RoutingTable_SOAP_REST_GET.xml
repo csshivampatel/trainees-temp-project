@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<ServiceRoutingTable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>7019e5c4-99a4-4719-b6e4-1153ac24699a</Id>
+  <Version>3da87350-4f8f-429d-a8e4-5e0b3e4a3f76</Version>
+  <BusinessFlows />
+  <Description>Converts SOAP Request to GET REST method on the outgoing request and clears Message Body</Description>
+  <Name>RoutingTable_SOAP_REST_GET</Name>
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <ServiceRoutingItems>
+    <ServiceRoutingItem>
+      <IsTestEnabled>false</IsTestEnabled>
+      <EndpointName>OrderQuoteService_REST</EndpointName>
+      <Request>
+        <Method>GET</Method>
+        <URI>/Orders</URI>
+        <Body />
+        <BodyType>Raw</BodyType>
+        <DeleteMessageBody>true</DeleteMessageBody>
+        <Parameters />
+        <Headers />
+        <BodyProperties />
+        <TestBody />
+        <TestEnabled>FALSE</TestEnabled>
+        <TestFormat>TEXT</TestFormat>
+        <MaxPoolSize>1</MaxPoolSize>
+        <PoolTimeOut>1000</PoolTimeOut>
+        <AuditRequest>false</AuditRequest>
+        <AuditResponses>false</AuditResponses>
+        <AuditFailures>false</AuditFailures>
+      </Request>
+      <ServiceRoutingType>Service</ServiceRoutingType>
+      <RequestDataMap />
+      <ResponseDataMap>JSON_TO_XML_For_Order</ResponseDataMap>
+      <RoutingConditions>
+        <Id>b673428f-641e-4e47-a9e6-02da50e4a678</Id>
+        <Version>1b926179-6bf9-4118-a818-4b6326ca0a25</Version>
+        <BusinessFlows />
+        <Description />
+        <IsSystemObject>false</IsSystemObject>
+        <IsPrivate>false</IsPrivate>
+      </RoutingConditions>
+    </ServiceRoutingItem>
+  </ServiceRoutingItems>
+  <Zone>Enterprise</Zone>
+</ServiceRoutingTable>

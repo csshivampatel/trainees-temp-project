@@ -1,0 +1,402 @@
+<?xml version="1.0"?>
+<ESBConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>19</Version>
+  <EnvironmentName>ServiceRoutingTablesSample</EnvironmentName>
+  <NeuronBuildVersion>3.7.5.351</NeuronBuildVersion>
+  <ApplicationName>Features3_7_5</ApplicationName>
+  <ApplicationId>0b524073-9bfd-4f7c-8a71-8c997ec7a924</ApplicationId>
+  <ZoneName>Enterprise</ZoneName>
+  <ChangeList>
+    <Additions />
+    <Revisions>
+      <string>Edit,*,endpoint host,Neuron ESB Default Host</string>
+      <string>Edit,*,endpoint host,Peregrine Scheduler</string>
+    </Revisions>
+    <Deletions />
+    <LastModifiedBy />
+    <LastModifiedDate>2021-07-01T17:27:13.1406108Z</LastModifiedDate>
+    <Comments />
+  </ChangeList>
+  <NeuronEnvironmentVariables />
+  <ProcessFolders />
+  <DataMapperPort>8585</DataMapperPort>
+  <InstanceName />
+  <Zones />
+  <Topics />
+  <Subscribers />
+  <Services />
+  <WorkflowDefinitions />
+  <WorkflowHosts />
+  <AvailabilityGroups />
+  <OAuthProviders />
+  <ESBMessagePipelines />
+  <Schemas>
+    <item>
+      <key>
+        <string>OrderQuoteSchema</string>
+      </key>
+      <value>
+        <ESBSchema>
+          <Id>d2b8354c-7e2d-4a25-bc33-8813b5df83c3</Id>
+          <Version>aaec4e56-7dfc-4f74-b446-95fb6efec602</Version>
+          <BusinessFlows />
+          <Description>Description</Description>
+          <Name>OrderQuoteSchema</Name>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <ValidateWithService>false</ValidateWithService>
+          <Storing>false</Storing>
+          <ShortName>OrderQuoteSchema</ShortName>
+          <FullName>http://tempuri.org/Schema1</FullName>
+          <Xsd />
+          <ServiceAddress />
+          <SchemaVersion />
+          <SourceUri />
+          <TargetNamespace />
+        </ESBSchema>
+      </value>
+    </item>
+  </Schemas>
+  <JsonSchemas>
+    <item>
+      <key>
+        <string>OrderSchema</string>
+      </key>
+      <value>
+        <ESBJsonSchema>
+          <Id>0179f6c4-1007-4650-b594-1bcf104e94a9</Id>
+          <Version>0f58c9f9-b0aa-47d3-8efa-4f3abcbf9a7d</Version>
+          <BusinessFlows />
+          <Description>Desc</Description>
+          <Name>OrderSchema</Name>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <FullName>http://tempuri.org/JsonSchema1</FullName>
+          <Storing>false</Storing>
+          <ShortName>OrderSchema</ShortName>
+          <Text />
+          <SchemaVersion />
+          <SourceUri />
+        </ESBJsonSchema>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>QuoteSchema</string>
+      </key>
+      <value>
+        <ESBJsonSchema>
+          <Id>53bebd75-5095-4954-be82-928302b95b89</Id>
+          <Version>b3559940-ad29-4ef6-9bb1-c5bcc4adc9bb</Version>
+          <BusinessFlows />
+          <Description />
+          <Name>QuoteSchema</Name>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <FullName>http://tempuri.org/JsonSchema1</FullName>
+          <Storing>false</Storing>
+          <ShortName>QuoteSchema</ShortName>
+          <Text />
+          <SchemaVersion />
+          <SourceUri />
+        </ESBJsonSchema>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>OrderResponseSchema</string>
+      </key>
+      <value>
+        <ESBJsonSchema>
+          <Id>6ba4c558-2a43-45ee-9182-4806e7106e16</Id>
+          <Version>1f369bc9-99df-4307-9899-a417e13c9b77</Version>
+          <BusinessFlows />
+          <Description />
+          <Name>OrderResponseSchema</Name>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <FullName>http://tempuri.org/JsonSchema1</FullName>
+          <Storing>false</Storing>
+          <ShortName>OrderResponseSchema</ShortName>
+          <Text />
+          <SchemaVersion />
+          <SourceUri />
+        </ESBJsonSchema>
+      </value>
+    </item>
+  </JsonSchemas>
+  <XmlDocs>
+    <item>
+      <key>
+        <string>SOAPRequest_GetOrders</string>
+      </key>
+      <value>
+        <ESBXmlDoc>
+          <Id>05ce9375-c5a5-400b-bd1a-45928919649c</Id>
+          <Version>56bb92f0-b616-4798-885d-4891f340f024</Version>
+          <BusinessFlows />
+          <Description>SOAP Request to test GetOrders for Testing</Description>
+          <Name>SOAPRequest_GetOrders</Name>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <Storing>false</Storing>
+          <XmlVersion />
+          <SourceUri />
+          <Xml />
+        </ESBXmlDoc>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>SOAPRequest_GetOrders_Parameters</string>
+      </key>
+      <value>
+        <ESBXmlDoc>
+          <Id>b64c562d-5958-4fd1-8b2f-96b80428e0ae</Id>
+          <Version>12e230ea-8297-4889-a36b-7bf8b101ea0d</Version>
+          <BusinessFlows />
+          <Description>SOAP Request to test GetOrders with Parameters</Description>
+          <Name>SOAPRequest_GetOrders_Parameters</Name>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <Storing>false</Storing>
+          <XmlVersion />
+          <SourceUri />
+          <Xml />
+        </ESBXmlDoc>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>SOAPRequest_PlaceOrder</string>
+      </key>
+      <value>
+        <ESBXmlDoc>
+          <Id>cb1c5cc2-21f8-4d7d-984a-96fe982b253e</Id>
+          <Version>c787ff26-cde6-4918-82d4-2bd1e30d095e</Version>
+          <BusinessFlows />
+          <Description>SOAP Request to test Place Order</Description>
+          <Name>SOAPRequest_PlaceOrder</Name>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <Storing>false</Storing>
+          <XmlVersion />
+          <SourceUri />
+          <Xml />
+        </ESBXmlDoc>
+      </value>
+    </item>
+  </XmlDocs>
+  <TextDocs />
+  <JsonDocs>
+    <item>
+      <key>
+        <string>Quotes</string>
+      </key>
+      <value>
+        <ESBJsonDoc>
+          <Id>a11d0f20-56b2-4bde-a7c8-7edab9122dd0</Id>
+          <Version>5ee3531b-02e3-4ac8-aac2-71835b496514</Version>
+          <BusinessFlows />
+          <Description />
+          <Name>Quotes</Name>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <Storing>false</Storing>
+          <JsonVersion />
+          <SourceUri />
+          <HttpMethods />
+          <JsonFormatString />
+          <Text />
+        </ESBJsonDoc>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Orders</string>
+      </key>
+      <value>
+        <ESBJsonDoc>
+          <Id>362d6a9d-3645-4428-a1ef-9ad291466431</Id>
+          <Version>bf34b673-3123-4444-86a2-1890d5c2dbd1</Version>
+          <BusinessFlows />
+          <Description />
+          <Name>Orders</Name>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <Storing>false</Storing>
+          <JsonVersion />
+          <SourceUri />
+          <HttpMethods />
+          <JsonFormatString />
+          <Text />
+        </ESBJsonDoc>
+      </value>
+    </item>
+  </JsonDocs>
+  <SwaggerDocs />
+  <WsdlDocuments>
+    <item>
+      <key>
+        <string>OrderQuoteService_Local</string>
+      </key>
+      <value>
+        <ESBXmlDoc>
+          <Id>cc10bd48-dc7a-4567-8155-e8c7883bc08c</Id>
+          <Version>fff345c8-bc46-4a5e-b2c5-6c53d84a1e4b</Version>
+          <BusinessFlows />
+          <Description />
+          <Name>OrderQuoteService_Local</Name>
+          <Group />
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <Storing>false</Storing>
+          <Xml />
+        </ESBXmlDoc>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>OrderQuoteService_National</string>
+      </key>
+      <value>
+        <ESBXmlDoc>
+          <Id>e4e4d64c-342c-4d9a-96ff-f35cb8c9555d</Id>
+          <Version>e5f3433a-1d49-4be8-98f1-1609a8e53911</Version>
+          <BusinessFlows />
+          <Description />
+          <Name>OrderQuoteService_National</Name>
+          <Group />
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <Storing>false</Storing>
+          <Xml />
+        </ESBXmlDoc>
+      </value>
+    </item>
+  </WsdlDocuments>
+  <Xslts />
+  <DataMappers>
+    <item>
+      <key>
+        <string>JSON_TO_XML_For_Order</string>
+      </key>
+      <value>
+        <ESBDataMapper>
+          <Id>e61def2e-6103-475f-b61d-bb3680e61ca6</Id>
+          <Version>81d92e96-7abc-4f33-8153-609cca3713d7</Version>
+          <BusinessFlows />
+          <Description />
+          <Name>JSON_TO_XML_For_Order</Name>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <Storing>false</Storing>
+          <SourceType>JSON</SourceType>
+          <TargetType>XML</TargetType>
+          <Text />
+          <AdmFile />
+          <GZFile />
+        </ESBDataMapper>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>XML_TO_JSON_For_OrderResponse</string>
+      </key>
+      <value>
+        <ESBDataMapper>
+          <Id>ebdede3a-18a1-4c6f-a3a0-d1e41c44bb5a</Id>
+          <Version>c7d5b922-a2f7-45fc-bad3-6b0fae07eeec</Version>
+          <BusinessFlows />
+          <Description />
+          <Name>XML_TO_JSON_For_OrderResponse</Name>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <Storing>false</Storing>
+          <SourceType>XML</SourceType>
+          <TargetType>JSON</TargetType>
+          <Text />
+          <AdmFile />
+          <GZFile />
+        </ESBDataMapper>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>XML_TO_JSON_For_Order</string>
+      </key>
+      <value>
+        <ESBDataMapper>
+          <Id>36c50d1c-8bec-4790-9d6f-d1390e7fb25b</Id>
+          <Version>916749d7-30e8-4d39-a32c-4aeff30d9cd6</Version>
+          <BusinessFlows />
+          <Description />
+          <Name>XML_TO_JSON_For_Order</Name>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <Storing>false</Storing>
+          <SourceType>XML</SourceType>
+          <TargetType>JSON</TargetType>
+          <Text />
+          <AdmFile />
+          <GZFile />
+        </ESBDataMapper>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>JSON_TO_XML_For_OrderResponse</string>
+      </key>
+      <value>
+        <ESBDataMapper>
+          <Id>86f60e1a-3f46-42ee-8147-e7b24072eed3</Id>
+          <Version>22cb5bd5-d580-469a-92c7-85e5f24fbd66</Version>
+          <BusinessFlows />
+          <Description />
+          <Name>JSON_TO_XML_For_OrderResponse</Name>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <Storing>false</Storing>
+          <SourceType>JSON</SourceType>
+          <TargetType>XML</TargetType>
+          <Text />
+          <AdmFile />
+          <GZFile />
+        </ESBDataMapper>
+      </value>
+    </item>
+  </DataMappers>
+  <BusinessEvents />
+  <Deployments />
+  <MessagePatterns />
+  <Bridges />
+  <Databases />
+  <Keys />
+  <Workflows />
+  <Applications />
+  <BusinessFlows />
+  <Bindings />
+  <ServiceRoutingTables />
+  <Behaviors />
+  <Adapters />
+  <Credentials />
+  <ServicePolicies />
+  <AdapterPolicies />
+  <Endpoints />
+  <AccessControlLists />
+  <Administrators />
+  <IsEncrypted>false</IsEncrypted>
+</ESBConfiguration>

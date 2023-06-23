@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<ESBMessagePipelineStorage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>fc583529-a0ef-45d2-8040-9648cf1e5920</Id>
+  <Version>2cf95beb-27a2-41e5-80f8-b474c7278f09</Version>
+  <Name>Set File Filename</Name>
+  <IsSystemObject>false</IsSystemObject>
+  <PipelineBlob>&lt;ESBMessagePipeline xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.neuronesb.com/pipelines/"&gt;&lt;Name&gt;Set File Filename&lt;/Name&gt;&lt;Properties xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;ReferencedAssemblies xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" /&gt;&lt;Steps&gt;&lt;ESBMessagePipelineStep i:type="ESBMessageCodePipelineStep"&gt;&lt;Bindings xmlns:d4p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name&gt;Set Adapter Property&lt;/Name&gt;&lt;Code&gt;string server = String.Empty;
+string port = String.Empty;
+string username = String.Empty;
+string folder = String.Empty;
+string filename = String.Empty;
+
+// Get the FTP Server
+if (!context.Data.TryGetProperty("ftp", "Server", ref server))
+	server = "localhost";
+
+// Get the FTP Port
+if (!context.Data.TryGetProperty("ftp", "Port", ref port))
+	server = "21";
+
+// Get the FTP Username
+if (!context.Data.TryGetProperty("ftp", "Username", ref username))
+	username = "Anonymous";
+
+// Get the FTP Folder the message was read from
+if (!context.Data.TryGetProperty("ftp", "Folder", ref folder))
+	folder = "Home";
+
+// Get the FTP Filename
+if (!context.Data.TryGetProperty("ftp", "Filename", ref filename))
+	filename = "FilenameNotFound.txt";
+
+// Set the path the file adapter will write the file to based on FTP message properties
+context.Data.SetProperty("file_out", "Path", "C:\\FileOut\\" + server + "\\" + port + "\\" + username + "\\" + folder + "\\");
+
+// Set the filename the file adapter will use based on the metadata properties of the incoming FTP file.
+context.Data.SetProperty("file_out", "Name", filename);&lt;/Code&gt;&lt;ReferencedAssemblies xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"&gt;&lt;d4p1:string&gt;Neuron&lt;/d4p1:string&gt;&lt;d4p1:string&gt;Neuron.Pipelines&lt;/d4p1:string&gt;&lt;d4p1:string&gt;Neuron.Esb&lt;/d4p1:string&gt;&lt;d4p1:string&gt;System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;d4p1:string&gt;System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;d4p1:string&gt;System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;d4p1:string&gt;System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;d4p1:string&gt;System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;d4p1:string&gt;System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;d4p1:string&gt;System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;/ReferencedAssemblies&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Steps&gt;&lt;/ESBMessagePipeline&gt;</PipelineBlob>
+</ESBMessagePipelineStorage>

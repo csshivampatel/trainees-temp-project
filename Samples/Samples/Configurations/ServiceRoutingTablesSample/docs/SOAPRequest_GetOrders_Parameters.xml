@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:per="http://PeregrineConnnect.ServiceModel.Samples">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <per:GetOrder>
+         <!--Optional:-->
+         <per:OrderNumber>1</per:OrderNumber>
+         <!--Optional:-->
+         <per:City></per:City>
+      </per:GetOrder>
+   </soapenv:Body>
+</soapenv:Envelope>

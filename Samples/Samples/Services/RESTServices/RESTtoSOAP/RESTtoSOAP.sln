@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerRESTClient", "CustomerRESTClient\CustomerRESTClient.csproj", "{C22AA8ED-6377-4546-88A2-A28BE178C591}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerSOAPClient", "CustomerSOAPClient\CustomerSOAPClient.csproj", "{EFF65D24-56F6-4687-857F-12BF9C130E68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerSOAPService", "CustomerSOAPService\CustomerSOAPService.csproj", "{A5263FEC-16D5-45FE-A6D5-446A300A929E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C22AA8ED-6377-4546-88A2-A28BE178C591}.Debug|x86.ActiveCfg = Debug|x86
+		{C22AA8ED-6377-4546-88A2-A28BE178C591}.Debug|x86.Build.0 = Debug|x86
+		{C22AA8ED-6377-4546-88A2-A28BE178C591}.Release|x86.ActiveCfg = Release|x86
+		{C22AA8ED-6377-4546-88A2-A28BE178C591}.Release|x86.Build.0 = Release|x86
+		{EFF65D24-56F6-4687-857F-12BF9C130E68}.Debug|x86.ActiveCfg = Debug|x86
+		{EFF65D24-56F6-4687-857F-12BF9C130E68}.Debug|x86.Build.0 = Debug|x86
+		{EFF65D24-56F6-4687-857F-12BF9C130E68}.Release|x86.ActiveCfg = Release|x86
+		{EFF65D24-56F6-4687-857F-12BF9C130E68}.Release|x86.Build.0 = Release|x86
+		{A5263FEC-16D5-45FE-A6D5-446A300A929E}.Debug|x86.ActiveCfg = Debug|x86
+		{A5263FEC-16D5-45FE-A6D5-446A300A929E}.Debug|x86.Build.0 = Debug|x86
+		{A5263FEC-16D5-45FE-A6D5-446A300A929E}.Release|x86.ActiveCfg = Release|x86
+		{A5263FEC-16D5-45FE-A6D5-446A300A929E}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

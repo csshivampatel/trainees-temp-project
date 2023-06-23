@@ -1,0 +1,35 @@
+﻿<NeuronCrmAdapterMessage>
+  <CrmCommands Transactional="true">
+    <Lookups>
+      <Lookup id="accountid" entity="account" lookupfield="accountid">
+        <searchfield name="name" value="A. Datum Corporation (sample)" typename="string" operator="equal" />
+      </Lookup>
+      <Lookup id="contactid1" entity="contact" lookupfield="contactid">
+        <searchfield name="fullname" value="Jim Glynn (sample)" typename="string" operator="equal" />
+      </Lookup>
+      <Lookup id="contactid2" entity="contact" lookupfield="contactid">
+        <searchfield name="fullname" value="John Smith" typename="string" operator="equal" />
+      </Lookup>
+    </Lookups>
+    <SaveCrmRecord allowCreate="true" id="fax" entity= "fax" identityfield= "activityid">
+      <properties>
+        <subject typename = "String">Sample Fax</subject>
+        <faxnumber typename = "String">100007</faxnumber>
+        <actualend typename = "DateTime">1/1/2009 12:30:00 AM</actualend>
+        <scheduledstart typename = "Datetime">1/1/2009 12:00:00 AM</scheduledstart>
+        <scheduledend typename = "Datetime">1/1/2009 12:30:00 AM</scheduledend>
+        <actualstart typename = "Datetime">1/1/2009 12:00:00 AM</actualstart>
+        <description typename = "String">.....Sample FAX.....</description>
+      </properties>
+      <multivalueproperties>
+        <to typename="PartyList">
+          <contactid lookupid="contactid1" typename="Lookup" reference="contact" />
+		  <contactid lookupid="contactid2" typename="Lookup" reference="contact" />
+        </to>
+        <from typename="PartyList">
+          <accountid lookupid="accountid" typename="Lookup" reference="account" />
+        </from>
+      </multivalueproperties>
+    </SaveCrmRecord>
+  </CrmCommands>
+</NeuronCrmAdapterMessage>

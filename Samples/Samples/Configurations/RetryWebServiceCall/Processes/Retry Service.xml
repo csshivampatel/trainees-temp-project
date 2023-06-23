@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<ESBMessagePipelineStorage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>4ecc599c-8a93-48ef-8832-9612ea5a1c8a</Id>
+  <Version>ec3b7e04-ede3-4385-a59f-ed9388e9c89b</Version>
+  <BusinessFlows />
+  <Description />
+  <Name>Retry Service</Name>
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <IsEncrypted>true</IsEncrypted>
+  <PipelineBlob>&lt;ESBMessagePipeline xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.neuronesb.com/pipelines/"&gt;&lt;Category i:nil="true" /&gt;&lt;Description i:nil="true" /&gt;&lt;GlobalProperties xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;Name&gt;Retry Service&lt;/Name&gt;&lt;Properties xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;ReferencedAssemblies xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" /&gt;&lt;Steps&gt;&lt;ESBMessagePipelineStep i:type="RetryPipelineStepOfESBMessagexAPWb1W4"&gt;&lt;Bindings xmlns:d4p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Id&gt;89118342-9908-49cb-8615-e3e3972cf12d&lt;/Id&gt;&lt;Name&gt;Retry&lt;/Name&gt;&lt;Uniquename&gt;71abfc23-bbaf-4afa-a40c-95a81682e0cc&lt;/Uniquename&gt;&lt;Children&gt;&lt;ESBMessagePipelineStep i:type="ESBMessageCodePipelineStep"&gt;&lt;Bindings xmlns:d6p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Id&gt;dbc3cd36-0d00-4504-9143-35bf761fb20a&lt;/Id&gt;&lt;Name&gt;Create Request Message&lt;/Name&gt;&lt;Uniquename&gt;f5a35b0f-da69-41de-8132-0bf2e0c08382&lt;/Uniquename&gt;&lt;BreakPointLines xmlns:d6p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;Code&gt;
+if(!context.Properties.ContainsKey("Attempt"))
+{
+	context.Properties.Add("Attempt", 1);
+}
+int attempt = (int)context.Properties["Attempt"];
+string name = "";
+switch(attempt)
+{
+	case 1:
+		name = "Joe Doe";
+		break;
+	case 2:
+		name = "Bob Doe";
+		break;
+	case 3:
+		name = "Johny Neuron";
+		break;
+}
+
+attempt++;
+context.Properties["Attempt"] = attempt;
+
+string message = String.Format("&amp;lt;neuron:GetPerson xmlns:neuron=\"http://neuron.esb.samples.processes/\"&amp;gt;&amp;lt;neuron:name&amp;gt;{0}&amp;lt;/neuron:name&amp;gt;&amp;lt;/neuron:GetPerson&amp;gt;", name);
+
+if(context.Instance.IsInfoEnabled)
+	context.Instance.TraceInformation("Topic: " + context.Data.Header.Topic);
+
+context.Data.FromXml(message);
+
+// Set the SOAP Action
+context.Data.Header.Action = "http://neuron.esb.samples.processes/IServiceProcessService/GetPerson";
+
+&lt;/Code&gt;&lt;ReferencedAssemblies xmlns:d6p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"&gt;&lt;d6p1:string&gt;mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d6p1:string&gt;&lt;d6p1:string&gt;Neuron, Version=3.0.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d6p1:string&gt;&lt;d6p1:string&gt;Neuron.Pipelines, Version=3.0.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d6p1:string&gt;&lt;d6p1:string&gt;Neuron.Esb, Version=3.0.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d6p1:string&gt;&lt;d6p1:string&gt;System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d6p1:string&gt;&lt;d6p1:string&gt;System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d6p1:string&gt;&lt;d6p1:string&gt;System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d6p1:string&gt;&lt;d6p1:string&gt;System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d6p1:string&gt;&lt;d6p1:string&gt;System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d6p1:string&gt;&lt;d6p1:string&gt;System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d6p1:string&gt;&lt;/ReferencedAssemblies&gt;&lt;TypeName&gt;Type7a873087187412899b299b28116687&lt;/TypeName&gt;&lt;/ESBMessagePipelineStep&gt;&lt;ESBMessagePipelineStep xmlns:d5p1="http://schemas.neuronesb.com/pipelines/esb/" i:type="d5p1:EsbMessageServiceEndpointPipelineStep"&gt;&lt;Bindings xmlns:d6p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Id&gt;451d2e63-5d10-4eda-821a-91c4541a76ce&lt;/Id&gt;&lt;Name&gt;Service Endpoint&lt;/Name&gt;&lt;Uniquename /&gt;&lt;d5p1:Category /&gt;&lt;d5p1:Description /&gt;&lt;d5p1:MaxServiceInstances&gt;100&lt;/d5p1:MaxServiceInstances&gt;&lt;d5p1:MessagePattern&gt;Request-Reply&lt;/d5p1:MessagePattern&gt;&lt;d5p1:Policy&gt;2-Second Timeout Policy&lt;/d5p1:Policy&gt;&lt;d5p1:ServiceBinding&gt;BasicHttp&lt;/d5p1:ServiceBinding&gt;&lt;d5p1:ServiceConnector&gt;Process Service Endpoint&lt;/d5p1:ServiceConnector&gt;&lt;d5p1:ServicePoolTimeout&gt;PT1M&lt;/d5p1:ServicePoolTimeout&gt;&lt;d5p1:ServiceUrl&gt;http://localhost:8003/samples/processes/ServiceProcess&lt;/d5p1:ServiceUrl&gt;&lt;d5p1:ThrowExceptionOnFault&gt;true&lt;/d5p1:ThrowExceptionOnFault&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Children&gt;&lt;ErrorType&gt;Communication&lt;/ErrorType&gt;&lt;RetryCount&gt;4&lt;/RetryCount&gt;&lt;RetryDelay&gt;PT0S&lt;/RetryDelay&gt;&lt;TraceErrors&gt;true&lt;/TraceErrors&gt;&lt;/ESBMessagePipelineStep&gt;&lt;ESBMessagePipelineStep xmlns:d3p1="http://schemas.neuronesb.com/pipelines/esb/" i:type="d3p1:EsbMessageTraceMessagePipelineStep"&gt;&lt;Bindings xmlns:d4p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Id&gt;96b0633d-b2e5-46c1-ac9b-8c5c62ae6f2a&lt;/Id&gt;&lt;Name&gt;Trace&lt;/Name&gt;&lt;Uniquename&gt;0ad33795-3662-4919-a2c4-fc9e0b87bda8&lt;/Uniquename&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Steps&gt;&lt;/ESBMessagePipeline&gt;</PipelineBlob>
+  <IsProcessFlow>false</IsProcessFlow>
+</ESBMessagePipelineStorage>
