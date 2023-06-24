@@ -1,5 +1,0 @@
-﻿<Statement type="StoredProcedure" sql="{{Call DeleteCustomer(?)}}">
-	<Parameters>
-		<Parameter type="int" name="@CustomerID" value="{0}" />
-	</Parameters>
-</Statement>
