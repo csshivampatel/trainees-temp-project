@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ESBSubscriber xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>fd31d684-be6b-4df0-bb90-b524b9d74ab6</Id>
+  <Version>eadcacd8-e790-4f23-a4cd-ea4708466d92</Version>
+  <Name>InquiryRequester</Name>
+  <Description />
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <AllowMultipleInstances>true</AllowMultipleInstances>
+  <UseUniqueWmiCounterName>true</UseUniqueWmiCounterName>
+  <SubscriberId>InquiryRequester</SubscriberId>
+  <ClientGroup>General</ClientGroup>
+  <Zone>Enterprise</Zone>
+  <Enabled>true</Enabled>
+  <Anonymous>true</Anonymous>
+  <Subscriptions>
+    <Subscription>
+      <TopicName>Inquiries</TopicName>
+      <CanRead>false</CanRead>
+      <CanWrite>true</CanWrite>
+      <SubscriptionType>Topic</SubscriptionType>
+    </Subscription>
+  </Subscriptions>
+  <LogActivity>false</LogActivity>
+  <LogFile />
+  <LogSession>true</LogSession>
+</ESBSubscriber>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<ESBSubscriber xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>7769be2c-fac9-4fd2-8b3b-018a4afa4302</Id>
+  <Version>3685a0d7-eac8-48f0-82cf-cc97b8ab14c7</Version>
+  <Name>TestMessagePublisher</Name>
+  <Description />
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <AllowMultipleInstances>true</AllowMultipleInstances>
+  <UseUniqueWmiCounterName>true</UseUniqueWmiCounterName>
+  <SubscriberId>TestMessagePublisher</SubscriberId>
+  <ClientGroup>General</ClientGroup>
+  <Zone>Enterprise</Zone>
+  <Enabled>true</Enabled>
+  <Anonymous>true</Anonymous>
+  <Subscriptions>
+    <Subscription>
+      <TopicName>Orders.*</TopicName>
+      <CanRead>false</CanRead>
+      <CanWrite>true</CanWrite>
+      <MatchMessagePatterns />
+      <SubscriptionType>Topic</SubscriptionType>
+    </Subscription>
+  </Subscriptions>
+  <MessagePipelines>
+    <ClientPipelineItem>
+      <Id>3826aed8-8ca4-4d3d-8a60-b7eb1f290ccd</Id>
+      <Version>6472222a-8fd3-464f-af55-d50fe44372c4</Version>
+      <Name>Dynamic Topic Routing - Header</Name>
+      <IsSystemObject>false</IsSystemObject>
+      <ApplyOnPublish>true</ApplyOnPublish>
+      <ApplyOnReceive>false</ApplyOnReceive>
+      <PipelineConditions>
+        <Id>2d0257d2-6854-4ebd-b667-c7651b9719d1</Id>
+        <Version>9ab963ee-a737-4855-b21d-c1837808a937</Version>
+        <IsSystemObject>false</IsSystemObject>
+        <Condition />
+      </PipelineConditions>
+    </ClientPipelineItem>
+  </MessagePipelines>
+  <LogActivity>false</LogActivity>
+  <LogFile />
+  <LogSession>true</LogSession>
+</ESBSubscriber>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ESBSubscriber xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>99f14334-522f-4479-b4a0-25a94aef8fef</Id>
+  <Version>dc3dfd0a-5c67-4eb8-bc8c-745310c4d843</Version>
+  <Name>ContactRequester</Name>
+  <Description />
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <AllowMultipleInstances>true</AllowMultipleInstances>
+  <UseUniqueWmiCounterName>true</UseUniqueWmiCounterName>
+  <SubscriberId>ContactRequester</SubscriberId>
+  <ClientGroup>General</ClientGroup>
+  <Zone>Enterprise</Zone>
+  <Enabled>true</Enabled>
+  <Anonymous>true</Anonymous>
+  <Subscriptions>
+    <Subscription>
+      <TopicName>Contacts.*</TopicName>
+      <CanRead>true</CanRead>
+      <CanWrite>true</CanWrite>
+      <SubscriptionType>Topic</SubscriptionType>
+    </Subscription>
+  </Subscriptions>
+  <LogActivity>false</LogActivity>
+  <LogFile />
+  <LogSession>true</LogSession>
+</ESBSubscriber>

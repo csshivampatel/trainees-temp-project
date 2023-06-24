@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<ESBSubscriber xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>198c6bfa-4f8a-42f3-8416-90f4cd606faa</Id>
+  <Version>42847c33-ad22-4eef-9cf4-8a99799e6a3b</Version>
+  <Name>TaxSubscriber</Name>
+  <Description />
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <AllowMultipleInstances>true</AllowMultipleInstances>
+  <UseUniqueWmiCounterName>true</UseUniqueWmiCounterName>
+  <SubscriberId>TaxSubscriber</SubscriberId>
+  <ClientGroup>General</ClientGroup>
+  <Zone>Enterprise</Zone>
+  <Enabled>true</Enabled>
+  <Anonymous>true</Anonymous>
+  <Subscriptions>
+    <Subscription>
+      <TopicName>Tax</TopicName>
+      <CanRead>true</CanRead>
+      <CanWrite>false</CanWrite>
+      <MatchMessagePatterns />
+      <SubscriptionType>Topic</SubscriptionType>
+    </Subscription>
+  </Subscriptions>
+  <LogActivity>false</LogActivity>
+  <LogFile />
+  <LogSession>true</LogSession>
+</ESBSubscriber>

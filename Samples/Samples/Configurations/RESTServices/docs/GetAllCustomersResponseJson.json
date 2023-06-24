@@ -1,0 +1,22 @@
+﻿[
+	{
+		"email": "orders@northwind.com",
+		"id": 1001,
+		"name": "Northwind Traders"
+	},
+	{
+		"email": "accounts@litware.com",
+		"id": 1002,
+		"name": "LitWare Inc."
+	},
+	{
+		"email": "admin@adventureworks.com",
+		"id": 1003,
+		"name": "AdventureWorks Cycles"
+	},
+	{
+		"email": "admin@contoso.com",
+		"id": 1234,
+		"name": "Contoso"
+	}
+]

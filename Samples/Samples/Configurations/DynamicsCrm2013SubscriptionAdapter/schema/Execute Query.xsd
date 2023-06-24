@@ -1,0 +1,54 @@
+﻿<xs:schema xmlns:tns="http://neuronesb.adapters.dynamicscrm2013" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://neuronesb.adapters.dynamicscrm2013" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Request Message: http://neuronesb.adapters.dynamicscrm2013/NeuronCrmAdapterMessage</xs:documentation>
+    <xs:documentation>Response Message: http://neuronesb.adapters.dynamicscrm2013/NeuronCrmAdapterMessageResponse</xs:documentation>
+  </xs:annotation>
+  <xs:element name="NeuronCrmAdapterMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CrmCommands">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="1" name="GetCrmRecord">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="1" maxOccurs="1" name="Query">
+                      <xs:annotation>
+                        <xs:documentation>Insert a valid FetchXML query in place of the &lt;Any&gt; element.  For example:</xs:documentation>
+                        <xs:documentation>&lt;fetch mapping='logical'&gt;&lt;entity name='account'&gt;&lt;attribute name='accountid'/&gt;&lt;attribute name='name'/&gt;&lt;/entity&gt;&lt;/fetch&gt;</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:any processContents="skip" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Transactional" type="xs:boolean" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NeuronCrmAdapterMessageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="GetCrmRecordResult">
+          <xs:annotation>
+            <xs:documentation>The list of CRM Entities in the result set from the FetchXML query will be returned in place of the &lt;Any&gt; element.  For example:</xs:documentation>
+            <xs:documentation>&lt;account&gt;&lt;accountid&gt;622ba3f0-1f68-e311-8f1c-000c29ae4250&lt;/accountid&gt;&lt;name&gt;Fourth Coffee (sample)&lt;/name&gt;&lt;/account&gt;&lt;account&gt;&lt;accountid&gt;642ba3f0-1f68-e311-8f1c-000c29ae4250&lt;/accountid&gt;&lt;name&gt;Litware, Inc. (sample)&lt;/name&gt;&lt;/account&gt;</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:any processContents="skip" />
+            </xs:sequence>
+            <xs:attribute name="numRecords" type="xs:integer" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<ESBAdapter xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>c2dcf850-8878-44ee-9393-bee37cde46f7</Id>
+  <Version>0ae3ce5c-8a01-43fe-b8c8-d0d118f8cd3b</Version>
+  <Name>POP3Adapter</Name>
+  <Description />
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <AdapterType>Net</AdapterType>
+  <Zone>Enterprise</Zone>
+  <BindingAssembly>Neuron.Esb.Adapters.POP3Adapter.dll</BindingAssembly>
+  <BindingClass>Neuron.Esb.POP3.Adapters.POP3Adapter</BindingClass>
+  <AdapterName>POP3 Adapter</AdapterName>
+</ESBAdapter>

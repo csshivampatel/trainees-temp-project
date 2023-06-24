@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<EsbAvailabilityGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>2bcf431b-0135-4874-a47a-c12edb5203c0</Id>
+  <Version>c39711f7-ff4b-4877-8a77-0e9b0f757456</Version>
+  <BusinessFlows />
+  <Description>Neuron ESB Default Host for Endpoints</Description>
+  <Name>Neuron ESB Default Host</Name>
+  <IsSystemObject>false</IsSystemObject>
+  <Category />
+  <RunAs />
+  <IsEnabled>true</IsEnabled>
+  <DeploymentGroups>
+    <EsbAvailabilityGroupDeploymentGroupMapping>
+      <DeploymentGroup>Dev</DeploymentGroup>
+      <Servers>
+        <DeploymentServer>
+          <ServerName>localhost</ServerName>
+          <Role>Primary</Role>
+          <RetryCount>2</RetryCount>
+          <RetryInterval>5</RetryInterval>
+          <IsEnabled>true</IsEnabled>
+        </DeploymentServer>
+      </Servers>
+    </EsbAvailabilityGroupDeploymentGroupMapping>
+  </DeploymentGroups>
+</EsbAvailabilityGroup>

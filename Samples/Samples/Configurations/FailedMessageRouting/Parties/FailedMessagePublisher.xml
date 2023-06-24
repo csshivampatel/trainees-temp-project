@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<ESBSubscriber xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>fa0ebaa9-d26d-4850-a64e-d5d9e9a428b9</Id>
+  <Version>44de3cc5-f86e-4beb-b38b-a97a5a37ece2</Version>
+  <Name>FailedMessagePublisher</Name>
+  <Description />
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <AllowMultipleInstances>true</AllowMultipleInstances>
+  <UseUniqueWmiCounterName>true</UseUniqueWmiCounterName>
+  <SubscriberId>FailedMessagePublisher</SubscriberId>
+  <ClientGroup>General</ClientGroup>
+  <Zone>Enterprise</Zone>
+  <Enabled>true</Enabled>
+  <Anonymous>true</Anonymous>
+  <Subscriptions>
+    <Subscription>
+      <TopicName>FailedMessages</TopicName>
+      <CanRead>false</CanRead>
+      <CanWrite>true</CanWrite>
+      <SubscriptionType>Topic</SubscriptionType>
+    </Subscription>
+  </Subscriptions>
+  <MessagePipelines>
+    <ClientPipelineItem>
+      <Id>b8ffeded-534c-4728-9a3c-d8afe6e2171f</Id>
+      <Version>9c229098-ec70-45af-bb59-be860bd99116</Version>
+      <Name>InboundFailuresSplitBatch</Name>
+      <Description />
+      <IsSystemObject>false</IsSystemObject>
+      <ApplyOnPublish>true</ApplyOnPublish>
+      <ApplyOnReceive>false</ApplyOnReceive>
+      <PipelineConditions>
+        <Id>a323333d-c8d0-4171-b74d-61947608e3bc</Id>
+        <Version>7e629aad-4bef-4a1c-9fce-2441f1d94669</Version>
+        <Description />
+        <IsSystemObject>false</IsSystemObject>
+        <Condition />
+      </PipelineConditions>
+    </ClientPipelineItem>
+  </MessagePipelines>
+  <LogActivity>false</LogActivity>
+  <LogFile />
+  <LogSession>true</LogSession>
+</ESBSubscriber>

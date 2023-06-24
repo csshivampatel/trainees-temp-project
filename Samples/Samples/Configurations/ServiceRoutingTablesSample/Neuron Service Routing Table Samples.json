@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "57bf4ba8-36ea-4c2b-85d7-d1e2ed4d737e",
+		"name": "Neuron Service Routing Table Samples",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ServiceRouteTables_SOAP_REST",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					},
+					{
+						"key": "SOAPAction",
+						"value": "http://PeregrineConnnect.ServiceModel.Samples/IOrder/GetOrder",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:per=\"http://PeregrineConnnect.ServiceModel.Samples\">\r\n   <soapenv:Header />\r\n   <soapenv:Body>\r\n      <per:PlaceOrder>\r\n         <!--Optional:-->\r\n         <per:order>\r\n            <!--Optional:-->\r\n            <per:Amount>22</per:Amount>\r\n            <!--Optional:-->\r\n            <per:City>New York</per:City>\r\n            <!--Optional:-->\r\n            <per:CustomerName>Himanshu</per:CustomerName>\r\n            <!--Optional:-->\r\n            <per:OrderDate>2021-03-22</per:OrderDate>\r\n            <!--Optional:-->\r\n            <per:OrderNumber>1</per:OrderNumber>\r\n            <!--Optional:-->\r\n            <per:Price>2</per:Price>\r\n            <!--Optional:-->\r\n            <per:Product>Bike</per:Product>\r\n            <!--Optional:-->\r\n            <per:Quantity>1</per:Quantity>\r\n            <!--Optional:-->\r\n            <per:Shipping>0</per:Shipping>\r\n         </per:order>\r\n         <!--Optional:-->\r\n         <per:City>NewYork</per:City>\r\n      </per:PlaceOrder>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9005",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9005"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ServiceRouteTables_SOAP_REST_GET",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:per=\"http://PeregrineConnnect.ServiceModel.Samples\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <per:GetOrder>\r\n       \r\n      </per:GetOrder>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9007",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9007"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ServiceRouteTables_REST_SOAP",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderNumber\": 12345,\r\n    \"customerName\": \"Joe Schmoe\",\r\n    \"orderDate\": \"2020-01-31T20:10:01Z\",\r\n    \"product\": \"New Segway\",\r\n    \"quantity\": 2,\r\n    \"price\": 40.3,\r\n    \"amount\": 80.6,\r\n    \"shipping\": 0.0,\r\n    \"city\": \"Local\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9009",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9009"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ServiceRouteTables_SOAP_SOAP_Passthru",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					},
+					{
+						"key": "SOAPAction",
+						"value": "\"http://PeregrineConnnect.ServiceModel.Samples/IOrder/GetOrder\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:per=\"http://PeregrineConnnect.ServiceModel.Samples\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <per:GetOrder>\r\n         <!--Optional:-->\r\n         <per:OrderNumber>1</per:OrderNumber>\r\n         <!--Optional:-->\r\n         <per:City></per:City>\r\n      </per:GetOrder>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9008",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9008"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ServiceRouteTables_MockRequest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9006",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9006"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ServiceRouteTables_MockResponse",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ServiceRouteTables_QueryString",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9002/1233/Cleveland",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"1233",
+						"Cleveland"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ServiceRouteTables_HttpHeader",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9003",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ServiceRouteTables_Conditional",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:per=\"http://PeregrineConnnect.ServiceModel.Samples\">\r\n   <soapenv:Header />\r\n   <soapenv:Body>\r\n      <per:PlaceOrder>\r\n         <!--Optional:-->\r\n         <per:order>\r\n            <!--Optional:-->\r\n            <per:Amount>22</per:Amount>\r\n            <!--Optional:-->\r\n            <per:City>New York</per:City>\r\n            <!--Optional:-->\r\n            <per:CustomerName>Himanshu</per:CustomerName>\r\n            <!--Optional:-->\r\n            <per:OrderDate>2021-03-22T09:00:00</per:OrderDate>\r\n            <!--Optional:-->\r\n            <per:OrderNumber>1</per:OrderNumber>\r\n            <!--Optional:-->\r\n            <per:Price>2</per:Price>\r\n            <!--Optional:-->\r\n            <per:Product>Bike</per:Product>\r\n            <!--Optional:-->\r\n            <per:Quantity>1</per:Quantity>\r\n            <!--Optional:-->\r\n            <per:Shipping>0</per:Shipping>\r\n         </per:order>\r\n         <!--Optional:-->\r\n         <per:City>NewYork</per:City>\r\n      </per:PlaceOrder>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9004",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9004"
+				}
+			},
+			"response": []
+		}
+	]
+}

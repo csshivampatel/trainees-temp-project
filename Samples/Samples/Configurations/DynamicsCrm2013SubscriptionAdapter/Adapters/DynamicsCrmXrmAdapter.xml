@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ESBAdapter xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>3861e42e-b523-4579-8d06-36ea23d3bbd8</Id>
+  <Version>fe5b8537-aca2-4a34-b91b-576562a81a1c</Version>
+  <BusinessFlows />
+  <Description />
+  <Name>DynamicsCrmXrmAdapter</Name>
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <AdapterType>Net</AdapterType>
+  <Zone>Enterprise</Zone>
+  <BindingAssembly>Neuron.Esb.Adapters.Crm2013Adapter.dll</BindingAssembly>
+  <BindingClass>Neuron.Esb.Adapters.Crm2013Adapter</BindingClass>
+  <AdapterName>Dynamics CRM XRM Adapter</AdapterName>
+</ESBAdapter>

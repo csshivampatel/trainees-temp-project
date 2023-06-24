@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<ESBSubscriber xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>02b1ebdf-c46a-4697-a51b-b1f1ca4b08d7</Id>
+  <Version>7773845c-bcbd-4f0f-9002-dfaa8522cf33</Version>
+  <Name>NorthstarPubByHeader</Name>
+  <Description />
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <AllowMultipleInstances>true</AllowMultipleInstances>
+  <UseUniqueWmiCounterName>true</UseUniqueWmiCounterName>
+  <SubscriberId>NorthstarPubByHeader</SubscriberId>
+  <ClientGroup>General</ClientGroup>
+  <Zone>Enterprise</Zone>
+  <Enabled>true</Enabled>
+  <Anonymous>true</Anonymous>
+  <Subscriptions>
+    <Subscription>
+      <TopicName>NorthStar.HR</TopicName>
+      <CanRead>false</CanRead>
+      <CanWrite>true</CanWrite>
+      <SubscriptionType>Topic</SubscriptionType>
+    </Subscription>
+    <Subscription>
+      <TopicName>NorthStar.HR.V1</TopicName>
+      <CanRead>false</CanRead>
+      <CanWrite>true</CanWrite>
+      <SubscriptionType>Topic</SubscriptionType>
+    </Subscription>
+    <Subscription>
+      <TopicName>NorthStar.HR.V2</TopicName>
+      <CanRead>false</CanRead>
+      <CanWrite>true</CanWrite>
+      <SubscriptionType>Topic</SubscriptionType>
+    </Subscription>
+  </Subscriptions>
+  <MessagePipelines>
+    <ClientPipelineItem>
+      <Id>4f3c094f-d259-442f-8523-c1fb940e5d80</Id>
+      <Version>25641aa0-3a66-4ad5-97b5-d36e56456f55</Version>
+      <Name>RouteBySoapHeader</Name>
+      <IsSystemObject>false</IsSystemObject>
+      <ApplyOnPublish>true</ApplyOnPublish>
+      <ApplyOnReceive>false</ApplyOnReceive>
+      <PipelineConditions>
+        <Id>e1f5362a-b379-4b06-ae45-a89e45a80e15</Id>
+        <Version>674cfa9d-8238-4bfc-924f-982c7c252ace</Version>
+        <IsSystemObject>false</IsSystemObject>
+        <Condition />
+      </PipelineConditions>
+    </ClientPipelineItem>
+  </MessagePipelines>
+  <LogActivity>false</LogActivity>
+  <LogFile />
+  <LogSession>true</LogSession>
+</ESBSubscriber>

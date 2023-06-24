@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<ESBService xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>ad0b2551-836c-44b3-9b83-6505689017b3</Id>
+  <Version>cdf7118c-717e-4e48-8468-668dfbdd248a</Version>
+  <BusinessFlows />
+  <Description />
+  <Name>RESTtoSQLClientConnector</Name>
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <Bindings />
+  <Topic />
+  <Pattern>1</Pattern>
+  <Properties />
+  <MessagingPattern>Request-Reply</MessagingPattern>
+  <ProxySettings>
+    <HostConfigType>Default</HostConfigType>
+    <CredentialConfigType>NotSpecified</CredentialConfigType>
+    <Credential>&lt;Default&gt;</Credential>
+    <Host />
+    <Port>0</Port>
+    <BypassLocalAddress>false</BypassLocalAddress>
+  </ProxySettings>
+  <Zone>Enterprise</Zone>
+  <Enabled>true</Enabled>
+  <ServiceName>RESTtoSQLClientConnector</ServiceName>
+  <ServiceGroup>General</ServiceGroup>
+  <Binding>REST</Binding>
+  <AvailabilityGroupId>Neuron ESB Default Host</AvailabilityGroupId>
+  <Behavior />
+  <KeepAlive>true</KeepAlive>
+  <HostNameComparisonModeIsExact>false</HostNameComparisonModeIsExact>
+  <TransactionType>None</TransactionType>
+  <MaxMessageSize>1000000</MaxMessageSize>
+  <ReliableMessaging>false</ReliableMessaging>
+  <ConfigFile />
+  <InboundPolling>false</InboundPolling>
+  <OptimizeForLargeMessages>false</OptimizeForLargeMessages>
+  <RawBody>false</RawBody>
+  <ServiceThrottles>
+    <MaxConcurrentCalls>208</MaxConcurrentCalls>
+    <MaxConcurrentInstances>1008</MaxConcurrentInstances>
+    <MaxConcurrentSessions>800</MaxConcurrentSessions>
+  </ServiceThrottles>
+  <CertificateValidationMode>None</CertificateValidationMode>
+  <CertificateRevocationMode>NoCheck</CertificateRevocationMode>
+  <NegotiateServiceCredential>true</NegotiateServiceCredential>
+  <EstablishSecurityContext>true</EstablishSecurityContext>
+  <Contract />
+  <Security>None</Security>
+  <ServiceIdentityType>None</ServiceIdentityType>
+  <ServicePrincipal />
+  <ServiceType>Business</ServiceType>
+  <ClientCredentialtype>Certificate</ClientCredentialtype>
+  <Impersonation>false</Impersonation>
+  <RelayAccessToken>true</RelayAccessToken>
+  <ClientConnectorId>559855ef-9bfa-4bba-9666-e00467604f5a</ClientConnectorId>
+  <ClientUrl>http://localhost:8000/Customer</ClientUrl>
+  <RouteClientTraffic>true</RouteClientTraffic>
+  <ClientTopic />
+  <UpdateMetadata>true</UpdateMetadata>
+  <UseHttps>false</UseHttps>
+  <EnableClientMetadataHttpEndpoint>false</EnableClientMetadataHttpEndpoint>
+  <EnableClientMetadataHttpsEndpoint>false</EnableClientMetadataHttpsEndpoint>
+  <ClientSubscriberId />
+  <CaptureHeaders>true</CaptureHeaders>
+  <CaptureHTTPHeaders>false</CaptureHTTPHeaders>
+  <HttpConnectionLimit>100</HttpConnectionLimit>
+  <EnableCors>false</EnableCors>
+  <ClientCertName />
+  <ACL />
+  <ExternalMetadataLocation />
+  <AccessUrl />
+  <RouteServiceTraffic>false</RouteServiceTraffic>
+  <RestoreHeaders>true</RestoreHeaders>
+  <RestoreHTTPHeaders>false</RestoreHTTPHeaders>
+  <ServiceTopic />
+  <ServiceSubscriberId />
+  <ReuseServiceConnection>true</ReuseServiceConnection>
+  <ServerCertName />
+  <ServicePolicy>Default</ServicePolicy>
+  <FailoverAddresses />
+  <FarmSingleInstance>false</FarmSingleInstance>
+  <ProcessList>
+    <ClientPipelineItem>
+      <Id>ad16503d-d833-4e68-bf19-dc0bf7f9a75b</Id>
+      <Version>ffefb003-e01c-4e62-b515-b42b84e11f96</Version>
+      <BusinessFlows />
+      <Description />
+      <Name>REST to SQL</Name>
+      <IsSystemObject>false</IsSystemObject>
+      <IsPrivate>false</IsPrivate>
+      <ApplyOnPublish>true</ApplyOnPublish>
+      <ApplyOnReceive>false</ApplyOnReceive>
+      <PipelineConditions>
+        <Id>61d41843-3d4b-4a46-b88c-7ded8f322b8c</Id>
+        <Version>b64d8c8a-0de9-40e4-ba57-34643dcd2ac3</Version>
+        <BusinessFlows />
+        <Description />
+        <IsSystemObject>false</IsSystemObject>
+        <IsPrivate>false</IsPrivate>
+        <Condition />
+      </PipelineConditions>
+    </ClientPipelineItem>
+  </ProcessList>
+  <ProcessMode>BusinessProcess</ProcessMode>
+  <ServiceRoutes />
+  <ServiceProcessMode>false</ServiceProcessMode>
+  <ServiceServiceRateEnable>false</ServiceServiceRateEnable>
+  <ClientServiceRateEnable>false</ClientServiceRateEnable>
+</ESBService>

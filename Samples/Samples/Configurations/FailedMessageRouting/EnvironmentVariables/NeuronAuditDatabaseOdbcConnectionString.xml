@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<NeuronVariable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>b247ea4c-c051-40cd-b5a7-118ab5be68d1</Id>
+  <Version>c6e771f9-9dc3-4392-b0b9-3d4e47a1ce1f</Version>
+  <Name>NeuronAuditDatabaseOdbcConnectionString</Name>
+  <Description />
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+</NeuronVariable>

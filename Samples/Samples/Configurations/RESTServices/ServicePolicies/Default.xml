@@ -1,0 +1,314 @@
+<?xml version="1.0"?>
+<ESBServicePolicy xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>c7f56854-da8c-41f1-9254-f4d57e2653ae</Id>
+  <Version>9cfba97f-bb0d-4dfc-9442-203d4e8c3f9e</Version>
+  <BusinessFlows />
+  <Description>Default service policy</Description>
+  <Name>Default</Name>
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <OnErrorAuditToDatabase>true</OnErrorAuditToDatabase>
+  <OnErrorAuditToFile>false</OnErrorAuditToFile>
+  <OnErrorRepublishMessage>false</OnErrorRepublishMessage>
+  <RepublishTopic />
+  <OnErrorRollback>false</OnErrorRollback>
+  <AlwaysAvailable>true</AlwaysAvailable>
+  <RequestReplyTimeout>60</RequestReplyTimeout>
+  <DoNotApplyPolicyIfFaultContract>false</DoNotApplyPolicyIfFaultContract>
+  <RetryCount>1</RetryCount>
+  <RetryInterval>1</RetryInterval>
+  <RollbackDelaySeconds>1</RollbackDelaySeconds>
+  <RollbackMessageExpirationSeconds>300</RollbackMessageExpirationSeconds>
+  <AuditDirectoryLocation />
+  <InlcudeAsExceptions>false</InlcudeAsExceptions>
+  <StartAndStopAdapterAccordingToAvailability>true</StartAndStopAdapterAccordingToAvailability>
+  <HttpStatusCodes>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>409</HttpStatusCode>
+      <Description>Conflict</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>599</HttpStatusCode>
+      <Description>Network connect timeout error (Unknown)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>598</HttpStatusCode>
+      <Description>Network read timeout error (Unknown)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>511</HttpStatusCode>
+      <Description>Network Authentication Required (RFC 6585)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>510</HttpStatusCode>
+      <Description>Not Extended (RFC 2774)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>509</HttpStatusCode>
+      <Description>Bandwidth Limit Exceeded (Apache bw/limited extension)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>507</HttpStatusCode>
+      <Description>Insufficient Storage (WebDAV; RFC 4918)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>506</HttpStatusCode>
+      <Description>Variant Also Negotiates (RFC 2295)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>505</HttpStatusCode>
+      <Description>HTTP Version Not Supported</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>504</HttpStatusCode>
+      <Description>Gateway Timeout</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>503</HttpStatusCode>
+      <Description>Service Unavailable</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>502</HttpStatusCode>
+      <Description>Bad Gateway</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>501</HttpStatusCode>
+      <Description>Not Implemented</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>500</HttpStatusCode>
+      <Description>Internal Server Error</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>499</HttpStatusCode>
+      <Description>Client Closed Request (Nginx)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>497</HttpStatusCode>
+      <Description>HTTP to HTTPS (Nginx)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>496</HttpStatusCode>
+      <Description>No Cert (Nginx)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>495</HttpStatusCode>
+      <Description>Cert Error (Nginx)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>494</HttpStatusCode>
+      <Description>Request Header Too Large (Nginx)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>451</HttpStatusCode>
+      <Description>Unavailable For Legal Reasons (Internet draft)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>450</HttpStatusCode>
+      <Description>Blocked by Windows Parental Controls (Microsoft)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>449</HttpStatusCode>
+      <Description>Retry With (Microsoft)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>444</HttpStatusCode>
+      <Description>No Response (Nginx)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>431</HttpStatusCode>
+      <Description>Request Header Fields Too Large (RFC 6585)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>429</HttpStatusCode>
+      <Description>Too Many Requests (RFC 6585)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>428</HttpStatusCode>
+      <Description>Precondition Required (RFC 6585)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>426</HttpStatusCode>
+      <Description>Upgrade Required (RFC 2817)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>425</HttpStatusCode>
+      <Description>Unordered Collection (Internet draft)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>424</HttpStatusCode>
+      <Description>Failed Dependency (WebDAV; RFC 4918)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>423</HttpStatusCode>
+      <Description>Locked (WebDAV; RFC 4918)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>422</HttpStatusCode>
+      <Description>Unprocessable Entity (WebDAV; RFC 4918)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>420</HttpStatusCode>
+      <Description>Enhance Your Calm (Twitter)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>418</HttpStatusCode>
+      <Description>I'm a teapot (RFC 2324)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>417</HttpStatusCode>
+      <Description>Expectation Failed</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>416</HttpStatusCode>
+      <Description>Requested Range Not Satisfiable</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>415</HttpStatusCode>
+      <Description>Unsupported Media Type</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>414</HttpStatusCode>
+      <Description>Request-URI Too Long</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>413</HttpStatusCode>
+      <Description>Request Entity Too Large</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>412</HttpStatusCode>
+      <Description>Precondition Failed</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>411</HttpStatusCode>
+      <Description>Length Required</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>410</HttpStatusCode>
+      <Description>Gone</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>408</HttpStatusCode>
+      <Description>Request Timeout</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>407</HttpStatusCode>
+      <Description>Proxy Authentication Required</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>406</HttpStatusCode>
+      <Description>Not Acceptable</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>405</HttpStatusCode>
+      <Description>Method Not Allowed</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>404</HttpStatusCode>
+      <Description>Not Found</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>403</HttpStatusCode>
+      <Description>Forbidden</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>402</HttpStatusCode>
+      <Description>Payment Required</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>401</HttpStatusCode>
+      <Description>Unauthorized</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>400</HttpStatusCode>
+      <Description>Bad Request</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>308</HttpStatusCode>
+      <Description>Permanent Redirect (approved as experimental RFC)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>307</HttpStatusCode>
+      <Description>Temporary Redirect (since HTTP/1.1)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>306</HttpStatusCode>
+      <Description>Switch Proxy</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>305</HttpStatusCode>
+      <Description>Use Proxy (since HTTP/1.1)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>304</HttpStatusCode>
+      <Description>Not Modified</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>303</HttpStatusCode>
+      <Description>See Other (since HTTP/1.1)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>302</HttpStatusCode>
+      <Description>Found</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>301</HttpStatusCode>
+      <Description>Moved Permanently</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>300</HttpStatusCode>
+      <Description>Multiple Choices</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>208</HttpStatusCode>
+      <Description>Already Reported (WebDAV; RFC 5842)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>207</HttpStatusCode>
+      <Description>Multi-Status (WebDAV; RFC 4918)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>206</HttpStatusCode>
+      <Description>Partial Content</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>205</HttpStatusCode>
+      <Description>Reset Content</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>204</HttpStatusCode>
+      <Description>No Content</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>203</HttpStatusCode>
+      <Description>Non-Authoritative Information (since HTTP/1.1)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>202</HttpStatusCode>
+      <Description>Accepted</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>201</HttpStatusCode>
+      <Description>Created</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>200</HttpStatusCode>
+      <Description>OK</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>102</HttpStatusCode>
+      <Description>Processing (WebDAV; RFC 2518)</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>101</HttpStatusCode>
+      <Description>Switching Protocols</Description>
+    </NeuronHttpStatusCode>
+    <NeuronHttpStatusCode>
+      <HttpStatusCode>100</HttpStatusCode>
+      <Description>Continue</Description>
+    </NeuronHttpStatusCode>
+  </HttpStatusCodes>
+  <CustomHttpStatusCodes />
+  <SoapFaultDescription />
+</ESBServicePolicy>

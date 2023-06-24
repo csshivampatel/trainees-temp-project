@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<EsbAvailabilityGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>f4633499-e046-4da2-bc7a-3a6deb04aad9</Id>
+  <Version>77b15e4f-cc7e-4ae3-b9b4-48b7e99650c3</Version>
+  <Name>Discount Workflow Group</Name>
+  <Description />
+  <IsSystemObject>false</IsSystemObject>
+  <Category>General</Category>
+  <RunAs />
+  <IsEnabled>true</IsEnabled>
+  <DeploymentGroups>
+    <EsbAvailabilityGroupDeploymentGroupMapping>
+      <DeploymentGroup>Dev</DeploymentGroup>
+      <Servers>
+        <DeploymentServer>
+          <ServerName>localhost</ServerName>
+          <Role>Primary</Role>
+          <RetryCount>0</RetryCount>
+          <RetryInterval>0</RetryInterval>
+          <IsEnabled>true</IsEnabled>
+        </DeploymentServer>
+      </Servers>
+    </EsbAvailabilityGroupDeploymentGroupMapping>
+  </DeploymentGroups>
+</EsbAvailabilityGroup>

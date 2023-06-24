@@ -1,0 +1,99 @@
+﻿{
+  "AtlasMapping" : {
+    "jsonType" : "io.atlasmap.v2.AtlasMapping",
+    "dataSource" : [ {
+      "jsonType" : "io.atlasmap.xml.v2.XmlDataSource",
+      "id" : "CustomerServiceSchemas_GetCustomerByIDResponse-XSD",
+      "name" : "CustomerServiceSchemas_GetCustomerByIDResponse-XSD",
+      "description" : "Source document CustomerServiceSchemas_GetCustomerByIDResponse-XSD type: XSD",
+      "uri" : "atlas:xml:CustomerServiceSchemas_GetCustomerByIDResponse-XSD",
+      "dataSourceType" : "SOURCE",
+      "xmlNamespaces" : {
+        "xmlNamespace" : [ {
+          "alias" : "tns",
+          "uri" : "http://Neuron.Samples"
+        } ]
+      }
+    }, {
+      "jsonType" : "io.atlasmap.json.v2.JsonDataSource",
+      "id" : "GetCustomerByIdResponseJson-JSON",
+      "name" : "GetCustomerByIdResponseJson-JSON",
+      "description" : "Target document GetCustomerByIdResponseJson-JSON type: JSON",
+      "uri" : "atlas:json:GetCustomerByIdResponseJson-JSON",
+      "dataSourceType" : "TARGET"
+    } ],
+    "mappings" : {
+      "mapping" : [ {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputField" : [ {
+          "jsonType" : "io.atlasmap.xml.v2.XmlField",
+          "docId" : "CustomerServiceSchemas_GetCustomerByIDResponse-XSD",
+          "path" : "/tns:GetCustomerByIDResponse/tns:GetCustomerByIDResult/tns:Email",
+          "fieldType" : "STRING",
+          "name" : "Email",
+          "attribute" : false
+        } ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.json.v2.JsonField",
+          "docId" : "GetCustomerByIdResponseJson-JSON",
+          "path" : "/email",
+          "fieldType" : "STRING",
+          "name" : "email",
+          "userCreated" : false
+        } ],
+        "id" : "mapping.73447",
+        "pageNumber" : 0
+      }, {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputField" : [ {
+          "jsonType" : "io.atlasmap.xml.v2.XmlField",
+          "docId" : "CustomerServiceSchemas_GetCustomerByIDResponse-XSD",
+          "path" : "/tns:GetCustomerByIDResponse/tns:GetCustomerByIDResult/tns:ID",
+          "fieldType" : "LONG",
+          "name" : "ID",
+          "attribute" : false
+        } ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.json.v2.JsonField",
+          "docId" : "GetCustomerByIdResponseJson-JSON",
+          "path" : "/id",
+          "fieldType" : "INTEGER",
+          "name" : "id",
+          "userCreated" : false
+        } ],
+        "id" : "mapping.866514",
+        "pageNumber" : 0
+      }, {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputField" : [ {
+          "jsonType" : "io.atlasmap.xml.v2.XmlField",
+          "docId" : "CustomerServiceSchemas_GetCustomerByIDResponse-XSD",
+          "path" : "/tns:GetCustomerByIDResponse/tns:GetCustomerByIDResult/tns:Name",
+          "fieldType" : "STRING",
+          "name" : "Name",
+          "attribute" : false
+        } ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.json.v2.JsonField",
+          "docId" : "GetCustomerByIdResponseJson-JSON",
+          "path" : "/name",
+          "fieldType" : "STRING",
+          "name" : "name",
+          "userCreated" : false
+        } ],
+        "id" : "mapping.616484",
+        "pageNumber" : 0
+      } ]
+    },
+    "lookupTables" : {
+      "lookupTable" : [ ]
+    },
+    "constants" : {
+      "constant" : [ ]
+    },
+    "properties" : {
+      "property" : [ ]
+    },
+    "name" : "UI.0"
+  }
+}

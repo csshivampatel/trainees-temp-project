@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<ESBDatabase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>64147d04-762f-4928-83c9-dd07f07520cb</Id>
+  <Version>37dcc28a-d421-4890-9063-e5dee70a433a</Version>
+  <BusinessFlows />
+  <Description />
+  <Name>localhost.NeuronESBSampleDB</Name>
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <Bindings />
+  <Accounts>
+    <Id>ded7919e-4b4a-4029-8886-901f27c97083</Id>
+    <Version>9c3e1b40-d368-4ad5-8015-26f1f9e9075b</Version>
+    <BusinessFlows />
+    <Description />
+    <IsSystemObject>false</IsSystemObject>
+    <IsPrivate>false</IsPrivate>
+    <AccessCheckType>Unknown</AccessCheckType>
+    <AccessCheckItems>
+      <ESBAccessCheckItem>
+        <AccessCheckType>WindowsGroup</AccessCheckType>
+        <AccessCheckMode>Default</AccessCheckMode>
+        <AccessPermission>ReadWrite</AccessPermission>
+        <Credential>
+          <Id>025bf956-4751-4858-8d0a-cb19720f9344</Id>
+          <Version>f3639f57-7d7b-42d2-891e-38cefb78a618</Version>
+          <BusinessFlows />
+          <Description />
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <Type>None</Type>
+          <AccessCheckType>Unknown</AccessCheckType>
+          <SID>S-1-5-18</SID>
+          <Username>NT AUTHORITY\SYSTEM</Username>
+          <CertStoreLocation>LocalMachine</CertStoreLocation>
+          <CertStoreName>My</CertStoreName>
+          <CertFindType>FindByThumbprint</CertFindType>
+        </Credential>
+      </ESBAccessCheckItem>
+    </AccessCheckItems>
+  </Accounts>
+  <UseNeuronDbImage>false</UseNeuronDbImage>
+  <BypassChecks>false</BypassChecks>
+  <UseAlternateSettings>false</UseAlternateSettings>
+  <DbContainerHostPort>0</DbContainerHostPort>
+  <DbContainerHostname />
+  <ContainerConnectionString>Data Source=,0;Initial Catalog=NeuronESBSampleDB;Integrated Security=True</ContainerConnectionString>
+  <CatalogName>NeuronESBSampleDB</CatalogName>
+  <ConnectionString>10dc3vgWBmJ+wt1TDJcaGWyA1gwTbkZAarpoEBdPhGQgC01njacGq2PQ2FsW8zsfKltntL626XSVYbnp6Vt+Kr1nIg0juZB6tb2pcrHh+Hiz7FItuDGLRCAFctiw9fzM</ConnectionString>
+  <Zone>(All Zones)</Zone>
+  <DatabaseType>SQLServer</DatabaseType>
+</ESBDatabase>

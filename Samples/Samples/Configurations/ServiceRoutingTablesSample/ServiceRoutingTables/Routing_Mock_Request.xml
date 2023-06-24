@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<ServiceRoutingTable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>c69a74b8-b6be-4310-8f60-724857f0abd7</Id>
+  <Version>42a1833e-166b-4a4c-8749-5b3d73a67dc4</Version>
+  <BusinessFlows />
+  <Description>Adds a hardcoded outgoing request to the backend service.</Description>
+  <Name>Routing_Mock_Request</Name>
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <ServiceRoutingItems>
+    <ServiceRoutingItem>
+      <IsTestEnabled>false</IsTestEnabled>
+      <EndpointName>Order_Local</EndpointName>
+      <SoapAction>http://PeregrineConnnect.ServiceModel.Samples/IOrder/PlaceOrder</SoapAction>
+      <Request>
+        <Method />
+        <URI />
+        <Body>&lt;per:PlaceOrder xmlns:per="http://PeregrineConnnect.ServiceModel.Samples"&gt;
+         &lt;!--Optional:--&gt;
+         &lt;per:order&gt;
+            &lt;!--Optional:--&gt;
+            &lt;per:Amount&gt;22&lt;/per:Amount&gt;
+            &lt;!--Optional:--&gt;
+            &lt;per:City&gt;New York&lt;/per:City&gt;
+            &lt;!--Optional:--&gt;
+            &lt;per:CustomerName&gt;Himanshu&lt;/per:CustomerName&gt;
+            &lt;!--Optional:--&gt;
+            &lt;per:OrderDate&gt;2021-03-22&lt;/per:OrderDate&gt;
+            &lt;!--Optional:--&gt;
+            &lt;per:OrderNumber&gt;1&lt;/per:OrderNumber&gt;
+            &lt;!--Optional:--&gt;
+            &lt;per:Price&gt;2&lt;/per:Price&gt;
+            &lt;!--Optional:--&gt;
+            &lt;per:Product&gt;Bike&lt;/per:Product&gt;
+            &lt;!--Optional:--&gt;
+            &lt;per:Quantity&gt;1&lt;/per:Quantity&gt;
+            &lt;!--Optional:--&gt;
+            &lt;per:Shipping&gt;0&lt;/per:Shipping&gt;
+         &lt;/per:order&gt;
+         &lt;!--Optional:--&gt;
+         &lt;per:City&gt;NewYork&lt;/per:City&gt;
+  &lt;/per:PlaceOrder&gt;</Body>
+        <BodyType>Raw</BodyType>
+        <DeleteMessageBody>false</DeleteMessageBody>
+        <Parameters />
+        <Headers>
+          <HeaderDataElement>
+            <Key>Content-Type</Key>
+            <Value>application/xml</Value>
+          </HeaderDataElement>
+        </Headers>
+        <BodyProperties />
+        <TestBody />
+        <TestEnabled>FALSE</TestEnabled>
+        <TestFormat>TEXT</TestFormat>
+        <MaxPoolSize>1</MaxPoolSize>
+        <PoolTimeOut>1000</PoolTimeOut>
+        <AuditRequest>false</AuditRequest>
+        <AuditResponses>false</AuditResponses>
+        <AuditFailures>false</AuditFailures>
+      </Request>
+      <ServiceRoutingType>Service</ServiceRoutingType>
+      <RequestDataMap />
+      <ResponseDataMap>XML_TO_JSON_For_OrderResponse</ResponseDataMap>
+      <RoutingConditions>
+        <Id>ca82fc40-3cd0-44eb-b248-51004902f890</Id>
+        <Version>ad8207e7-7b69-42ed-b4b3-abdd157000ce</Version>
+        <BusinessFlows />
+        <Description />
+        <IsSystemObject>false</IsSystemObject>
+        <IsPrivate>false</IsPrivate>
+      </RoutingConditions>
+    </ServiceRoutingItem>
+  </ServiceRoutingItems>
+  <Zone>Enterprise</Zone>
+</ServiceRoutingTable>

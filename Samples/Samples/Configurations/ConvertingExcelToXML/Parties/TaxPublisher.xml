@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<ESBSubscriber xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>7f023517-4cec-486e-af60-0060b4704dfd</Id>
+  <Version>db673af7-13a0-4720-a8ea-d32ba8437b7c</Version>
+  <Name>TaxPublisher</Name>
+  <Description />
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <AllowMultipleInstances>true</AllowMultipleInstances>
+  <UseUniqueWmiCounterName>true</UseUniqueWmiCounterName>
+  <SubscriberId>TaxPublisher</SubscriberId>
+  <ClientGroup>General</ClientGroup>
+  <Zone>Enterprise</Zone>
+  <Enabled>true</Enabled>
+  <Anonymous>true</Anonymous>
+  <Subscriptions>
+    <Subscription>
+      <TopicName>Tax</TopicName>
+      <CanRead>false</CanRead>
+      <CanWrite>true</CanWrite>
+      <MatchMessagePatterns />
+      <SubscriptionType>Topic</SubscriptionType>
+    </Subscription>
+  </Subscriptions>
+  <MessagePipelines>
+    <ClientPipelineItem>
+      <Id>b8a41caa-ef6f-4792-a88e-21fad16061cc</Id>
+      <Version>f93b6a13-913a-4a3d-ba7a-f57757047cb3</Version>
+      <Name>GetTaxRates</Name>
+      <IsSystemObject>false</IsSystemObject>
+      <ApplyOnPublish>true</ApplyOnPublish>
+      <ApplyOnReceive>false</ApplyOnReceive>
+      <PipelineConditions>
+        <Id>3e8bff2c-deb6-497f-b3e6-60753c635838</Id>
+        <Version>e89c10ff-b466-4a28-8700-1dcb8cb02d4d</Version>
+        <IsSystemObject>false</IsSystemObject>
+        <Condition />
+      </PipelineConditions>
+    </ClientPipelineItem>
+  </MessagePipelines>
+  <LogActivity>false</LogActivity>
+  <LogFile />
+  <LogSession>true</LogSession>
+</ESBSubscriber>

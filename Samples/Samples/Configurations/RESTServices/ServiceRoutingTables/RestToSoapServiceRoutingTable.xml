@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<ServiceRoutingTable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>7c62b149-65a9-4a43-9acc-61e364df7a81</Id>
+  <Version>cab36a33-3a31-4a9c-8d7e-3c5537b2d4fe</Version>
+  <BusinessFlows />
+  <Description />
+  <Name>RestToSoapServiceRoutingTable</Name>
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <ServiceRoutingItems>
+    <ServiceRoutingItem>
+      <IsTestEnabled>false</IsTestEnabled>
+      <EndpointName>SOAPServiceRouteServiceConnector</EndpointName>
+      <SoapAction>http://Neuron.Samples/ICustomerService/AddCustomer</SoapAction>
+      <Request>
+        <Method />
+        <URI>/</URI>
+        <Body />
+        <BodyType>Raw</BodyType>
+        <DeleteMessageBody>false</DeleteMessageBody>
+        <DeleteResponseBody>false</DeleteResponseBody>
+        <Parameters />
+        <Headers />
+        <BodyProperties />
+        <TestBody />
+        <TestEnabled>FALSE</TestEnabled>
+        <TestFormat>TEXT</TestFormat>
+        <MaxPoolSize>1</MaxPoolSize>
+        <PoolTimeOut>1000</PoolTimeOut>
+        <AuditRequest>false</AuditRequest>
+        <AuditResponses>false</AuditResponses>
+        <AuditFailures>false</AuditFailures>
+      </Request>
+      <ServiceRoutingType>Service</ServiceRoutingType>
+      <RequestDataMap>AddCustomerRequestJsonToXml</RequestDataMap>
+      <ResponseDataMap>AddCustomerResponseXmlToJson</ResponseDataMap>
+      <RoutingConditions>
+        <Id>004e68b4-2148-42dc-80d5-0f6828b841d7</Id>
+        <Version>cd0ac624-a303-42ef-9723-e90759a16a2d</Version>
+        <BusinessFlows />
+        <Description />
+        <IsSystemObject>false</IsSystemObject>
+        <IsPrivate>false</IsPrivate>
+        <Condition>
+          <Conditions>
+            <ConditionElement>
+              <PrefixOperator>None</PrefixOperator>
+              <Expression1>Method</Expression1>
+              <NotOperator>false</NotOperator>
+              <RelationalOperator>TextEquals</RelationalOperator>
+              <Expression2>POST</Expression2>
+              <SuffixOperator>None</SuffixOperator>
+              <LogicalOperator>End</LogicalOperator>
+            </ConditionElement>
+          </Conditions>
+        </Condition>
+      </RoutingConditions>
+    </ServiceRoutingItem>
+    <ServiceRoutingItem>
+      <IsTestEnabled>false</IsTestEnabled>
+      <EndpointName>SOAPServiceRouteServiceConnector</EndpointName>
+      <SoapAction>http://Neuron.Samples/ICustomerService/GetCustomerByID</SoapAction>
+      <Request>
+        <Method />
+        <URI>/</URI>
+        <Body>&lt;GetCustomerByID xmlns='http://Neuron.Samples'&gt;
+	&lt;id&gt;{#HTTPLocalPath[0]}&lt;/id&gt;
+&lt;/GetCustomerByID&gt;</Body>
+        <BodyType>Raw</BodyType>
+        <DeleteMessageBody>false</DeleteMessageBody>
+        <DeleteResponseBody>false</DeleteResponseBody>
+        <Parameters />
+        <Headers />
+        <BodyProperties />
+        <TestBody />
+        <TestEnabled>FALSE</TestEnabled>
+        <TestFormat>TEXT</TestFormat>
+        <MaxPoolSize>1</MaxPoolSize>
+        <PoolTimeOut>1000</PoolTimeOut>
+        <AuditRequest>false</AuditRequest>
+        <AuditResponses>false</AuditResponses>
+        <AuditFailures>false</AuditFailures>
+      </Request>
+      <ServiceRoutingType>Service</ServiceRoutingType>
+      <RequestDataMap />
+      <ResponseDataMap>GetCustomerByIdResponseXmlToJson</ResponseDataMap>
+      <RoutingConditions>
+        <Id>004e68b4-2148-42dc-80d5-0f6828b841d7</Id>
+        <Version>cd0ac624-a303-42ef-9723-e90759a16a2d</Version>
+        <BusinessFlows />
+        <Description />
+        <IsSystemObject>false</IsSystemObject>
+        <IsPrivate>false</IsPrivate>
+        <Condition>
+          <Conditions>
+            <ConditionElement>
+              <PrefixOperator>None</PrefixOperator>
+              <Expression1>Method</Expression1>
+              <NotOperator>false</NotOperator>
+              <RelationalOperator>TextEquals</RelationalOperator>
+              <Expression2>GET</Expression2>
+              <SuffixOperator>None</SuffixOperator>
+              <LogicalOperator>And</LogicalOperator>
+            </ConditionElement>
+            <ConditionElement>
+              <PrefixOperator>None</PrefixOperator>
+              <Expression1>LocalPath</Expression1>
+              <NotOperator>false</NotOperator>
+              <RelationalOperator>MatchesRegex</RelationalOperator>
+              <Expression2>(.*[^/])$</Expression2>
+              <SuffixOperator>None</SuffixOperator>
+              <LogicalOperator>End</LogicalOperator>
+            </ConditionElement>
+          </Conditions>
+        </Condition>
+      </RoutingConditions>
+    </ServiceRoutingItem>
+    <ServiceRoutingItem>
+      <IsTestEnabled>false</IsTestEnabled>
+      <EndpointName>SOAPServiceRouteServiceConnector</EndpointName>
+      <SoapAction>http://Neuron.Samples/ICustomerService/GetCustomerByName</SoapAction>
+      <Request>
+        <Method />
+        <URI>/</URI>
+        <Body>&lt;GetCustomerByName xmlns='http://Neuron.Samples'&gt;
+	&lt;name&gt;{#HTTPQuery.Name}&lt;/name&gt;
+&lt;/GetCustomerByName&gt;</Body>
+        <BodyType>Raw</BodyType>
+        <DeleteMessageBody>false</DeleteMessageBody>
+        <DeleteResponseBody>false</DeleteResponseBody>
+        <Parameters />
+        <Headers />
+        <BodyProperties />
+        <TestBody />
+        <TestEnabled>FALSE</TestEnabled>
+        <TestFormat>TEXT</TestFormat>
+        <MaxPoolSize>1</MaxPoolSize>
+        <PoolTimeOut>1000</PoolTimeOut>
+        <AuditRequest>false</AuditRequest>
+        <AuditResponses>false</AuditResponses>
+        <AuditFailures>false</AuditFailures>
+      </Request>
+      <ServiceRoutingType>Service</ServiceRoutingType>
+      <RequestDataMap />
+      <ResponseDataMap>GetCustomerByNameResponseXmlToJson</ResponseDataMap>
+      <RoutingConditions>
+        <Id>004e68b4-2148-42dc-80d5-0f6828b841d7</Id>
+        <Version>cd0ac624-a303-42ef-9723-e90759a16a2d</Version>
+        <BusinessFlows />
+        <Description />
+        <IsSystemObject>false</IsSystemObject>
+        <IsPrivate>false</IsPrivate>
+        <Condition>
+          <Conditions>
+            <ConditionElement>
+              <PrefixOperator>None</PrefixOperator>
+              <Expression1>Method</Expression1>
+              <NotOperator>false</NotOperator>
+              <RelationalOperator>TextEquals</RelationalOperator>
+              <Expression2>GET</Expression2>
+              <SuffixOperator>None</SuffixOperator>
+              <LogicalOperator>And</LogicalOperator>
+            </ConditionElement>
+            <ConditionElement>
+              <PrefixOperator>None</PrefixOperator>
+              <Expression1>HTTPQuery:Name</Expression1>
+              <NotOperator>true</NotOperator>
+              <RelationalOperator>Empty</RelationalOperator>
+              <Expression2 />
+              <SuffixOperator>None</SuffixOperator>
+              <LogicalOperator>End</LogicalOperator>
+            </ConditionElement>
+          </Conditions>
+        </Condition>
+      </RoutingConditions>
+    </ServiceRoutingItem>
+    <ServiceRoutingItem>
+      <IsTestEnabled>false</IsTestEnabled>
+      <EndpointName>SOAPServiceRouteServiceConnector</EndpointName>
+      <SoapAction>http://Neuron.Samples/ICustomerService/GetAllCustomers</SoapAction>
+      <Request>
+        <Method />
+        <URI>/</URI>
+        <Body>&lt;GetAllCustomers xmlns="http://Neuron.Samples" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/&gt;</Body>
+        <BodyType>Raw</BodyType>
+        <DeleteMessageBody>false</DeleteMessageBody>
+        <DeleteResponseBody>false</DeleteResponseBody>
+        <Parameters />
+        <Headers>
+          <HeaderDataElement>
+            <Key>Content-Type</Key>
+            <Value>application/xml</Value>
+          </HeaderDataElement>
+        </Headers>
+        <BodyProperties />
+        <TestBody />
+        <TestEnabled>FALSE</TestEnabled>
+        <TestFormat>TEXT</TestFormat>
+        <MaxPoolSize>1</MaxPoolSize>
+        <PoolTimeOut>1000</PoolTimeOut>
+        <AuditRequest>false</AuditRequest>
+        <AuditResponses>false</AuditResponses>
+        <AuditFailures>false</AuditFailures>
+      </Request>
+      <ServiceRoutingType>Service</ServiceRoutingType>
+      <RequestDataMap />
+      <ResponseDataMap>GetAllCustomersResponseXmlToJson</ResponseDataMap>
+      <RoutingConditions>
+        <Id>004e68b4-2148-42dc-80d5-0f6828b841d7</Id>
+        <Version>cd0ac624-a303-42ef-9723-e90759a16a2d</Version>
+        <BusinessFlows />
+        <Description />
+        <IsSystemObject>false</IsSystemObject>
+        <IsPrivate>false</IsPrivate>
+        <Condition>
+          <Conditions>
+            <ConditionElement>
+              <PrefixOperator>None</PrefixOperator>
+              <Expression1>Method</Expression1>
+              <NotOperator>false</NotOperator>
+              <RelationalOperator>TextEquals</RelationalOperator>
+              <Expression2>GET</Expression2>
+              <SuffixOperator>None</SuffixOperator>
+              <LogicalOperator>End</LogicalOperator>
+            </ConditionElement>
+          </Conditions>
+        </Condition>
+      </RoutingConditions>
+    </ServiceRoutingItem>
+  </ServiceRoutingItems>
+  <Zone>Enterprise</Zone>
+</ServiceRoutingTable>

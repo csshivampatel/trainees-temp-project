@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<ESBMessagePipelineStorage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>4790541e-6218-4b79-af25-821cbd335bf0</Id>
+  <Version>9c5d8da7-7ec1-4484-ae84-3f78ffd6556c</Version>
+  <Name>Exception Handling</Name>
+  <Description />
+  <IsSystemObject>false</IsSystemObject>
+  <IsEncrypted>true</IsEncrypted>
+  <PipelineBlob>&lt;ESBMessagePipeline xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.neuronesb.com/pipelines/"&gt;&lt;Category i:nil="true" /&gt;&lt;Description i:nil="true" /&gt;&lt;GlobalProperties xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;Name&gt;Exception Handling&lt;/Name&gt;&lt;Properties xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;ReferencedAssemblies xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" /&gt;&lt;Steps&gt;&lt;ESBMessagePipelineStep xmlns:d3p1="http://schemas.neuronesb.com/pipelines/esb/" i:type="d3p1:EsbMessageCSharpCodePipelineStep"&gt;&lt;Bindings xmlns:d4p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Name&gt;Your custom logic&lt;/Name&gt;&lt;Uniquename /&gt;&lt;BreakPointLines xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;Code&gt;// When using the Audit Process Step, Neuron ESB will add all important information to the exception,
+// including the process name, process step and any inner exceptions that
+// are included with the original exception.
+
+// You can use the common exception handler to add your own logic to
+// handle exceptions, such as send notifications or log to a custom logging system
+
+// An example of how to capture and edit the existing process exception that will be thrown is included
+// in the commented section below:
+
+//PipelineException parentEx = (PipelineException)context.Properties["PipelineException"];
+//
+//string newExceptionMessag = String.Format(System.Globalization.CultureInfo.InvariantCulture,
+//            "\r\n\r\nPipeline Error Message: {0} \r\n\r\nSource Pipeline: {1}\r\nSource Pipeline Step: {2}\r\nSource Error Message: {3}\r\n\r\n",
+//                                    parentEx.Message,
+//                                          parentEx.Pipeline, 
+//                                          parentEx.PipelineStep, 
+//                                          (parentEx.InnerException != null ? parentEx.InnerException.Message : ""));
+//
+//context.Properties["CurrentException"] = new System.Exception(newExceptionMessag);&lt;/Code&gt;&lt;ReferencedAssemblies xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"&gt;&lt;d4p1:string&gt;Neuron&lt;/d4p1:string&gt;&lt;d4p1:string&gt;Neuron.Pipelines&lt;/d4p1:string&gt;&lt;d4p1:string&gt;Neuron.Esb&lt;/d4p1:string&gt;&lt;d4p1:string&gt;System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;d4p1:string&gt;System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;d4p1:string&gt;System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;d4p1:string&gt;System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;d4p1:string&gt;System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;d4p1:string&gt;System.Data.DataSetExtensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;d4p1:string&gt;System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;d4p1:string&gt;System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;/ReferencedAssemblies&gt;&lt;TypeName&gt;Typeaf401a78a9948b590a7b8634dc0794&lt;/TypeName&gt;&lt;/ESBMessagePipelineStep&gt;&lt;ESBMessagePipelineStep i:type="RethrowPipelineStepOfESBMessagexAPWb1W4"&gt;&lt;Bindings xmlns:d4p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Name i:nil="true" /&gt;&lt;Uniquename i:nil="true" /&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Steps&gt;&lt;/ESBMessagePipeline&gt;</PipelineBlob>
+</ESBMessagePipelineStorage>

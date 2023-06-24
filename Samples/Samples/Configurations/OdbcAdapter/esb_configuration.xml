@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<ESBConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>49</Version>
+  <EnvironmentName>OdbcAdapter</EnvironmentName>
+  <NeuronBuildVersion>3.7.5.413</NeuronBuildVersion>
+  <ApplicationName>OdbcAdapter</ApplicationName>
+  <ApplicationId>ddc6ea94-ee62-4289-bb9b-b723b2e186dc</ApplicationId>
+  <ZoneName>Enterprise</ZoneName>
+  <ChangeList>
+    <Additions />
+    <Revisions>
+      <string>Edit,Enterprise,adapter endpoint,ODBCOrderQueries</string>
+      <string>Edit,Enterprise,adapter endpoint,ODBCOrderInserts</string>
+    </Revisions>
+    <Deletions>
+      <string>Delete,Enterprise,subscriber,OrderQueries</string>
+      <string>Delete,Enterprise,subscriber,OrderProcessor</string>
+    </Deletions>
+    <LastModifiedBy />
+    <LastModifiedDate>2021-10-05T18:58:58.3355646Z</LastModifiedDate>
+    <Comments />
+  </ChangeList>
+  <NeuronEnvironmentVariables />
+  <ProcessFolders />
+  <DataMapperPort>8585</DataMapperPort>
+  <InstanceName />
+  <Zones />
+  <Topics />
+  <Subscribers />
+  <Services />
+  <WorkflowDefinitions />
+  <WorkflowHosts />
+  <AvailabilityGroups />
+  <OAuthProviders />
+  <ESBMessagePipelines />
+  <Schemas>
+    <item>
+      <key>
+        <string>InsertOrder</string>
+      </key>
+      <value>
+        <ESBSchema>
+          <Id>571f3917-e4ca-47bb-a1d8-63048db9e7a2</Id>
+          <Version>17c5085a-b5ac-4103-8d58-a7d268dccd4c</Version>
+          <BusinessFlows />
+          <Description />
+          <Name>InsertOrder</Name>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <ValidateWithService>false</ValidateWithService>
+          <Storing>false</Storing>
+          <ShortName>InsertOrder</ShortName>
+          <FullName>ODBCInsertOrder</FullName>
+          <Xsd />
+          <ServiceAddress />
+          <SchemaVersion />
+          <SourceUri />
+          <TargetNamespace />
+        </ESBSchema>
+      </value>
+    </item>
+  </Schemas>
+  <JsonSchemas />
+  <XmlDocs>
+    <item>
+      <key>
+        <string>GetOrderTestMessage</string>
+      </key>
+      <value>
+        <ESBXmlDoc>
+          <Id>18de79b0-38b0-4e7e-aaea-4a0736237bdc</Id>
+          <Version>d81344f4-c8b9-4bac-9b0e-1dece80210bd</Version>
+          <BusinessFlows />
+          <Description />
+          <Name>GetOrderTestMessage</Name>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <Storing>false</Storing>
+          <XmlVersion />
+          <SourceUri />
+          <Xml />
+        </ESBXmlDoc>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>OrdersTestMessage</string>
+      </key>
+      <value>
+        <ESBXmlDoc>
+          <Id>8e988ac9-05c6-468a-acab-db241e5e590b</Id>
+          <Version>f4e8ba3d-7255-4552-8242-37797d40f580</Version>
+          <BusinessFlows />
+          <Description />
+          <Name>OrdersTestMessage</Name>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <Storing>false</Storing>
+          <XmlVersion />
+          <SourceUri />
+          <Xml />
+        </ESBXmlDoc>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>OdbcStoredProcTemplate</string>
+      </key>
+      <value>
+        <ESBXmlDoc>
+          <Id>b06f4dab-898f-46ad-b690-ea804d5d3309</Id>
+          <Version>69c65aa8-79e0-4719-b368-6e2450221da6</Version>
+          <BusinessFlows />
+          <Description />
+          <Name>OdbcStoredProcTemplate</Name>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <Storing>false</Storing>
+          <XmlVersion />
+          <SourceUri />
+          <Xml />
+        </ESBXmlDoc>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>OdbcSqlTemplate</string>
+      </key>
+      <value>
+        <ESBXmlDoc>
+          <Id>98ad0be9-f458-414e-a2e1-505dcaec112c</Id>
+          <Version>a0572e26-fcfe-4980-a1fa-187d453a6849</Version>
+          <BusinessFlows />
+          <Description />
+          <Name>OdbcSqlTemplate</Name>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <Storing>false</Storing>
+          <XmlVersion />
+          <SourceUri />
+          <Xml />
+        </ESBXmlDoc>
+      </value>
+    </item>
+  </XmlDocs>
+  <TextDocs />
+  <JsonDocs />
+  <SwaggerDocs />
+  <WsdlDocuments />
+  <Xslts>
+    <item>
+      <key>
+        <string>OrderToOdbcInsert</string>
+      </key>
+      <value>
+        <ESBXslt>
+          <Id>ca823251-07ac-49b9-a1c3-98ad63cc3e46</Id>
+          <Version>77773ee7-5044-4081-8377-5561aae41fa7</Version>
+          <BusinessFlows />
+          <Description />
+          <Name>OrderToOdbcInsert</Name>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <Storing>false</Storing>
+          <Xslt />
+          <TestInput />
+          <TestOutput />
+        </ESBXslt>
+      </value>
+    </item>
+  </Xslts>
+  <DataMappers />
+  <BusinessEvents />
+  <Deployments />
+  <MessagePatterns />
+  <Bridges />
+  <Databases />
+  <Keys />
+  <Workflows />
+  <Applications />
+  <BusinessFlows />
+  <Bindings />
+  <ServiceRoutingTables />
+  <Behaviors />
+  <Adapters />
+  <Credentials />
+  <ServicePolicies />
+  <AdapterPolicies />
+  <Endpoints />
+  <AccessControlLists />
+  <Administrators />
+  <IsEncrypted>false</IsEncrypted>
+</ESBConfiguration>

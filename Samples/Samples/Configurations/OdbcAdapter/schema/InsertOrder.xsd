@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Statement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Parameters">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Parameter">
+                <xs:complexType>
+                  <xs:attribute default="int" name="type" type="xs:string" use="optional" />
+                  <xs:attribute default="@OrderID" name="name" type="xs:string" use="optional" />
+                  <xs:attribute name="value" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Parameter">
+                <xs:complexType>
+                  <xs:attribute default="datetime" name="type" type="xs:string" use="optional" />
+                  <xs:attribute default="@OrderDate" name="name" type="xs:string" use="optional" />
+                  <xs:attribute name="value" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+			  <xs:element name="Parameter">
+                <xs:complexType>
+                  <xs:attribute default="money" name="type" type="xs:string" use="optional" />
+                  <xs:attribute default="@OrderAmount" name="name" type="xs:string" use="optional" />
+                  <xs:attribute name="value" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="type" type="xs:string" use="required" />
+      <xs:attribute name="sql" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

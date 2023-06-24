@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<ServiceRoutingTable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>eb47f1a7-a130-4f21-b5b5-f44d38d63682</Id>
+  <Version>032b1c0e-4ce1-41f3-9579-acffee2dc5c6</Version>
+  <BusinessFlows />
+  <Description />
+  <Name>SoapToRestServiceRoutingTable</Name>
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <ServiceRoutingItems>
+    <ServiceRoutingItem>
+      <IsTestEnabled>false</IsTestEnabled>
+      <EndpointName>RESTServiceRouteServiceConnector</EndpointName>
+      <Request>
+        <Method>POST</Method>
+        <URI>/</URI>
+        <Body />
+        <BodyType>Raw</BodyType>
+        <DeleteMessageBody>false</DeleteMessageBody>
+        <DeleteResponseBody>false</DeleteResponseBody>
+        <Parameters />
+        <Headers />
+        <BodyProperties />
+        <TestBody />
+        <TestEnabled>FALSE</TestEnabled>
+        <TestFormat>TEXT</TestFormat>
+        <MaxPoolSize>1</MaxPoolSize>
+        <PoolTimeOut>1000</PoolTimeOut>
+        <AuditRequest>false</AuditRequest>
+        <AuditResponses>false</AuditResponses>
+        <AuditFailures>false</AuditFailures>
+      </Request>
+      <ServiceRoutingType>Service</ServiceRoutingType>
+      <RequestDataMap>AddCustomerRequestXmlToJson</RequestDataMap>
+      <ResponseDataMap>AddCustomerResponseJsonToXml</ResponseDataMap>
+      <RoutingConditions>
+        <Id>03ef75c8-fc90-428c-a232-b0000323ad61</Id>
+        <Version>359d9496-21d6-4e67-8440-16d41d1d7c91</Version>
+        <BusinessFlows />
+        <Description />
+        <IsSystemObject>false</IsSystemObject>
+        <IsPrivate>false</IsPrivate>
+        <Condition>
+          <Conditions>
+            <ConditionElement>
+              <PrefixOperator>None</PrefixOperator>
+              <Expression1>Action</Expression1>
+              <NotOperator>false</NotOperator>
+              <RelationalOperator>TextEquals</RelationalOperator>
+              <Expression2>http://Neuron.Samples/ICustomerService/AddCustomer</Expression2>
+              <SuffixOperator>None</SuffixOperator>
+              <LogicalOperator>End</LogicalOperator>
+            </ConditionElement>
+          </Conditions>
+        </Condition>
+      </RoutingConditions>
+    </ServiceRoutingItem>
+    <ServiceRoutingItem>
+      <IsTestEnabled>false</IsTestEnabled>
+      <EndpointName>RESTServiceRouteServiceConnector</EndpointName>
+      <Request>
+        <Method>GET</Method>
+        <URI>/</URI>
+        <Body />
+        <BodyType>Raw</BodyType>
+        <DeleteMessageBody>true</DeleteMessageBody>
+        <DeleteResponseBody>false</DeleteResponseBody>
+        <Parameters />
+        <Headers />
+        <BodyProperties />
+        <TestBody />
+        <TestEnabled>FALSE</TestEnabled>
+        <TestFormat>TEXT</TestFormat>
+        <MaxPoolSize>1</MaxPoolSize>
+        <PoolTimeOut>1000</PoolTimeOut>
+        <AuditRequest>false</AuditRequest>
+        <AuditResponses>false</AuditResponses>
+        <AuditFailures>false</AuditFailures>
+      </Request>
+      <ServiceRoutingType>Service</ServiceRoutingType>
+      <RequestDataMap />
+      <ResponseDataMap>GetAllCustomersResponseJsonToXml</ResponseDataMap>
+      <RoutingConditions>
+        <Id>03ef75c8-fc90-428c-a232-b0000323ad61</Id>
+        <Version>359d9496-21d6-4e67-8440-16d41d1d7c91</Version>
+        <BusinessFlows />
+        <Description />
+        <IsSystemObject>false</IsSystemObject>
+        <IsPrivate>false</IsPrivate>
+        <Condition>
+          <Conditions>
+            <ConditionElement>
+              <PrefixOperator>None</PrefixOperator>
+              <Expression1>Action</Expression1>
+              <NotOperator>false</NotOperator>
+              <RelationalOperator>TextEquals</RelationalOperator>
+              <Expression2>http://Neuron.Samples/ICustomerService/GetAllCustomers</Expression2>
+              <SuffixOperator>None</SuffixOperator>
+              <LogicalOperator>End</LogicalOperator>
+            </ConditionElement>
+          </Conditions>
+        </Condition>
+      </RoutingConditions>
+    </ServiceRoutingItem>
+    <ServiceRoutingItem>
+      <IsTestEnabled>false</IsTestEnabled>
+      <EndpointName>RESTServiceRouteServiceConnector</EndpointName>
+      <Request>
+        <Method>GET</Method>
+        <URI>/{#BodyXPath("/*[local-name()='GetCustomerByID' and namespace-uri()='http://Neuron.Samples']/*[local-name()='id' and namespace-uri()='http://Neuron.Samples']")}</URI>
+        <Body />
+        <BodyType>Raw</BodyType>
+        <DeleteMessageBody>true</DeleteMessageBody>
+        <DeleteResponseBody>false</DeleteResponseBody>
+        <Parameters />
+        <Headers />
+        <BodyProperties />
+        <TestBody />
+        <TestEnabled>FALSE</TestEnabled>
+        <TestFormat>TEXT</TestFormat>
+        <MaxPoolSize>1</MaxPoolSize>
+        <PoolTimeOut>1000</PoolTimeOut>
+        <AuditRequest>false</AuditRequest>
+        <AuditResponses>false</AuditResponses>
+        <AuditFailures>false</AuditFailures>
+      </Request>
+      <ServiceRoutingType>Service</ServiceRoutingType>
+      <RequestDataMap />
+      <ResponseDataMap>GetCustomerByIdResponseJsonToXml</ResponseDataMap>
+      <RoutingConditions>
+        <Id>03ef75c8-fc90-428c-a232-b0000323ad61</Id>
+        <Version>359d9496-21d6-4e67-8440-16d41d1d7c91</Version>
+        <BusinessFlows />
+        <Description />
+        <IsSystemObject>false</IsSystemObject>
+        <IsPrivate>false</IsPrivate>
+        <Condition>
+          <Conditions>
+            <ConditionElement>
+              <PrefixOperator>None</PrefixOperator>
+              <Expression1>Action</Expression1>
+              <NotOperator>false</NotOperator>
+              <RelationalOperator>TextEquals</RelationalOperator>
+              <Expression2>http://Neuron.Samples/ICustomerService/GetCustomerByID</Expression2>
+              <SuffixOperator>None</SuffixOperator>
+              <LogicalOperator>End</LogicalOperator>
+            </ConditionElement>
+          </Conditions>
+        </Condition>
+      </RoutingConditions>
+    </ServiceRoutingItem>
+    <ServiceRoutingItem>
+      <IsTestEnabled>false</IsTestEnabled>
+      <EndpointName>RESTServiceRouteServiceConnector</EndpointName>
+      <Request>
+        <Method>GET</Method>
+        <URI>/</URI>
+        <Body />
+        <BodyType>Raw</BodyType>
+        <DeleteMessageBody>true</DeleteMessageBody>
+        <DeleteResponseBody>false</DeleteResponseBody>
+        <Parameters>
+          <ParameterDataElement>
+            <Key>Name</Key>
+            <Value>{#BodyXPath("/*[local-name()='GetCustomerByName' and namespace-uri()='http://Neuron.Samples']/*[local-name()='name' and namespace-uri()='http://Neuron.Samples']")}</Value>
+          </ParameterDataElement>
+        </Parameters>
+        <Headers>
+          <HeaderDataElement>
+            <Key>Name</Key>
+            <Value>{#BodyXPath("/*[local-name()='GetCustomerByName' and namespace-uri()='http://Neuron.Samples']/*[local-name()='name' and namespace-uri()='http://Neuron.Samples']")}</Value>
+          </HeaderDataElement>
+        </Headers>
+        <BodyProperties />
+        <TestBody />
+        <TestEnabled>FALSE</TestEnabled>
+        <TestFormat>TEXT</TestFormat>
+        <MaxPoolSize>1</MaxPoolSize>
+        <PoolTimeOut>1000</PoolTimeOut>
+        <AuditRequest>false</AuditRequest>
+        <AuditResponses>false</AuditResponses>
+        <AuditFailures>false</AuditFailures>
+      </Request>
+      <ServiceRoutingType>Service</ServiceRoutingType>
+      <RequestDataMap />
+      <ResponseDataMap>GetCustomerByNameResponseJsonToXml</ResponseDataMap>
+      <RoutingConditions>
+        <Id>03ef75c8-fc90-428c-a232-b0000323ad61</Id>
+        <Version>359d9496-21d6-4e67-8440-16d41d1d7c91</Version>
+        <BusinessFlows />
+        <Description />
+        <IsSystemObject>false</IsSystemObject>
+        <IsPrivate>false</IsPrivate>
+        <Condition>
+          <Conditions>
+            <ConditionElement>
+              <PrefixOperator>None</PrefixOperator>
+              <Expression1>Action</Expression1>
+              <NotOperator>false</NotOperator>
+              <RelationalOperator>TextEquals</RelationalOperator>
+              <Expression2>http://Neuron.Samples/ICustomerService/GetCustomerByName</Expression2>
+              <SuffixOperator>None</SuffixOperator>
+              <LogicalOperator>End</LogicalOperator>
+            </ConditionElement>
+          </Conditions>
+        </Condition>
+      </RoutingConditions>
+    </ServiceRoutingItem>
+  </ServiceRoutingItems>
+  <Zone>Enterprise</Zone>
+</ServiceRoutingTable>

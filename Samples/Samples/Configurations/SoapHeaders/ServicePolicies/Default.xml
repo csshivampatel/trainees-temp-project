@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<ESBServicePolicy xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>12b29681-013d-428a-b9e3-92d17325a7a1</Id>
+  <Version>fdd9c1c8-570f-4cc2-82ba-eb30a6e3a82e</Version>
+  <Name>Default</Name>
+  <Description>Default service policy</Description>
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <RequestReplyTimeout>60</RequestReplyTimeout>
+  <RetryCount>1</RetryCount>
+  <RetryInterval>1</RetryInterval>
+  <OnErrorAuditToDatabase>false</OnErrorAuditToDatabase>
+  <OnErrorAuditToFile>false</OnErrorAuditToFile>
+  <OnErrorRepublishMessage>false</OnErrorRepublishMessage>
+  <OnErrorRollback>false</OnErrorRollback>
+  <RepublishTopic />
+  <AlwaysAvailable>true</AlwaysAvailable>
+  <InlcudeAsExceptions>false</InlcudeAsExceptions>
+  <StartAndStopAdapterAccordingToAvailability>true</StartAndStopAdapterAccordingToAvailability>
+  <HttpStatusCodes />
+  <DoNotApplyPolicyIfFaultContract>false</DoNotApplyPolicyIfFaultContract>
+  <RollbackMessageExpirationSeconds>300</RollbackMessageExpirationSeconds>
+  <RollbackDelaySeconds>1</RollbackDelaySeconds>
+  <AuditDirectoryLocation />
+</ESBServicePolicy>

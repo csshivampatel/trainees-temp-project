@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<ESBConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>23</Version>
+  <EnvironmentName>Transports_NetMsmq</EnvironmentName>
+  <NeuronBuildVersion>3.7.5.443</NeuronBuildVersion>
+  <ApplicationName>Transports_NetMsmq</ApplicationName>
+  <ApplicationId>e840bfbf-13fd-4d97-8f61-d93e05dfb935</ApplicationId>
+  <ZoneName>Enterprise</ZoneName>
+  <ChangeList>
+    <Additions />
+    <Revisions />
+    <Deletions>
+      <string>Delete,*,credential,ClientCert</string>
+      <string>Delete,*,credential,FederatedEndpointCert</string>
+      <string>Delete,*,credential,FederatedIssuedTokenCert</string>
+      <string>Delete,*,credential,FederatedServerCert</string>
+      <string>Delete,*,credential,ServerCert</string>
+    </Deletions>
+    <LastModifiedBy />
+    <LastModifiedDate>2021-11-24T20:47:43.0099982Z</LastModifiedDate>
+    <Comments />
+  </ChangeList>
+  <NeuronEnvironmentVariables />
+  <ProcessFolders />
+  <DataMapperPort>8585</DataMapperPort>
+  <InstanceName />
+  <Zones />
+  <Topics />
+  <Subscribers />
+  <Services />
+  <WorkflowDefinitions />
+  <WorkflowHosts />
+  <AvailabilityGroups />
+  <OAuthProviders />
+  <ESBMessagePipelines />
+  <Schemas />
+  <JsonSchemas />
+  <XmlDocs />
+  <TextDocs />
+  <JsonDocs />
+  <SwaggerDocs />
+  <WsdlDocuments />
+  <Xslts />
+  <DataMappers />
+  <BusinessEvents />
+  <Deployments />
+  <MessagePatterns />
+  <Bridges />
+  <Databases />
+  <Keys />
+  <Workflows />
+  <Applications />
+  <BusinessFlows />
+  <Bindings />
+  <ServiceRoutingTables />
+  <Behaviors />
+  <Adapters />
+  <Credentials />
+  <ServicePolicies />
+  <AdapterPolicies />
+  <Endpoints />
+  <AccessControlLists />
+  <Administrators />
+  <IsEncrypted>false</IsEncrypted>
+</ESBConfiguration>

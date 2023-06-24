@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ESBAdapterPolicy xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>e792dc93-9c5e-456e-b678-d83b33a69f3a</Id>
+  <Version>889f4682-6619-4f56-8af9-5a7967004959</Version>
+  <BusinessFlows />
+  <Description>Default adapter policy</Description>
+  <Name>Default</Name>
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <RetryCount>1</RetryCount>
+  <RetryInterval>1</RetryInterval>
+  <OnErrorAuditToDatabase>false</OnErrorAuditToDatabase>
+  <OnErrorAuditToFile>true</OnErrorAuditToFile>
+  <OnErrorRepublishMessage>false</OnErrorRepublishMessage>
+  <OnErrorRollback>false</OnErrorRollback>
+  <RepublishTopic />
+  <AlwaysAvailable>true</AlwaysAvailable>
+  <StartAndStopAdapterAccordingToAvailability>true</StartAndStopAdapterAccordingToAvailability>
+  <RollbackMessageExpirationSeconds>300</RollbackMessageExpirationSeconds>
+  <RollbackDelaySeconds>60</RollbackDelaySeconds>
+</ESBAdapterPolicy>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<ESBSubscriber xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>171b7cee-a0e0-4354-a81e-796265fd004a</Id>
+  <Version>8c80b35e-8fa2-4274-996b-68acbf0dd08d</Version>
+  <Name>NorthStar.HR.V2</Name>
+  <Description />
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <AllowMultipleInstances>true</AllowMultipleInstances>
+  <UseUniqueWmiCounterName>true</UseUniqueWmiCounterName>
+  <SubscriberId>NorthStar.HR.V2</SubscriberId>
+  <ClientGroup>General</ClientGroup>
+  <Zone>Enterprise</Zone>
+  <Enabled>true</Enabled>
+  <Anonymous>true</Anonymous>
+  <Subscriptions>
+    <Subscription>
+      <TopicName>NorthStar.HR.V2</TopicName>
+      <CanRead>true</CanRead>
+      <CanWrite>false</CanWrite>
+      <SubscriptionType>Topic</SubscriptionType>
+    </Subscription>
+  </Subscriptions>
+  <MessagePipelines>
+    <ClientPipelineItem>
+      <Id>5cadb425-c1c5-48d9-83a3-5be6cb7625f6</Id>
+      <Version>908f0ff6-40af-4619-af7a-8587079cb9ec</Version>
+      <Name>InsertCustomSoapHeader</Name>
+      <IsSystemObject>false</IsSystemObject>
+      <ApplyOnPublish>false</ApplyOnPublish>
+      <ApplyOnReceive>true</ApplyOnReceive>
+      <PipelineConditions>
+        <Id>34d52fbb-f4da-430a-9f8d-7b442cdb7b89</Id>
+        <Version>2908f00c-ac5f-4a9e-9f85-082313c8b5a9</Version>
+        <IsSystemObject>false</IsSystemObject>
+        <Condition />
+      </PipelineConditions>
+    </ClientPipelineItem>
+  </MessagePipelines>
+  <LogActivity>false</LogActivity>
+  <LogFile />
+  <LogSession>true</LogSession>
+</ESBSubscriber>

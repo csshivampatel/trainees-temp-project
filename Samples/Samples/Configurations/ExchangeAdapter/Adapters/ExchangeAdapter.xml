@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<ESBAdapter xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>ff814473-c2d5-47fb-af7a-68bf908ac13b</Id>
+  <Version>5999955e-947f-456d-9d7b-9c24e5a65cde</Version>
+  <Name>ExchangeAdapter</Name>
+  <Description />
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <AdapterType>Net</AdapterType>
+  <Zone>Enterprise</Zone>
+  <BindingAssembly>Neuron.Esb.Adapters.MsExchangeAdapter.dll</BindingAssembly>
+  <BindingClass>Neuron.Esb.MsExchange.Adapters.ExchangeAdapter</BindingClass>
+  <AdapterName>Microsoft Exchange Adapter</AdapterName>
+</ESBAdapter>

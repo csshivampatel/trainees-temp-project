@@ -1,0 +1,63 @@
+﻿<xs:schema xmlns:tns="http://neuronesb.adapters.dynamicscrm2013" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://neuronesb.adapters.dynamicscrm2013" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Request Message: http://neuronesb.adapters.dynamicscrm2013/NeuronCrmAdapterMessage</xs:documentation>
+    <xs:documentation>Response Message: http://neuronesb.adapters.dynamicscrm2013/NeuronCrmAdapterMessageResponse</xs:documentation>
+  </xs:annotation>
+  <xs:element name="NeuronCrmAdapterMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CrmCommands">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Lookups">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="Lookup">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" name="searchfield">
+                            <xs:complexType>
+                              <xs:attribute name="name" type="xs:string" use="required" />
+                              <xs:attribute name="value" type="xs:string" use="optional" />
+                              <xs:attribute name="typename" type="xs:string" />
+                              <xs:attribute name="operator" type="xs:string" use="required" />
+                              <xs:attribute name="lookupid" type="xs:string" use="optional" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:string" use="required" />
+                        <xs:attribute name="entity" type="xs:string" use="required" />
+                        <xs:attribute name="lookupfield" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="SetCrmState">
+                <xs:complexType>
+                  <xs:attribute name="entity" type="xs:string" use="required" />
+                  <xs:attribute name="lookupid" type="xs:string" use="optional" />
+                  <xs:attribute name="statuscode" type="xs:integer" use="required" />
+                  <xs:attribute name="statecode" type="xs:string" use="required" />
+                  <xs:attribute name="value" type="xs:string" use="optional" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Transactional" type="xs:boolean" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NeuronCrmAdapterMessageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="SetCrmStateResult">
+          <xs:complexType>
+            <xs:attribute name="success" type="xs:boolean" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

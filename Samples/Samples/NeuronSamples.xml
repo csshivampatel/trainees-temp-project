@@ -1,0 +1,766 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NeuronSamples>
+
+  <!-- Adapters -->
+
+  <Sample tree     = "Adapters"
+          name     = "Exchange and POP3 Adapters"
+          desc     = "This sample demonstrates using the Exchange and POP3 Adapters to retrieve emails from a mail server and publish them to the ESB."
+          config   = "ExchangeAdapter"
+          folder   = ""
+          solution = ""
+          help     = "https://www.peregrineconnect.com/documentation-kb/receiving-email-with-the-exchange-and-pop3-adapters/"
+          setup    = "0"
+          clients  = "0"
+         />
+
+  <Sample tree     = "Adapters"
+        name       = "Dynamics CRM XRM Adapter"
+        desc       = "This sample demonstrates using the Dynamics CRM XRM Adapter to perform operations on CRM entities, such as create, delete, change the state of an entity and perform a Fetch XML query."
+        config     = "DynamicsCrm2013SubscriptionAdapter"
+        folder     = ""
+        solution   = ""
+        help       = "https://www.peregrineconnect.com/documentation-kb/integrating-with-microsoft-crm/"
+        setup      = "0"
+        clients    = "1"
+         />
+
+  <Sample tree     = "Adapters"
+          name     = "FTP Adapter"
+          desc     = "This sample demonstrates using the FTP Adapter to upload or download files via FTP."
+          config   = "FtpAdapter"
+          folder   = ""
+          solution = ""
+          help     = "https://www.peregrineconnect.com/documentation-kb/exchanging-files-with-the-ftp-adapter/"
+          setup    = "0"
+          clients  = "0"
+         />
+  <Sample tree     = "Adapters"
+          name     = "ODBC Adapter"
+          desc     = "There are two ways to integrate with databases in Neuron ESB.  The first way is to use the ODBC adapter included with Neuron ESB.  This supports polling, inserting,updating and querying any database using an ODBC Driver/DSN.  The second way to integrate with databases is to use any of the database process steps – ODBC, Store, Table Query and XML Query.  The later three steps are restricted to only Microsoft SQL Server.  The ODBC adapter can be used to integrate with any ODBC datasource.  This sample demonstrates how to integrate with Microsoft SQL Server using the ODBC adapter."
+          config   = "OdbcAdapter"
+          folder   = ""
+          solution = ""
+          help     = "https://www.peregrineconnect.com/documentation-kb/odbc-adapter/"
+          setup    = "0"
+          clients  = "0"
+            />
+  <Sample tree     = "Adapters"
+          name     = "Smtp Adapter"
+          desc     = "This sample demonstrates using the Smtp Adapter to subscribe to emails and send them via SMTP.  The sample also demonstrates how to dynamically set certain adapter properties using the message body."
+          config   = "SmtpAdapter"
+          folder   = ""
+          solution = ""
+          help     = "https://www.peregrineconnect.com/documentation-kb/sending-email-with-the-smtp-adapter/"
+          setup    = "0"
+          clients  = "0"
+         />
+
+  <Sample tree     = "Adapters/Custom Adapters"
+          name     = "Neuron ESB Adapter Framework"
+          desc     = "This sample is a Visual Studio Solution that contains the Neuron ESB Adapter Framework. The Neuron ESB Adapter Framework contains all the base functions and libraries that enable custom Neuron ESB Adapter development. Developers using this framework can create rich Neuron ESB Adapters that support the message exchange patterns exposed by many of the native Neuron ESB Adapters, such as Publish, Subscribe, Request/Response and Solicit/Response mode adapters. A rich set of custom properties and meta data can be included for design time configuration within the Neuron ESB Explorer when configuring an Adapter Endpoint."
+          config   = ""
+          folder   = "CustomAdapters\AdapterFramework"
+          solution = "Esb-Name-Adapter.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/adapter-framework/"
+          setup    = "0"
+          clients  = "0"
+           />
+
+  <Sample tree     = "Adapters/Custom Adapters"
+          name     = "Log Adapter"
+          desc     = "This sample adapter subscribes to messages and writes their body content to the Neuron Log files."
+          config   = ""
+          folder   = "CustomAdapters\LogAdapter"
+          solution = "EsbLogAdapter.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/log-adapter/"
+          setup    = "0"
+          clients  = "0"
+           />
+  
+  <!-- Client API/Subscriptions -->
+
+  <Sample tree     = "Client API/Subscriptions"
+          name     = "Filter By Object"
+          desc     = "The Filter samples demonstrate message routing through Subscriber topic subscriptions and conditions.  When routing by topics, messages are routed to parties that subscribe to a particular topic or subtopic.  Sometimes a particular party may want to only receive messages based on some type of condition, such as a value based on an XPATH lookup.  In the Filter by Object sample, the subscribing parties filter the messages they subscribe to by adding a condition on the topic subscription where the body matches a specific object type."
+          config   = "FilterByObject"
+          folder   = "ClientAPI\Subscriptions\FilterByObject"
+          solution = "FilterByObject.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/subscriptions/"
+          setup    = "0"
+          clients  = "0"
+          />
+		  
+  <Sample tree     = "Client API/Subscriptions"
+          name     = "Filter By Subtopic"
+          desc     = "The Filter samples demonstrate message routing through Subscriber topic subscriptions and conditions.  When routing by topics, messages are routed to parties that subscribe to a particular topic or subtopic.  Sometimes a particular party may want to only receive messages based on some type of condition, such as a value based on an XPATH lookup.  In the Filter by Subtopic sample, the subscribing parties filter the messages they subscribe to by subscribing to a specific subtopic."
+          config   = "FilterBySubtopic"
+          folder   = "ClientAPI\Subscriptions\FilterBySubtopic"
+          solution = "FilterBySubtopic.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/subscriptions/"
+          setup    = "0"
+          clients  = "0"
+          />
+		  
+  <Sample tree     = "Client API/Subscriptions"
+          name     = "Filter By XPath"
+          desc     = "The Filter samples demonstrate message routing through Subscriber topic subscriptions and conditions.  When routing by topics, messages are routed to parties that subscribe to a particular topic or subtopic.  In the Filter by XPATH sample, the subscribing parties filter the messages they subscribe to by adding a condition on the topic subscription where the body matches an XPATH value."
+          config   = "FilterByXPath"
+          folder   = "ClientAPI\Subscriptions\FilterByXPath"
+          solution = "FilterByXPath.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/subscriptions/"
+          setup    = "0"
+          clients  = "0"
+          />
+
+  <!-- OAuth Providers -->
+
+  <Sample tree     = "OAuth Providers"
+          name     = "Azure Active Directory Authorization Code Grant Type Provider"
+          desc     = "This sample is a Visual Studio Solution that contains an OAuth provider that implements the Authorization Code grant type for Azure Active Directory. This custom OAuth provider demonstrates how to implement a provider that has additional requirements beyond the basic OAuth 2.0 standard."
+          config   = ""
+          folder   = "CustomOAuthProviders\AzureAuthCodeGrantOAuthProvider"
+          solution = "AzureAuthCodeGrantOAuthProvider.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/azure-code-grant-oauth-provider-sample/"
+          setup    = "0"
+          clients  = "0"
+          />
+
+  <Sample tree     = "OAuth Providers"
+          name     = "Azure Active Directory Client Credentials Grant Type Provider"
+          desc     = "This sample is a Visual Studio Solution that contains an OAuth provider that implements the Client Credentials grant type for Azure Active Directory. This custom OAuth provider demonstrates how to implement a provider that has additional requirements beyond the basic OAuth 2.0 standard."
+          config   = ""
+          folder   = "CustomOAuthProviders\AzureClientCredentialsGrantOAuthProvider"
+          solution = "AzureClientCredentialsGrantOAuthProvider.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/azure-client-credentials-grant-oauth-provider-sample/"
+          setup    = "0"
+          clients  = "0"
+          />
+  
+  <Sample tree     = "OAuth Providers"
+          name     = "Generic Authorization Code Grant Type Provider"
+          desc     = "This sample is a Visual Studio Solution that contains a generic OAuth provider that implements the Authorization Code grant type. This solution can be used as the basis for any custom OAuth provider that implements the Authorization Code grant type."
+          config   = ""
+          folder   = "CustomOAuthProviders\GenericAuthCodeGrantOAuthProvider"
+          solution = "GenericAuthCodeGrantOAuthProvider.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/generic-code-grant-oauth-provider-sample/"
+          setup    = "0"
+          clients  = "0"
+          />
+
+  <Sample tree     = "OAuth Providers"
+          name     = "Generic Client Credentials Grant Type Provider"
+          desc     = "This sample is a Visual Studio Solution that contains a generic OAuth provider that implements the Client Credentials grant type. This solution can be used as the basis for any custom OAuth provider that implements the Client Credentials grant type."
+          config   = ""
+          folder   = "CustomOAuthProviders\GenericClientCredentialsGrantOAuthProvider"
+          solution = "GenericClientCredentialsGrantOAuthProvider.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/generic-client-credentials-grant-oauth-provider-sample/"
+          setup    = "0"
+          clients  = "0"
+          />
+
+  <Sample tree     = "OAuth Providers"
+          name     = "Generic Password Credentials Grant Type Provider"
+          desc     = "This sample is a Visual Studio Solution that contains a generic OAuth provider that implements the Password Credentials grant type. This solution can be used as the basis for any custom OAuth provider that implements the Password Credentials grant type."
+          config   = ""
+          folder   = "CustomOAuthProviders\GenericPasswordCredentialsGrantOAuthProvider"
+          solution = "GenericPasswordCredentialsGrantOAuthProvider.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/generic-password-credentials-grant-oauth-provider-sample/"
+          setup    = "0"
+          clients  = "0"
+          />
+
+  <!-- Patterns/DirectMessaging -->
+
+  <Sample tree     = "Patterns"
+          name     = "Direct Messaging"
+          desc     = "The Direct Messaging Object sample demonstrates point-to-point messaging with an object payload.  In direct messaging, the sender specifies the party Id of the recipient so that only that recipient receives the message. "
+          config   = "DirectMessagingObject"
+          folder   = "Patterns\DirectMessaging\DirectMessagingObject"
+          solution = "DirectMessagingObject.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/direct-messaging/"
+          setup    = "0"
+          clients  = "0"
+          />
+
+  <!-- Patterns/Itinerary -->
+
+  <Sample tree     = "Patterns"
+          name     = "Itinerary"
+          desc     = "The Itinerary Object sample demonstrates itinerary routing with an object payload.  In itinerary routing, the sender specifies a routing slip of destinations. Each recipient of a message routes the message on to the next destination on the itinerary. Each destination on the itinerary is either a topic or a subscriber (notated as partyId@topic)."
+          config   = "ItineraryObject"
+          folder   = "Patterns\Itinerary\ItineraryObject"
+          solution = "ItineraryObject.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/itinerary/"
+          setup    = "0"
+          clients  = "0"
+          />
+
+  <!-- Patterns/RequestReply -->
+
+  <Sample tree     = "Patterns"
+          name     = "Request Reply"
+          desc     = "The Request-Reply Object sample demonstrates request-reply messaging with an object payload.  In request-reply,  a request message from a sender can be replied to by any matching subscriber. The sender blocks waiting for a response after sending the request."
+          config   = "RequestReplyObject"
+          folder   = "Patterns\RequestReply\RequestReplyObject"
+          solution = "RequestReplyObject.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/request-reply/"
+          setup    = "0"
+          clients  = "0"
+          />
+
+  <!-- Patterns/PubSub -->
+
+  <Sample tree     = "Patterns"
+          name     = "Pub/Sub"
+          desc     = "The Pub-Sub Object sample demonstrates publish-subscribe messaging with an object payload  In publish-subscribe, messages from a sender can be received by any number of parties who have a matching subscriptions."
+          config   = "PubSubObject"
+          folder   = "Patterns\PubSub\PubSubObject"
+          solution = "PubSubObject.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/publish-subscribe/"
+          setup    = "0"
+          clients  = "0"
+          />
+
+  <!-- Patterns/Scatter Gather -->
+
+  <Sample tree   = "Patterns"
+        name     = "Scatter Gather"
+        desc     = "This sample demonstrates using Neuron to resolve a common scatter-gather application integration problem.  The Scatter Gather pattern is manifested when a requester sends an asynchronous request to a number of providers, which send their replies asynchronously to the requester. A common use for this pattern is when a request for quote is received, and that request must be broadcast out to N number of providers for bid. Each provider will (or may) reply to the request with their respective bid.  From there the replies are aggregated and the highest bidder may win."
+        config   = "ScatterGatherProcessSample"
+        folder   = "Scenarios\ScatterGatherPattern"
+        solution = "ScatterGatherSolution.sln"
+        help     = "https://www.peregrineconnect.com/documentation-kb/scatter-gather-pattern/"
+        setup    = "1"
+        clients  = "0"
+          />
+
+  <!-- Patterns/Failed Message Routing -->
+
+  <Sample tree   = "Patterns"
+        name     = "Failed Message Routing"
+        desc     = "This sample demonstrates the routing of messages that written to the Failed Messages table in the Neuron Audit Database.  A SQL Adapter Endpoint will poll the Failed Messages table using a Stored Procedure, and any new messages will be published to the ESB for processing by an SMTP Adapter Endpoint."
+        config   = "FailedMessageRouting"
+        folder   = "Scenarios"
+        solution = ""
+        help     = "https://www.peregrineconnect.com/documentation-kb/failed-message-routing/"
+        setup    = "0"
+        clients  = "0"
+          />
+
+  <!-- Processes -->
+  
+  <Sample tree     = "Processes"
+          name     = "Accessing SQL Data From Processes"
+          desc     = "There are two ways to integrate with SQL Server in Neuron.  The first way is to use the ODBC adapter included with Neuron.  The second way to integrate with SQL Server is to use any of the database process steps – ODBC, Store, Table Query and XML Query.  This sample demonstrates how to integrate with SQL Server using the Store, Table Query, and XML Query process steps."
+          config   = "AccessingSQLDataFromProcesses"
+          folder   = "Processes"
+          solution = ""
+          help     = "https://www.peregrineconnect.com/documentation-kb/accessing-sql-data-from-processes/"
+          setup    = "0"
+          clients  = "1"
+          />
+		  
+  <Sample tree     = "Processes"
+          name     = "Converting Excel To XML"
+          desc     = "This sample demonstrates how you can use the Excel To XML process step to convert an incoming Excel worksheet into an XML document.  The Excel To XML process step allows you to select which worksheet in the incoming message to convert.  It also provides options to add row numbers, restrict the number of rows, and a column constraint to filter which data is returned from the file."
+          config   = "ConvertingExcelToXML"
+          folder   = "Processes"
+          solution = ""
+          help     = "https://www.peregrineconnect.com/documentation-kb/converting-excel-to-xml/"
+          setup    = "0"
+          clients  = "2"
+          />
+		  
+  <Sample tree     = "Processes"
+          name     = "Dynamic Routing Content"
+          desc     = "This sample demonstrates how you can use a Publish Neuron Process step to route a message to different topics using the Publish step’s TopicSelector Code option.  With the TopicSelector Code option, the topic that a Publish process step sends messages on can be dynamically set at runtime based on selector code defined by the user. For example, the selector code can inspect the incoming message and set the outgoing topic based on some property of the message or some content found inside the message body. In this example the selector code will look for the value of a certain Xml node attribute extracted via an XPath expression."
+          config   = "DynamicRoutingContent"
+          folder   = "Processes"
+          solution = ""
+          help     = "https://www.peregrineconnect.com/documentation-kb/dynamic-routing-content/"
+          setup    = "0"
+          clients  = "2"
+          />
+		  
+  <Sample tree     = "Processes"
+          name     = "Dynamic Routing Header Properties"
+          desc     = "This sample demonstrates how you can use a Decision Neuron Process step to route a message to different topics based on the value of an ESB Message property. A Decision process step contains 2 to n branches each of which can contain any number of other process steps. There is at least 1 conditional “If” branch and 1 “Else” branch in a Decision process step. Any number of “Else If” conditional branches may be added. The evaluation is always done from left to right starting with “If” branch then continuing through each “Else If” branch and finally ending up at the “Else” branch if no preceding condition is met. Conditions are specified in the branch as code similar to the Code process step."
+          config   = "DynamicRoutingHeaderProperties"
+          folder   = "Processes"
+          solution = ""
+          help     = "https://www.peregrineconnect.com/documentation-kb/dynamic-routing-message-property/"
+          setup    = "0"
+          clients  = "4"
+          />
+		  
+  <Sample tree     = "Processes"
+          name     = "Exception Handling"
+          desc     = "This sample demonstrates how you can wrap the Neuron Process steps inside an Exception step.  An Exception step is comprised of three execution blocks: Try, Catch and Finally. Encapsulating process steps inside an Exception step allows for further processing in the event of any errors. In this example the exception thrown will be compared with a known type and an attempt to fix the issue will be performed in a Code process step. If the exception is not of a known type then it will be re-thrown so that the process can abort execution."
+          config   = "ExceptionHandling"
+          folder   = "Processes"
+          solution = ""
+          help     = "https://www.peregrineconnect.com/documentation-kb/exception-handling/"
+          setup    = "0"
+          clients  = "2"
+          />
+		  
+  <Sample tree     = "Processes"
+          name     = "Message Validation and Transformation"
+          desc     = "This sample demonstrates the Validate - Schema and Transform - Xslt Neuron Process steps. To assure messages on the bus are in the form and format expected it is often necessary to perform some type of validation before allowing them to flow through the bus. Schema validation is the process of checking to assure an XML document conforms to a defined structure. In Neuron, a Validate - Schema process step can be used to accomplish this goal. Once a message has been validated, it is often necessary to convert the message into a new format that is required for the subscriber receiving the message. In Neuron, a Transform – Xslt process step can be used to accomplish this."
+          config   = "MessageValidationTransformation"
+          folder   = "Processes"
+          solution = ""
+          help     = "https://www.peregrineconnect.com/documentation-kb/message-validation-transformation/"
+          setup    = "0"
+          clients  = "0"
+          />
+
+  <Sample tree     = "Processes"
+          name     = "Correlated Messaging with the MSMQ Process Step"
+          desc     = "Sometimes it is necessary to correlate one-way messages with another system.  Your process may need to send a one-way message to that system, and then receive one or more one-way messages as a response.  Neuron provides an MSMQ Process Step that can be used for this particular scenario.  The MSMQ Process Step can be configured to send or receive messages, either transactionally or non-transactionally.  When receiving messages, the MSMQ Process Step can be configured to retrieve any message from the queue or only receive messages matching a correlation ID."
+          config   = "MsmqProcessStep"
+          folder   = "Processes\MSMQMessageProcessor"
+          solution = "MSMQMessageProcessor.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/correlated-messaging-with-the-msmq-process-step/"
+          setup    = "0"
+          clients  = "0"
+          />
+
+  <Sample tree     = "Processes"
+          name     = "ODBC Process Step"
+          desc     = "There are two ways to integrate with databases in Neuron ESB.  The first way is to use the ODBC adapter included with Neuron ESB. This supports polling, inserting,updating and querying any database using an ODBC Driver/DSN.  The second way to integrate with databases is to use any of the database process steps – ODBC, Store, Table Query and XML Query.  The later three steps are restricted to only Microsoft SQL Server.  The ODBC process step can be used to integrate with any ODBC datasource.  This sample demonstrates how to integrate with Microsoft SQL Server using the ODBC process step."
+          config   = "OdbcProcessStep"
+          folder   = "Processes"
+          solution = ""
+          help     = "https://www.peregrineconnect.com/documentation-kb/using-the-odbc-process-step/"
+          setup    = "0"
+          clients  = "0"
+            />
+		  
+  <Sample tree     = "Processes"
+          name     = "Retry Web Service Call"
+          desc     = "This sample demonstrates the Service and Retry Neuron Process steps. One of the components available in the Neuron Process step collection is a Retry process step that can be used to wrap a Service process step in retry logic to help overcome issues that may occur while calling the web service defined in the Service process step. The Retry step can detect either Communication or System.Exception errors and execute its contained steps a user configured number of times."
+          config   = "RetryWebServiceCall"
+          folder   = "Processes\RetryWebServiceCall\ServiceProcessService"
+          solution = "ServiceProcessService.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/retry-call-to-web-service/"
+          setup    = "0"
+          clients  = "0"
+          />
+		  
+  <Sample tree     = "Processes"
+          name     = "Splitting Messages with Join"
+          desc     = "This sample demonstrates how a Neuron Process can split a message into parts for processing and re-join those parts into a single message for further processing.  A Message may contain multiple elements, each of which requires special processing. For example, a purchase order published to the bus may contain several individual orders that must be processed separately.  Batch file processing is another common scenario which requires the ability to split and process the individual parts of the original message as separate distinct messages.  Often, these individual messages are sent for processing using a request-reply message exchange pattern.  The responses can be collected and joined together for either further processing or as a return message to the original sender.  This sample demonstrates how to use the Split process step to split a batch of orders into individual parts and how to re-join the individual orders into a single message."
+          config   = "SplittingMessageswithJoin"
+          folder   = "Processes"
+          solution = ""
+          help     = "https://www.peregrineconnect.com/documentation-kb/splitting-messages-with-join/"
+          setup    = "0"
+          clients  = "3"
+          />
+		  
+  <Sample tree     = "Processes"
+          name     = "Splitting Messages with Null Join"
+          desc     = "This sample demonstrates how a Neuron Process can split a message into parts and send those parts as separate messages on a different topic for further processing.  A Message may contain multiple elements, each of which requires special processing. For example, a purchase order published to the bus may contain several individual orders that must be processed separately.  Batch file processing is another common scenario which requires the ability to split and process the individual parts of the original message as separate distinct messages.  Users may also wish to publish the original message (before splitting and processing) on the topic which it was originally published to.  This sample demonstrates how the Push process step can be used to effectively preserve the original message body before any processing steps execute within a process.  The sample continues by demonstrating how the original message can be restored within the process using the Pop process step."
+          config   = "SplittingMessageswithNullJoin"
+          folder   = "Processes"
+          solution = ""
+          help     = "https://www.peregrineconnect.com/documentation-kb/splitting-messages-with-null-join/"
+          setup    = "0"
+          clients  = "2"
+          />
+		  
+  <Sample tree     = "Processes"
+          name     = "Transactional Process"
+          desc     = "This sample demonstrates how to wrap process steps in a transaction. Transactions are used to ensure that, if a process fails to execute, any individual step of that process (that supports transactions or use XA resource compliant transaction resource managers) that had already completed prior to the error occurring is “rolled back” to its original state. In Neuron Processes there is a Transaction process step that can be used to wrap other steps and execute them in one atomic transaction."
+          config   = "TransactionalProcess"
+          folder   = "Processes"
+          solution = ""
+          help     = "https://www.peregrineconnect.com/documentation-kb/transactional-process/"
+          setup    = "0"
+          clients  = "0"
+          />
+		  
+  <Sample tree     = "Processes"
+          name     = "Using For and While Loops"
+          desc     = "This sample demonstrates how you can use For, For-Each, While and Break process steps to execute looping logic in your processes."
+          config   = "UsingForWhileLoops"
+          folder   = "Processes"
+          solution = ""
+          help     = "https://www.peregrineconnect.com/documentation-kb/using-for-and-while-loops/"
+          setup    = "0"
+          clients  = "0"
+          />
+
+  <Sample tree     = "Processes"
+          name     = "Testing Processes from Visual Studio"
+          desc     = "This sample demonstrates how you can use Visual Studio to write unit tests for individual process steps or entire processes."
+          config   = ""
+          folder   = "Processes\UnitTestProcesses"
+          solution = "UnitTestProcesses.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/testing-processes-from-visual-studio/"
+          setup    = "0"
+          clients  = "0"
+          />
+
+  <Sample tree   = "Processes/CustomSteps"
+        name     = "Simple Custom Process Step"
+        desc     = "Writing custom process steps for Neuron is very common. This sample includes a custom process step that uses a standard property grid UI."
+        config   = ""
+        folder   = "\Processes\SimpleProcessStep"
+        solution = "SimpleProcessStep.sln"
+        help     = "https://www.peregrineconnect.com/documentation-kb/developing-custom-process-steps-with-a-simple-ui/"
+        setup    = "0"
+        clients  = "0"
+          />
+
+  <Sample tree     = "Processes/CustomSteps"
+          name     = "Complex Custom Process Step"
+          desc     = "Writing custom process steps for Neuron is very common. This sample includes a custom process step that uses an enhanced property grid UI that gives you more control over the UI behavior of the properties in the property grid at design time."
+          config   = ""
+          folder   = "\Processes\ComplexProcessStep"
+          solution = "ComplexProcessStep.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/developing-custom-process-steps-with-an-enhanced-ui/"
+          setup    = "0"
+          clients  = "0"
+          />
+  
+   <!-- Samples/Scenarios -->
+
+  <Sample tree     = "Scenarios/Chat"
+          name     = "Chat"
+          desc     = "Neuron offers a distributable .NET Neuron ESB Client API that allow users to effectively “host” the Enterprise Service Bus (ESB) within their own .NET Applications, remote from the central Neuron ESB Server. The Neuron ESB Client API can communicate either with Topics via the central Neuron ESB Server, or directly to other hosted Neuron ESB clients. These hosted Neuron ESB Clients can be easily distributed across the network where Business Processes can be associated with them and executed within the environment they are hosted in.  This sample demonstrates how the Client API can be used to implement a chat application."
+          config   = "Chat"
+          folder   = "Scenarios\Chat"
+          solution = "Chat.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/chat/"
+          setup    = "0"
+          clients  = "0"
+          />
+		  
+  <Sample tree     = "Scenarios/COM Interop Sample"
+          name     = "COM Interop to ESB using Excel"
+          desc     = "Neuron offers a distributable .NET Neuron ESB Client API that allow users to effectively “host” the Enterprise Service Bus (ESB) within their own .NET Applications, remote from the central Neuron ESB Server. The Neuron ESB Client API can communicate either with Topics via the central Neuron ESB Server, or directly to other hosted Neuron ESB clients. These hosted Neuron ESB Clients can be easily distributed across the network where Business Processes can be associated with them and executed within the environment they are hosted in.  Using .NET COM Interoperability features, the Neuron ESB Client API may be exposed as a COM library that can be used within scripting environments such as VBScript and WScript or within development environments like Microsoft Office VBA applications, PowerBuilder or Foxpro."
+          config   = "NeuronCOMSample"
+          folder   = "Scenarios\NeuronCOM"
+          solution = "Neuron.Excel.Interop.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/neuron-com-interoperability/"
+          setup    = "1"
+          clients  = "1"
+          />
+
+  <Sample tree     = "Services"
+          name     = "Exposing a WSDL in a Client Connector"
+          desc     = "When exposing Web services to developers, it is often necessary for them to have access to the message contracts required to call the service.  By default, Neuron client connectors are typeless - they don't have a WSDL to share.  This sample demonstrates how to expose a WSDL from a Neuron Client Connector to assist with Web client development."
+          config   = "WsdlClientConnector"
+          folder   = "Services\Wsdl"
+          solution = "PaymentService.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/exposing-a-wsdl-in-a-client-connector/"
+          setup    = "0"
+          clients  = "0"
+          />
+		  
+   <Sample tree    = "Services"
+          name     = "Using Service Routing Tables"
+          desc     = "Service Routing tables provide a very low latency way of implementing basic Neuron ESB scenarios of mocking, mapping, and routing services without the overhead of a Business Process. This sample demonstrates using Service Routing Tables in a variety of use cases."
+          config   = "ServiceRoutingTablesSample"
+          folder   = "Services\RoutingAndTracingWCF"
+          solution = "RoutingAndTracingWCF.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/service-routing-tables-sample/"
+          setup    = "0"
+          clients  = "0"
+          />
+
+  <Sample tree     = "Services"
+          name     = "Soap Headers"
+          desc     = "This sample demonstrates how to utilize Soap Headers with Neuron Client Connectors and Service Connectors.  The sample includes a Web client, which sends requests to Neuron containing Soap Headers.  A Neuron process will add additional Soap Headers to the messages prior to forwarding them on to a target Web service."
+          config   = "SoapHeaders"
+          folder   = "Services\SoapHeaders"
+          solution = "SoapHeaders.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/web-services-with-soap-headers/"
+          setup    = "0"
+          clients  = "0"
+          />
+
+  <Sample tree     = "Scenarios/BusinessProcessToWorkflow"
+          name     = "Business Process to Workflow"
+          desc     = "The business process to workflow sample will show you how to receive information inside of a business process, in order to return an immediate response to a client, while passing the processing of long running tasks over off to a workflow."
+          config   = "BusinessProcessToWorkflow"
+          folder   = "Scenarios\BusinessProcessToWorkflow"
+          solution = "ShoppingCart.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/business-process-to-workflow-sample/"
+          setup    = "0"
+          clients  = "1"
+          />
+
+  <Sample tree     = "Scenarios/Custom Scheduled Job"
+          name     = "Peregrine MS Custom Job Scheduling"
+          desc     = "The Peregrine Connect Management Suite Scheduler can schedule any job within an enterprise or even outside Neuron ESB. Using the Custom Job function, you can implement your solution with Visual Studio or any .NET language. The custom job defined when using the Peregrine Connect Management Suite can be configured, triggered, and monitored. This sample illustrates a how to implement the custom job functionality. In addition, it will demonstrate how to check log folders for specific log files containing keywords and emails. This sample can be used as a guide for any other functionality you choose to implement."
+          config   = ""
+          folder   = "Scenarios\CustomLogMonitorJob"
+          solution = "CustomLogMonitor.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/scheduler-custom-job-sample/"
+          setup    = "0"
+          clients  = "1"
+          />
+  
+  <Sample tree     = "Scenarios/Scheduled Job"
+          name     = "Peregrine MS Job Scheduling using Business Process"
+          desc     = "The Peregrine Connect Management Suite Scheduler sample will show you how to setup the Job Scheduler and run Business Process jobs hosted in Neuron ESB 3.7.5."
+          config   = ""
+          folder   = ""
+          solution = ""
+          help     = "https://www.peregrineconnect.com/documentation-kb/scheduled-jobs-sample/"
+          setup    = "0"
+          clients  = "0"
+          />
+  <!-- Services/LargeMessages -->
+
+  <Sample tree     = "Services/Large Messages"
+          name     = "Large Messages"
+          desc     = "This sample demonstrates sending large messages between a client and service via Neuron."
+          config   = "LargeMessages"
+          folder   = "Services\LargeMessages"
+          solution = "LargeMessages.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/large-messages/"
+          setup    = "0"
+          clients  = "0"
+          />
+		  
+<!-- Services/RESTServices -->
+  <Sample 
+		  tree     = "Services/REST Services"
+          name     = "Securing Client Connectors with OAuth"
+          desc     = "This sample will show you how to setup a Client Connector secured with OAuth. The easiest way to setup a Client Connector with OAuth is with the help of Peregrine Connect Management Suite (PeregrineMS). You may also setup OAuth using an external provider such as AWS, Azure, Google or any other generic OAuth provider such as Thinktecture’s Identity Server 4. In this sample, both PeregrineMS and Azure AD providers are illustrated. This sample shows you how to get a token and use it to call a Client Connector that is secured with OAuth."
+          config   = "OAuthForClientConnectors"
+          folder   = "Services\RESTServices\ClientOAuth"
+          solution = "NeuronOAuthConsumerSample.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/securing-client-connectors-with-oauth-sample/" 
+          setup    = "0"
+          clients  = "0"
+          />
+
+  <Sample tree     = "Services/REST Services"
+          name     = "REST Client to REST Service"
+          desc     = "This sample demonstrates how to route RESTful services through Neuron.  The sample first demonstrates a Windows Communication Foundation (WCF) client directly calling a WCF service utilizing the WebHttp binding.  The second part of the sample demonstrates routing the service call through Neuron."
+          config   = "RESTServices"
+          folder   = "Services\RESTServices\RESTtoREST"
+          solution = "RESTtoREST.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/rest-to-rest-service-routing/"
+          setup    = "0"
+          clients  = "0"
+          />
+		  
+  <Sample tree     = "Services/REST Services"
+          name     = "REST Client to SOAP Service"
+          desc     = "This sample demonstrates how to use Neuron to provide service mediation between a RESTful client and a SOAP Web Service.  The sample contains a SOAP Web Service and two clients – a RESTful client and a SOAP-based client.  Both clients are able to route their service calls through Neuron to the same SOAP-based Web Service.  The ESB Configuration contains a Process named REST to SOAP that implements a pattern for routing REST requests based on the HTTP method (GET, POST, etc).  This process routes POST requests to the appropriate SOAP Web services.  The process then sets the message Action property appropriately and transforms the REST request into the correct SOAP request format.  The message is published to the bus and the response is transformed into the correct format for the REST response."
+          config   = "RESTServices"
+          folder   = "Services\RESTServices\RESTtoSOAP"
+          solution = "RESTtoSOAP.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/rest-to-soap-service-mediation/"
+          setup    = "0"
+          clients  = "0"
+          />
+		  
+  <Sample tree     = "Services/REST Services"
+          name     = "SOAP Client to REST Service"
+          desc     = "This sample demonstrates how to use Neuron to provide service mediation between a SOAP-based client and a RESTful service.  The sample contains a REST Service and two clients – a RESTful client and a SOAP-based client.  Both clients are able to route their service calls through Neuron to the same REST-based Web Service.  The ESB Configuration contains a Process named SOAP to REST that implements a pattern for converting SOAP requests to the appropriate REST requests.  This process routes requests based on the SOAP Action and sets the message property HTTP.Method to the appropriate method.  The process then transforms the SOAP request into the REST request.  The message is published to the bus and the response is transformed into the correct format for the SOAP response."
+          config   = "RESTServices"
+          folder   = "Services\RESTServices\SOAPtoREST"
+          solution = "SOAPtoREST.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/soap-to-rest-service-mediation/"
+          setup    = "0"
+          clients  = "0"
+          />
+		  
+  <Sample tree     = "Services/REST Services"
+          name     = "REST Client to SQL Server"
+          desc     = "This sample demonstrates how to use Neuron to expose an SQL database as a RESTful service.  The sample contains a REST client, ESB Configuration and an SQL database.  The ESB Configuration contains a Process named REST to SQL that implements a pattern for routing REST requests based on the HTTP method (GET, POST, etc).  This process routes POST requests to SQL Creates, DELETE request to SQL Deletes and GET requests to SQL Reads.  The process then sets the message Action property appropriately and transforms the REST request into the correct SQL adapter message format.  The message is published to the bus and the response is transformed into the correct format for the REST response.  If the request is not a GET, POST or DELETE, the process returns a 400 Bad Request response.  The sample client application attempts to send an UPDATE and will receive that response."
+          config   = "RESTServices"
+          folder   = "Services\RESTServices\RESTtoSQL"
+          solution = "RESTtoSQL.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/exposing-an-adapter-via-restful-services/"
+          setup    = "0"
+          clients  = "0"
+          />
+		  
+  <Sample tree     = "Services/REST Services"
+          name     = "REST Client and Service with JSON Encoding"
+          desc     = "This sample demonstrates how to make RESTful service calls that use JSON serialization/deserialization through Neuron.  The sample first demonstrates a Windows Communication Foundation (WCF) client calling a Neuron Client Connector utilizing the WebHttp binding.  Neuron then routes the request through a Service Connector that calls a WCF service using the WebHttp binding.  Both the client and service application utilize the JSON.Net library to serialize/deserialize the message bodies into the JSON format.  This sample utilizes JSON.Net to serialize and deserialize objects for transfer over HTTP."
+          config   = "RESTServices"
+          folder   = "Services\RESTServices\JSON"
+          solution = "JSON.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/json-serialization-deserialization/"
+          setup    = "0"
+          clients  = "0"
+          />
+		  
+  <Sample tree     = "Services/REST Services"
+          name     = "REST Client and Service with Binary Payloads"
+          desc     = "This sample demonstrates how to make RESTful service calls that contain binary data to Neuron.  A REST client sends a jpg file to Neuron, which in turn saves the image to the file system.  The ESB Configuration contains a Process named Publish Image which demonstrates using some of the properties available when a REST request is received.  This process checks for the source of the message.  If the message was sent from a RESTful client, then the message routed to a file adapter endpoint to save the jpg to the file system.  The process retrieves the image filename from the MessageHeader.LocalPath message property and uses the value to set the filename the file adapter will use when saving the file.  If the message was received from the file system, it is routed to a RESTful service.  For this route, the process retrieves the filename from the file adapter message properties and uses it to set the LocalPath message property.  The process also sets the Method, Content-Type and WebBodyFormatMessageProperty property."
+          config   = "RESTServices"
+          folder   = "Services\RESTServices\ImageREST"
+          solution = "ImageREST.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/sending-binary-messages-via-rest/"
+          setup    = "0"
+          clients  = "0"
+          />
+
+  <!-- Services/Transports -->
+
+  <Sample tree   = "Services/Transports/BasicHttp"
+          name     = "One-Way"
+          desc     = "The transport samples demonstrate using Neuron ESB Client Connectors and Service Connectors.  This sample demonstrates the use of the basicHttp binding with a one-way service call."
+          config   = "Transports_BasicHttp"
+          folder   = "Services\Transports\BasicHttp\OneWayService"
+          solution = "OneWayService.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/transport-samples/"
+          setup    = "0"
+          clients  = "0"
+          />
+		  
+  <Sample tree   = "Services/Transports/BasicHttp"
+          name     = "Request-Reply"
+          desc     = "The transport samples demonstrate using Neuron ESB Client Connectors and Service Connectors.  This sample demonstrates the use of the basicHttp binding with a request-reply service call."
+          config   = "Transports_BasicHttp"
+          folder   = "Services\Transports\BasicHttp\RequestReplyService"
+          solution = "RequestReplyService.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/transport-samples/"
+          setup    = "0"
+          clients  = "0"
+          />
+		  
+  <Sample tree   = "Services/Transports/NetMsmq"
+          name     = "One-Way"
+          desc     = "The transport samples demonstrate using Neuron ESB Client Connectors and Service Connectors.  This sample demonstrates the use of the netMsmq binding with a one-way service call."
+          config   = "Transports_NetMsmq"
+          folder   = "Services\Transports\NetMsmq\OneWayService"
+          solution = "OneWayService.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/transport-samples/"
+          setup    = "0"
+          clients  = "0"
+          />
+		  
+  <Sample tree   = "Services/Transports/NetTcp"
+          name     = "One-Way"
+          desc     = "The transport samples demonstrate using Neuron ESB Client Connectors and Service Connectors.  This sample demonstrates the use of the netTcp binding with a one-way service call."
+          config   = "Transports_NetTcp"
+          folder   = "Services\Transports\NetTcp\OneWayService"
+          solution = "OneWayService.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/transport-samples/"
+          setup    = "0"
+          clients  = "0"
+          />
+		  
+  <Sample tree   = "Services/Transports/NetTcp"
+          name     = "Request-Reply"
+          desc     = "The transport samples demonstrate using Neuron ESB Client Connectors and Service Connectors.  This sample demonstrates the use of the netTcp binding with a request-reply service call."
+          config   = "Transports_NetTcp"
+          folder   = "Services\Transports\NetTcp\RequestReplyService"
+          solution = "RequestReplyService.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/transport-samples/"
+          setup    = "0"
+          clients  = "0"
+          />
+		  
+  <Sample tree     = "Services/Transports/WSHttp"
+          name     = "One-Way"
+          desc     = "The transport samples demonstrate using Neuron ESB Client Connectors and Service Connectors.  This sample demonstrates the use of the wsHttp binding with a one-way service call."
+          config   = "Transports_WSHttp"
+          folder   = "Services\Transports\WSHttp\OneWayService"
+          solution = "OneWayService.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/transport-samples/"
+          setup    = "0"
+          clients  = "0"
+          />
+		  
+  <Sample tree     = "Services/Transports/WSHttp"
+          name     = "Request-Reply"
+          desc     = "The transport samples demonstrate using Neuron ESB Client Connectors and Service Connectors.  This sample demonstrates the use of the wsHttp binding with a request-reply service call."
+          config   = "Transports_WSHttp"
+          folder   = "Services\Transports\WSHttp\RequestReplyService"
+          solution = "RequestReplyService.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/transport-samples/"
+          setup    = "0"
+          clients  = "0"
+          />
+
+  <!-- Workflows -->
+  <Sample tree     = "Workflows"
+          name     = "Normal Workflow"
+          desc     = "This sample shows a simple Normal workflow that logs the text of the incoming ESBMessage as well as the Workflow Instance ID. A Normal workflow is executed once for each message sent to the topic associated with the Workflow Endpoint."
+          config   = "NormalWorkflow"
+          folder   = "Workflows"
+          solution = ""
+          help     = "https://www.peregrineconnect.com/documentation-kb/normal-workflow/"
+          setup    = "0"
+          clients  = "1"
+          />
+
+  <Sample tree     = "Workflows"
+          name     = "Request-Reply Workflow"
+          desc     = "This sample shows a Request-Reply workflow that accepts a promotion code on the text property of the incoming ESBMessage and replies with a new ESBMessage where the text property contains the discount corresponding to the promotion code. A Request-Reply workflow is executed once for each message sent to the topic associated with the Workflow Endpoint."
+          config   = "RequestDiscountWorkflow"
+          folder   = "Workflows"
+          solution = ""
+          help     = "https://www.peregrineconnect.com/documentation-kb/request-reply-workflow/"
+          setup    = "0"
+          clients  = "1"
+          />
+
+  <Sample tree     = "Workflows"
+          name     = "Correlated Workflow"
+          desc     = "This sample shows a Correlated Workflow that joins order records after a Process has split them into separate messages. A Correlated-type workflow is executed once for a unique set of messages determined by the correlation set properties configured on the Workflow Endpoint. In this sample, orders are assigned to batches and the batch ID is used to initialize the correlation set. All orders in batch 'B001' are handled by one instance of the workflow while all orders in batch 'B002' are handled by another workflow instance."
+          config   = "CorrelatedJoinWorkflow"
+          folder   = "Workflows\OrderProcessor"
+          solution = "OrderProcessor.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/correlated-workflow/"
+          setup    = "0"
+          clients  = "2"
+          />
+
+  <Sample tree     = "Workflows"
+          name     = "Correlated Send and Receive"
+          desc     = "This sample shows an order message sent to a normal-type workflow that then publishes it to another topic for further processsing. When that processing completes the order is sent back to the existing instance of the workflow that published it. Routing to the original workflow is done by setting the correlation set on the publish to the order ID."
+          config   = "CorrelatedSendReceiveWorkflow"
+          folder   = "Workflows"
+          solution = ""
+          help     = "https://www.peregrineconnect.com/documentation-kb/correlated-send-receive-workflow/"
+          setup    = "0"
+          clients  = "3"
+          />
+  
+  <Sample tree     = "Workflows/Custom Activities"
+          name     = "Developing a Custom Workflow Activity"
+          desc     = "This sample demonstrates how to create a custom workflow activity that generates lorem ipsum text.  To test, compile the solution, copy the assembly to the \Program Files\Neuron ESB v3\DEFAULT\Workflows folder and restart the Neuron Explorer."
+          config   = ""
+          folder   = "Workflows\SampleDataActivityLibrary"
+          solution = "SampleDataActivityLibrary.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/developing-a-custom-workflow-activity/"
+          setup    = "0"
+          clients  = "0"
+          />
+
+  <Sample tree     = "Workflows/Microsoft WF Samples"
+          name     = "Importing a Microsoft Workflow Sample"
+          desc     = "This sample demonstrates how to import the Switch activity that ships with the Microsoft samples into Neuron ESB Explorer.  This sample contains only documentation and requires that you install the Windows Workflow (WF) Samples from the Microsoft site."
+          config   = ""
+          folder   = "Workflows"
+          solution = ""
+          help     = "https://www.peregrineconnect.com/documentation-kb/importing-a-microsoft-workflow-sample/"
+          setup    = "0"
+          clients  = "0"
+          />
+
+  <Sample tree     = "Workflows/Microsoft WF Samples"
+          name     = "Using a Microsoft Workflow Sample as a Custom Workflow Activity"
+          desc     = "This sample demonstrates how to use the FlowChartWithFaultHandling activity that ships with the Microsoft samples into Neuron ESB Explorer.  This sample contains only documentation and requires that you install the Windows Workflow (WF) Samples from the Microsoft site."
+          config   = ""
+          folder   = "Workflows"
+          solution = ""
+          help     = "https://www.peregrineconnect.com/documentation-kb/using-a-microsoft-workflow-sample-as-a-custom-workflow-activity/"
+          setup    = "0"
+          clients  = "0"
+          />
+</NeuronSamples>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<ESBSubscriber xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>a63309f8-4f3d-4382-a660-d063e76c9bd8</Id>
+  <Version>9750f520-e109-40a4-87c7-42981c635bd4</Version>
+  <Name>NormalWorkflowPublisher</Name>
+  <Description />
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <Bindings />
+  <AllowMultipleInstances>true</AllowMultipleInstances>
+  <UseUniqueWmiCounterName>false</UseUniqueWmiCounterName>
+  <SubscriberId>NormalWorkflowPublisher</SubscriberId>
+  <ClientGroup>General</ClientGroup>
+  <Zone>Enterprise</Zone>
+  <Enabled>true</Enabled>
+  <ACL />
+  <Anonymous>true</Anonymous>
+  <Subscriptions>
+    <Subscription>
+      <TopicName>NormalWorkflowTopic</TopicName>
+      <CanRead>false</CanRead>
+      <CanWrite>true</CanWrite>
+      <SubscriptionType>Topic</SubscriptionType>
+    </Subscription>
+  </Subscriptions>
+  <LogActivity>false</LogActivity>
+  <LogSession>true</LogSession>
+</ESBSubscriber>
