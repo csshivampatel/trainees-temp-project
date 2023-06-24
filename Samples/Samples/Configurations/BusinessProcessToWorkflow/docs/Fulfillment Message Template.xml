@@ -1,0 +1,7 @@
+﻿<Request>
+	<OrderId>{0}</OrderId>
+	<CustomerName>{1}</CustomerName>
+	<MailingAddress>{2}</MailingAddress>
+	<ItemId>{3}</ItemId>
+	<Quantity>{4}</Quantity>
+</Request>

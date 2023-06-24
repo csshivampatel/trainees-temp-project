@@ -1,0 +1,7 @@
+﻿<Statement type="StoredProcedure" sql="{Call StoreOrderItem(?,?,?)}" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+	<Parameters>
+		<Parameter type="int" name="@OrderID" value="1234"/>
+		<Parameter type="datetime" name="@OrderDate" value="4/22/09"/>
+		<Parameter type="money" name="@OrderAmount" value="100.00"/>
+	</Parameters>
+</Statement>

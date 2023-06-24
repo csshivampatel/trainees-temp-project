@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
+  <Default Extension="esb" ContentType="" />
+  <Default Extension="cs" ContentType="" />
+  <Default Extension="config" ContentType="" />
+  <Default Extension="csproj" ContentType="" />
+  <Default Extension="user" ContentType="" />
+  <Default Extension="gpState" ContentType="" />
+  <Default Extension="iloprj" ContentType="" />
+  <Default Extension="sln" ContentType="" />
+  <Default Extension="htm" ContentType="" />
+  <Default Extension="sql" ContentType="" />
+  <Default Extension="txt" ContentType="" />
+  <Default Extension="png" ContentType="" />
+  <Default Extension="snk" ContentType="" />
+  <Default Extension="resx" ContentType="" />
+  <Default Extension="settings" ContentType="" />
+  <Default Extension="vspscc" ContentType="" />
+  <Default Extension="vssscc" ContentType="" />
+  <Default Extension="xlsm" ContentType="" />
+  <Default Extension="bat" ContentType="" />
+  <Default Extension="xml" ContentType="" />
+</Types>

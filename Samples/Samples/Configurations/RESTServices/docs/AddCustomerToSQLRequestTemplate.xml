@@ -1,0 +1,7 @@
+﻿<Statement type="StoredProcedure" sql="{{Call CreateCustomer(?,?,?)}}">
+	<Parameters>
+		<Parameter type="int" name="@CustomerID" value="{0}" />
+		<Parameter type="varchar" name="@Name" value="{1}" />
+		<Parameter type="varchar" name="@EmailAddress" value="{2}" />
+	</Parameters>
+</Statement>

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoClientRequest", "ContosoClientRequest\ContosoClientRequest.csproj", "{F271DD28-A668-4C86-BC53-67B71BEE210C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewMartQuoteService", "NewMartQuoteService\NewMartQuoteService.csproj", "{26E46D5F-30E2-4F45-ADB5-EA52CF1D2284}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OldMartQuoteService", "OldMartQuoteService\OldMartQuoteService.csproj", "{96483460-45BC-40B3-8D60-0C4A06173704}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F271DD28-A668-4C86-BC53-67B71BEE210C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F271DD28-A668-4C86-BC53-67B71BEE210C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F271DD28-A668-4C86-BC53-67B71BEE210C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F271DD28-A668-4C86-BC53-67B71BEE210C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26E46D5F-30E2-4F45-ADB5-EA52CF1D2284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26E46D5F-30E2-4F45-ADB5-EA52CF1D2284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26E46D5F-30E2-4F45-ADB5-EA52CF1D2284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26E46D5F-30E2-4F45-ADB5-EA52CF1D2284}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96483460-45BC-40B3-8D60-0C4A06173704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96483460-45BC-40B3-8D60-0C4A06173704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96483460-45BC-40B3-8D60-0C4A06173704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96483460-45BC-40B3-8D60-0C4A06173704}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

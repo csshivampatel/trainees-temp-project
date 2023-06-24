@@ -1,0 +1,17 @@
+﻿<Orders batchID="B001">
+	<Order>
+		<OrderID>1001</OrderID>
+		<OrderDate>10/31/14</OrderDate>
+		<OrderAmount>100.00</OrderAmount>
+    </Order>
+	<Order>
+		<OrderID>1002</OrderID>
+		<OrderDate>10/31/14</OrderDate>
+		<OrderAmount>110.00</OrderAmount>
+    </Order>
+	<Order>
+		<OrderID>1003</OrderID>
+		<OrderDate>10/31/14</OrderDate>
+		<OrderAmount>120.00</OrderAmount>
+    </Order>
+</Orders>

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<ServiceRoutingTable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>dd2a10ab-bd73-42ba-b3ea-14d509c7d161</Id>
+  <Version>e036067c-a36d-419d-840b-a1e5b39d8832</Version>
+  <BusinessFlows />
+  <Description>Takes SOAP Requests and calls REST Service after mapping on the  request and response.</Description>
+  <Name>ServiceRoutingTable_REST_SOAP</Name>
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <ServiceRoutingItems>
+    <ServiceRoutingItem>
+      <IsTestEnabled>false</IsTestEnabled>
+      <EndpointName>Order_Local</EndpointName>
+      <SoapAction>http://PeregrineConnnect.ServiceModel.Samples/IOrder/PlaceOrder</SoapAction>
+      <Request>
+        <Method />
+        <URI />
+        <Body />
+        <BodyType>Raw</BodyType>
+        <DeleteMessageBody>false</DeleteMessageBody>
+        <Parameters />
+        <Headers>
+          <HeaderDataElement>
+            <Key>Content-Type</Key>
+            <Value>application/json</Value>
+          </HeaderDataElement>
+        </Headers>
+        <BodyProperties />
+        <TestBody />
+        <TestEnabled>FALSE</TestEnabled>
+        <TestFormat>TEXT</TestFormat>
+        <MaxPoolSize>1</MaxPoolSize>
+        <PoolTimeOut>1000</PoolTimeOut>
+        <AuditRequest>true</AuditRequest>
+        <AuditResponses>true</AuditResponses>
+        <AuditFailures>false</AuditFailures>
+      </Request>
+      <ServiceRoutingType>Service</ServiceRoutingType>
+      <RequestDataMap>JSON_TO_XML_For_Order</RequestDataMap>
+      <ResponseDataMap>XML_TO_JSON_For_OrderResponse</ResponseDataMap>
+      <RoutingConditions>
+        <Id>a7d028a2-1073-4ddb-94e5-36e2f6618a85</Id>
+        <Version>7554eca3-ec4f-47ef-8db5-643240a775df</Version>
+        <BusinessFlows />
+        <Description />
+        <IsSystemObject>false</IsSystemObject>
+        <IsPrivate>false</IsPrivate>
+      </RoutingConditions>
+    </ServiceRoutingItem>
+  </ServiceRoutingItems>
+  <Zone>Enterprise</Zone>
+</ServiceRoutingTable>

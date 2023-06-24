@@ -1,0 +1,30 @@
+﻿<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:per="http://PeregrineConnnect.ServiceModel.Samples">
+   <soapenv:Header />
+   <soapenv:Body>
+      <per:PlaceOrder>
+         <!--Optional:-->
+         <per:order>
+            <!--Optional:-->
+            <per:Amount>22</per:Amount>
+            <!--Optional:-->
+            <per:City>New York</per:City>
+            <!--Optional:-->
+            <per:CustomerName>Himanshu</per:CustomerName>
+            <!--Optional:-->
+            <per:OrderDate>2021-03-22T09:00:00</per:OrderDate>
+            <!--Optional:-->
+            <per:OrderNumber>1</per:OrderNumber>
+            <!--Optional:-->
+            <per:Price>2</per:Price>
+            <!--Optional:-->
+            <per:Product>Bike</per:Product>
+            <!--Optional:-->
+            <per:Quantity>1</per:Quantity>
+            <!--Optional:-->
+            <per:Shipping>0</per:Shipping>
+         </per:order>
+         <!--Optional:-->
+         <per:City>NewYork</per:City>
+      </per:PlaceOrder>
+   </soapenv:Body>
+</soapenv:Envelope>

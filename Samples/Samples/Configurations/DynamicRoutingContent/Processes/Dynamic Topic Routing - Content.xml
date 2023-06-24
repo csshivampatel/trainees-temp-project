@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<ESBMessagePipelineStorage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>eba4e57f-39c7-4635-96e4-fe34879fc956</Id>
+  <Version>9de0a279-cdd7-4ab0-98d1-6b7d95389678</Version>
+  <Name>Dynamic Topic Routing - Content</Name>
+  <IsSystemObject>false</IsSystemObject>
+  <PipelineBlob>&lt;ESBMessagePipeline xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.neuronesb.com/pipelines/"&gt;&lt;Name&gt;Dynamic Topic Routing - Content&lt;/Name&gt;&lt;Properties xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;Steps&gt;&lt;ESBMessagePipelineStep i:type="ExceptionPipelineStepOfESBMessagexAPWb1W4"&gt;&lt;Bindings xmlns:d4p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name i:nil="true" /&gt;&lt;Catch&gt;&lt;Bindings xmlns:d5p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name i:nil="true" /&gt;&lt;Children&gt;&lt;ESBMessagePipelineStep xmlns:d6p1="http://schemas.neuronesb.com/pipelines/esb/" i:type="d6p1:EsbMessagePipelineExecutionPipelineStep"&gt;&lt;Bindings xmlns:d7p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name&gt;Process Exception&lt;/Name&gt;&lt;d6p1:FileName i:nil="true" /&gt;&lt;d6p1:PipelineName&gt;Exception Handling&lt;/d6p1:PipelineName&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Children&gt;&lt;/Catch&gt;&lt;Finally&gt;&lt;Bindings xmlns:d5p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name i:nil="true" /&gt;&lt;Children&gt;&lt;ESBMessagePipelineStep i:type="CancelPipelineStepOfESBMessagexAPWb1W4"&gt;&lt;Bindings xmlns:d7p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name&gt;End Message&lt;/Name&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Children&gt;&lt;/Finally&gt;&lt;Try&gt;&lt;Bindings xmlns:d5p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name i:nil="true" /&gt;&lt;Children&gt;&lt;ESBMessagePipelineStep xmlns:d6p1="http://schemas.neuronesb.com/pipelines/esb/" i:type="d6p1:EsbMessagePublishPipelineStep"&gt;&lt;Bindings xmlns:d7p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name&gt;Contact Selector Pub&lt;/Name&gt;&lt;d6p1:Semantic&gt;Multicast&lt;/d6p1:Semantic&gt;&lt;d6p1:TopicSelector i:type="d6p1:ESBMessageCodeTopicSelector"&gt;&lt;d6p1:Code&gt;//return topic
+string topic = String.Empty;
+
+try
+{
+	//get the message body contents as an Xml document
+	System.Xml.XmlDocument doc = message.ToXmlDocument();
+	System.Xml.XmlNode node = doc.SelectSingleNode("Contact[@type]");
+	if(node != null &amp;amp;&amp;amp; node.Attributes != null &amp;amp;&amp;amp;
+		node.Attributes["type"] != null)
+	{
+		if(node.Attributes["type"].Value.Equals("Sales"))
+		{
+			topic = "Contacts.Sales";
+		}
+		else if(node.Attributes["type"].Value.Equals("Vendor"))
+		{
+			topic = "Contacts.Vendor";
+		}
+	}
+}
+catch(Exception ex)
+{
+	System.Diagnostics.Trace.WriteLine("Exception occurred retrieving topic: " + ex.Message);
+	topic = String.Empty;
+}
+
+if(String.IsNullOrEmpty(topic))
+{
+	System.Diagnostics.Trace.WriteLine("Failed to set topic");
+}
+return topic;&lt;/d6p1:Code&gt;&lt;d6p1:ReferencedAssemblies xmlns:d8p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"&gt;&lt;d8p1:string&gt;mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d8p1:string&gt;&lt;d8p1:string&gt;System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d8p1:string&gt;&lt;d8p1:string&gt;System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d8p1:string&gt;&lt;d8p1:string&gt;System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d8p1:string&gt;&lt;d8p1:string&gt;System.Runtime.Serialization, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d8p1:string&gt;&lt;d8p1:string&gt;System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d8p1:string&gt;&lt;d8p1:string&gt;Neuron.Esb, Version=2.5.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d8p1:string&gt;&lt;d8p1:string&gt;Neuron, Version=2.5.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d8p1:string&gt;&lt;d8p1:string&gt;Neuron.Pipelines, Version=2.5.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d8p1:string&gt;&lt;/d6p1:ReferencedAssemblies&gt;&lt;/d6p1:TopicSelector&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Children&gt;&lt;/Try&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Steps&gt;&lt;/ESBMessagePipeline&gt;</PipelineBlob>
+</ESBMessagePipelineStorage>

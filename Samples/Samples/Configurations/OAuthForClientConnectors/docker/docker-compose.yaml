@@ -1,0 +1,37 @@
+version: '2.1'
+services:
+  neurondb:
+    image: neuronesbperegrineconnect/neurondb:3.0.0.0
+    environment:
+      sa_password: "Password123"
+      HOSTNAME: neurondb
+      ACCEPT_EULA: "Y"
+    volumes:
+      - C:\Source\Main_MergeOAuth\installers\Samples\Configurations\NeuronSolutionForOAuthSample\docker\dbFiles:C:\Program Files\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL\Data
+    ports:
+      - "1433:1433"
+  neuronsolutionforoauthsample:
+    image: neuronesbperegrineconnect/neuronesb:3.0.0.0_{serverVersionTag}
+    entrypoint: /app/ESBService.exe
+    env_file: config.env
+    environment:
+      controlPort: 50004
+      HOSTNAME: neuronsolutionforoauthsample
+    depends_on:
+      - "neurondb"
+    volumes:
+      - C:\Source\Main_MergeOAuth\installers\Samples\Configurations\NeuronSolutionForOAuthSample:C:\Source\Main_MergeOAuth\installers\Samples\Configurations\NeuronSolutionForOAuthSample
+    ports:
+      - 61000:61000
+      - 50010-50100:50010-50100
+      - 50004:50004
+      - 50002:50002
+      - 50200:50200
+      - 51003:51003
+  
+    hostname: neuronsolutionforoauthsample
+  #-{NeuronEndpointHostTemplate}
+networks:
+  default:
+    external:
+      name: nat

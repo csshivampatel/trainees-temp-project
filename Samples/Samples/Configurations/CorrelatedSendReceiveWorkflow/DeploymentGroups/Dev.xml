@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<ESBDeployment xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>dfe89e98-4309-4931-9ee7-9f03c9306ee8</Id>
+  <Version>36b24222-3013-4a00-888c-a3e8e39a199f</Version>
+  <BusinessFlows />
+  <Description>Run everything on local machine</Description>
+  <Name>Dev</Name>
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <NeuronEnvironmentVariables />
+  <AmqpConnectionList>
+    <AmqpConnectionProperties>
+      <Server>localhost</Server>
+      <Port>-1</Port>
+      <HealthPort>15672</HealthPort>
+      <VHost>/</VHost>
+      <Username>gcMEvMZhYW2mg8bNoVyb+g==</Username>
+      <Password>gcMEvMZhYW2mg8bNoVyb+g==</Password>
+    </AmqpConnectionProperties>
+  </AmqpConnectionList>
+  <AmqpPort>0</AmqpPort>
+  <AmqpManagementPort>0</AmqpManagementPort>
+  <Zone>Enterprise</Zone>
+  <Enabled>true</Enabled>
+  <Active>true</Active>
+  <ServerTopology>0</ServerTopology>
+  <StateDatabase>localhost.NeuronESB</StateDatabase>
+  <Units>
+    <ESBDeploymentUnit>
+      <MachineName>localhost</MachineName>
+      <IsESBServer>true</IsESBServer>
+      <IsQueueServer>true</IsQueueServer>
+    </ESBDeploymentUnit>
+  </Units>
+  <Addresses />
+  <Queues />
+</ESBDeployment>

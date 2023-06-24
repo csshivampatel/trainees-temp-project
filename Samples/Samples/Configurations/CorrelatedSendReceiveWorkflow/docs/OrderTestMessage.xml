@@ -1,0 +1,17 @@
+﻿<Order>
+	<OrderDate>10/31/14</OrderDate>
+	<Items>
+		<Item>
+			<ProductCode>P001</ProductCode>
+			<Description>Product 1</Description>
+			<UnitPrice>2.99</UnitPrice>
+			<Qty>2</Qty>
+        </Item>
+		<Item>
+			<ProductCode>P002</ProductCode>
+			<Description>Product 2</Description>
+			<UnitPrice>5.79</UnitPrice>
+			<Qty>5</Qty>
+        </Item>
+    </Items>
+</Order>

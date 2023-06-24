@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "NeuronESBOAuth Demo Page";
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">This solution requires PeregrineMS and Neuron ESB, configured with the <strong>Securing Client Connectors with OAuth</strong> sample. For details on how to set-up this sample configuration, see the document <a href="https://www.peregrineconnect.com/documentation-kb/setup-client-connectors-in-oauth-sample"> Securing Client Connectors in OAuth Sample</a>. Each of the bullet lists refers to the links above.</p>
+    <p>Part I : Test using PeregrineMS as an OAuth provider using the Client Credentials flow</p>
+    <ul>
+        <li>CliendId-ClientSecret - Displays your client ID and secret from the web.config file</li>
+        <li>Get-Token - Retrieves an access token from PeregrineMS and displays it</li>
+        <li>Use-Token - Performs a call to a Neuron ESB Client Connector with a PeregrineMS OAuth token</li>
+    </ul>
+
+    <p>Part II : Test using Azure AD as an OAuth provider using the Client Credentials flow</p>
+    <ul>
+        <li>Get-TokenAzure - Retrieves an access token from Azure AD and displays it</li>
+        <li>Use-TokenAzure - Performs a call to a Neuron ESB Client Connector with a Azure AD OAuth token</li>
+    </ul>
+    <p></p>
+    <p>More samples of Implementing OAuth Consumer can be found at <a href="http://docs.identityserver.io/en/latest/quickstarts/community.html">Identity Server Docs - QuickStarts</a> </p>
+</div>
+
+<div class="row">
+    <h3>@ViewBag.Message</h3>
+
+</div>

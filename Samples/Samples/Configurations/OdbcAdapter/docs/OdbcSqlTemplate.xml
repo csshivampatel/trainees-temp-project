@@ -1,0 +1,5 @@
+﻿<Statement type="Text" sql="SELECT * FROM [Order] where OrderID = ?">
+	<Parameters>
+		<Parameter type="int" name="@OrderID" value="{0}"/>
+	</Parameters>
+</Statement>

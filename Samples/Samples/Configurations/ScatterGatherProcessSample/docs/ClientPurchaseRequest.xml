@@ -1,0 +1,5 @@
+﻿<PurchaseRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Products>
+		<Product name="BigBox" quanity="10" location="Denver"></Product>
+	</Products>
+</PurchaseRequest>

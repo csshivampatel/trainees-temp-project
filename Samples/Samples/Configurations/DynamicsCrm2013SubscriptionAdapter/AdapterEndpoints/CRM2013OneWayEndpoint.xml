@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<ESBEndpoint xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>38e77ac1-576a-4e34-9c2c-109bdae4c707</Id>
+  <Version>f45df067-5a26-48bc-9aeb-2b1310515f1c</Version>
+  <BusinessFlows />
+  <Description />
+  <Name>CRM2013OneWayEndpoint</Name>
+  <Group />
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <Bindings />
+  <FarmSingleInstance>false</FarmSingleInstance>
+  <Enabled>true</Enabled>
+  <Zone>Enterprise</Zone>
+  <AvailabilityGroupId>Neuron ESB Default Host</AvailabilityGroupId>
+  <IncludeMetadata>true</IncludeMetadata>
+  <AdapterName>Microsoft Dynamics CRM XRM</AdapterName>
+  <AdapterAssembly>Neuron.Esb.Adapters.Crm2013Adapter.dll</AdapterAssembly>
+  <AdapterMessageDirection>Duplex</AdapterMessageDirection>
+  <AdapterClass>Neuron.Esb.Adapters.Crm2013Adapter</AdapterClass>
+  <AdapterMode>Subscribe</AdapterMode>
+  <ProcessMode>false</ProcessMode>
+  <ClientProcessMode>Messaging</ClientProcessMode>
+  <ProcessList />
+  <ServiceRateEnable>false</ServiceRateEnable>
+  <Properties>
+    <NameValuePair>
+      <Name>RetrieveMetadata</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>CRMServerAddress</Name>
+      <Value>crm2013</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>CRMOrganizationName</Name>
+      <Value>NeuronDemo</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SecurityType</Name>
+      <Value>Windows</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>Domain</Name>
+      <Value>neuron</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>Username</Name>
+      <Value>Administrator</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>Password</Name>
+      <Value>PdQfIG1Hh+5cgkvl0yQpWg==</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>AuditOnFailure</Name>
+      <Value>False</Value>
+    </NameValuePair>
+  </Properties>
+  <AdapterBindings />
+  <PartyId>CRMOneWaySubscriber</PartyId>
+  <RunAs />
+  <AdapterPolicy>Default</AdapterPolicy>
+  <PoolSize>1</PoolSize>
+  <ProcessingThreads>1</ProcessingThreads>
+</ESBEndpoint>

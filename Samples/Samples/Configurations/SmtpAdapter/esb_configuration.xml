@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<ESBConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>58</Version>
+  <EnvironmentName>SmtpAdapter</EnvironmentName>
+  <NeuronBuildVersion>3.7.5.329</NeuronBuildVersion>
+  <ApplicationName>SmtpAdapter</ApplicationName>
+  <ApplicationId>3e505bb9-c009-4b64-846a-2ad9879e2347</ApplicationId>
+  <ZoneName>Enterprise</ZoneName>
+  <ChangeList>
+    <Additions />
+    <Revisions>
+      <string>Edit,*,zone,Enterprise</string>
+    </Revisions>
+    <Deletions />
+    <LastModifiedBy />
+    <LastModifiedDate>2021-06-18T11:19:43.4196192Z</LastModifiedDate>
+    <Comments />
+  </ChangeList>
+  <NeuronEnvironmentVariables />
+  <ProcessFolders />
+  <DataMapperPort>8585</DataMapperPort>
+  <InstanceName />
+  <Zones />
+  <Topics />
+  <Subscribers />
+  <Services />
+  <WorkflowDefinitions />
+  <WorkflowHosts />
+  <AvailabilityGroups />
+  <OAuthProviders />
+  <ESBMessagePipelines />
+  <Schemas />
+  <JsonSchemas />
+  <XmlDocs>
+    <item>
+      <key>
+        <string>DynamicSampleXml</string>
+      </key>
+      <value>
+        <ESBXmlDoc>
+          <Id>d8dcd927-9ce6-4ae6-9cba-f9bb35b1769b</Id>
+          <Version>2364cc57-2323-4a67-bc65-11dd8973a8bf</Version>
+          <BusinessFlows />
+          <Description />
+          <Name>DynamicSampleXml</Name>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <Storing>false</Storing>
+          <XmlVersion />
+          <SourceUri />
+          <Xml />
+        </ESBXmlDoc>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>StaticSampleXml</string>
+      </key>
+      <value>
+        <ESBXmlDoc>
+          <Id>d5cf9a71-6121-4351-b641-c42faf2e860a</Id>
+          <Version>376bb4bc-1030-44f0-918c-6a1129fb120b</Version>
+          <BusinessFlows />
+          <Description />
+          <Name>StaticSampleXml</Name>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <Storing>false</Storing>
+          <XmlVersion />
+          <SourceUri />
+          <Xml />
+        </ESBXmlDoc>
+      </value>
+    </item>
+  </XmlDocs>
+  <TextDocs />
+  <JsonDocs />
+  <SwaggerDocs />
+  <WsdlDocuments />
+  <Xslts>
+    <item>
+      <key>
+        <string>FailureToHtml</string>
+      </key>
+      <value>
+        <ESBXslt>
+          <Id>c85d614d-c88a-4576-88de-78d53883101c</Id>
+          <Version>647bc666-8d38-4d5e-8d6c-907b0b6a462d</Version>
+          <BusinessFlows />
+          <Description />
+          <Name>FailureToHtml</Name>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <Storing>false</Storing>
+          <Xslt />
+          <TestInput />
+          <TestOutput />
+        </ESBXslt>
+      </value>
+    </item>
+  </Xslts>
+  <DataMappers />
+  <BusinessEvents />
+  <Deployments />
+  <MessagePatterns />
+  <Bridges />
+  <Databases />
+  <Keys />
+  <Workflows />
+  <Applications />
+  <BusinessFlows />
+  <Bindings />
+  <ServiceRoutingTables />
+  <Behaviors />
+  <Adapters />
+  <Credentials />
+  <ServicePolicies />
+  <AdapterPolicies />
+  <Endpoints />
+  <AccessControlLists />
+  <Administrators />
+  <IsEncrypted>false</IsEncrypted>
+</ESBConfiguration>

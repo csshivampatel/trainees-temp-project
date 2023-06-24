@@ -1,0 +1,12 @@
+﻿<Contact type="Vendor">
+	<CompanyName>Acme</CompanyName> 
+	<Type>Supplies</Type>
+	<Street>100 Maple St</Street> 
+	<Street2></Street2>
+	<City>Boulder</City> 
+	<Region>CO</Region>
+	<PostalCode>80303</PostalCode>
+	<Country>USA</Country>
+	<Phone>888-123-1234</Phone>
+	<Email>sales@acme.com</Email>
+</Contact>

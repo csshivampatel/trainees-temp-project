@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<ESBEndpoint xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>ef78c7f5-5c43-49ff-8209-b66717aacefb</Id>
+  <Version>d8f30eab-8248-4890-b056-0a3709f3ebc5</Version>
+  <BusinessFlows />
+  <Description />
+  <Name>StaticSmtpAdapter</Name>
+  <Group />
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <Bindings />
+  <FarmSingleInstance>false</FarmSingleInstance>
+  <Enabled>true</Enabled>
+  <Zone>Enterprise</Zone>
+  <AvailabilityGroupId>Neuron ESB Default Host</AvailabilityGroupId>
+  <IncludeMetadata>true</IncludeMetadata>
+  <AdapterName>SMTP</AdapterName>
+  <AdapterAssembly>Neuron.Esb.Adapters.SmtpAdapter.dll</AdapterAssembly>
+  <AdapterMessageDirection>Duplex</AdapterMessageDirection>
+  <AdapterClass>Neuron.Esb.Adapters.SmtpAdapter</AdapterClass>
+  <AdapterMode>Subscribe</AdapterMode>
+  <ProcessMode>false</ProcessMode>
+  <ClientProcessMode>Messaging</ClientProcessMode>
+  <ProcessList />
+  <ServiceRateEnable>false</ServiceRateEnable>
+  <Properties>
+    <NameValuePair>
+      <Name>DefaultToAddress</Name>
+      <Value>/SMTPSample/To</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>DefaultBccAddress</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>DefaultCcAddress</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>DefaultFromAddress</Name>
+      <Value>/SMTPSample/From</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>DefaultReadReceipt</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>DefaultDeliveryReceipt</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>DefaultFailureReceipt</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>DefaultDelayReceipt</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>DefaultSubject</Name>
+      <Value>Static Smtp adapter properties test</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>IsBodyHtml</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>BodyAsAttachment</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>Attachments</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>XpathAsAttachment</Name>
+      <Value>/SMTPSample/body</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>XslTemplate</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>DefaultFileName</Name>
+      <Value>Attachment.txt</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ProcessingInstructions</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SmtpServer</Name>
+      <Value>localhost</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SmtpPort</Name>
+      <Value>25</Value>
+    </NameValuePair>
+  </Properties>
+  <AdapterBindings />
+  <PartyId>StaticAlertsSubscriber</PartyId>
+  <RunAs />
+  <AdapterPolicy>Default</AdapterPolicy>
+  <PoolSize>1</PoolSize>
+  <ProcessingThreads>1</ProcessingThreads>
+</ESBEndpoint>

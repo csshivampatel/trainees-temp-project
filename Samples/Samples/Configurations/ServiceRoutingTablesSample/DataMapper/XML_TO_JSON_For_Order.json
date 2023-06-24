@@ -1,0 +1,245 @@
+﻿{
+  "AtlasMapping" : {
+    "jsonType" : "io.atlasmap.v2.AtlasMapping",
+    "dataSource" : [ {
+      "jsonType" : "io.atlasmap.xml.v2.XmlDataSource",
+      "id" : "OrderQuoteSchema_PlaceOrder-XSD",
+      "name" : "OrderQuoteSchema_PlaceOrder-XSD",
+      "description" : "Source document OrderQuoteSchema_PlaceOrder-XSD type: XSD",
+      "uri" : "atlas:xml:OrderQuoteSchema_PlaceOrder-XSD",
+      "dataSourceType" : "SOURCE",
+      "xmlNamespaces" : {
+        "xmlNamespace" : [ {
+          "alias" : "tns",
+          "uri" : "http://PeregrineConnnect.ServiceModel.Samples"
+        } ]
+      }
+    }, {
+      "jsonType" : "io.atlasmap.json.v2.JsonDataSource",
+      "id" : "OrderSchema-JSON SCHEMA",
+      "name" : "OrderSchema-JSON SCHEMA",
+      "description" : "Target document OrderSchema-JSON SCHEMA type: JSON",
+      "uri" : "atlas:json:OrderSchema-JSON SCHEMA",
+      "dataSourceType" : "TARGET"
+    } ],
+    "mappings" : {
+      "mapping" : [ {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputField" : [ {
+          "jsonType" : "io.atlasmap.xml.v2.XmlField",
+          "docId" : "OrderQuoteSchema_PlaceOrder-XSD",
+          "path" : "/tns:PlaceOrder/tns:order/tns:Product",
+          "fieldType" : "STRING",
+          "name" : "Product",
+          "attribute" : false
+        } ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.v2.PropertyField",
+          "value" : "",
+          "docId" : "DOC.Properties.362160",
+          "path" : "/Order.Product",
+          "fieldType" : "STRING",
+          "name" : "Order.Product",
+          "scope" : "CustomProperty"
+        } ],
+        "id" : "mapping.185974",
+        "pageNumber" : 0
+      }, {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputField" : [ {
+          "jsonType" : "io.atlasmap.xml.v2.XmlField",
+          "docId" : "OrderQuoteSchema_PlaceOrder-XSD",
+          "path" : "/tns:PlaceOrder/tns:order/tns:OrderNumber",
+          "fieldType" : "LONG",
+          "name" : "OrderNumber",
+          "attribute" : false
+        } ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.json.v2.JsonField",
+          "docId" : "OrderSchema-JSON SCHEMA",
+          "path" : "/orderNumber",
+          "fieldType" : "BIG_INTEGER",
+          "name" : "orderNumber",
+          "userCreated" : false
+        } ],
+        "id" : "mapping.350482",
+        "pageNumber" : 0
+      }, {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputField" : [ {
+          "jsonType" : "io.atlasmap.xml.v2.XmlField",
+          "docId" : "OrderQuoteSchema_PlaceOrder-XSD",
+          "path" : "/tns:PlaceOrder/tns:order/tns:CustomerName",
+          "fieldType" : "STRING",
+          "name" : "CustomerName",
+          "attribute" : false
+        } ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.json.v2.JsonField",
+          "docId" : "OrderSchema-JSON SCHEMA",
+          "path" : "/customerName",
+          "fieldType" : "STRING",
+          "name" : "customerName",
+          "userCreated" : false
+        } ],
+        "id" : "mapping.841992",
+        "pageNumber" : 0
+      }, {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputField" : [ {
+          "jsonType" : "io.atlasmap.xml.v2.XmlField",
+          "docId" : "OrderQuoteSchema_PlaceOrder-XSD",
+          "path" : "/tns:PlaceOrder/tns:order/tns:OrderDate",
+          "fieldType" : "DATE_TIME",
+          "name" : "OrderDate",
+          "attribute" : false
+        } ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.json.v2.JsonField",
+          "docId" : "OrderSchema-JSON SCHEMA",
+          "path" : "/orderDate",
+          "fieldType" : "STRING",
+          "name" : "orderDate",
+          "userCreated" : false
+        } ],
+        "id" : "mapping.850468",
+        "pageNumber" : 0
+      }, {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputField" : [ {
+          "jsonType" : "io.atlasmap.xml.v2.XmlField",
+          "docId" : "OrderQuoteSchema_PlaceOrder-XSD",
+          "path" : "/tns:PlaceOrder/tns:order/tns:Product",
+          "fieldType" : "STRING",
+          "name" : "Product",
+          "attribute" : false
+        } ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.json.v2.JsonField",
+          "docId" : "OrderSchema-JSON SCHEMA",
+          "path" : "/product",
+          "fieldType" : "STRING",
+          "name" : "product",
+          "userCreated" : false
+        } ],
+        "id" : "mapping.378244",
+        "pageNumber" : 0
+      }, {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputField" : [ {
+          "jsonType" : "io.atlasmap.xml.v2.XmlField",
+          "docId" : "OrderQuoteSchema_PlaceOrder-XSD",
+          "path" : "/tns:PlaceOrder/tns:order/tns:Quantity",
+          "fieldType" : "LONG",
+          "name" : "Quantity",
+          "attribute" : false
+        } ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.json.v2.JsonField",
+          "docId" : "OrderSchema-JSON SCHEMA",
+          "path" : "/quantity",
+          "fieldType" : "BIG_INTEGER",
+          "name" : "quantity",
+          "userCreated" : false
+        } ],
+        "id" : "mapping.270462",
+        "pageNumber" : 0
+      }, {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputField" : [ {
+          "jsonType" : "io.atlasmap.xml.v2.XmlField",
+          "docId" : "OrderQuoteSchema_PlaceOrder-XSD",
+          "path" : "/tns:PlaceOrder/tns:order/tns:Price",
+          "fieldType" : "DECIMAL",
+          "name" : "Price",
+          "attribute" : false
+        } ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.json.v2.JsonField",
+          "docId" : "OrderSchema-JSON SCHEMA",
+          "path" : "/price",
+          "fieldType" : "NUMBER",
+          "name" : "price",
+          "userCreated" : false
+        } ],
+        "id" : "mapping.246340",
+        "pageNumber" : 0
+      }, {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputField" : [ {
+          "jsonType" : "io.atlasmap.xml.v2.XmlField",
+          "docId" : "OrderQuoteSchema_PlaceOrder-XSD",
+          "path" : "/tns:PlaceOrder/tns:order/tns:Amount",
+          "fieldType" : "DOUBLE",
+          "name" : "Amount",
+          "attribute" : false
+        } ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.json.v2.JsonField",
+          "docId" : "OrderSchema-JSON SCHEMA",
+          "path" : "/amount",
+          "fieldType" : "NUMBER",
+          "name" : "amount",
+          "userCreated" : false
+        } ],
+        "id" : "mapping.33243",
+        "pageNumber" : 0
+      }, {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputField" : [ {
+          "jsonType" : "io.atlasmap.xml.v2.XmlField",
+          "docId" : "OrderQuoteSchema_PlaceOrder-XSD",
+          "path" : "/tns:PlaceOrder/tns:order/tns:Shipping",
+          "fieldType" : "DOUBLE",
+          "name" : "Shipping",
+          "attribute" : false
+        } ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.json.v2.JsonField",
+          "docId" : "OrderSchema-JSON SCHEMA",
+          "path" : "/shipping",
+          "fieldType" : "NUMBER",
+          "name" : "shipping",
+          "userCreated" : false
+        } ],
+        "id" : "mapping.730817",
+        "pageNumber" : 0
+      }, {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputField" : [ {
+          "jsonType" : "io.atlasmap.xml.v2.XmlField",
+          "docId" : "OrderQuoteSchema_PlaceOrder-XSD",
+          "path" : "/tns:PlaceOrder/tns:order/tns:City",
+          "fieldType" : "STRING",
+          "name" : "City",
+          "attribute" : false
+        } ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.json.v2.JsonField",
+          "docId" : "OrderSchema-JSON SCHEMA",
+          "path" : "/city",
+          "fieldType" : "STRING",
+          "name" : "city",
+          "userCreated" : false
+        } ],
+        "id" : "mapping.275803",
+        "pageNumber" : 0
+      } ]
+    },
+    "lookupTables" : {
+      "lookupTable" : [ ]
+    },
+    "constants" : {
+      "constant" : [ ]
+    },
+    "properties" : {
+      "property" : [ {
+        "name" : "Order.Product",
+        "fieldType" : "STRING",
+        "scope" : "CustomProperty",
+        "dataSourceType" : "TARGET"
+      } ]
+    },
+    "name" : "UI.0"
+  }
+}

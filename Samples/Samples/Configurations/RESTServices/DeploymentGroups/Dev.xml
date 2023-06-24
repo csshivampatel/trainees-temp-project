@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<ESBDeployment xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>a6d88ecb-9b11-4851-a4cb-6b7145a865c8</Id>
+  <Version>ed6e9e9f-159d-4d28-b67c-9b453bb11dd8</Version>
+  <BusinessFlows />
+  <Description>Run everything on local machine</Description>
+  <Name>Dev</Name>
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <NeuronEnvironmentVariables />
+  <RunInDocker>false</RunInDocker>
+  <WindowsVersion>Server2019</WindowsVersion>
+  <DockerSettings>
+    <BootstrapServicePort>50000</BootstrapServicePort>
+    <ManagementServicePort>50002</ManagementServicePort>
+    <ControlServicePort>50004</ControlServicePort>
+    <CacheServiceBasePort>50200</CacheServiceBasePort>
+    <EndpointHostServicePort>51004</EndpointHostServicePort>
+    <SwaggerSelfHostBasePort>51003</SwaggerSelfHostBasePort>
+    <TcpPublishingStartPort>50010</TcpPublishingStartPort>
+    <TcpPublishingEndPort>50100</TcpPublishingEndPort>
+    <AllocatedMemory>0</AllocatedMemory>
+    <AllocatedCores>0</AllocatedCores>
+    <LogPath />
+    <DockerHosts />
+    <EnablePortSharing>false</EnablePortSharing>
+    <Administrators />
+    <Users />
+    <UseGmsa>false</UseGmsa>
+    <GmsaAccount>LocalService</GmsaAccount>
+    <SwarmDeployment>false</SwarmDeployment>
+  </DockerSettings>
+  <DockerEnvironmentConfig>
+    <esbInstanceName>Default</esbInstanceName>
+    <esbEnvironment />
+    <esbZone>Enterprise</esbZone>
+    <esbDeploymentGroup>Dev</esbDeploymentGroup>
+    <overrideDotNetThreadPoolSize>false</overrideDotNetThreadPoolSize>
+    <dotNetMaxWorkerThreads>1000</dotNetMaxWorkerThreads>
+    <dotNetMaxIOThreads>1000</dotNetMaxIOThreads>
+    <dotNetMinWorkerThreads>200</dotNetMinWorkerThreads>
+    <dotNetMinIOThreads>200</dotNetMinIOThreads>
+    <ClientSettingsProviderServiceUri />
+    <MaximumLogFileSize>104857600</MaximumLogFileSize>
+    <MinimumDiskSpaceThreshold>10485760</MinimumDiskSpaceThreshold>
+    <LogFileSchedule>Daily</LogFileSchedule>
+    <StartupTimeoutTicks>6000000000</StartupTimeoutTicks>
+    <ConfigurationReloadDelayTicks>600000000</ConfigurationReloadDelayTicks>
+    <WSDiscoveryEnabled>true</WSDiscoveryEnabled>
+    <WSDiscoveryBroadcast>true</WSDiscoveryBroadcast>
+    <WSDiscoveryAnnouncementIntervalTicks>100000000</WSDiscoveryAnnouncementIntervalTicks>
+    <WSDiscoveryApplicationScope>default</WSDiscoveryApplicationScope>
+    <DiscoveryTCPPort>51001</DiscoveryTCPPort>
+    <DiscoveryRESTPort>51002</DiscoveryRESTPort>
+    <DiscoverySwaggerPort>51003</DiscoverySwaggerPort>
+    <NeuronEndpointHostPort>51004</NeuronEndpointHostPort>
+    <NeuronEventProcessorPort>51005</NeuronEventProcessorPort>
+    <NeuronEventProcessorMachine>localhost</NeuronEventProcessorMachine>
+    <DefaultHttpConnectionLimit>100</DefaultHttpConnectionLimit>
+    <ClusterNetworkName />
+    <MaxHeartbeatFailures>2</MaxHeartbeatFailures>
+    <NeuronHybridFeaturesEnabled>false</NeuronHybridFeaturesEnabled>
+    <LoggingPollIntervalInSeconds>5</LoggingPollIntervalInSeconds>
+    <MicrosoftServiceBusConnectionString>Endpoint=sb://[your namespace].servicebus.windows.net;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=[your secret]</MicrosoftServiceBusConnectionString>
+    <EsbUseMachineEnvironmentVars>false</EsbUseMachineEnvironmentVars>
+    <XsltFilesLocation />
+    <XsdFilesLocation />
+    <LogPattern>%date{yyyy-MM-dd HH:mm:ss.fffzzz} [%thread] %-5level - %message%newline%exception</LogPattern>
+    <LogFolderCleanupSchedule>10</LogFolderCleanupSchedule>
+    <SavedHistoryCleanupSchedule>0</SavedHistoryCleanupSchedule>
+    <NeuronHybridManagementSuiteHost>localhost</NeuronHybridManagementSuiteHost>
+    <NeuronServiceWCFTracingEnabled>false</NeuronServiceWCFTracingEnabled>
+    <TempDirectory />
+    <DisableGlobalExceptionHandler>true</DisableGlobalExceptionHandler>
+    <NeuronServiceRateFlushInterval>5</NeuronServiceRateFlushInterval>
+    <NeuronServiceRateCacheSize>10000</NeuronServiceRateCacheSize>
+    <NeuronEventConsumerLevel>1</NeuronEventConsumerLevel>
+    <NeuronEventTimeToLive>1440</NeuronEventTimeToLive>
+    <NeuronEventPoolSizeInit>0</NeuronEventPoolSizeInit>
+    <NeuronEventPoolSizeMax>200</NeuronEventPoolSizeMax>
+    <LicenseKey />
+    <SwaggerSelfHostingUrl />
+    <SchedulerRemotingPort>49153</SchedulerRemotingPort>
+    <SchedulerEnableLogging>false</SchedulerEnableLogging>
+    <DataMapperServicePort>8585</DataMapperServicePort>
+    <MSAppPoolServiceAccount>NT AUTHORITY\NETWORK SERVICE</MSAppPoolServiceAccount>
+    <IsDirty>false</IsDirty>
+  </DockerEnvironmentConfig>
+  <AmqpConnectionList />
+  <SharedNat>false</SharedNat>
+  <AmqpServer>localhost</AmqpServer>
+  <AmqpPort>-1</AmqpPort>
+  <AmqpUserName>yBhwAya8PC32CdI39OB2Kg==</AmqpUserName>
+  <AmqpPassword>yBhwAya8PC32CdI39OB2Kg==</AmqpPassword>
+  <AmqpManagementPort>55672</AmqpManagementPort>
+  <Zone>Enterprise</Zone>
+  <Enabled>true</Enabled>
+  <Active>true</Active>
+  <DevelopmentDefault>false</DevelopmentDefault>
+  <EncryptUnicode>true</EncryptUnicode>
+  <ServerTopology>0</ServerTopology>
+  <StateDatabase />
+  <Units>
+    <ESBDeploymentUnit>
+      <MachineName>localhost</MachineName>
+      <IsESBServer>true</IsESBServer>
+      <IsQueueServer>true</IsQueueServer>
+    </ESBDeploymentUnit>
+  </Units>
+  <Addresses />
+  <Queues />
+</ESBDeployment>

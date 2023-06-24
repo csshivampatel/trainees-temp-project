@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<ESBAdapter xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>a49968a5-0af3-4425-8449-48717a7badc7</Id>
+  <Version>486ec32c-7f3f-48e0-88c1-9a8be8080757</Version>
+  <Name>ODBCAdapter</Name>
+  <Description />
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <AdapterType>Net</AdapterType>
+  <Zone>Enterprise</Zone>
+  <BindingAssembly>Neuron.Esb.Adapters.OdbcAdapter.dll</BindingAssembly>
+  <BindingClass>Neuron.Esb.Adapters.OdbcAdapter</BindingClass>
+  <AdapterName>Odbc Adapter</AdapterName>
+</ESBAdapter>

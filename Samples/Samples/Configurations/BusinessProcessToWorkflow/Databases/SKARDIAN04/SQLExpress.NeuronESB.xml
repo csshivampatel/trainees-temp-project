@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ESBDatabase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>d9d3a6c4-54db-473e-8932-ec1e736573f5</Id>
+  <Version>eb155ed5-857c-42de-ba07-6ec29131b465</Version>
+  <BusinessFlows />
+  <Description />
+  <Name>SKARDIAN04\SQLExpress.NeuronESB</Name>
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <Bindings />
+  <CatalogName>NeuronESB</CatalogName>
+  <ConnectionString>pCgeAqfN5Z/vsovjP8ahAnDjWq3BNi9oSnk3q1Rr4CYDVSyGda+juZo4z1jOwWQu9insmPojCUkrb3XptD4MzM+gPeQ8jx3Z818ulq9KQxk=</ConnectionString>
+  <Zone>(All Zones)</Zone>
+  <DatabaseType>SQLServer</DatabaseType>
+</ESBDatabase>

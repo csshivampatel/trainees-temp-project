@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ESBAdapter xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>eb6ef6da-b08b-4f95-9a64-2f63ac341654</Id>
+  <Version>f831a94b-ed2d-488a-ade8-a879c55176a6</Version>
+  <BusinessFlows />
+  <Description />
+  <Name>Adapter1</Name>
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <AdapterType>Net</AdapterType>
+  <Zone>Enterprise</Zone>
+  <BindingAssembly>Neuron.Esb.Adapters.SharePoint.dll</BindingAssembly>
+  <BindingClass>Neuron.Esb.Adapters.SharePoint.Adapter</BindingClass>
+  <AdapterName>WSS Subscription Adapter</AdapterName>
+</ESBAdapter>

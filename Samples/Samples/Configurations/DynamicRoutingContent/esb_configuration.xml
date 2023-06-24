@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<ESBConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>26</Version>
+  <EnvironmentName>DynamicRoutingContent</EnvironmentName>
+  <NeuronBuildVersion>3.7.5.329</NeuronBuildVersion>
+  <ApplicationName>DynamicRoutingContent</ApplicationName>
+  <ApplicationId>7a2f686c-15df-40be-9d10-7b4f89697306</ApplicationId>
+  <ZoneName>Enterprise</ZoneName>
+  <ChangeList>
+    <Additions />
+    <Revisions>
+      <string>Edit,*,zone,Enterprise</string>
+    </Revisions>
+    <Deletions />
+    <LastModifiedBy />
+    <LastModifiedDate>2021-06-18T10:30:21.5028722Z</LastModifiedDate>
+    <Comments />
+  </ChangeList>
+  <NeuronEnvironmentVariables />
+  <ProcessFolders />
+  <DataMapperPort>8585</DataMapperPort>
+  <InstanceName />
+  <Zones />
+  <Topics />
+  <Subscribers />
+  <Services />
+  <WorkflowDefinitions />
+  <WorkflowHosts />
+  <AvailabilityGroups />
+  <OAuthProviders />
+  <ESBMessagePipelines />
+  <Schemas />
+  <JsonSchemas />
+  <XmlDocs>
+    <item>
+      <key>
+        <string>SalesContactTestMessage</string>
+      </key>
+      <value>
+        <ESBXmlDoc>
+          <Id>de85a4e6-eacb-42aa-aa7e-65ee12fee0b5</Id>
+          <Version>5e01a5c4-b609-49f3-930b-b94a6f2ffb6e</Version>
+          <BusinessFlows />
+          <Description />
+          <Name>SalesContactTestMessage</Name>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <Storing>false</Storing>
+          <XmlVersion />
+          <SourceUri />
+          <Xml />
+        </ESBXmlDoc>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>VendorContactTestMessageCopy</string>
+      </key>
+      <value>
+        <ESBXmlDoc>
+          <Id>de812a9c-1587-4cbf-b69a-2fafffa37740</Id>
+          <Version>e83a0fbb-0911-4c29-a188-78d2faf33d80</Version>
+          <BusinessFlows />
+          <Description />
+          <Name>VendorContactTestMessageCopy</Name>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <Storing>false</Storing>
+          <XmlVersion />
+          <SourceUri />
+          <Xml />
+        </ESBXmlDoc>
+      </value>
+    </item>
+  </XmlDocs>
+  <TextDocs />
+  <JsonDocs />
+  <SwaggerDocs />
+  <WsdlDocuments />
+  <Xslts />
+  <DataMappers />
+  <BusinessEvents />
+  <Deployments />
+  <MessagePatterns />
+  <Bridges />
+  <Databases />
+  <Keys />
+  <Workflows />
+  <Applications />
+  <BusinessFlows />
+  <Bindings />
+  <ServiceRoutingTables />
+  <Behaviors />
+  <Adapters />
+  <Credentials />
+  <ServicePolicies />
+  <AdapterPolicies />
+  <Endpoints />
+  <AccessControlLists />
+  <Administrators />
+  <IsEncrypted>false</IsEncrypted>
+</ESBConfiguration>

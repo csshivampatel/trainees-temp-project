@@ -1,0 +1,10 @@
+﻿<NeuronCrmAdapterMessage>
+  <CrmCommands Transactional="true">
+    <Lookups>
+      <Lookup id="accountid1" entity="account" lookupfield="accountid">
+        <searchfield name="name" value="Sample Account" typename="string" operator="equal" />
+      </Lookup>
+    </Lookups>
+    <DeleteCrmRecord entity="account" lookupid="accountid1" />
+  </CrmCommands>
+</NeuronCrmAdapterMessage>

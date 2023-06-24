@@ -1,0 +1,10 @@
+﻿<NeuronCrmAdapterMessage>
+  <CrmCommands Transactional="false">
+    <Lookups>
+      <Lookup id="accountid1" entity="account" lookupfield="accountid">
+        <searchfield name="name" value="Sample Account" typename="string" operator="equal" />
+      </Lookup>
+    </Lookups>
+    <SetCrmState entity="account" lookupid="accountid1" statuscode="2" statecode="1"/>
+  </CrmCommands>
+</NeuronCrmAdapterMessage>

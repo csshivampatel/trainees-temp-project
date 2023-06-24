@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<ServiceRoutingTable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>605a50db-a277-4dcf-954b-75c0e3b9920d</Id>
+  <Version>a006528f-843a-417b-ac6d-a5a634b59814</Version>
+  <BusinessFlows />
+  <Description />
+  <Name>RESTServiceRoutingTable</Name>
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <ServiceRoutingItems>
+    <ServiceRoutingItem>
+      <IsTestEnabled>false</IsTestEnabled>
+      <EndpointName>RESTServiceRouteServiceConnector</EndpointName>
+      <Request>
+        <Method>GET</Method>
+        <Body />
+        <BodyType>Raw</BodyType>
+        <DeleteMessageBody>false</DeleteMessageBody>
+        <DeleteResponseBody>false</DeleteResponseBody>
+        <Parameters />
+        <Headers />
+        <BodyProperties />
+        <TestBody />
+        <TestEnabled>FALSE</TestEnabled>
+        <TestFormat>TEXT</TestFormat>
+        <MaxPoolSize>1</MaxPoolSize>
+        <PoolTimeOut>1000</PoolTimeOut>
+        <AuditRequest>false</AuditRequest>
+        <AuditResponses>false</AuditResponses>
+        <AuditFailures>false</AuditFailures>
+      </Request>
+      <ServiceRoutingType>Service</ServiceRoutingType>
+      <RequestDataMap />
+      <ResponseDataMap />
+      <RoutingConditions>
+        <Id>ef999a8d-4017-4780-b77f-e29430563c65</Id>
+        <Version>0e7da127-0163-49e1-af90-941dce37350e</Version>
+        <BusinessFlows />
+        <Description />
+        <IsSystemObject>false</IsSystemObject>
+        <IsPrivate>false</IsPrivate>
+        <Condition>
+          <Conditions>
+            <ConditionElement>
+              <PrefixOperator>None</PrefixOperator>
+              <Expression1>Method</Expression1>
+              <NotOperator>false</NotOperator>
+              <RelationalOperator>TextEquals</RelationalOperator>
+              <Expression2>GET</Expression2>
+              <SuffixOperator>None</SuffixOperator>
+              <LogicalOperator>End</LogicalOperator>
+            </ConditionElement>
+          </Conditions>
+        </Condition>
+      </RoutingConditions>
+    </ServiceRoutingItem>
+    <ServiceRoutingItem>
+      <IsTestEnabled>false</IsTestEnabled>
+      <EndpointName>RESTServiceRouteServiceConnector</EndpointName>
+      <Request>
+        <Method>POST</Method>
+        <Body />
+        <BodyType>Raw</BodyType>
+        <DeleteMessageBody>false</DeleteMessageBody>
+        <DeleteResponseBody>false</DeleteResponseBody>
+        <Parameters />
+        <Headers />
+        <BodyProperties />
+        <TestBody />
+        <TestEnabled>FALSE</TestEnabled>
+        <TestFormat>TEXT</TestFormat>
+        <MaxPoolSize>1</MaxPoolSize>
+        <PoolTimeOut>1000</PoolTimeOut>
+        <AuditRequest>false</AuditRequest>
+        <AuditResponses>false</AuditResponses>
+        <AuditFailures>false</AuditFailures>
+      </Request>
+      <ServiceRoutingType>Service</ServiceRoutingType>
+      <RequestDataMap />
+      <ResponseDataMap />
+      <RoutingConditions>
+        <Id>ef999a8d-4017-4780-b77f-e29430563c65</Id>
+        <Version>0e7da127-0163-49e1-af90-941dce37350e</Version>
+        <BusinessFlows />
+        <Description />
+        <IsSystemObject>false</IsSystemObject>
+        <IsPrivate>false</IsPrivate>
+        <Condition>
+          <Conditions>
+            <ConditionElement>
+              <PrefixOperator>None</PrefixOperator>
+              <Expression1>Method</Expression1>
+              <NotOperator>false</NotOperator>
+              <RelationalOperator>TextEquals</RelationalOperator>
+              <Expression2>POST</Expression2>
+              <SuffixOperator>None</SuffixOperator>
+              <LogicalOperator>End</LogicalOperator>
+            </ConditionElement>
+          </Conditions>
+        </Condition>
+      </RoutingConditions>
+    </ServiceRoutingItem>
+  </ServiceRoutingItems>
+  <Zone>Enterprise</Zone>
+</ServiceRoutingTable>

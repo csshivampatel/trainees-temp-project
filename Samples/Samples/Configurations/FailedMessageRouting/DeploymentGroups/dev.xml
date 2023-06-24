@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<ESBDeployment xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>de90cd89-9593-40b8-b844-fc9def06600e</Id>
+  <Version>0a89f4b5-64c2-4ee2-9e5b-900926a88f02</Version>
+  <BusinessFlows />
+  <Description>Run everything on local machine</Description>
+  <Name>Dev</Name>
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <NeuronEnvironmentVariables>
+    <item>
+      <key>
+        <string>NeuronAuditDatabaseConnectionString</string>
+      </key>
+      <value>
+        <string>l7eJyeIO1ORT6yerTT+HD3g3M8/AuX5nkR3V9bsWPt3BB4QY36yjtmYqIL/nEcigCg3nhRG5DApvG4icvmKg4suYS3lcCSbXDNFhxUAbmh8=</string>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>SmtpAlertToAddress</string>
+      </key>
+      <value>
+        <string>lSi6D7Y7NufFxoVhhV/kIEpT/UjJP7DcLuGNsQT08HA=</string>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>SmtpAlertFromAddress</string>
+      </key>
+      <value>
+        <string>3qhhkBYq3+xUC53dHHY13DQ4Uw4RrZphHQxc6SMm8gE=</string>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>SmtpAlertServer</string>
+      </key>
+      <value>
+        <string>mMoLvuDSUDeBLz3nEh9nDg==</string>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>NeuronAuditDatabaseOdbcConnectionString</string>
+      </key>
+      <value>
+        <string>xE/biIVF7zyviBIgr/fVpcoE8TKKn+zP3uWyjYNc2nQOSiKhgtcDwIw1TQB4qEKFr8AQtqNHrFWUQ0adGT1JCzEx5Xx7kQ5fcupqB4+2aZKp4FhNo/pXZ4NGeAcwlfKT</string>
+      </value>
+    </item>
+  </NeuronEnvironmentVariables>
+  <AmqpConnectionList />
+  <AmqpServer>localhost</AmqpServer>
+  <AmqpPort>-1</AmqpPort>
+  <AmqpUserName>gcMEvMZhYW2mg8bNoVyb+g==</AmqpUserName>
+  <AmqpPassword>gcMEvMZhYW2mg8bNoVyb+g==</AmqpPassword>
+  <AmqpManagementPort>55672</AmqpManagementPort>
+  <Zone>Enterprise</Zone>
+  <Enabled>true</Enabled>
+  <Active>true</Active>
+  <ServerTopology>0</ServerTopology>
+  <StateDatabase>localhost.NeuronAuditDB</StateDatabase>
+  <Units>
+    <ESBDeploymentUnit>
+      <MachineName>localhost</MachineName>
+      <IsESBServer>true</IsESBServer>
+      <IsQueueServer>true</IsQueueServer>
+    </ESBDeploymentUnit>
+  </Units>
+  <Addresses />
+  <Queues />
+</ESBDeployment>

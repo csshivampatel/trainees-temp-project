@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<ESBEndpoint xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>0e4aa186-d0c8-42dd-9355-0ef5c757d3c5</Id>
+  <Version>6add8daa-15c4-4477-9e22-ab0f8a1ffb34</Version>
+  <BusinessFlows />
+  <Description>Sends alerts that contain original exception message as body and message that caused exception as attachment. Uses environmental variable: SmtpAlertToFromAddress</Description>
+  <Name>FailedMessageAlerts</Name>
+  <Group />
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <Bindings />
+  <FarmSingleInstance>false</FarmSingleInstance>
+  <Enabled>true</Enabled>
+  <Zone>Enterprise</Zone>
+  <AvailabilityGroupId>Neuron ESB Default Host</AvailabilityGroupId>
+  <IncludeMetadata>true</IncludeMetadata>
+  <AdapterName>SMTP</AdapterName>
+  <AdapterAssembly>Neuron.Esb.Adapters.SmtpAdapter.dll</AdapterAssembly>
+  <AdapterMessageDirection>Duplex</AdapterMessageDirection>
+  <AdapterClass>Neuron.Esb.Adapters.SmtpAdapter</AdapterClass>
+  <AdapterMode>Subscribe</AdapterMode>
+  <ProcessMode>false</ProcessMode>
+  <ClientProcessMode>Messaging</ClientProcessMode>
+  <ProcessList />
+  <ServiceRateEnable>false</ServiceRateEnable>
+  <Properties>
+    <NameValuePair>
+      <Name>DefaultToAddress</Name>
+      <Value>Logs@NeuronDemo.com</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>DefaultBccAddress</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>DefaultCcAddress</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>DefaultFromAddress</Name>
+      <Value>Neuron@NeuronDemo.com</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>DefaultReadReceipt</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>DefaultDeliveryReceipt</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>DefaultFailureReceipt</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>DefaultDelayReceipt</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>DefaultSubject</Name>
+      <Value>Failed Message Notification</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>IsBodyHtml</Name>
+      <Value>True</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>BodyAsAttachment</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>Attachments</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>XpathAsAttachment</Name>
+      <Value>/FAILURE/Document/text()</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>XslTemplate</Name>
+      <Value>FailureMessageToEmailBody</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>DefaultFileName</Name>
+      <Value>FailedMessage.xml</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ProcessingInstructions</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SmtpServer</Name>
+      <Value>localhost</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SmtpPort</Name>
+      <Value>25</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>UseSSL</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>Anonymous</Name>
+      <Value>True</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>Username</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>Password</Name>
+      <Value />
+    </NameValuePair>
+  </Properties>
+  <AdapterBindings>
+    <ExpressionBoundProperty>
+      <PropertyName>DefaultToAddress</PropertyName>
+      <Expression>{$SmtpAlertToAddress}</Expression>
+    </ExpressionBoundProperty>
+    <ExpressionBoundProperty>
+      <PropertyName>DefaultFromAddress</PropertyName>
+      <Expression>{$SmtpAlertFromAddress}</Expression>
+    </ExpressionBoundProperty>
+    <ExpressionBoundProperty>
+      <PropertyName>SmtpServer</PropertyName>
+      <Expression>{$SmtpAlertServer}</Expression>
+    </ExpressionBoundProperty>
+  </AdapterBindings>
+  <PartyId>FailedMessageSubscriber</PartyId>
+  <RunAs />
+  <AdapterPolicy>FailedSMTPAlertAdapterPolicy</AdapterPolicy>
+  <PoolSize>1</PoolSize>
+  <ProcessingThreads>1</ProcessingThreads>
+</ESBEndpoint>

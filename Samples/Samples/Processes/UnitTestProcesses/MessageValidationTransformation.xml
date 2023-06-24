@@ -1,0 +1,916 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ESBConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>0</Version>
+  <EnvironmentName>MessageValidationTransformation.xml</EnvironmentName>
+  <NeuronEnvironmentVariables />
+  <Zones>
+    <item>
+      <key>
+        <string>Enterprise</string>
+      </key>
+      <value>
+        <ESBZone>
+          <Id>b8c81a13-9ac8-4961-8cdb-c94a9e5ad1d7</Id>
+          <Version>074f47fd-477a-4308-8bd1-44cf2c122aed</Version>
+          <Name>Enterprise</Name>
+          <Description />
+          <IsSystemObject>false</IsSystemObject>
+          <Location />
+          <Enabled>true</Enabled>
+          <Channels>
+            <ESBChannelDescription>
+              <Capabilities>
+                <ChannelName>net/msmq</ChannelName>
+                <Properties>
+                  <NameValuePair>
+                    <Name>Recoverable</Name>
+                    <Value>True</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>TransactionalReceiveService</Name>
+                    <Value>False</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>TransactedPubSub</Name>
+                    <Value>True</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>MaxBatchSize</Name>
+                    <Value>100</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>RetryCycleDelay</Name>
+                    <Value>00:10:00</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>ReceiveRetryCount</Name>
+                    <Value>3</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>ReceiveErrorHandling</Name>
+                    <Value>Fault</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>QueueTransferProtocol</Name>
+                    <Value>Native</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>MaxRetryCycles</Name>
+                    <Value>3</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>DeadLetterQueue</Name>
+                    <Value>System</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>Direct</Name>
+                    <Value>False</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>CustomDeadLetterQueue</Name>
+                    <Value />
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>UsePublicQueues</Name>
+                    <Value>False</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>TimeToLive</Name>
+                    <Value>1440</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>MaxConcurrentCalls</Name>
+                    <Value>32</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>MaxBufferPoolSize</Name>
+                    <Value>2147483647</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>LogNoRecipient</Name>
+                    <Value>True</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>AuthenticationMode</Name>
+                    <Value>None</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>EncryptionAlgorithm</Name>
+                    <Value>RC4Stream</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>ProtectionLevel</Name>
+                    <Value>None</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>SecureHashAlgorithm</Name>
+                    <Value>MD5</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>SecurityMode</Name>
+                    <Value>None</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>AlgorithmSuite</Name>
+                    <Value>Default</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>MessageCredentialType</Name>
+                    <Value>None</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>Certificate</Name>
+                    <Value />
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>DeadLettersEnabled</Name>
+                    <Value>False</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>PoisonMessagesEnabled</Name>
+                    <Value>False</Value>
+                  </NameValuePair>
+                </Properties>
+              </Capabilities>
+              <ChannelName>net/msmq</ChannelName>
+            </ESBChannelDescription>
+            <ESBChannelDescription>
+              <Capabilities>
+                <ChannelName>wcf/tcp</ChannelName>
+                <Properties>
+                  <NameValuePair>
+                    <Name>Reliable</Name>
+                    <Value>False</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>Ordered</Name>
+                    <Value>False</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>ClientPortBase</Name>
+                    <Value>61007</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>ClientPortRange</Name>
+                    <Value>1000</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>ServicePort</Name>
+                    <Value>50012</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>AllowOutputBatching</Name>
+                    <Value>False</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>Streaming</Name>
+                    <Value>False</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>Secure</Name>
+                    <Value>False</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>MaxConcurrentCalls</Name>
+                    <Value>2147483647</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>OpenTimeout</Name>
+                    <Value>60</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>SendTimeout</Name>
+                    <Value>60</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>CloseTimeout</Name>
+                    <Value>60</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>ListenBacklog</Name>
+                    <Value>1000</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>MaxConnections</Name>
+                    <Value>200</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>MaxBufferPoolSize</Name>
+                    <Value>524288</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>MaxReceivedMessageSize</Name>
+                    <Value>2147483647</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>ClientPoolSize</Name>
+                    <Value>100</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>LogNoRecipient</Name>
+                    <Value>True</Value>
+                  </NameValuePair>
+                </Properties>
+              </Capabilities>
+              <ChannelName>wcf/tcp</ChannelName>
+            </ESBChannelDescription>
+            <ESBChannelDescription>
+              <Capabilities>
+                <ChannelName>wcf/peer</ChannelName>
+                <Properties>
+                  <NameValuePair>
+                    <Name>ClientBasePort</Name>
+                    <Value>50100</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>ClientBasePortRange</Name>
+                    <Value>1000</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>CleanupInterval</Name>
+                    <Value>300</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>RefreshInterval</Name>
+                    <Value>120</Value>
+                  </NameValuePair>
+                </Properties>
+              </Capabilities>
+              <ChannelName>wcf/peer</ChannelName>
+            </ESBChannelDescription>
+            <ESBChannelDescription>
+              <Capabilities>
+                <ChannelName>biztalk/tcp</ChannelName>
+                <Properties>
+                  <NameValuePair>
+                    <Name>PublishEsbMessageBody</Name>
+                    <Value>False</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>BizTalkSendTcpPort</Name>
+                    <Value>50300</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>BizTalkReceiveUri</Name>
+                    <Value>net.tcp://localhost:50510/neuron</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>BizTalkServiceUri</Name>
+                    <Value>http://localhost/NeuronESBBizTalkService/Utility.svc</Value>
+                  </NameValuePair>
+                </Properties>
+              </Capabilities>
+              <ChannelName>biztalk/tcp</ChannelName>
+            </ESBChannelDescription>
+            <ESBChannelDescription>
+              <Capabilities>
+                <ChannelName>wcf/pipe</ChannelName>
+                <Properties>
+                  <NameValuePair>
+                    <Name>AllowOutputBatching</Name>
+                    <Value>False</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>ClientPoolSize</Name>
+                    <Value>100</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>CloseTimeout</Name>
+                    <Value>60</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>LogNoRecipient</Name>
+                    <Value>True</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>MaxBufferPoolSize</Name>
+                    <Value>524288</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>MaxConcurrentCalls</Name>
+                    <Value>1000</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>MaxConnections</Name>
+                    <Value>200</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>MaxReceivedMessageSize</Name>
+                    <Value>2147483647</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>OpenTimeout</Name>
+                    <Value>60</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>Secure</Name>
+                    <Value>False</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>SendTimeout</Name>
+                    <Value>60</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>Streaming</Name>
+                    <Value>False</Value>
+                  </NameValuePair>
+                </Properties>
+              </Capabilities>
+              <ChannelName>wcf/pipe</ChannelName>
+            </ESBChannelDescription>
+            <ESBChannelDescription>
+              <Capabilities>
+                <ChannelName>amqp/rabbitmq</ChannelName>
+                <Properties>
+                  <NameValuePair>
+                    <Name>AutoAcknowledge</Name>
+                    <Value>False</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>AutoDelete</Name>
+                    <Value>False</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>Durable</Name>
+                    <Value>False</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>Exclusive</Name>
+                    <Value>False</Value>
+                  </NameValuePair>
+                  <NameValuePair>
+                    <Name>Immediate</Name>
+                    <Value>False</Value>
+                  </NameValuePair>
+                </Properties>
+              </Capabilities>
+              <ChannelName>amqp/rabbitmq</ChannelName>
+            </ESBChannelDescription>
+          </Channels>
+          <BootstrapServicePort>50000</BootstrapServicePort>
+          <ManagementServicePort>50002</ManagementServicePort>
+          <ControlServicePort>50004</ControlServicePort>
+          <CacheServiceBasePort>50200</CacheServiceBasePort>
+          <ResolverServicePort>50005</ResolverServicePort>
+          <RelayServicePort>50006</RelayServicePort>
+          <TcpPublishingStartPort>50010</TcpPublishingStartPort>
+          <TcpPublishingEndPort>50100</TcpPublishingEndPort>
+          <MsmqReceiveServicePort>50008</MsmqReceiveServicePort>
+          <Clustered>false</Clustered>
+          <ClusterDatabaseName />
+          <QueueServer>localhost</QueueServer>
+          <ActiveDeploymentGroup />
+          <ClientPollingIntervalSec>15</ClientPollingIntervalSec>
+          <ClientReportingExpirationIntervalSec>60</ClientReportingExpirationIntervalSec>
+          <ServicePollingIntervalSec>15</ServicePollingIntervalSec>
+          <TCPPubSubClientBasePort>61000</TCPPubSubClientBasePort>
+          <TCPPubSubClientPortRange>1000</TCPPubSubClientPortRange>
+          <WorkflowQueueMaxCount>100</WorkflowQueueMaxCount>
+          <EnableWMIClientCounters>true</EnableWMIClientCounters>
+          <EnableWMINeuronEndpointCounters>false</EnableWMINeuronEndpointCounters>
+          <BindingSettings />
+          <ZoneName>Enterprise</ZoneName>
+        </ESBZone>
+      </value>
+    </item>
+  </Zones>
+  <Topics>
+    <item>
+      <key>
+        <string>Enterprise/Books</string>
+      </key>
+      <value>
+        <ESBTopic>
+          <Id>276fa153-d068-4915-9a9b-f77a6e8df956</Id>
+          <Version>80c07d6b-ba77-42fe-88f3-1f56694b2852</Version>
+          <Name>Books</Name>
+          <Description />
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <_auditFailureDetailVerbose>true</_auditFailureDetailVerbose>
+          <ThrottleType>None</ThrottleType>
+          <ThrottleValue>0</ThrottleValue>
+          <CompressionType>Automatic</CompressionType>
+          <CompressionSize>1</CompressionSize>
+          <CompressionUnit>MB</CompressionUnit>
+          <TopicGroup>General</TopicGroup>
+          <Zone>Enterprise</Zone>
+          <ChannelType>wcf/tcp</ChannelType>
+          <ChannelProperties>
+            <NameValuePair>
+              <Name>Reliable</Name>
+              <Value>False</Value>
+            </NameValuePair>
+            <NameValuePair>
+              <Name>Ordered</Name>
+              <Value>False</Value>
+            </NameValuePair>
+            <NameValuePair>
+              <Name>ClientPortBase</Name>
+              <Value>61007</Value>
+            </NameValuePair>
+            <NameValuePair>
+              <Name>ClientPortRange</Name>
+              <Value>1000</Value>
+            </NameValuePair>
+            <NameValuePair>
+              <Name>ServicePort</Name>
+              <Value>50014</Value>
+            </NameValuePair>
+            <NameValuePair>
+              <Name>AllowOutputBatching</Name>
+              <Value>False</Value>
+            </NameValuePair>
+            <NameValuePair>
+              <Name>Streaming</Name>
+              <Value>False</Value>
+            </NameValuePair>
+            <NameValuePair>
+              <Name>Secure</Name>
+              <Value>False</Value>
+            </NameValuePair>
+            <NameValuePair>
+              <Name>MaxConcurrentCalls</Name>
+              <Value>1000</Value>
+            </NameValuePair>
+            <NameValuePair>
+              <Name>OpenTimeout</Name>
+              <Value>60</Value>
+            </NameValuePair>
+            <NameValuePair>
+              <Name>SendTimeout</Name>
+              <Value>60</Value>
+            </NameValuePair>
+            <NameValuePair>
+              <Name>CloseTimeout</Name>
+              <Value>60</Value>
+            </NameValuePair>
+            <NameValuePair>
+              <Name>ListenBacklog</Name>
+              <Value>1000</Value>
+            </NameValuePair>
+            <NameValuePair>
+              <Name>MaxConnections</Name>
+              <Value>200</Value>
+            </NameValuePair>
+            <NameValuePair>
+              <Name>MaxBufferPoolSize</Name>
+              <Value>524288</Value>
+            </NameValuePair>
+            <NameValuePair>
+              <Name>MaxReceivedMessageSize</Name>
+              <Value>2147483647</Value>
+            </NameValuePair>
+            <NameValuePair>
+              <Name>ClientPoolSize</Name>
+              <Value>100</Value>
+            </NameValuePair>
+            <NameValuePair>
+              <Name>LogNoRecipient</Name>
+              <Value>True</Value>
+            </NameValuePair>
+          </ChannelProperties>
+          <AuditBeforePublishPipelineExecutes>false</AuditBeforePublishPipelineExecutes>
+          <AuditAfterReceivePipelineExecutes>false</AuditAfterReceivePipelineExecutes>
+          <AsynchronousAudit>true</AsynchronousAudit>
+          <AuditMessages>false</AuditMessages>
+          <AuditWhenNoRecipients>false</AuditWhenNoRecipients>
+          <AuditFailureDetailVerbose>true</AuditFailureDetailVerbose>
+          <Enabled>true</Enabled>
+          <Encrypted>false</Encrypted>
+          <EncryptionMethod>(None)</EncryptionMethod>
+          <EncryptionCredentials />
+        </ESBTopic>
+      </value>
+    </item>
+  </Topics>
+  <Subscribers>
+    <item>
+      <key>
+        <string>Enterprise/BookMessagePublisher</string>
+      </key>
+      <value>
+        <ESBSubscriber>
+          <Id>9091806d-40f4-4ec9-a1cc-53c86e25e387</Id>
+          <Version>b167414e-ecab-49f5-a97e-81c20f5806d5</Version>
+          <Name>BookMessagePublisher</Name>
+          <Description />
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <AllowMultipleInstances>true</AllowMultipleInstances>
+          <UseUniqueWmiCounterName>true</UseUniqueWmiCounterName>
+          <SubscriberId>BookMessagePublisher</SubscriberId>
+          <ClientGroup>General</ClientGroup>
+          <Zone>Enterprise</Zone>
+          <Enabled>true</Enabled>
+          <Anonymous>true</Anonymous>
+          <Subscriptions>
+            <Subscription>
+              <TopicName>Books</TopicName>
+              <CanRead>false</CanRead>
+              <CanWrite>true</CanWrite>
+              <SubscriptionType>Topic</SubscriptionType>
+            </Subscription>
+          </Subscriptions>
+          <MessagePipelines>
+            <ClientPipelineItem>
+              <Id>5e344170-0392-4a04-ae9b-fae93f5ba12e</Id>
+              <Version>477236e2-4035-4422-88de-51eb21e33948</Version>
+              <Name>Validate Book Message</Name>
+              <IsSystemObject>false</IsSystemObject>
+              <ApplyOnPublish>true</ApplyOnPublish>
+              <ApplyOnReceive>false</ApplyOnReceive>
+              <PipelineConditions>
+                <Id>0c9e637b-76b1-498b-b758-c6befbd0bd07</Id>
+                <Version>cf619a1e-fc2b-446e-8d8a-8a19b32237f0</Version>
+                <IsSystemObject>false</IsSystemObject>
+                <Condition />
+              </PipelineConditions>
+            </ClientPipelineItem>
+          </MessagePipelines>
+          <LogActivity>false</LogActivity>
+          <LogFile />
+          <LogSession>true</LogSession>
+        </ESBSubscriber>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>Enterprise/BookSubscriber</string>
+      </key>
+      <value>
+        <ESBSubscriber>
+          <Id>202808e6-91bf-4a98-9cdb-a9063d4584fb</Id>
+          <Version>b367c2da-6377-4a16-8aac-46b8ff75cb78</Version>
+          <Name>BookSubscriber</Name>
+          <Description />
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <AllowMultipleInstances>true</AllowMultipleInstances>
+          <UseUniqueWmiCounterName>true</UseUniqueWmiCounterName>
+          <SubscriberId>BookSubscriber</SubscriberId>
+          <ClientGroup>General</ClientGroup>
+          <Zone>Enterprise</Zone>
+          <Enabled>true</Enabled>
+          <Anonymous>true</Anonymous>
+          <Subscriptions>
+            <Subscription>
+              <TopicName>Books</TopicName>
+              <CanRead>true</CanRead>
+              <CanWrite>false</CanWrite>
+              <SubscriptionType>Topic</SubscriptionType>
+            </Subscription>
+          </Subscriptions>
+          <LogActivity>false</LogActivity>
+          <LogFile />
+          <LogSession>true</LogSession>
+        </ESBSubscriber>
+      </value>
+    </item>
+  </Subscribers>
+  <Services />
+  <ESBMessagePipelines>
+    <item>
+      <key>
+        <string>c6a20b9f-27e8-46f4-8d49-e724f8e4ee5f</string>
+      </key>
+      <value>
+        <ESBMessagePipelineStorage>
+          <Id>c6a20b9f-27e8-46f4-8d49-e724f8e4ee5f</Id>
+          <Version>8bb53284-5347-4fb1-8581-dd75243a1256</Version>
+          <Name>Validate Book Message - Code</Name>
+          <IsSystemObject>false</IsSystemObject>
+          <PipelineBlob>&lt;ESBMessagePipeline xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.neuronesb.com/pipelines/"&gt;&lt;Name&gt;Validate Book Message - Code&lt;/Name&gt;&lt;Properties xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;Steps&gt;&lt;ESBMessagePipelineStep i:type="ESBMessageCodePipelineStep"&gt;&lt;Bindings xmlns:d4p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name&gt;set schema &amp;amp; xslt&lt;/Name&gt;&lt;Code&gt;string transformXslt = "BookToHtmlXslt";
+string validationSchema = "BookSchema";
+
+// Set the neuron specific properties that the transform and schema validation steps will use for dynamic processing
+context.Data.SetProperty("neuron", "xsltName", transformXslt);
+context.Data.SetProperty("neuron", "schemaNames", validationSchema);&lt;/Code&gt;&lt;ReferencedAssemblies xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"&gt;&lt;d4p1:string&gt;mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;d4p1:string&gt;Neuron, Version=2.6.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d4p1:string&gt;&lt;d4p1:string&gt;Neuron.Pipelines, Version=2.6.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d4p1:string&gt;&lt;d4p1:string&gt;Neuron.Esb, Version=2.6.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d4p1:string&gt;&lt;d4p1:string&gt;System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;d4p1:string&gt;System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;d4p1:string&gt;System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;d4p1:string&gt;System.Runtime.Serialization, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;d4p1:string&gt;System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d4p1:string&gt;&lt;/ReferencedAssemblies&gt;&lt;/ESBMessagePipelineStep&gt;&lt;ESBMessagePipelineStep xmlns:d3p1="http://schemas.neuronesb.com/pipelines/esb/" i:type="d3p1:EsbMessageSchemaValidationPipelineStep"&gt;&lt;Bindings xmlns:d4p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name&gt;validate books&lt;/Name&gt;&lt;OnInvalid&gt;&lt;Bindings xmlns:d5p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name i:nil="true" /&gt;&lt;Children&gt;&lt;ESBMessagePipelineStep i:type="ESBMessageCodePipelineStep"&gt;&lt;Bindings xmlns:d7p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name&gt;display exception&lt;/Name&gt;&lt;Code&gt;//get the current exception
+Exception ex = (Exception)context.Properties["CurrentException"];
+
+string msg = "Validation Exception: ";
+if(ex.InnerException != null)
+{
+	msg += ex.InnerException.Message;
+}
+else
+{
+	msg += ex.Message;
+}
+
+//trace to designer window
+context.Instance.TraceError(msg);
+&lt;/Code&gt;&lt;ReferencedAssemblies xmlns:d7p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"&gt;&lt;d7p1:string&gt;mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;Neuron, Version=2.6.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d7p1:string&gt;&lt;d7p1:string&gt;Neuron.Pipelines, Version=2.6.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d7p1:string&gt;&lt;d7p1:string&gt;Neuron.Esb, Version=2.6.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.Runtime.Serialization, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;/ReferencedAssemblies&gt;&lt;/ESBMessagePipelineStep&gt;&lt;ESBMessagePipelineStep i:type="CancelPipelineStepOfESBMessagexAPWb1W4"&gt;&lt;Bindings xmlns:d7p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name i:nil="true" /&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Children&gt;&lt;/OnInvalid&gt;&lt;OnValid&gt;&lt;Bindings xmlns:d5p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name i:nil="true" /&gt;&lt;Children&gt;&lt;ESBMessagePipelineStep i:type="d3p1:EsbMessageBodyXslTransformPipelineStep"&gt;&lt;Bindings xmlns:d7p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name&gt;message to html&lt;/Name&gt;&lt;EnableDocumentFunction&gt;false&lt;/EnableDocumentFunction&gt;&lt;EnableScript&gt;false&lt;/EnableScript&gt;&lt;Parameters /&gt;&lt;Properties xmlns:d7p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;TransformXml i:nil="true" /&gt;&lt;/ESBMessagePipelineStep&gt;&lt;ESBMessagePipelineStep i:type="d3p1:EsbMessageTraceMessagePipelineStep"&gt;&lt;Bindings xmlns:d7p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name i:nil="true" /&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Children&gt;&lt;/OnValid&gt;&lt;Properties xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;Schemas xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;ValidationFlags&gt;ReportValidationWarnings&lt;/ValidationFlags&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Steps&gt;&lt;/ESBMessagePipeline&gt;</PipelineBlob>
+        </ESBMessagePipelineStorage>
+      </value>
+    </item>
+    <item>
+      <key>
+        <string>5e344170-0392-4a04-ae9b-fae93f5ba12e</string>
+      </key>
+      <value>
+        <ESBMessagePipelineStorage>
+          <Id>5e344170-0392-4a04-ae9b-fae93f5ba12e</Id>
+          <Version>20ebbce8-2ab0-4a8c-a16a-fa5b2c99f6f0</Version>
+          <Name>Validate Book Message</Name>
+          <IsSystemObject>false</IsSystemObject>
+          <PipelineBlob>&lt;ESBMessagePipeline xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.neuronesb.com/pipelines/"&gt;&lt;Name&gt;Validate Book Message&lt;/Name&gt;&lt;Properties xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;Steps&gt;&lt;ESBMessagePipelineStep xmlns:d3p1="http://schemas.neuronesb.com/pipelines/esb/" i:type="d3p1:EsbMessageSchemaValidationPipelineStep"&gt;&lt;Bindings xmlns:d4p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name&gt;validate books&lt;/Name&gt;&lt;OnInvalid&gt;&lt;Bindings xmlns:d5p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name i:nil="true" /&gt;&lt;Children&gt;&lt;ESBMessagePipelineStep i:type="ESBMessageCodePipelineStep"&gt;&lt;Bindings xmlns:d7p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name&gt;display exception&lt;/Name&gt;&lt;Code&gt;//get the current exception
+Exception ex = (Exception)context.Properties["CurrentException"];
+
+string msg = "Validation Exception: ";
+if(ex.InnerException != null)
+{
+	msg += ex.InnerException.Message;
+}
+else
+{
+	msg += ex.Message;
+}
+
+//trace to designer window
+context.Instance.TraceError(msg);
+&lt;/Code&gt;&lt;ReferencedAssemblies xmlns:d7p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"&gt;&lt;d7p1:string&gt;mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;Neuron, Version=2.6.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d7p1:string&gt;&lt;d7p1:string&gt;Neuron.Pipelines, Version=2.6.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d7p1:string&gt;&lt;d7p1:string&gt;Neuron.Esb, Version=2.6.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.Runtime.Serialization, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;/ReferencedAssemblies&gt;&lt;/ESBMessagePipelineStep&gt;&lt;ESBMessagePipelineStep i:type="CancelPipelineStepOfESBMessagexAPWb1W4"&gt;&lt;Bindings xmlns:d7p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name i:nil="true" /&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Children&gt;&lt;/OnInvalid&gt;&lt;OnValid&gt;&lt;Bindings xmlns:d5p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name i:nil="true" /&gt;&lt;Children&gt;&lt;ESBMessagePipelineStep i:type="d3p1:EsbMessageBodyXslTransformPipelineStep"&gt;&lt;Bindings xmlns:d7p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name&gt;message to html&lt;/Name&gt;&lt;EnableDocumentFunction&gt;false&lt;/EnableDocumentFunction&gt;&lt;EnableScript&gt;false&lt;/EnableScript&gt;&lt;Parameters /&gt;&lt;Properties xmlns:d7p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;TransformXml&gt;&amp;lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+&amp;lt;xsl:template match="/"&amp;gt;
+  &amp;lt;html&amp;gt;
+  &amp;lt;body&amp;gt;
+	&amp;lt;h2&amp;gt;&amp;lt;xsl:value-of select="book/title" /&amp;gt;&amp;lt;/h2&amp;gt;
+	&amp;lt;h3&amp;gt;&amp;lt;xsl:value-of select="book/author" /&amp;gt;&amp;lt;/h3&amp;gt;
+    &amp;lt;table border="1"&amp;gt;
+    &amp;lt;tr bgcolor="#9acd32"&amp;gt;
+      &amp;lt;th align="left"&amp;gt;Name&amp;lt;/th&amp;gt;
+      &amp;lt;th align="left"&amp;gt;Since&amp;lt;/th&amp;gt;
+	  &amp;lt;th align="left"&amp;gt;Qualification&amp;lt;/th&amp;gt;
+    &amp;lt;/tr&amp;gt;
+    &amp;lt;xsl:for-each select="book/character"&amp;gt;
+    &amp;lt;tr&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;xsl:value-of select="./name" /&amp;gt;&amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;xsl:value-of select="./since" /&amp;gt;&amp;lt;/td&amp;gt;
+	  &amp;lt;td&amp;gt;&amp;lt;xsl:value-of select="./qualification" /&amp;gt;&amp;lt;/td&amp;gt;
+    &amp;lt;/tr&amp;gt;
+    &amp;lt;/xsl:for-each&amp;gt;
+    &amp;lt;/table&amp;gt;
+  &amp;lt;/body&amp;gt;
+  &amp;lt;/html&amp;gt;
+&amp;lt;/xsl:template&amp;gt;
+&amp;lt;/xsl:stylesheet&amp;gt;&lt;/TransformXml&gt;&lt;/ESBMessagePipelineStep&gt;&lt;ESBMessagePipelineStep i:type="d3p1:EsbMessageTraceMessagePipelineStep"&gt;&lt;Bindings xmlns:d7p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name i:nil="true" /&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Children&gt;&lt;/OnValid&gt;&lt;Properties xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;Schemas xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"&gt;&lt;d4p1:string&gt;&amp;lt;?xml version="1.0" encoding="utf-16"?&amp;gt;
+&amp;lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&amp;gt;
+  &amp;lt;xs:element name="book"&amp;gt;
+    &amp;lt;xs:complexType&amp;gt;
+      &amp;lt;xs:sequence&amp;gt;
+        &amp;lt;xs:element name="title" type="xs:string" /&amp;gt;
+        &amp;lt;xs:element name="author" type="xs:string" /&amp;gt;
+        &amp;lt;xs:element minOccurs="0" maxOccurs="unbounded" name="character"&amp;gt;
+          &amp;lt;xs:complexType&amp;gt;
+            &amp;lt;xs:sequence&amp;gt;
+              &amp;lt;xs:element name="name" type="xs:string" /&amp;gt;
+              &amp;lt;xs:element minOccurs="0" maxOccurs="unbounded" name="friend-of" type="xs:string" /&amp;gt;
+              &amp;lt;xs:element name="since" type="xs:date" /&amp;gt;
+              &amp;lt;xs:element name="qualification" type="xs:string" /&amp;gt;
+            &amp;lt;/xs:sequence&amp;gt;
+          &amp;lt;/xs:complexType&amp;gt;
+        &amp;lt;/xs:element&amp;gt;
+      &amp;lt;/xs:sequence&amp;gt;
+      &amp;lt;xs:attribute name="isbn" type="xs:string" /&amp;gt;
+    &amp;lt;/xs:complexType&amp;gt;
+  &amp;lt;/xs:element&amp;gt;
+&amp;lt;/xs:schema&amp;gt;&lt;/d4p1:string&gt;&lt;/Schemas&gt;&lt;ValidationFlags&gt;ReportValidationWarnings&lt;/ValidationFlags&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Steps&gt;&lt;/ESBMessagePipeline&gt;</PipelineBlob>
+        </ESBMessagePipelineStorage>
+      </value>
+    </item>
+  </ESBMessagePipelines>
+  <Schemas>
+    <item>
+      <key>
+        <string>BookSchema</string>
+      </key>
+      <value>
+        <ESBSchema>
+          <Id>b7ba52f4-1a33-422b-819a-de15c3f4f36d</Id>
+          <Version />
+          <Name>BookSchema</Name>
+          <Description>Schema used in Validate Message pipeline sample</Description>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <FullName>BookSchema</FullName>
+          <ValidateWithService>false</ValidateWithService>
+          <Storing>false</Storing>
+          <ServiceAddress />
+          <SourceUri />
+          <TargetNamespace />
+          <ShortName>BookSchema</ShortName>
+          <Xsd>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:element name="book"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name="title" type="xs:string" /&gt;
+        &lt;xs:element name="author" type="xs:string" /&gt;
+        &lt;xs:element name="character" minOccurs="0" maxOccurs="unbounded"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="name" type="xs:string" /&gt;
+              &lt;xs:element name="friend-of" type="xs:string" minOccurs="0" maxOccurs="unbounded" /&gt;
+              &lt;xs:element name="since" type="xs:date" /&gt;
+              &lt;xs:element name="qualification" type="xs:string" /&gt;
+            &lt;/xs:sequence&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:sequence&gt;
+      &lt;xs:attribute name="isbn" type="xs:string" /&gt;
+    &lt;/xs:complexType&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</Xsd>
+        </ESBSchema>
+      </value>
+    </item>
+  </Schemas>
+  <XmlDocs>
+    <item>
+      <key>
+        <string>SchemaValidationSampleMessage</string>
+      </key>
+      <value>
+        <ESBXmlDoc>
+          <Id>0dd7bdc5-ea69-4990-af8d-f49868738c19</Id>
+          <Version>42a63f03-c26c-4c3d-8879-88db7fabcacd</Version>
+          <Name>SchemaValidationSampleMessage</Name>
+          <Description />
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <XmlVersion />
+          <SourceUri />
+          <Storing>false</Storing>
+          <Xml>&lt;book isbn="0836217462"&gt;
+  &lt;title&gt;Being a Dog Is a Full-Time Job&lt;/title&gt; 
+  &lt;author&gt;Charles M. Schulz&lt;/author&gt; 
+	&lt;character&gt;
+		&lt;name&gt;Snoopy&lt;/name&gt; 
+		&lt;friend-of&gt;Peppermint Patty&lt;/friend-of&gt; 
+		&lt;since&gt;1950-10-04&lt;/since&gt; 
+		&lt;qualification&gt;extroverted beagle&lt;/qualification&gt; 
+  	&lt;/character&gt;
+	&lt;character&gt;
+		&lt;name&gt;Peppermint Patty&lt;/name&gt; 
+		&lt;since&gt;1966-08-22&lt;/since&gt; 
+		&lt;qualification&gt;bold, brash and tomboyish&lt;/qualification&gt; 
+	&lt;/character&gt;
+&lt;/book&gt;</Xml>
+        </ESBXmlDoc>
+      </value>
+    </item>
+  </XmlDocs>
+  <WsdlDocuments />
+  <Xslts>
+    <item>
+      <key>
+        <string>BookToHtmlXslt</string>
+      </key>
+      <value>
+        <ESBXslt>
+          <Id>c0d39dc6-876c-48a1-ac4e-ec816c24ead9</Id>
+          <Version>ee6092f2-025c-4090-9818-a9f1e0e47b82</Version>
+          <Name>BookToHtmlXslt</Name>
+          <Description />
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <Storing>false</Storing>
+          <Xslt>&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+&lt;xsl:template match="/"&gt;
+  &lt;html&gt;
+  &lt;body&gt;
+	&lt;h2&gt;&lt;xsl:value-of select="./title" /&gt;&lt;/h2&gt;
+	&lt;h3&gt;&lt;xsl:value-of select="./author" /&gt;&lt;/h3&gt;
+    &lt;table border="1"&gt;
+    &lt;tr bgcolor="#9acd32"&gt;
+      &lt;th align="left"&gt;Name&lt;/th&gt;
+      &lt;th align="left"&gt;Since&lt;/th&gt;
+	  &lt;th align="left"&gt;Qualification&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;xsl:for-each select="character"&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;xsl:value-of select="./name" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;xsl:value-of select="./since" /&gt;&lt;/td&gt;
+	  &lt;td&gt;&lt;xsl:value-of select="./qualification" /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/xsl:for-each&gt;
+    &lt;/table&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+&lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</Xslt>
+          <TestInput />
+          <TestOutput />
+        </ESBXslt>
+      </value>
+    </item>
+  </Xslts>
+  <BusinessEvents />
+  <Deployments>
+    <item>
+      <key>
+        <string>Dev</string>
+      </key>
+      <value>
+        <ESBDeployment>
+          <Id>d722c0d6-f79a-400a-a38d-121606138e90</Id>
+          <Version>61a0e00a-f4eb-41ad-a889-fdbf95328211</Version>
+          <Name>Dev</Name>
+          <Description>Run everything on local machine</Description>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <NeuronEnvironmentVariables />
+          <AmqpServer>localhost</AmqpServer>
+          <AmqpPort>-1</AmqpPort>
+          <AmqpUserName>guest</AmqpUserName>
+          <AmqpPassword>guest</AmqpPassword>
+          <AmqpManagementPort>55672</AmqpManagementPort>
+          <Zone>Enterprise</Zone>
+          <Enabled>true</Enabled>
+          <Active>true</Active>
+          <ServerTopology>0</ServerTopology>
+          <StateDatabase />
+          <Units>
+            <ESBDeploymentUnit>
+              <MachineName>localhost</MachineName>
+              <IsESBServer>true</IsESBServer>
+              <IsQueueServer>true</IsQueueServer>
+            </ESBDeploymentUnit>
+          </Units>
+          <Addresses />
+          <Queues />
+        </ESBDeployment>
+      </value>
+    </item>
+  </Deployments>
+  <MessagePatterns />
+  <Bridges />
+  <Databases />
+  <Keys />
+  <Workflows />
+  <Bindings />
+  <Behaviors />
+  <Adapters />
+  <Credentials />
+  <ServicePolicies>
+    <item>
+      <key>
+        <string>Default</string>
+      </key>
+      <value>
+        <ESBServicePolicy>
+          <Id>949fbafb-014f-472d-890e-16c922bb6ae3</Id>
+          <Version>2f9ad314-893d-4568-b292-64e726439d70</Version>
+          <Name>Default</Name>
+          <Description>Default service policy</Description>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <RequestReplyTimeout>60</RequestReplyTimeout>
+          <RetryCount>1</RetryCount>
+          <RetryInterval>1</RetryInterval>
+          <OnErrorAuditToDatabase>false</OnErrorAuditToDatabase>
+          <OnErrorAuditToFile>true</OnErrorAuditToFile>
+          <OnErrorRepublishMessage>false</OnErrorRepublishMessage>
+          <OnErrorRollback>false</OnErrorRollback>
+          <RepublishTopic />
+          <AlwaysAvailable>true</AlwaysAvailable>
+          <InlcudeAsExceptions>false</InlcudeAsExceptions>
+          <StartAndStopAdapterAccordingToAvailability>true</StartAndStopAdapterAccordingToAvailability>
+          <HttpStatusCodes />
+          <DoNotApplyPolicyIfFaultContract>false</DoNotApplyPolicyIfFaultContract>
+          <RollbackMessageExpirationSeconds>300</RollbackMessageExpirationSeconds>
+          <RollbackDelaySeconds>1</RollbackDelaySeconds>
+        </ESBServicePolicy>
+      </value>
+    </item>
+  </ServicePolicies>
+  <AdapterPolicies>
+    <item>
+      <key>
+        <string>Default</string>
+      </key>
+      <value>
+        <ESBAdapterPolicy>
+          <Id>21ff7b02-ff53-4e30-9940-f71d05bfade4</Id>
+          <Version>0b6979ac-754c-49fc-9972-262f6c4d6df4</Version>
+          <Name>Default</Name>
+          <Description>Default adapter policy</Description>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <RetryCount>1</RetryCount>
+          <RetryInterval>1</RetryInterval>
+          <OnErrorAuditToDatabase>false</OnErrorAuditToDatabase>
+          <OnErrorAuditToFile>true</OnErrorAuditToFile>
+          <OnErrorRepublishMessage>false</OnErrorRepublishMessage>
+          <OnErrorRollback>false</OnErrorRollback>
+          <RepublishTopic />
+          <AlwaysAvailable>true</AlwaysAvailable>
+          <StartAndStopAdapterAccordingToAvailability>true</StartAndStopAdapterAccordingToAvailability>
+          <RollbackMessageExpirationSeconds>300</RollbackMessageExpirationSeconds>
+          <RollbackDelaySeconds>1</RollbackDelaySeconds>
+        </ESBAdapterPolicy>
+      </value>
+    </item>
+  </AdapterPolicies>
+  <Endpoints />
+  <AccessControlLists />
+  <Administrators />
+</ESBConfiguration>

@@ -1,0 +1,3 @@
+﻿<BidQuery xmlns="http://schema.neuron.sample/newmart/broadcast/request">
+	<Catalog productId="BigBox" qty="10" distributionCenter="Denver" />
+</BidQuery>

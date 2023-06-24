@@ -1,0 +1,5 @@
+﻿<QuoteRequest xmlns="http://schema.neuron.sample/oldmart/broadcast/request">
+	<Products>
+		<Product SKU="BigBox" quanity="10" warehouse="Denver" />
+	</Products>
+</QuoteRequest>

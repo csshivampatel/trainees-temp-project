@@ -1,0 +1,85 @@
+﻿{
+  "AtlasMapping" : {
+    "jsonType" : "io.atlasmap.v2.AtlasMapping",
+    "dataSource" : [ {
+      "jsonType" : "io.atlasmap.json.v2.JsonDataSource",
+      "id" : "OrderResponseSchema-JSON SCHEMA",
+      "name" : "OrderResponseSchema-JSON SCHEMA",
+      "description" : "Source document OrderResponseSchema-JSON SCHEMA type: JSON",
+      "uri" : "atlas:json:OrderResponseSchema-JSON SCHEMA",
+      "dataSourceType" : "SOURCE"
+    }, {
+      "jsonType" : "io.atlasmap.xml.v2.XmlDataSource",
+      "id" : "OrderQuoteSchema_PlaceOrderResponse-XSD",
+      "name" : "OrderQuoteSchema_PlaceOrderResponse-XSD",
+      "description" : "Target document OrderQuoteSchema_PlaceOrderResponse-XSD type: XSD",
+      "uri" : "atlas:xml:OrderQuoteSchema_PlaceOrderResponse-XSD",
+      "dataSourceType" : "TARGET",
+      "xmlNamespaces" : {
+        "xmlNamespace" : [ {
+          "alias" : "tns",
+          "uri" : "http://PeregrineConnnect.ServiceModel.Samples"
+        } ]
+      }
+    } ],
+    "mappings" : {
+      "mapping" : [ {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputField" : [ {
+          "jsonType" : "io.atlasmap.json.v2.JsonField",
+          "docId" : "OrderResponseSchema-JSON SCHEMA",
+          "path" : "/orderNumber",
+          "fieldType" : "BIG_INTEGER",
+          "name" : "orderNumber",
+          "userCreated" : false
+        } ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.v2.PropertyField",
+          "value" : "",
+          "docId" : "DOC.Properties.459964",
+          "path" : "/Order.OrderNumber",
+          "fieldType" : "STRING",
+          "name" : "Order.OrderNumber",
+          "scope" : "CustomProperty"
+        } ],
+        "id" : "mapping.243341",
+        "pageNumber" : 0
+      }, {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputField" : [ {
+          "jsonType" : "io.atlasmap.json.v2.JsonField",
+          "docId" : "OrderResponseSchema-JSON SCHEMA",
+          "path" : "/orderNumber",
+          "fieldType" : "BIG_INTEGER",
+          "name" : "orderNumber",
+          "userCreated" : false
+        } ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.xml.v2.XmlField",
+          "docId" : "OrderQuoteSchema_PlaceOrderResponse-XSD",
+          "path" : "/tns:PlaceOrderResponse/tns:PlaceOrderResult",
+          "fieldType" : "LONG",
+          "name" : "PlaceOrderResult",
+          "attribute" : false
+        } ],
+        "id" : "mapping.137718",
+        "pageNumber" : 0
+      } ]
+    },
+    "lookupTables" : {
+      "lookupTable" : [ ]
+    },
+    "constants" : {
+      "constant" : [ ]
+    },
+    "properties" : {
+      "property" : [ {
+        "name" : "Order.OrderNumber",
+        "fieldType" : "STRING",
+        "scope" : "CustomProperty",
+        "dataSourceType" : "TARGET"
+      } ]
+    },
+    "name" : "UI.0"
+  }
+}

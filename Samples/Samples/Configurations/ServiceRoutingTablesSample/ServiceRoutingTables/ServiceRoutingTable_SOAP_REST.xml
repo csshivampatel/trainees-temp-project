@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<ServiceRoutingTable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>2e11db5f-e169-4b89-9731-0fef44e69f27</Id>
+  <Version>25b7070d-3e9e-4abe-8b81-96d70283c14a</Version>
+  <BusinessFlows />
+  <Description>Takes REST Requests and calls SOAP Service after mapping on the  request and response.</Description>
+  <Name>ServiceRoutingTable_SOAP_REST</Name>
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <ServiceRoutingItems>
+    <ServiceRoutingItem>
+      <IsTestEnabled>false</IsTestEnabled>
+      <EndpointName>OrderQuoteService_REST</EndpointName>
+      <Request>
+        <Method>POST</Method>
+        <URI>/Orders</URI>
+        <Body />
+        <BodyType>Raw</BodyType>
+        <DeleteMessageBody>false</DeleteMessageBody>
+        <Parameters />
+        <Headers>
+          <HeaderDataElement>
+            <Key>Content-Type</Key>
+            <Value>application/xml</Value>
+          </HeaderDataElement>
+        </Headers>
+        <BodyProperties />
+        <TestBody />
+        <TestEnabled>FALSE</TestEnabled>
+        <TestFormat>TEXT</TestFormat>
+        <MaxPoolSize>1</MaxPoolSize>
+        <PoolTimeOut>1000</PoolTimeOut>
+        <AuditRequest>false</AuditRequest>
+        <AuditResponses>false</AuditResponses>
+        <AuditFailures>false</AuditFailures>
+      </Request>
+      <ServiceRoutingType>Service</ServiceRoutingType>
+      <RequestDataMap>XML_TO_JSON_For_Order</RequestDataMap>
+      <ResponseDataMap>JSON_TO_XML_For_OrderResponse</ResponseDataMap>
+      <RoutingConditions>
+        <Id>e9127ffe-6ba8-4b5b-aaac-3c8bc855c7a3</Id>
+        <Version>4ee3e91f-efca-4888-b2ff-c5615a259d42</Version>
+        <BusinessFlows />
+        <Description />
+        <IsSystemObject>false</IsSystemObject>
+        <IsPrivate>false</IsPrivate>
+      </RoutingConditions>
+    </ServiceRoutingItem>
+  </ServiceRoutingItems>
+  <Zone>Enterprise</Zone>
+</ServiceRoutingTable>

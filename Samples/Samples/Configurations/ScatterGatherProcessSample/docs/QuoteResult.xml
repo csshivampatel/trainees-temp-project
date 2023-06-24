@@ -1,0 +1,12 @@
+﻿<QuoteCollection xmlns="http://schema.neuron.sample/broadcast/result">
+	<QuoteResult xmlns="http://schema.neuron.sample/oldmart/broadcast/result">
+		<Vendor name="OLD MART" vendorId="GID989087" address="476 some street" city="Los Angeles" state="CA" zip="98989">
+			<Product SKU="BigBox" instock="true" quantity="10" price="55.67" />
+		</Vendor>
+	</QuoteResult>
+	<QuoteResult xmlns="http://schema.neuron.sample/newmart/broadcast/result">
+		<Vendor name="NEW MART" vendorId="GID000987" address="879 some street" city="Boston" state="MA" zip="90008">
+			<Product SKU="BigBox" instock="true" quantity="10" price="125.67" />
+		</Vendor>
+	</QuoteResult>
+</QuoteCollection>

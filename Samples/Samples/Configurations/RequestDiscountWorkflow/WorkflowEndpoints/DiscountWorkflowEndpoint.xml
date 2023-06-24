@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<EsbWorkflowHost xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>ba0040c7-81b8-4fb3-b187-0c4ef00c59e1</Id>
+  <Version>e76f04cb-5884-4ba7-b6c8-b7f5dec69fc8</Version>
+  <Name>DiscountWorkflowEndpoint</Name>
+  <Description />
+  <IsSystemObject>false</IsSystemObject>
+  <Bindings />
+  <AvailabilityGroupId>Discount Workflow Group</AvailabilityGroupId>
+  <Conditions>
+    <Action>false</Action>
+    <Binary>false</Binary>
+    <BodyType>false</BodyType>
+    <CustomProperties />
+    <DestId>false</DestId>
+    <Duplicate>false</Duplicate>
+    <DuplicateId>false</DuplicateId>
+    <Event>false</Event>
+    <Expires>false</Expires>
+    <FaultTo>false</FaultTo>
+    <FaultType>false</FaultType>
+    <From>false</From>
+    <HttpHeaders />
+    <HttpQueryParameters />
+    <Machine>false</Machine>
+    <ParentMessageId>false</ParentMessageId>
+    <Priority>false</Priority>
+    <RegularExpressions />
+    <RelatesTo>false</RelatesTo>
+    <ReplyTo>false</ReplyTo>
+    <ReplyToMessageId>false</ReplyToMessageId>
+    <ReplyToPartyId>false</ReplyToPartyId>
+    <ReplyToSessionId>false</ReplyToSessionId>
+    <RequestHeadersToPreserve>false</RequestHeadersToPreserve>
+    <RoutingSlip>false</RoutingSlip>
+    <Semantic>false</Semantic>
+    <Session>false</Session>
+    <Sid>false</Sid>
+    <SoapHeaders />
+    <SourceId>false</SourceId>
+    <TargetId>false</TargetId>
+    <To>false</To>
+    <Topic>false</Topic>
+    <TrackingSequence>false</TrackingSequence>
+    <TransactionId>false</TransactionId>
+    <Username>false</Username>
+    <XPathExpressions />
+  </Conditions>
+  <IsEnabled>true</IsEnabled>
+  <IsStoreTrackingValues>true</IsStoreTrackingValues>
+  <IsTrackingEnabled>true</IsTrackingEnabled>
+  <MaximumConcurrentWorkflows>100</MaximumConcurrentWorkflows>
+  <MaximumVariableLength>255</MaximumVariableLength>
+  <MessageTimeout>60</MessageTimeout>
+  <SubscriberId>DiscountSubscriber</SubscriberId>
+  <Topic>Discount</Topic>
+  <WorkflowDefinitionId>RequestDiscountWorkflow</WorkflowDefinitionId>
+</EsbWorkflowHost>
