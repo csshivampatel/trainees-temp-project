@@ -1,5 +1,0 @@
-﻿<SMTPSample>
-	<From>Neuron@NeuronDemo.com</From>
-	<To>Logs@NeuronDemo.com</To>
-	<body>This is a static Smtp adapter properties test</body>
-</SMTPSample>
