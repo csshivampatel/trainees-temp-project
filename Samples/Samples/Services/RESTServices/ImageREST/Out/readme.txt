@@ -1,1 +1,0 @@
-This folder is used by the "REST Client and Service with Binary Payloads" sample.
