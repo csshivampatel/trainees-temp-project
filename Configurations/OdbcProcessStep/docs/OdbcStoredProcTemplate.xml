@@ -1,0 +1,7 @@
+﻿<Statement type="StoredProcedure" sql="{0}">
+	<Parameters>
+		<Parameter type="int" name="@OrderID" value="{1}" />
+		<Parameter type="datetime" name="@OrderDate" value="{2}" />
+		<Parameter type="money" name="@OrderAmount" value="{3}" />
+	</Parameters>
+</Statement>

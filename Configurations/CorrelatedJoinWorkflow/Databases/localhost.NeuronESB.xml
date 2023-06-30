@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<ESBDatabase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>f7038a5c-fc6a-49f1-a782-99db996f2b56</Id>
+  <Version>d5ff0159-d7d1-49ec-af07-112cd7072d53</Version>
+  <BusinessFlows />
+  <Description />
+  <Name>localhost.NeuronESB</Name>
+  <IsSystemObject>false</IsSystemObject>
+  <Bindings />
+  <Accounts>
+    <Id>35a06084-d8a3-4bd1-bf43-7e44ea4f2d3e</Id>
+    <Version>a2fcc096-8720-407e-a507-e9da98a09fe8</Version>
+    <BusinessFlows />
+    <Description />
+    <IsSystemObject>false</IsSystemObject>
+    <AccessCheckType>Unknown</AccessCheckType>
+    <AccessCheckItems>
+      <ESBAccessCheckItem>
+        <AccessCheckType>WindowsGroup</AccessCheckType>
+        <AccessCheckMode>Default</AccessCheckMode>
+        <AccessPermission>ReadWrite</AccessPermission>
+        <Credential>
+          <Id>155931dd-7376-40b7-8f5d-b65aa5ca17f9</Id>
+          <Version>82942c54-a0c9-4117-8a22-0d5d068170c2</Version>
+          <BusinessFlows />
+          <Description />
+          <IsSystemObject>false</IsSystemObject>
+          <Type>None</Type>
+          <AccessCheckType>Unknown</AccessCheckType>
+          <SID>S-1-5-18</SID>
+          <Username>NT AUTHORITY\SYSTEM</Username>
+          <CertStoreLocation>LocalMachine</CertStoreLocation>
+          <CertStoreName>My</CertStoreName>
+          <CertFindType>FindByThumbprint</CertFindType>
+        </Credential>
+      </ESBAccessCheckItem>
+    </AccessCheckItems>
+  </Accounts>
+  <CatalogName>NeuronESB</CatalogName>
+  <ConnectionString>10dc3vgWBmJ+wt1TDJcaGWyA1gwTbkZAarpoEBdPhGS2OtDSmSPuXHoRTLsFTvGG8eE/eD3G8W/nPHXCRDvtXvZIPAQYWM0IPzkHOhBSslg=</ConnectionString>
+  <Zone>(All Zones)</Zone>
+  <DatabaseType>SQLServer</DatabaseType>
+</ESBDatabase>

@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<ServiceRoutingTable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>6c999fe0-e5e8-4be0-a460-8ba995127349</Id>
+  <Version>33b0d398-e468-4df4-9fe6-dbcec892a37e</Version>
+  <BusinessFlows />
+  <Description>Returns a mock response without calling the backend service.</Description>
+  <Name>Routing_Mock_Response</Name>
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <ServiceRoutingItems>
+    <ServiceRoutingItem>
+      <IsTestEnabled>false</IsTestEnabled>
+      <EndpointName>OrderQuoteService_REST</EndpointName>
+      <Request>
+        <Method>GET</Method>
+        <Body />
+        <BodyType>Raw</BodyType>
+        <DeleteMessageBody>false</DeleteMessageBody>
+        <Parameters />
+        <Headers />
+        <BodyProperties />
+        <TestBody>{
+    "orderNumber": 1,
+    "customerName": "Edward Jones",
+    "orderDate": "0001-01-01T00:00:00",
+    "product": "Shiny red car",
+    "quantity": 2,
+    "price": 50.3,
+    "amount": 100.6,
+    "shipping": 0.0,
+    "city": "NewYork"
+}</TestBody>
+        <TestEnabled>TRUE</TestEnabled>
+        <TestFormat>JSON</TestFormat>
+        <MaxPoolSize>1</MaxPoolSize>
+        <PoolTimeOut>1000</PoolTimeOut>
+        <AuditRequest>false</AuditRequest>
+        <AuditResponses>false</AuditResponses>
+        <AuditFailures>false</AuditFailures>
+      </Request>
+      <ServiceRoutingType>Service</ServiceRoutingType>
+      <RequestDataMap />
+      <ResponseDataMap />
+      <RoutingConditions>
+        <Id>89d70aa9-28d4-4062-974b-4d9be87d9616</Id>
+        <Version>c55e2624-61ce-4e57-ab68-4e202398ee0f</Version>
+        <BusinessFlows />
+        <Description />
+        <IsSystemObject>false</IsSystemObject>
+        <IsPrivate>false</IsPrivate>
+      </RoutingConditions>
+    </ServiceRoutingItem>
+  </ServiceRoutingItems>
+  <Zone>Enterprise</Zone>
+</ServiceRoutingTable>

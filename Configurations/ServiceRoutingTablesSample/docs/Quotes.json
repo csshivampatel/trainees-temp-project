@@ -1,0 +1,10 @@
+﻿{
+    "quoteNumber": 423483,
+    "quoteDate": "0001-01-01T00:00:00",
+    "product": "Bike",
+    "quantity": 2,
+    "city": "NewYork",
+    "price": 50.3,
+    "shipping": 0.0,
+    "amount": 100.6
+}

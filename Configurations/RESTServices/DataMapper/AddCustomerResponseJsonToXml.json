@@ -1,0 +1,79 @@
+﻿{
+  "AtlasMapping" : {
+    "jsonType" : "io.atlasmap.v2.AtlasMapping",
+    "dataSource" : [ {
+      "jsonType" : "io.atlasmap.json.v2.JsonDataSource",
+      "id" : "CustomerResultJson-JSON",
+      "name" : "CustomerResultJson-JSON",
+      "description" : "Source document CustomerResultJson-JSON type: JSON",
+      "uri" : "atlas:json:CustomerResultJson-JSON",
+      "dataSourceType" : "SOURCE"
+    }, {
+      "jsonType" : "io.atlasmap.xml.v2.XmlDataSource",
+      "id" : "CustomerServiceSchemas_AddCustomerResponse-XSD",
+      "name" : "CustomerServiceSchemas_AddCustomerResponse-XSD",
+      "description" : "Target document CustomerServiceSchemas_AddCustomerResponse-XSD type: XSD",
+      "uri" : "atlas:xml:CustomerServiceSchemas_AddCustomerResponse-XSD",
+      "dataSourceType" : "TARGET",
+      "xmlNamespaces" : {
+        "xmlNamespace" : [ {
+          "alias" : "tns",
+          "uri" : "http://Neuron.Samples"
+        } ]
+      }
+    } ],
+    "mappings" : {
+      "mapping" : [ {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputField" : [ {
+          "jsonType" : "io.atlasmap.json.v2.JsonField",
+          "docId" : "CustomerResultJson-JSON",
+          "path" : "/errorMsg",
+          "fieldType" : "STRING",
+          "name" : "errorMsg",
+          "userCreated" : false
+        } ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.xml.v2.XmlField",
+          "docId" : "CustomerServiceSchemas_AddCustomerResponse-XSD",
+          "path" : "/tns:AddCustomerResponse/tns:AddCustomerResult/tns:errorMsg",
+          "fieldType" : "STRING",
+          "name" : "errorMsg",
+          "attribute" : false
+        } ],
+        "id" : "mapping.42383",
+        "pageNumber" : 0
+      }, {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputField" : [ {
+          "jsonType" : "io.atlasmap.json.v2.JsonField",
+          "docId" : "CustomerResultJson-JSON",
+          "path" : "/success",
+          "fieldType" : "BOOLEAN",
+          "name" : "success",
+          "userCreated" : false
+        } ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.xml.v2.XmlField",
+          "docId" : "CustomerServiceSchemas_AddCustomerResponse-XSD",
+          "path" : "/tns:AddCustomerResponse/tns:AddCustomerResult/tns:success",
+          "fieldType" : "BOOLEAN",
+          "name" : "success",
+          "attribute" : false
+        } ],
+        "id" : "mapping.283940",
+        "pageNumber" : 0
+      } ]
+    },
+    "lookupTables" : {
+      "lookupTable" : [ ]
+    },
+    "constants" : {
+      "constant" : [ ]
+    },
+    "properties" : {
+      "property" : [ ]
+    },
+    "name" : "UI.0"
+  }
+}

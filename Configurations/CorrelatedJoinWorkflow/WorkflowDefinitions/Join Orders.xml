@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<EsbWorkflowDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>169c4a05-bddf-4f9c-be33-be07104298d8</Id>
+  <Version>57a01ac8-f3da-4875-9823-4995d315fb95</Version>
+  <BusinessFlows />
+  <Description />
+  <Name>Join Orders</Name>
+  <IsSystemObject>false</IsSystemObject>
+  <Category>General</Category>
+  <Path />
+  <ReferencedAssemblies />
+  <WorkflowType>CorrelatedMessageWorkflow</WorkflowType>
+  <WorkflowXaml>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;Activity x:Class="Join Orders" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:ne="clr-namespace:Neuron.Esb;assembly=Neuron.Esb" xmlns:nea="clr-namespace:Neuron.Esb.Administration;assembly=Neuron.Esb" xmlns:nea1="clr-namespace:Neuron.Esb.Activities;assembly=Neuron.Esb.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:s1="clr-namespace:System;assembly=System" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:snh="clr-namespace:System.Net.Http;assembly=System.Net.Http" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"&gt;
+  &lt;x:Members&gt;
+    &lt;x:Property Name="configuration" Type="InArgument(nea:ESBConfiguration)" /&gt;
+    &lt;x:Property Name="environmentVariables" Type="InArgument(scg:IReadOnlyDictionary(x:String, x:String))" /&gt;
+    &lt;x:Property Name="message" Type="InArgument(ne:ESBMessage)" /&gt;
+  &lt;/x:Members&gt;
+  &lt;sap:VirtualizedContainerService.HintSize&gt;599,1284&lt;/sap:VirtualizedContainerService.HintSize&gt;
+  &lt;sap2010:WorkflowViewState.IdRef&gt;Join Orders_1&lt;/sap2010:WorkflowViewState.IdRef&gt;
+  &lt;mva:VisualBasic.Settings&gt;Assembly references and imported namespaces for internal implementation&lt;/mva:VisualBasic.Settings&gt;
+  &lt;TextExpression.NamespacesForImplementation&gt;
+    &lt;sco:Collection x:TypeArguments="x:String"&gt;
+      &lt;x:String&gt;System.Activities.XamlIntegration&lt;/x:String&gt;
+      &lt;x:String&gt;System.Activities.Validation&lt;/x:String&gt;
+      &lt;x:String&gt;System.Activities&lt;/x:String&gt;
+      &lt;x:String&gt;System.Activities.Statements&lt;/x:String&gt;
+      &lt;x:String&gt;System.Activities.Expressions&lt;/x:String&gt;
+      &lt;x:String&gt;Microsoft.VisualBasic.Activities&lt;/x:String&gt;
+      &lt;x:String&gt;Neuron.Esb&lt;/x:String&gt;
+      &lt;x:String&gt;Neuron.Esb.Administration&lt;/x:String&gt;
+      &lt;x:String&gt;Neuron.Esb.Activities&lt;/x:String&gt;
+      &lt;x:String&gt;System&lt;/x:String&gt;
+      &lt;x:String&gt;System.Collections.Generic&lt;/x:String&gt;
+      &lt;x:String&gt;System.Net.Http&lt;/x:String&gt;
+      &lt;x:String&gt;System.Windows.Markup&lt;/x:String&gt;
+    &lt;/sco:Collection&gt;
+  &lt;/TextExpression.NamespacesForImplementation&gt;
+  &lt;TextExpression.ReferencesForImplementation&gt;
+    &lt;sco:Collection x:TypeArguments="AssemblyReference"&gt;
+      &lt;AssemblyReference&gt;System.Activities&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;Neuron.Esb&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;Neuron.Esb.Adapters.WebSphereMQHeaderRW&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;Neuron.Esb.Activities&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;mscorlib&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;System&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;System.ComponentModel.Composition&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;System.Core&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;System.ServiceModel&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;System.Net.Http&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;PresentationCore&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;WindowsBase&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;PresentationFramework&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;System.Xaml&lt;/AssemblyReference&gt;
+    &lt;/sco:Collection&gt;
+  &lt;/TextExpression.ReferencesForImplementation&gt;
+  &lt;Sequence DisplayName="Join steps" sap:VirtualizedContainerService.HintSize="559,1124" sap2010:WorkflowViewState.IdRef="Sequence_1"&gt;
+    &lt;Sequence.Variables&gt;
+      &lt;Variable x:TypeArguments="x:String" Name="batchID" /&gt;
+      &lt;Variable x:TypeArguments="x:Int32" Name="ordersInBatch" /&gt;
+      &lt;Variable x:TypeArguments="scg:List(ne:ESBMessage)" Default="[New System.Collections.Generic.List(Of Neuron.Esb.ESBMessage)]" Name="orders" /&gt;
+      &lt;Variable x:TypeArguments="ne:ESBMessage" Name="joinedOrder" /&gt;
+    &lt;/Sequence.Variables&gt;
+    &lt;sap:WorkflowViewStateService.ViewState&gt;
+      &lt;scg:Dictionary x:TypeArguments="x:String, x:Object"&gt;
+        &lt;x:Boolean x:Key="IsExpanded"&gt;True&lt;/x:Boolean&gt;
+      &lt;/scg:Dictionary&gt;
+    &lt;/sap:WorkflowViewStateService.ViewState&gt;
+    &lt;DoWhile DisplayName="Gather orders" sap:VirtualizedContainerService.HintSize="537,772" sap2010:WorkflowViewState.IdRef="DoWhile_1"&gt;
+      &lt;sap:WorkflowViewStateService.ViewState&gt;
+        &lt;scg:Dictionary x:TypeArguments="x:String, x:Object"&gt;
+          &lt;x:Boolean x:Key="IsExpanded"&gt;True&lt;/x:Boolean&gt;
+          &lt;x:Boolean x:Key="IsPinned"&gt;False&lt;/x:Boolean&gt;
+        &lt;/scg:Dictionary&gt;
+      &lt;/sap:WorkflowViewStateService.ViewState&gt;
+      &lt;DoWhile.Condition&gt;[orders.Count &amp;lt; ordersInBatch]&lt;/DoWhile.Condition&gt;
+      &lt;Sequence DisplayName="Gather steps" sap:VirtualizedContainerService.HintSize="511,614" sap2010:WorkflowViewState.IdRef="Sequence_2"&gt;
+        &lt;sap:WorkflowViewStateService.ViewState&gt;
+          &lt;scg:Dictionary x:TypeArguments="x:String, x:Object"&gt;
+            &lt;x:Boolean x:Key="IsExpanded"&gt;True&lt;/x:Boolean&gt;
+            &lt;x:Boolean x:Key="IsPinned"&gt;False&lt;/x:Boolean&gt;
+          &lt;/scg:Dictionary&gt;
+        &lt;/sap:WorkflowViewStateService.ViewState&gt;
+        &lt;If Condition="[String.IsNullOrEmpty(batchID)]" DisplayName="If initial values not set" sap:VirtualizedContainerService.HintSize="489,428" sap2010:WorkflowViewState.IdRef="If_1"&gt;
+          &lt;sap:WorkflowViewStateService.ViewState&gt;
+            &lt;scg:Dictionary x:TypeArguments="x:String, x:Object"&gt;
+              &lt;x:Boolean x:Key="IsExpanded"&gt;True&lt;/x:Boolean&gt;
+              &lt;x:Boolean x:Key="IsPinned"&gt;False&lt;/x:Boolean&gt;
+            &lt;/scg:Dictionary&gt;
+          &lt;/sap:WorkflowViewStateService.ViewState&gt;
+          &lt;If.Then&gt;
+            &lt;Sequence DisplayName="Set values from first message" sap:VirtualizedContainerService.HintSize="264,284" sap2010:WorkflowViewState.IdRef="Sequence_3"&gt;
+              &lt;sap:WorkflowViewStateService.ViewState&gt;
+                &lt;scg:Dictionary x:TypeArguments="x:String, x:Object"&gt;
+                  &lt;x:Boolean x:Key="IsExpanded"&gt;True&lt;/x:Boolean&gt;
+                  &lt;x:Boolean x:Key="IsPinned"&gt;False&lt;/x:Boolean&gt;
+                &lt;/scg:Dictionary&gt;
+              &lt;/sap:WorkflowViewStateService.ViewState&gt;
+              &lt;Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_1"&gt;
+                &lt;Assign.To&gt;
+                  &lt;OutArgument x:TypeArguments="x:String"&gt;[batchID]&lt;/OutArgument&gt;
+                &lt;/Assign.To&gt;
+                &lt;Assign.Value&gt;
+                  &lt;InArgument x:TypeArguments="x:String"&gt;[message.GetProperty("orders", "batchID")]&lt;/InArgument&gt;
+                &lt;/Assign.Value&gt;
+              &lt;/Assign&gt;
+              &lt;Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_2"&gt;
+                &lt;Assign.To&gt;
+                  &lt;OutArgument x:TypeArguments="x:Int32"&gt;[ordersInBatch]&lt;/OutArgument&gt;
+                &lt;/Assign.To&gt;
+                &lt;Assign.Value&gt;
+                  &lt;InArgument x:TypeArguments="x:Int32"&gt;[Convert.ToInt32(message.GetProperty("orders", "ordersInBatch"))]&lt;/InArgument&gt;
+                &lt;/Assign.Value&gt;
+              &lt;/Assign&gt;
+            &lt;/Sequence&gt;
+          &lt;/If.Then&gt;
+          &lt;If.Else&gt;
+            &lt;nea1:ReceiveMessage CorrelationID="{x:Null}" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ReceiveMessage_1" Result="[message]" Timeout="00:01:00" /&gt;
+          &lt;/If.Else&gt;
+        &lt;/If&gt;
+        &lt;AddToCollection x:TypeArguments="ne:ESBMessage" Collection="[orders]" DisplayName="Add order to collection" sap:VirtualizedContainerService.HintSize="489,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_1" Item="[message]" /&gt;
+      &lt;/Sequence&gt;
+    &lt;/DoWhile&gt;
+    &lt;nea1:JoinMessages DisplayName="Join orders" sap:VirtualizedContainerService.HintSize="537,36" sap2010:WorkflowViewState.IdRef="JoinMessages_1" Messages="[orders]" Result="[joinedOrder]" WrapperElementName="ProcessedOrders" WrapperElementNamespace="http://neuronesb/order"&gt;
+      &lt;sap:WorkflowViewStateService.ViewState&gt;
+        &lt;scg:Dictionary x:TypeArguments="x:String, x:Object"&gt;
+          &lt;x:Boolean x:Key="IsExpanded"&gt;False&lt;/x:Boolean&gt;
+          &lt;x:Boolean x:Key="IsPinned"&gt;False&lt;/x:Boolean&gt;
+        &lt;/scg:Dictionary&gt;
+      &lt;/sap:WorkflowViewStateService.ViewState&gt;
+    &lt;/nea1:JoinMessages&gt;
+    &lt;nea1:CSharpCodeActivity ReferencedAssemblies="{x:Array Type=x:String}" DisplayName="Add batchID attribute" sap:VirtualizedContainerService.HintSize="537,36" sap2010:WorkflowViewState.IdRef="CSharpCodeActivity_2" SourceCode="var xml = joinedOrder.ToXDocument();&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;var batchIDAttribute = new XAttribute(&amp;quot;batchID&amp;quot;, batchID);&amp;#xD;&amp;#xA;xml.Root.Add(batchIDAttribute);&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;joinedOrder.FromXml(xml.ToString());"&gt;
+      &lt;sap:WorkflowViewStateService.ViewState&gt;
+        &lt;scg:Dictionary x:TypeArguments="x:String, x:Object"&gt;
+          &lt;x:Boolean x:Key="IsExpanded"&gt;False&lt;/x:Boolean&gt;
+          &lt;x:Boolean x:Key="IsPinned"&gt;False&lt;/x:Boolean&gt;
+        &lt;/scg:Dictionary&gt;
+      &lt;/sap:WorkflowViewStateService.ViewState&gt;
+    &lt;/nea1:CSharpCodeActivity&gt;
+    &lt;nea1:PublishMessage CorrelationID="{x:Null}" CorrelationSet="{x:Null}" DisplayName="Publish order" sap:VirtualizedContainerService.HintSize="464,36" sap2010:WorkflowViewState.IdRef="PublishMessage_1" Message="[joinedOrder]" Semantic="Multicast" Topic="Orders.Completed"&gt;
+      &lt;sap:WorkflowViewStateService.ViewState&gt;
+        &lt;scg:Dictionary x:TypeArguments="x:String, x:Object"&gt;
+          &lt;x:Boolean x:Key="IsExpanded"&gt;False&lt;/x:Boolean&gt;
+          &lt;x:Boolean x:Key="IsPinned"&gt;False&lt;/x:Boolean&gt;
+        &lt;/scg:Dictionary&gt;
+      &lt;/sap:WorkflowViewStateService.ViewState&gt;
+    &lt;/nea1:PublishMessage&gt;
+  &lt;/Sequence&gt;
+&lt;/Activity&gt;</WorkflowXaml>
+</EsbWorkflowDefinition>

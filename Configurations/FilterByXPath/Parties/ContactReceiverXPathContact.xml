@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<ESBSubscriber xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>4d697bf4-e0e2-495a-86f1-9bd5e196dcf7</Id>
+  <Version>12b8b9ba-7eb3-4a2c-9b41-8852f24f0a74</Version>
+  <Name>ContactReceiverXPathContact</Name>
+  <Description />
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <AllowMultipleInstances>true</AllowMultipleInstances>
+  <UseUniqueWmiCounterName>true</UseUniqueWmiCounterName>
+  <SubscriberId>ContactReceiverXPathContact</SubscriberId>
+  <ClientGroup>General</ClientGroup>
+  <Zone>Enterprise</Zone>
+  <Enabled>true</Enabled>
+  <Anonymous>true</Anonymous>
+  <Subscriptions>
+    <Subscription>
+      <TopicName>Contacts.*</TopicName>
+      <CanRead>true</CanRead>
+      <CanWrite>false</CanWrite>
+      <Condition>
+        <Conditions>
+          <ConditionElement>
+            <PrefixOperator>None</PrefixOperator>
+            <Expression1>Body</Expression1>
+            <NotOperator>false</NotOperator>
+            <RelationalOperator>MatchesXPath</RelationalOperator>
+            <Expression2>//con:contact</Expression2>
+            <SuffixOperator>None</SuffixOperator>
+            <LogicalOperator>End</LogicalOperator>
+          </ConditionElement>
+        </Conditions>
+      </Condition>
+      <SubscriptionType>Topic</SubscriptionType>
+    </Subscription>
+  </Subscriptions>
+  <LogActivity>false</LogActivity>
+  <LogFile />
+  <LogSession>true</LogSession>
+</ESBSubscriber>

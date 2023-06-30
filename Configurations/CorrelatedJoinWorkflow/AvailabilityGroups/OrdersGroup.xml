@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<EsbAvailabilityGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>b4fab9a1-4c1c-408b-9f39-1dc4d8bad92e</Id>
+  <Version>ab0a64c6-2859-45b5-88fe-77951b642560</Version>
+  <Name>OrdersGroup</Name>
+  <Description />
+  <IsSystemObject>false</IsSystemObject>
+  <Category>General</Category>
+  <RunAs />
+  <IsEnabled>true</IsEnabled>
+  <DeploymentGroups>
+    <EsbAvailabilityGroupDeploymentGroupMapping>
+      <DeploymentGroup>Dev</DeploymentGroup>
+      <Servers>
+        <DeploymentServer>
+          <ServerName>localhost</ServerName>
+          <Role>Primary</Role>
+          <RetryCount>0</RetryCount>
+          <RetryInterval>0</RetryInterval>
+          <IsEnabled>true</IsEnabled>
+        </DeploymentServer>
+      </Servers>
+    </EsbAvailabilityGroupDeploymentGroupMapping>
+  </DeploymentGroups>
+</EsbAvailabilityGroup>

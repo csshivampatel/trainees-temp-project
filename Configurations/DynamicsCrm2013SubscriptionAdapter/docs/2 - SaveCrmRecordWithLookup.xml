@@ -1,0 +1,24 @@
+﻿<NeuronCrmAdapterMessage>
+  <CrmCommands Transactional="true">
+    <Lookups>
+      <Lookup id="contactid" entity="contact" lookupfield="contactid">
+        <searchfield name="fullname" value="John Smith" typename="string" operator="equal" />
+      </Lookup>
+    </Lookups>
+    <SaveCrmRecord allowCreate="true" id="account" entity= "account" identityfield= "accountid">
+	  <properties>
+        <accountnumber typename = "string">101010101010</accountnumber>
+        <address1_city typename = "string">Irvine</address1_city>
+        <address1_country  typename = "string">USA </address1_country>
+        <name typename = "string">Sample Account</name>
+        <creditlimit typename = "money">10000</creditlimit>
+        <isprivate  typename = "bool">True</isprivate>
+        <industrycode typename = "optionsetvalue">1</industrycode>
+        <territorycode typename = "optionsetvalue">1</territorycode>
+        <description typename = "string">Sample Account</description>
+        <telephone1 typename = "string">100007</telephone1>
+        <primarycontactid typename = "Lookup" lookupid ="contactid" />
+      </properties>
+    </SaveCrmRecord>
+  </CrmCommands>
+</NeuronCrmAdapterMessage>

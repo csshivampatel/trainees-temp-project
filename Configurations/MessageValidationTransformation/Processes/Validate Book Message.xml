@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<ESBMessagePipelineStorage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>5e344170-0392-4a04-ae9b-fae93f5ba12e</Id>
+  <Version>20ebbce8-2ab0-4a8c-a16a-fa5b2c99f6f0</Version>
+  <Name>Validate Book Message</Name>
+  <IsSystemObject>false</IsSystemObject>
+  <PipelineBlob>&lt;ESBMessagePipeline xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.neuronesb.com/pipelines/"&gt;&lt;GlobalProperties xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;Name&gt;Validate Book Message&lt;/Name&gt;&lt;Properties xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;ReferencedAssemblies xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" /&gt;&lt;Steps&gt;&lt;ESBMessagePipelineStep xmlns:d3p1="http://schemas.neuronesb.com/pipelines/esb/" i:type="d3p1:EsbMessageSchemaValidationPipelineStep"&gt;&lt;Bindings xmlns:d4p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name&gt;validate books&lt;/Name&gt;&lt;OnInvalid&gt;&lt;Bindings xmlns:d5p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name i:nil="true" /&gt;&lt;Children&gt;&lt;ESBMessagePipelineStep i:type="ESBMessageCodePipelineStep"&gt;&lt;Bindings xmlns:d7p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name&gt;display exception&lt;/Name&gt;&lt;Code&gt;//get the current exception
+Exception ex = (Exception)context.Properties["CurrentException"];
+
+string msg = "Validation Exception: ";
+if(ex.InnerException != null)
+{
+	msg += ex.InnerException.Message;
+}
+else
+{
+	msg += ex.Message;
+}
+
+//trace to designer window
+context.Instance.TraceError(msg);
+&lt;/Code&gt;&lt;ReferencedAssemblies xmlns:d7p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"&gt;&lt;d7p1:string&gt;mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;Neuron, Version=3.0.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d7p1:string&gt;&lt;d7p1:string&gt;Neuron.Pipelines, Version=3.0.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d7p1:string&gt;&lt;d7p1:string&gt;Neuron.Esb, Version=3.0.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;/ReferencedAssemblies&gt;&lt;/ESBMessagePipelineStep&gt;&lt;ESBMessagePipelineStep i:type="CancelPipelineStepOfESBMessagexAPWb1W4"&gt;&lt;Bindings xmlns:d7p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name i:nil="true" /&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Children&gt;&lt;/OnInvalid&gt;&lt;OnValid&gt;&lt;Bindings xmlns:d5p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name i:nil="true" /&gt;&lt;Children&gt;&lt;ESBMessagePipelineStep i:type="d3p1:EsbMessageBodyXslTransformPipelineStep"&gt;&lt;Bindings xmlns:d7p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name&gt;message to html&lt;/Name&gt;&lt;EnableDocumentFunction&gt;false&lt;/EnableDocumentFunction&gt;&lt;EnableScript&gt;false&lt;/EnableScript&gt;&lt;Parameters /&gt;&lt;TransformXml i:nil="true" /&gt;&lt;d3p1:XsltName&gt;BookToHtmlXslt&lt;/d3p1:XsltName&gt;&lt;/ESBMessagePipelineStep&gt;&lt;ESBMessagePipelineStep i:type="d3p1:EsbMessageTraceMessagePipelineStep"&gt;&lt;Bindings xmlns:d7p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;Name i:nil="true" /&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Children&gt;&lt;/OnValid&gt;&lt;Properties xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;Schemas xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"&gt;&lt;d4p1:string&gt;&amp;lt;?xml version="1.0" encoding="utf-16"?&amp;gt;
+&amp;lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&amp;gt;
+  &amp;lt;xs:element name="book"&amp;gt;
+    &amp;lt;xs:complexType&amp;gt;
+      &amp;lt;xs:sequence&amp;gt;
+        &amp;lt;xs:element name="title" type="xs:string" /&amp;gt;
+        &amp;lt;xs:element name="author" type="xs:string" /&amp;gt;
+        &amp;lt;xs:element minOccurs="0" maxOccurs="unbounded" name="character"&amp;gt;
+          &amp;lt;xs:complexType&amp;gt;
+            &amp;lt;xs:sequence&amp;gt;
+              &amp;lt;xs:element name="name" type="xs:string" /&amp;gt;
+              &amp;lt;xs:element minOccurs="0" maxOccurs="unbounded" name="friend-of" type="xs:string" /&amp;gt;
+              &amp;lt;xs:element name="since" type="xs:date" /&amp;gt;
+              &amp;lt;xs:element name="qualification" type="xs:string" /&amp;gt;
+            &amp;lt;/xs:sequence&amp;gt;
+          &amp;lt;/xs:complexType&amp;gt;
+        &amp;lt;/xs:element&amp;gt;
+      &amp;lt;/xs:sequence&amp;gt;
+      &amp;lt;xs:attribute name="isbn" type="xs:string" /&amp;gt;
+    &amp;lt;/xs:complexType&amp;gt;
+  &amp;lt;/xs:element&amp;gt;
+&amp;lt;/xs:schema&amp;gt;&lt;/d4p1:string&gt;&lt;/Schemas&gt;&lt;ValidationFlags&gt;ReportValidationWarnings&lt;/ValidationFlags&gt;&lt;d3p1:SchemaNames i:nil="true" /&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Steps&gt;&lt;/ESBMessagePipeline&gt;</PipelineBlob>
+</ESBMessagePipelineStorage>

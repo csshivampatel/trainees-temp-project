@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<ESBService xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>4274b3c7-a2f3-4cd6-b443-568c222cee2e</Id>
+  <Version>279928b7-8be2-4256-b6e7-2fff5ea2c7d8</Version>
+  <BusinessFlows />
+  <Description />
+  <Name>EchoHRService_V2</Name>
+  <Group />
+  <IsSystemObject>false</IsSystemObject>
+  <Bindings />
+  <RequestReplyActionPairs />
+  <Pattern>0</Pattern>
+  <Properties />
+  <MessagingPattern>Request-Reply</MessagingPattern>
+  <ProxySettings>
+    <HostConfigType>Default</HostConfigType>
+    <CredentialConfigType>NotSpecified</CredentialConfigType>
+    <Credential>&lt;Default&gt;</Credential>
+    <Host />
+    <Port>0</Port>
+    <BypassLocalAddress>false</BypassLocalAddress>
+  </ProxySettings>
+  <Enabled>true</Enabled>
+  <Zone>Enterprise</Zone>
+  <ServiceName>EchoHRService_V2</ServiceName>
+  <AvailabilityGroupId>Neuron ESB Default Host</AvailabilityGroupId>
+  <ServiceGroup />
+  <Behavior />
+  <Binding>BasicHttp</Binding>
+  <KeepAlive>true</KeepAlive>
+  <HostNameComparisonModeIsExact>false</HostNameComparisonModeIsExact>
+  <TransactionType>None</TransactionType>
+  <MaxMessageSize>1000000</MaxMessageSize>
+  <ReliableMessaging>false</ReliableMessaging>
+  <ConfigFile />
+  <InboundPolling>false</InboundPolling>
+  <OptimizeForLargeMessages>false</OptimizeForLargeMessages>
+  <RawBody>false</RawBody>
+  <ServiceThrottles>
+    <MaxConcurrentCalls>128</MaxConcurrentCalls>
+    <MaxConcurrentInstances>928</MaxConcurrentInstances>
+    <MaxConcurrentSessions>800</MaxConcurrentSessions>
+  </ServiceThrottles>
+  <CertificateValidationMode>None</CertificateValidationMode>
+  <CertificateRevocationMode>NoCheck</CertificateRevocationMode>
+  <NegotiateServiceCredential>false</NegotiateServiceCredential>
+  <EstablishSecurityContext>false</EstablishSecurityContext>
+  <Contract>http://tempuri.org/IEchoAnything</Contract>
+  <Security>None</Security>
+  <ServiceIdentityType>None</ServiceIdentityType>
+  <ServicePrincipal />
+  <ServiceType>Business</ServiceType>
+  <ClientCredentialtype>Certificate</ClientCredentialtype>
+  <Impersonation>false</Impersonation>
+  <ClientConnectorId>3794ba42-48e2-43f9-aafe-0cebda55f662</ClientConnectorId>
+  <ClientUrl />
+  <RouteClientTraffic>false</RouteClientTraffic>
+  <ClientTopic />
+  <UpdateMetadata>true</UpdateMetadata>
+  <UseHttps>false</UseHttps>
+  <EnableClientMetadataHttpEndpoint>false</EnableClientMetadataHttpEndpoint>
+  <EnableClientMetadataHttpsEndpoint>false</EnableClientMetadataHttpsEndpoint>
+  <ClientSubscriberId>NorthstarPub</ClientSubscriberId>
+  <CaptureHeaders>false</CaptureHeaders>
+  <CaptureHTTPHeaders>false</CaptureHTTPHeaders>
+  <HttpConnectionLimit>2</HttpConnectionLimit>
+  <EnableCors>false</EnableCors>
+  <ACL />
+  <AccessUrl>http://localhost:8742/</AccessUrl>
+  <RouteServiceTraffic>true</RouteServiceTraffic>
+  <RestoreHeaders>true</RestoreHeaders>
+  <RestoreHTTPHeaders>false</RestoreHTTPHeaders>
+  <ServiceTopic />
+  <ServiceSubscriberId>NorthStar.HR.V2</ServiceSubscriberId>
+  <ReuseServiceConnection>true</ReuseServiceConnection>
+  <ServicePolicy>Default</ServicePolicy>
+  <FailoverAddresses />
+  <FarmSingleInstance>false</FarmSingleInstance>
+</ESBService>

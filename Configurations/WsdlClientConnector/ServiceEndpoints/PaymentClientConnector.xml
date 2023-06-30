@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<ESBService xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>5c022989-a316-4620-a547-ca3a49f66a36</Id>
+  <Version>887637b5-acbe-4608-a72d-6f11aa1f7fb9</Version>
+  <BusinessFlows />
+  <Description />
+  <Name>PaymentClientConnector</Name>
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <Bindings />
+  <Topic />
+  <Pattern>1</Pattern>
+  <Properties />
+  <MessagingPattern>Request-Reply</MessagingPattern>
+  <ProxySettings>
+    <HostConfigType>Default</HostConfigType>
+    <CredentialConfigType>NotSpecified</CredentialConfigType>
+    <Credential>&lt;Default&gt;</Credential>
+    <Host />
+    <Port>0</Port>
+    <BypassLocalAddress>false</BypassLocalAddress>
+  </ProxySettings>
+  <Enabled>true</Enabled>
+  <Zone>Enterprise</Zone>
+  <ServiceName>PaymentClientConnector</ServiceName>
+  <AvailabilityGroupId>Neuron ESB Default Host</AvailabilityGroupId>
+  <ServiceGroup>General</ServiceGroup>
+  <Behavior />
+  <Binding>BasicHttp</Binding>
+  <KeepAlive>true</KeepAlive>
+  <HostNameComparisonModeIsExact>false</HostNameComparisonModeIsExact>
+  <TransactionType>None</TransactionType>
+  <MaxMessageSize>1000000</MaxMessageSize>
+  <ReliableMessaging>false</ReliableMessaging>
+  <ConfigFile />
+  <InboundPolling>false</InboundPolling>
+  <OptimizeForLargeMessages>false</OptimizeForLargeMessages>
+  <RawBody>false</RawBody>
+  <ServiceThrottles>
+    <MaxConcurrentCalls>208</MaxConcurrentCalls>
+    <MaxConcurrentInstances>1008</MaxConcurrentInstances>
+    <MaxConcurrentSessions>800</MaxConcurrentSessions>
+  </ServiceThrottles>
+  <CertificateValidationMode>None</CertificateValidationMode>
+  <CertificateRevocationMode>NoCheck</CertificateRevocationMode>
+  <NegotiateServiceCredential>true</NegotiateServiceCredential>
+  <EstablishSecurityContext>true</EstablishSecurityContext>
+  <Contract />
+  <Security>None</Security>
+  <ServiceIdentityType>None</ServiceIdentityType>
+  <ServicePrincipal />
+  <ServiceType>Business</ServiceType>
+  <ClientCredentialtype>Certificate</ClientCredentialtype>
+  <Impersonation>false</Impersonation>
+  <ClientConnectorId>02dc82c0-476f-4fb0-b80c-17d24f8c3564</ClientConnectorId>
+  <ClientUrl>http://localhost:8080/PaymentService</ClientUrl>
+  <RouteClientTraffic>true</RouteClientTraffic>
+  <ClientTopic>Payments</ClientTopic>
+  <UpdateMetadata>true</UpdateMetadata>
+  <UseHttps>false</UseHttps>
+  <WsdlDocumentId>PaymentServiceFullWSDL</WsdlDocumentId>
+  <EnableClientMetadataHttpEndpoint>true</EnableClientMetadataHttpEndpoint>
+  <ClientMetadataHttpUrl />
+  <EnableClientMetadataHttpsEndpoint>false</EnableClientMetadataHttpsEndpoint>
+  <ClientMetadataHttpsUrl />
+  <ClientSubscriberId>PaymentPublisher</ClientSubscriberId>
+  <CaptureHeaders>true</CaptureHeaders>
+  <CaptureHTTPHeaders>false</CaptureHTTPHeaders>
+  <HttpConnectionLimit>100</HttpConnectionLimit>
+  <EnableCors>false</EnableCors>
+  <ClientCertName />
+  <ACL />
+  <ExternalMetadataLocation />
+  <AccessUrl />
+  <RouteServiceTraffic>false</RouteServiceTraffic>
+  <RestoreHeaders>true</RestoreHeaders>
+  <RestoreHTTPHeaders>false</RestoreHTTPHeaders>
+  <ServiceTopic />
+  <ServiceSubscriberId />
+  <ReuseServiceConnection>true</ReuseServiceConnection>
+  <ServerCertName />
+  <ServicePolicy>Default</ServicePolicy>
+  <FailoverAddresses />
+  <FarmSingleInstance>false</FarmSingleInstance>
+</ESBService>

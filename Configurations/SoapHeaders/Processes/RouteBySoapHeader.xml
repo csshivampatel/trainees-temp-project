@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<ESBMessagePipelineStorage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>4f3c094f-d259-442f-8523-c1fb940e5d80</Id>
+  <Version>a2dbdde6-3747-4e7f-8371-0ca39629d3e1</Version>
+  <BusinessFlows />
+  <Description />
+  <Name>RouteBySoapHeader</Name>
+  <IsSystemObject>false</IsSystemObject>
+  <IsEncrypted>true</IsEncrypted>
+  <PipelineBlob>&lt;ESBMessagePipeline xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.neuronesb.com/pipelines/"&gt;&lt;Category i:nil="true" /&gt;&lt;Description i:nil="true" /&gt;&lt;GlobalProperties xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;Name&gt;RouteBySoapHeader&lt;/Name&gt;&lt;Properties xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;ReferencedAssemblies xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" /&gt;&lt;Steps&gt;&lt;ESBMessagePipelineStep i:type="DecisionPipelineStepOfESBMessagexAPWb1W4"&gt;&lt;Bindings xmlns:d4p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Name&gt;Decision&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;Branches&gt;&lt;BranchOfESBMessagexAPWb1W4&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Condition i:type="CodeBranchConditionOfESBMessagexAPWb1W4"&gt;&lt;Code&gt;string propName = "Route";
+string ns = "http://www.neuronesb.com/samples/soapheaders";
+//
+return context.Data.Soap.Headers.ContainsKey(ns + "/" + propName);
+&lt;/Code&gt;&lt;ReferencedAssemblies xmlns:d7p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"&gt;&lt;d7p1:string&gt;Neuron&lt;/d7p1:string&gt;&lt;d7p1:string&gt;Neuron.Pipelines&lt;/d7p1:string&gt;&lt;d7p1:string&gt;Neuron.Esb&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;/ReferencedAssemblies&gt;&lt;/Condition&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Name&gt;Route Header?&lt;/Name&gt;&lt;Steps&gt;&lt;Bindings xmlns:d7p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Name&gt;Group&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;Children&gt;&lt;ESBMessagePipelineStep i:type="ESBMessageCodePipelineStep"&gt;&lt;Bindings xmlns:d9p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Name&gt;Code&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;BreakPointLines xmlns:d9p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;Code&gt;string header = "http://www.neuronesb.com/samples/soapheaders" + "/" + "Route";
+System.Xml.XmlDocument xmlDoc;
+
+// Get the property
+string propValue = context.Data.Soap.Headers.ContainsKey(header)?context.Data.Soap.Headers[header]:"";
+if(!String.IsNullOrEmpty(propValue))
+{	
+	// Load the xml doc
+	xmlDoc = new System.Xml.XmlDocument();
+	xmlDoc.LoadXml(propValue);
+	
+	// write the property we retreived as the outgoing soap header 
+	if(context.Instance.IsInfoEnabled)
+		context.Instance.TraceInformation("Neuron Pipeline - Route - " +  xmlDoc.InnerText);
+
+	// set the topic with the subtopic that represents the service to route to
+	context.Data.Header.Topic = xmlDoc.InnerText;
+}&lt;/Code&gt;&lt;ReferencedAssemblies xmlns:d9p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"&gt;&lt;d9p1:string&gt;Neuron&lt;/d9p1:string&gt;&lt;d9p1:string&gt;Neuron.Pipelines&lt;/d9p1:string&gt;&lt;d9p1:string&gt;Neuron.Esb&lt;/d9p1:string&gt;&lt;d9p1:string&gt;System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d9p1:string&gt;&lt;d9p1:string&gt;System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d9p1:string&gt;&lt;d9p1:string&gt;System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d9p1:string&gt;&lt;d9p1:string&gt;System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d9p1:string&gt;&lt;d9p1:string&gt;System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d9p1:string&gt;&lt;d9p1:string&gt;System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d9p1:string&gt;&lt;d9p1:string&gt;System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d9p1:string&gt;&lt;/ReferencedAssemblies&gt;&lt;TypeName&gt;Type80907463d88432182bbe11cb342be3&lt;/TypeName&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Children&gt;&lt;/Steps&gt;&lt;/BranchOfESBMessagexAPWb1W4&gt;&lt;BranchOfESBMessagexAPWb1W4&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Condition i:type="CodeBranchConditionOfESBMessagexAPWb1W4"&gt;&lt;Code&gt;string propName = "SecurityHeader";
+string ns = "http://www.neuronesb.com/samples/soapheaders";
+
+return context.Data.Soap.Headers.ContainsKey(ns + "/" + propName);
+&lt;/Code&gt;&lt;ReferencedAssemblies xmlns:d7p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"&gt;&lt;d7p1:string&gt;Neuron&lt;/d7p1:string&gt;&lt;d7p1:string&gt;Neuron.Pipelines&lt;/d7p1:string&gt;&lt;d7p1:string&gt;Neuron.Esb&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;d7p1:string&gt;System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d7p1:string&gt;&lt;/ReferencedAssemblies&gt;&lt;/Condition&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Name&gt;Security Header?&lt;/Name&gt;&lt;Steps&gt;&lt;Bindings xmlns:d7p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Name&gt;Group&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;Children&gt;&lt;ESBMessagePipelineStep i:type="ESBMessageCodePipelineStep"&gt;&lt;Bindings xmlns:d9p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Name&gt;Code&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;BreakPointLines xmlns:d9p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;Code&gt;string header = "http://www.neuronesb.com/samples/soapheaders" + "/" + "SecurityHeader";
+Neuron.Samples.Soap.Headers.SecurityHeader securityHeader;
+System.Xml.XmlDocument xmlDoc;
+System.Runtime.Serialization.DataContractSerializer serializer;
+
+// Get the property
+string propValue = context.Data.Soap.Headers.ContainsKey(header)?context.Data.Soap.Headers[header]:"";
+if(!String.IsNullOrEmpty(propValue))
+{	
+	// Load the xml doc
+	xmlDoc = new System.Xml.XmlDocument();
+	xmlDoc.LoadXml(propValue);
+	
+	// create the serialized object so we can access the SecurityHeader class directly
+	serializer = new System.Runtime.Serialization.DataContractSerializer(typeof(Neuron.Samples.Soap.Headers.SecurityHeader));
+	using(System.IO.MemoryStream outStream = new System.IO.MemoryStream())
+	{
+		xmlDoc.Save(outStream);
+		outStream.Position = 0; 
+       	securityHeader = (Neuron.Samples.Soap.Headers.SecurityHeader)serializer.ReadObject(outStream);
+	}
+	
+	// write the property we retreived as the outgoing soap header 
+	System.Diagnostics.EventLog.WriteEntry("Neuron Pipeline - Token",securityHeader.Token, System.Diagnostics.EventLogEntryType.Warning, 5000);
+
+	// set the topic with the subtopic that represents the service to route to
+	context.Data.Header.Topic = securityHeader.Service;
+}&lt;/Code&gt;&lt;ReferencedAssemblies xmlns:d9p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"&gt;&lt;d9p1:string&gt;mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d9p1:string&gt;&lt;d9p1:string&gt;System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d9p1:string&gt;&lt;d9p1:string&gt;System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d9p1:string&gt;&lt;d9p1:string&gt;Neuron, Version=3.0.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d9p1:string&gt;&lt;d9p1:string&gt;Neuron.Pipelines, Version=3.0.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d9p1:string&gt;&lt;d9p1:string&gt;Neuron.Esb, Version=3.0.0.0, Culture=neutral, PublicKeyToken=ed764b6eccb2f6cc&lt;/d9p1:string&gt;&lt;d9p1:string&gt;System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d9p1:string&gt;&lt;d9p1:string&gt;System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d9p1:string&gt;&lt;d9p1:string&gt;System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d9p1:string&gt;&lt;d9p1:string&gt;System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/d9p1:string&gt;&lt;d9p1:string&gt;SoapHeaders, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null&lt;/d9p1:string&gt;&lt;/ReferencedAssemblies&gt;&lt;TypeName&gt;Type6afab290e4647c086221db735023cf&lt;/TypeName&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Children&gt;&lt;/Steps&gt;&lt;/BranchOfESBMessagexAPWb1W4&gt;&lt;BranchOfESBMessagexAPWb1W4&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Condition i:type="AlwaysBranchConditionOfESBMessagexAPWb1W4" /&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Name&gt;Else&lt;/Name&gt;&lt;Steps&gt;&lt;Bindings xmlns:d7p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Name&gt;Group&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;Children&gt;&lt;ESBMessagePipelineStep i:type="CancelPipelineStepOfESBMessagexAPWb1W4"&gt;&lt;Bindings xmlns:d9p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Name&gt;Cancel&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Children&gt;&lt;/Steps&gt;&lt;/BranchOfESBMessagexAPWb1W4&gt;&lt;/Branches&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Steps&gt;&lt;/ESBMessagePipeline&gt;</PipelineBlob>
+</ESBMessagePipelineStorage>

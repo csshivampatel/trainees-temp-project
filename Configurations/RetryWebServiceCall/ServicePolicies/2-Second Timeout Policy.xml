@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<ESBServicePolicy xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>2dc3a346-a2e8-4154-bc87-d3175ce32875</Id>
+  <Version>15219e36-fca6-42d8-85bd-25df7deb1f5a</Version>
+  <BusinessFlows />
+  <Description>Default service policy</Description>
+  <Name>2-Second Timeout Policy</Name>
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <OnErrorAuditToDatabase>false</OnErrorAuditToDatabase>
+  <OnErrorAuditToFile>true</OnErrorAuditToFile>
+  <OnErrorRepublishMessage>false</OnErrorRepublishMessage>
+  <RepublishTopic />
+  <OnErrorRollback>false</OnErrorRollback>
+  <AlwaysAvailable>true</AlwaysAvailable>
+  <RequestReplyTimeout>2</RequestReplyTimeout>
+  <DoNotApplyPolicyIfFaultContract>false</DoNotApplyPolicyIfFaultContract>
+  <RetryCount>1</RetryCount>
+  <RetryInterval>1</RetryInterval>
+  <RollbackDelaySeconds>1</RollbackDelaySeconds>
+  <RollbackMessageExpirationSeconds>300</RollbackMessageExpirationSeconds>
+  <AuditDirectoryLocation />
+  <InlcudeAsExceptions>false</InlcudeAsExceptions>
+  <StartAndStopAdapterAccordingToAvailability>true</StartAndStopAdapterAccordingToAvailability>
+  <HttpStatusCodes />
+  <CustomHttpStatusCodes />
+  <SoapFaultDescription />
+</ESBServicePolicy>

@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://PeregrineConnnect.ServiceModel.Samples" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="OutofCityOrderService" targetNamespace="http://PeregrineConnnect.ServiceModel.Samples" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://PeregrineConnnect.ServiceModel.Samples">
+      <xs:element name="RequestQuote">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Product" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+            <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RequestQuoteResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RequestQuoteResult" nillable="true" type="tns:Quote" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="Quote">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Amount" type="xs:double" />
+          <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Price" type="xs:double" />
+          <xs:element minOccurs="0" name="Product" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+          <xs:element minOccurs="0" name="QuoteDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="QuoteNumber" type="xs:int" />
+          <xs:element minOccurs="0" name="Shipping" type="xs:double" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Quote" nillable="true" type="tns:Quote" />
+      <xs:element name="GetOrder">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="OrderNumber" type="xs:int" />
+            <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetOrderResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetOrderResult" nillable="true" type="tns:Order" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="Order">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Amount" type="xs:double" />
+          <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OrderNumber" type="xs:int" />
+          <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Product" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+          <xs:element minOccurs="0" name="Shipping" type="xs:double" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Order" nillable="true" type="tns:Order" />
+      <xs:element name="PlaceOrder">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="order" nillable="true" type="tns:Order" />
+            <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PlaceOrderResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="PlaceOrderResult" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xsd:schema>
+    <xsd:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IQuote_RequestQuote_InputMessage">
+    <wsdl:part name="parameters" element="tns:RequestQuote" />
+  </wsdl:message>
+  <wsdl:message name="IQuote_RequestQuote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RequestQuoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrder_GetOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrder" />
+  </wsdl:message>
+  <wsdl:message name="IOrder_GetOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrder_PlaceOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:PlaceOrder" />
+  </wsdl:message>
+  <wsdl:message name="IOrder_PlaceOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PlaceOrderResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IQuote">
+    <wsdl:operation name="RequestQuote">
+      <wsdl:input wsaw:Action="http://PeregrineConnnect.ServiceModel.Samples/IQuote/RequestQuote" message="tns:IQuote_RequestQuote_InputMessage" />
+      <wsdl:output wsaw:Action="http://PeregrineConnnect.ServiceModel.Samples/IQuote/RequestQuoteResponse" message="tns:IQuote_RequestQuote_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IOrder">
+    <wsdl:operation name="GetOrder">
+      <wsdl:input wsaw:Action="http://PeregrineConnnect.ServiceModel.Samples/IOrder/GetOrder" message="tns:IOrder_GetOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://PeregrineConnnect.ServiceModel.Samples/IOrder/GetOrderResponse" message="tns:IOrder_GetOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PlaceOrder">
+      <wsdl:input wsaw:Action="http://PeregrineConnnect.ServiceModel.Samples/IOrder/PlaceOrder" message="tns:IOrder_PlaceOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://PeregrineConnnect.ServiceModel.Samples/IOrder/PlaceOrderResponse" message="tns:IOrder_PlaceOrder_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IQuote" type="tns:IQuote">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RequestQuote">
+      <soap:operation soapAction="http://PeregrineConnnect.ServiceModel.Samples/IQuote/RequestQuote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IOrder" type="tns:IOrder">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetOrder">
+      <soap:operation soapAction="http://PeregrineConnnect.ServiceModel.Samples/IOrder/GetOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PlaceOrder">
+      <soap:operation soapAction="http://PeregrineConnnect.ServiceModel.Samples/IOrder/PlaceOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OutofCityOrderService">
+    <wsdl:port name="BasicHttpBinding_IQuote" binding="tns:BasicHttpBinding_IQuote">
+      <soap:address location="http://localhost:8001/Quote" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IOrder" binding="tns:BasicHttpBinding_IOrder">
+      <soap:address location="http://localhost:8001/Order" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

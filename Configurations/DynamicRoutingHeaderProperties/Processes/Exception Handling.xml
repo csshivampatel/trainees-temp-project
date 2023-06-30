@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ESBMessagePipelineStorage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>0c24e9cb-db3d-40fc-81c4-1f8b4070c38b</Id>
+  <Version>76a8ce4b-13c7-4cd3-9a57-693720b97540</Version>
+  <Name>Exception Handling</Name>
+  <Description />
+  <IsSystemObject>false</IsSystemObject>
+  <IsEncrypted>true</IsEncrypted>
+  <PipelineBlob>&lt;ESBMessagePipeline xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.neuronesb.com/pipelines/"&gt;&lt;Category i:nil="true" /&gt;&lt;Description i:nil="true" /&gt;&lt;GlobalProperties xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;Name&gt;Exception Handling&lt;/Name&gt;&lt;Properties xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;ReferencedAssemblies xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" /&gt;&lt;Steps&gt;&lt;ESBMessagePipelineStep xmlns:d3p1="http://schemas.neuronesb.com/pipelines/esb/" i:type="d3p1:EsbMessageAuditPipelineStep"&gt;&lt;Bindings xmlns:d4p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Name&gt;Audit Failure&lt;/Name&gt;&lt;Uniquename i:nil="true" /&gt;&lt;d3p1:Action&gt;Failure&lt;/d3p1:Action&gt;&lt;d3p1:FailureDetail i:nil="true" /&gt;&lt;d3p1:FailureType i:nil="true" /&gt;&lt;d3p1:IncludeBody&gt;true&lt;/d3p1:IncludeBody&gt;&lt;d3p1:IncludeMsgProps&gt;true&lt;/d3p1:IncludeMsgProps&gt;&lt;d3p1:XPath i:nil="true" /&gt;&lt;/ESBMessagePipelineStep&gt;&lt;ESBMessagePipelineStep i:type="RethrowPipelineStepOfESBMessagexAPWb1W4"&gt;&lt;Bindings xmlns:d4p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Name i:nil="true" /&gt;&lt;Uniquename i:nil="true" /&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Steps&gt;&lt;/ESBMessagePipeline&gt;</PipelineBlob>
+</ESBMessagePipelineStorage>

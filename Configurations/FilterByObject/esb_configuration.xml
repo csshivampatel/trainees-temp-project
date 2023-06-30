@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<ESBConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>22</Version>
+  <EnvironmentName>FilterByObject</EnvironmentName>
+  <NeuronBuildVersion>3.7.5.329</NeuronBuildVersion>
+  <ApplicationName>FilterByObject</ApplicationName>
+  <ApplicationId>36d2eb2a-06a3-4e18-b373-954af4c08c18</ApplicationId>
+  <ZoneName>Enterprise</ZoneName>
+  <ChangeList>
+    <Additions />
+    <Revisions>
+      <string>Edit,*,zone,Enterprise</string>
+    </Revisions>
+    <Deletions />
+    <LastModifiedBy />
+    <LastModifiedDate>2021-06-18T10:31:43.956178Z</LastModifiedDate>
+    <Comments />
+  </ChangeList>
+  <NeuronEnvironmentVariables />
+  <ProcessFolders />
+  <DataMapperPort>8585</DataMapperPort>
+  <InstanceName />
+  <Zones />
+  <Topics />
+  <Subscribers />
+  <Services />
+  <WorkflowDefinitions />
+  <WorkflowHosts />
+  <AvailabilityGroups />
+  <OAuthProviders />
+  <ESBMessagePipelines />
+  <Schemas />
+  <JsonSchemas />
+  <XmlDocs />
+  <TextDocs />
+  <JsonDocs />
+  <SwaggerDocs />
+  <WsdlDocuments />
+  <Xslts>
+    <item>
+      <key>
+        <string>TransformContactXsl</string>
+      </key>
+      <value>
+        <ESBXslt>
+          <Id>60ca66d4-277d-4712-bb23-ef0524253c91</Id>
+          <Version>a7b11e79-b42a-4ce0-b568-0fe78ca6e87b</Version>
+          <BusinessFlows />
+          <Description />
+          <Name>TransformContactXsl</Name>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <Storing>false</Storing>
+          <Xslt />
+          <TestInput />
+          <TestOutput />
+        </ESBXslt>
+      </value>
+    </item>
+  </Xslts>
+  <DataMappers />
+  <BusinessEvents />
+  <Deployments />
+  <MessagePatterns />
+  <Bridges />
+  <Databases />
+  <Keys />
+  <Workflows />
+  <Applications />
+  <BusinessFlows />
+  <Bindings />
+  <ServiceRoutingTables />
+  <Behaviors />
+  <Adapters />
+  <Credentials />
+  <ServicePolicies />
+  <AdapterPolicies />
+  <Endpoints />
+  <AccessControlLists />
+  <Administrators />
+  <IsEncrypted>false</IsEncrypted>
+</ESBConfiguration>

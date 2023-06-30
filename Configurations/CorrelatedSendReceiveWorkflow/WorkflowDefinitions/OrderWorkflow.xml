@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<EsbWorkflowDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>62c9f4ec-fc36-43e8-b9c3-a53c981a418a</Id>
+  <Version>9e9110cb-5ae0-4908-a1c8-0def94e043e1</Version>
+  <Name>OrderWorkflow</Name>
+  <Description />
+  <IsSystemObject>false</IsSystemObject>
+  <Category>General</Category>
+  <Path />
+  <WorkflowType>BasicWorkflow</WorkflowType>
+  <WorkflowXaml>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;Activity x:Class="OrderWorkflow" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:ne="clr-namespace:Neuron.Esb;assembly=Neuron.Esb" xmlns:nea="clr-namespace:Neuron.Esb.Administration;assembly=Neuron.Esb" xmlns:nea1="clr-namespace:Neuron.Esb.Activities;assembly=Neuron.Esb.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:s1="clr-namespace:System;assembly=System" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:snh="clr-namespace:System.Net.Http;assembly=System.Net.Http" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"&gt;
+  &lt;x:Members&gt;
+    &lt;x:Property Name="message" Type="InArgument(ne:ESBMessage)" /&gt;
+    &lt;x:Property Name="configuration" Type="InArgument(nea:ESBConfiguration)" /&gt;
+    &lt;x:Property Name="environmentVariables" Type="InArgument(scg:IReadOnlyDictionary(x:String, x:String))" /&gt;
+  &lt;/x:Members&gt;
+  &lt;sap:VirtualizedContainerService.HintSize&gt;304,870&lt;/sap:VirtualizedContainerService.HintSize&gt;
+  &lt;sap2010:WorkflowViewState.IdRef&gt;NewWorkflow1_1&lt;/sap2010:WorkflowViewState.IdRef&gt;
+  &lt;mva:VisualBasic.Settings&gt;Assembly references and imported namespaces for internal implementation&lt;/mva:VisualBasic.Settings&gt;
+  &lt;TextExpression.NamespacesForImplementation&gt;
+    &lt;sco:Collection x:TypeArguments="x:String"&gt;
+      &lt;x:String&gt;System.Activities.XamlIntegration&lt;/x:String&gt;
+      &lt;x:String&gt;System.Activities.Validation&lt;/x:String&gt;
+      &lt;x:String&gt;System.Activities&lt;/x:String&gt;
+      &lt;x:String&gt;System.Activities.Statements&lt;/x:String&gt;
+      &lt;x:String&gt;System.Activities.Expressions&lt;/x:String&gt;
+      &lt;x:String&gt;Microsoft.VisualBasic.Activities&lt;/x:String&gt;
+      &lt;x:String&gt;Neuron.Esb&lt;/x:String&gt;
+      &lt;x:String&gt;Neuron.Esb.Administration&lt;/x:String&gt;
+      &lt;x:String&gt;Neuron.Esb.Activities&lt;/x:String&gt;
+      &lt;x:String&gt;System&lt;/x:String&gt;
+      &lt;x:String&gt;System.Collections.Generic&lt;/x:String&gt;
+      &lt;x:String&gt;System.Net.Http&lt;/x:String&gt;
+      &lt;x:String&gt;System.Windows.Markup&lt;/x:String&gt;
+    &lt;/sco:Collection&gt;
+  &lt;/TextExpression.NamespacesForImplementation&gt;
+  &lt;TextExpression.ReferencesForImplementation&gt;
+    &lt;sco:Collection x:TypeArguments="AssemblyReference"&gt;
+      &lt;AssemblyReference&gt;System.Activities&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;Neuron.Esb&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;Neuron.Esb.Adapters.WebSphereMQHeaderRW&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;ESBService&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;Neuron.Esb.Activities&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;mscorlib&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;System&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;System.Net.Http&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;PresentationCore&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;WindowsBase&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;PresentationFramework&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;System.Xaml&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;System.ComponentModel.Composition&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;System.Core&lt;/AssemblyReference&gt;
+      &lt;AssemblyReference&gt;System.ServiceModel&lt;/AssemblyReference&gt;
+    &lt;/sco:Collection&gt;
+  &lt;/TextExpression.ReferencesForImplementation&gt;
+  &lt;Sequence DisplayName="Steps" sap:VirtualizedContainerService.HintSize="264,790" sap2010:WorkflowViewState.IdRef="Sequence_1"&gt;
+    &lt;Sequence.Variables&gt;
+      &lt;Variable x:TypeArguments="x:String" Name="orderID" /&gt;
+      &lt;Variable x:TypeArguments="ne:ESBMessage" Name="correlatedMsg" /&gt;
+      &lt;Variable x:TypeArguments="x:String" Name="correlationID" /&gt;
+    &lt;/Sequence.Variables&gt;
+    &lt;sap:WorkflowViewStateService.ViewState&gt;
+      &lt;scg:Dictionary x:TypeArguments="x:String, x:Object"&gt;
+        &lt;x:Boolean x:Key="IsExpanded"&gt;True&lt;/x:Boolean&gt;
+      &lt;/scg:Dictionary&gt;
+    &lt;/sap:WorkflowViewStateService.ViewState&gt;
+    &lt;Assign DisplayName="Set order id" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_1"&gt;
+      &lt;Assign.To&gt;
+        &lt;OutArgument x:TypeArguments="x:String"&gt;[orderID]&lt;/OutArgument&gt;
+      &lt;/Assign.To&gt;
+      &lt;Assign.Value&gt;
+        &lt;InArgument x:TypeArguments="x:String"&gt;[Guid.NewGuid.ToString()]&lt;/InArgument&gt;
+      &lt;/Assign.Value&gt;
+    &lt;/Assign&gt;
+    &lt;WriteLine DisplayName="log" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&amp;quot;Order ID: &amp;quot; + orderID]" /&gt;
+    &lt;nea1:CSharpCodeActivity ReferencedAssemblies="{x:Array Type=x:String}" DisplayName="Set orderId custom property" sap:VirtualizedContainerService.HintSize="242,36" sap2010:WorkflowViewState.IdRef="CSharpCodeActivity_1" SourceCode="message.SetProperty(&amp;quot;order&amp;quot;, &amp;quot;orderId&amp;quot;, orderID);"&gt;
+      &lt;sap:WorkflowViewStateService.ViewState&gt;
+        &lt;scg:Dictionary x:TypeArguments="x:String, x:Object"&gt;
+          &lt;x:Boolean x:Key="IsExpanded"&gt;False&lt;/x:Boolean&gt;
+          &lt;x:Boolean x:Key="IsPinned"&gt;False&lt;/x:Boolean&gt;
+        &lt;/scg:Dictionary&gt;
+      &lt;/sap:WorkflowViewStateService.ViewState&gt;
+    &lt;/nea1:CSharpCodeActivity&gt;
+    &lt;nea1:PublishMessage CorrelationID="[correlationID]" DisplayName="Send" sap:VirtualizedContainerService.HintSize="242,128" sap2010:WorkflowViewState.IdRef="PublishMessage_2" Message="[message]" Semantic="Multicast" Topic="Orders.Out"&gt;
+      &lt;nea1:PublishMessage.CorrelationSet&gt;
+        &lt;nea1:CreateCorrelationSet Action="False" Binary="False" BodyType="False" CustomProperties="order.orderId" DestId="False" Duplicate="False" DuplicateId="False" Event="False" Expires="False" FaultTo="False" FaultType="False" From="False" Machine="False" ParentMessageId="False" Priority="False" RelatesTo="False" ReplyTo="False" ReplyToMessageId="False" ReplyToPartyId="False" ReplyToSessionId="False" RequestHeadersToPreserve="False" RoutingSlip="False" Semantic="False" Session="False" Sid="False" SourceId="False" TargetId="False" To="False" Topic="False" TrackingSequence="False" TransactionId="False" UserName="False"&gt;
+          &lt;nea1:CreateCorrelationSet.HttpHeaders&gt;
+            &lt;InArgument x:TypeArguments="x:String"&gt;
+              &lt;Literal x:TypeArguments="x:String" Value="" /&gt;
+            &lt;/InArgument&gt;
+          &lt;/nea1:CreateCorrelationSet.HttpHeaders&gt;
+          &lt;nea1:CreateCorrelationSet.HttpQueryParameters&gt;
+            &lt;InArgument x:TypeArguments="x:String"&gt;
+              &lt;Literal x:TypeArguments="x:String" Value="" /&gt;
+            &lt;/InArgument&gt;
+          &lt;/nea1:CreateCorrelationSet.HttpQueryParameters&gt;
+          &lt;nea1:CreateCorrelationSet.RegularExpressions&gt;
+            &lt;InArgument x:TypeArguments="x:String"&gt;
+              &lt;Literal x:TypeArguments="x:String" Value="" /&gt;
+            &lt;/InArgument&gt;
+          &lt;/nea1:CreateCorrelationSet.RegularExpressions&gt;
+          &lt;nea1:CreateCorrelationSet.SoapHeaders&gt;
+            &lt;InArgument x:TypeArguments="x:String"&gt;
+              &lt;Literal x:TypeArguments="x:String" Value="" /&gt;
+            &lt;/InArgument&gt;
+          &lt;/nea1:CreateCorrelationSet.SoapHeaders&gt;
+          &lt;nea1:CreateCorrelationSet.XPathExpressions&gt;
+            &lt;InArgument x:TypeArguments="x:String"&gt;
+              &lt;Literal x:TypeArguments="x:String" Value="" /&gt;
+            &lt;/InArgument&gt;
+          &lt;/nea1:CreateCorrelationSet.XPathExpressions&gt;
+        &lt;/nea1:CreateCorrelationSet&gt;
+      &lt;/nea1:PublishMessage.CorrelationSet&gt;
+    &lt;/nea1:PublishMessage&gt;
+    &lt;WriteLine DisplayName="log" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&amp;quot;Correlation ID: &amp;quot; + correlationID]" /&gt;
+    &lt;nea1:ReceiveMessage CorrelationID="[correlationID]" DisplayName="Receive" sap:VirtualizedContainerService.HintSize="242,22" sap2010:WorkflowViewState.IdRef="ReceiveMessage_1" Result="[correlatedMsg]" Timeout="00:01:00" /&gt;
+    &lt;WriteLine DisplayName="log" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[correlatedMsg.Text]" /&gt;
+  &lt;/Sequence&gt;
+&lt;/Activity&gt;</WorkflowXaml>
+</EsbWorkflowDefinition>

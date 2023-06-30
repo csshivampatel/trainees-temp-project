@@ -1,0 +1,10 @@
+﻿<NeuronCrmAdapterMessage>
+  <CrmCommands Transactional="true">
+    <SaveCrmRecord allowCreate="true" id="contact" entity="contact" identityfield="contactid">
+      <properties>
+        <firstname typename="String">John</firstname>
+        <lastname typename="String">Smith</lastname>
+      </properties>
+    </SaveCrmRecord>
+  </CrmCommands>
+</NeuronCrmAdapterMessage>

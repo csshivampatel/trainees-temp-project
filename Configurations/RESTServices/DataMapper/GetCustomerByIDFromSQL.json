@@ -1,0 +1,99 @@
+﻿{
+  "AtlasMapping" : {
+    "jsonType" : "io.atlasmap.v2.AtlasMapping",
+    "dataSource" : [ {
+      "jsonType" : "io.atlasmap.xml.v2.XmlDataSource",
+      "id" : "GetCustomerByIdFromSQLResponse-XML",
+      "name" : "GetCustomerByIdFromSQLResponse-XML",
+      "description" : "Source document GetCustomerByIdFromSQLResponse-XML type: XML",
+      "uri" : "atlas:xml:GetCustomerByIdFromSQLResponse-XML",
+      "dataSourceType" : "SOURCE",
+      "xmlNamespaces" : {
+        "xmlNamespace" : [ ]
+      }
+    }, {
+      "jsonType" : "io.atlasmap.json.v2.JsonDataSource",
+      "id" : "GetCustomerByIdResponseJson-JSON",
+      "name" : "GetCustomerByIdResponseJson-JSON",
+      "description" : "Target document GetCustomerByIdResponseJson-JSON type: JSON",
+      "uri" : "atlas:json:GetCustomerByIdResponseJson-JSON",
+      "dataSourceType" : "TARGET"
+    } ],
+    "mappings" : {
+      "mapping" : [ {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputField" : [ {
+          "jsonType" : "io.atlasmap.xml.v2.XmlField",
+          "docId" : "GetCustomerByIdFromSQLResponse-XML",
+          "path" : "/Root/Row/EmailAddress",
+          "fieldType" : "STRING",
+          "name" : "EmailAddress",
+          "userCreated" : false,
+          "attribute" : false
+        } ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.json.v2.JsonField",
+          "docId" : "GetCustomerByIdResponseJson-JSON",
+          "path" : "/email",
+          "fieldType" : "STRING",
+          "name" : "email",
+          "userCreated" : false
+        } ],
+        "id" : "mapping.101533",
+        "pageNumber" : 0
+      }, {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputField" : [ {
+          "jsonType" : "io.atlasmap.xml.v2.XmlField",
+          "docId" : "GetCustomerByIdFromSQLResponse-XML",
+          "path" : "/Root/Row/CustomerID",
+          "fieldType" : "STRING",
+          "name" : "CustomerID",
+          "userCreated" : false,
+          "attribute" : false
+        } ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.json.v2.JsonField",
+          "docId" : "GetCustomerByIdResponseJson-JSON",
+          "path" : "/id",
+          "fieldType" : "INTEGER",
+          "name" : "id",
+          "userCreated" : false
+        } ],
+        "id" : "mapping.507708",
+        "pageNumber" : 0
+      }, {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputField" : [ {
+          "jsonType" : "io.atlasmap.xml.v2.XmlField",
+          "docId" : "GetCustomerByIdFromSQLResponse-XML",
+          "path" : "/Root/Row/Name",
+          "fieldType" : "STRING",
+          "name" : "Name",
+          "userCreated" : false,
+          "attribute" : false
+        } ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.json.v2.JsonField",
+          "docId" : "GetCustomerByIdResponseJson-JSON",
+          "path" : "/name",
+          "fieldType" : "STRING",
+          "name" : "name",
+          "userCreated" : false
+        } ],
+        "id" : "mapping.196032",
+        "pageNumber" : 0
+      } ]
+    },
+    "lookupTables" : {
+      "lookupTable" : [ ]
+    },
+    "constants" : {
+      "constant" : [ ]
+    },
+    "properties" : {
+      "property" : [ ]
+    },
+    "name" : "UI.0"
+  }
+}

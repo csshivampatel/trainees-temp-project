@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<ESBAdapter xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>bb6373aa-36a6-4bee-bb23-8a9ace28f221</Id>
+  <Version>57b1c088-90ac-4688-8510-298860a908db</Version>
+  <Name>FtpAdapter</Name>
+  <Description />
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <AdapterType>Net</AdapterType>
+  <Zone>Enterprise</Zone>
+  <BindingAssembly>Neuron.Esb.Adapters.FtpAdapter.dll</BindingAssembly>
+  <BindingClass>Neuron.Esb.Adapters.FtpAdapter</BindingClass>
+  <AdapterName>Ftp Adapter</AdapterName>
+</ESBAdapter>

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<ServiceRoutingTable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>eb4abc9c-2252-4e0e-80bb-a063476da168</Id>
+  <Version>a56f8f3e-c8c5-4b70-8c56-eb114bddc6ee</Version>
+  <BusinessFlows />
+  <Description />
+  <Name>SOAPServiceRoutingTable</Name>
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <ServiceRoutingItems>
+    <ServiceRoutingItem>
+      <IsTestEnabled>false</IsTestEnabled>
+      <EndpointName>SOAPServiceRouteServiceConnector</EndpointName>
+      <Request>
+        <Method />
+        <Body />
+        <BodyType>Raw</BodyType>
+        <DeleteMessageBody>false</DeleteMessageBody>
+        <DeleteResponseBody>false</DeleteResponseBody>
+        <Parameters />
+        <Headers />
+        <BodyProperties />
+        <TestBody />
+        <TestEnabled>FALSE</TestEnabled>
+        <TestFormat>TEXT</TestFormat>
+        <MaxPoolSize>1</MaxPoolSize>
+        <PoolTimeOut>1000</PoolTimeOut>
+        <AuditRequest>false</AuditRequest>
+        <AuditResponses>false</AuditResponses>
+        <AuditFailures>false</AuditFailures>
+      </Request>
+      <ServiceRoutingType>Service</ServiceRoutingType>
+      <RequestDataMap />
+      <ResponseDataMap />
+      <RoutingConditions>
+        <Id>f7572410-b66a-4f0a-b520-d57cfa28cca2</Id>
+        <Version>a5e20450-6113-4297-b094-b4108493fcd1</Version>
+        <BusinessFlows />
+        <Description />
+        <IsSystemObject>false</IsSystemObject>
+        <IsPrivate>false</IsPrivate>
+      </RoutingConditions>
+    </ServiceRoutingItem>
+  </ServiceRoutingItems>
+  <Zone>Enterprise</Zone>
+</ServiceRoutingTable>

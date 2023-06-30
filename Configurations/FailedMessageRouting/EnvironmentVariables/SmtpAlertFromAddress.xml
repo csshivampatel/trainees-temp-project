@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<NeuronVariable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>c24a247b-5a79-42aa-87b5-a93002b7c1c4</Id>
+  <Version>84a044fa-f2e8-4370-9816-12039e19378b</Version>
+  <Name>SmtpAlertFromAddress</Name>
+  <Description />
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+</NeuronVariable>

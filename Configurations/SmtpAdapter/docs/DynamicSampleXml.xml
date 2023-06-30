@@ -1,0 +1,14 @@
+﻿<FAILURE ConversationId="a532bf09-581c-4223-ad47-f6e9a28fff40" MessageId="d6d1e1ae-87a6-499e-b8f5-9272e59e6831" Created="2011-06-05T23:15:35.717">
+	<ServiceName>EchoAnythingService</ServiceName>
+	<Topic>DDIWorld.HR.V1</Topic>
+	<MessageId>d6d1e1ae-87a6-499e-b8f5-9272e59e6831</MessageId>
+	<Publisher>OnRampPublisher</Publisher>
+	<FailureDatetime>2011-06-05T23:15:35.7336093</FailureDatetime>
+	<FailureType>ApplicationException</FailureType>
+	<FailureDetail>My mama told me...never fool around:).</FailureDetail>
+	<Document><![CDATA[<PurchaseRequest>
+	                            <Products>
+		                            <Product name="BigBox" quanity="10" location="Denver"></Product>
+	                            </Products>
+                            </PurchaseRequest>]]></Document>
+</FAILURE>

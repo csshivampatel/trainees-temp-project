@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<ServiceRoutingTable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>86e21bfc-ff92-410b-b96f-aac3c7f1c154</Id>
+  <Version>d26f3db5-3ff5-491c-947d-3ea2d660cf8b</Version>
+  <BusinessFlows />
+  <Description>Adds a hard-coded HTTP Header to the outgoing request.</Description>
+  <Name>ServiceRoutingTable_Add_Header</Name>
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <ServiceRoutingItems>
+    <ServiceRoutingItem>
+      <IsTestEnabled>false</IsTestEnabled>
+      <EndpointName>OrderQuoteService_REST</EndpointName>
+      <Request>
+        <Method>GET</Method>
+        <URI>/Quotes</URI>
+        <Body />
+        <BodyType>Raw</BodyType>
+        <DeleteMessageBody>false</DeleteMessageBody>
+        <Parameters />
+        <Headers>
+          <HeaderDataElement>
+            <Key>City</Key>
+            <Value>"Los Angles"</Value>
+          </HeaderDataElement>
+        </Headers>
+        <BodyProperties />
+        <TestBody />
+        <TestEnabled>FALSE</TestEnabled>
+        <TestFormat>TEXT</TestFormat>
+        <MaxPoolSize>1</MaxPoolSize>
+        <PoolTimeOut>1000</PoolTimeOut>
+        <AuditRequest>false</AuditRequest>
+        <AuditResponses>false</AuditResponses>
+        <AuditFailures>false</AuditFailures>
+      </Request>
+      <ServiceRoutingType>Service</ServiceRoutingType>
+      <RequestDataMap />
+      <ResponseDataMap />
+      <RoutingConditions>
+        <Id>fde79876-77b0-41a1-9e40-88c27123529e</Id>
+        <Version>64ff551a-f745-4114-a236-750fa58ee427</Version>
+        <BusinessFlows />
+        <Description />
+        <IsSystemObject>false</IsSystemObject>
+        <IsPrivate>false</IsPrivate>
+      </RoutingConditions>
+    </ServiceRoutingItem>
+  </ServiceRoutingItems>
+  <Zone>Enterprise</Zone>
+</ServiceRoutingTable>

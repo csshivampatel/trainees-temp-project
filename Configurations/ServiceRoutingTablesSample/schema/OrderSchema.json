@@ -1,0 +1,125 @@
+﻿{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "orderNumber": 12345,
+            "customerName": "Joe Schmoe",
+            "orderDate": "0001-01-01T00:00:00",
+            "product": "New Segway",
+            "quantity": 2,
+            "price": 40.3,
+            "amount": 80.6,
+            "shipping": 0.0,
+            "city": "Local"
+        }
+    ],
+    "required": [
+        "orderNumber",
+        "customerName",
+        "orderDate",
+        "product",
+        "quantity",
+        "price",
+        "amount",
+        "shipping",
+        "city"
+    ],
+    "properties": {
+        "orderNumber": {
+            "$id": "#/properties/orderNumber",
+            "type": "integer",
+            "title": "The orderNumber schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                12345
+            ]
+        },
+        "customerName": {
+            "$id": "#/properties/customerName",
+            "type": "string",
+            "title": "The customerName schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Joe Schmoe"
+            ]
+        },
+        "orderDate": {
+            "$id": "#/properties/orderDate",
+            "type": "string",
+            "title": "The orderDate schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "0001-01-01T00:00:00"
+            ]
+        },
+        "product": {
+            "$id": "#/properties/product",
+            "type": "string",
+            "title": "The product schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "New Segway"
+            ]
+        },
+        "quantity": {
+            "$id": "#/properties/quantity",
+            "type": "integer",
+            "title": "The quantity schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                2
+            ]
+        },
+        "price": {
+            "$id": "#/properties/price",
+            "type": "number",
+            "title": "The price schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0.0,
+            "examples": [
+                40.3
+            ]
+        },
+        "amount": {
+            "$id": "#/properties/amount",
+            "type": "number",
+            "title": "The amount schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0.0,
+            "examples": [
+                80.6
+            ]
+        },
+        "shipping": {
+            "$id": "#/properties/shipping",
+            "type": "number",
+            "title": "The shipping schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0.0,
+            "examples": [
+                0.0
+            ]
+        },
+        "city": {
+            "$id": "#/properties/city",
+            "type": "string",
+            "title": "The city schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Local"
+            ]
+        }
+    },
+    "additionalProperties": true
+}

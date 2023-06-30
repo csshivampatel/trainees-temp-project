@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<ESBSubscriber xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>75bd6fd8-de05-49bc-aa43-310995dd7ce9</Id>
+  <Version>ee2493db-a208-47d9-b6f5-f3c1314a42bb</Version>
+  <Name>FtpSubscriber</Name>
+  <Description />
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <AllowMultipleInstances>true</AllowMultipleInstances>
+  <UseUniqueWmiCounterName>true</UseUniqueWmiCounterName>
+  <SubscriberId>FtpSubscriber</SubscriberId>
+  <ClientGroup>General</ClientGroup>
+  <Zone>Enterprise</Zone>
+  <Enabled>true</Enabled>
+  <Anonymous>true</Anonymous>
+  <Subscriptions>
+    <Subscription>
+      <TopicName>FtpTopic.Out</TopicName>
+      <CanRead>true</CanRead>
+      <CanWrite>false</CanWrite>
+      <SubscriptionType>Topic</SubscriptionType>
+    </Subscription>
+  </Subscriptions>
+  <MessagePipelines>
+    <ClientPipelineItem>
+      <Id>ff035f61-0c28-4f12-8822-87fda8ae4fb9</Id>
+      <Version>bdb1e6e4-ce3c-41aa-80d5-b65964d6fc91</Version>
+      <Name>Set FTP Filename</Name>
+      <IsSystemObject>false</IsSystemObject>
+      <ApplyOnPublish>false</ApplyOnPublish>
+      <ApplyOnReceive>true</ApplyOnReceive>
+      <PipelineConditions>
+        <Id>a3a42c08-eb36-4d24-8da2-9e03222e5b21</Id>
+        <Version>396769d5-7ea5-4716-a8f7-c078f0d06016</Version>
+        <IsSystemObject>false</IsSystemObject>
+        <Condition />
+      </PipelineConditions>
+    </ClientPipelineItem>
+  </MessagePipelines>
+  <LogActivity>false</LogActivity>
+  <LogFile />
+  <LogSession>true</LogSession>
+</ESBSubscriber>
