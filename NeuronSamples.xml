@@ -4,17 +4,6 @@
   <!-- Adapters -->
 
   <Sample tree     = "Adapters"
-        name       = "Dynamics CRM XRM Adapter"
-        desc       = "This sample demonstrates using the Dynamics CRM XRM Adapter to perform operations on CRM entities, such as create, delete, change the state of an entity and perform a Fetch XML query."
-        config     = "DynamicsCrm2013SubscriptionAdapter"
-        folder     = ""
-        solution   = ""
-        help       = "https://www.peregrineconnect.com/documentation-kb/integrating-with-microsoft-crm/"
-        setup      = "0"
-        clients    = "1"
-         />
-
-  <Sample tree     = "Adapters"
           name     = "ODBC Adapter"
           desc     = "There are two ways to integrate with databases in Neuron ESB.  The first way is to use the ODBC adapter included with Neuron ESB.  This supports polling, inserting,updating and querying any database using an ODBC Driver/DSN.  The second way to integrate with databases is to use any of the database process steps – ODBC, Store, Table Query and XML Query.  The later three steps are restricted to only Microsoft SQL Server.  The ODBC adapter can be used to integrate with any ODBC datasource.  This sample demonstrates how to integrate with Microsoft SQL Server using the ODBC adapter."
           config   = "OdbcAdapter"
