@@ -173,7 +173,9 @@ namespace Peregrine.Application.Service.Services
                             
 
                             // Extract the ZIP file
-                            ZipFile.ExtractToDirectory(destinationPath, "D:\\shivam\\github\\clone-repos-version");
+                            // ZipFile.ExtractToDirectory(destinationPath, "D:\\shivam\\github\\clone-repos-version");
+                            ZipFile.ExtractToDirectory(destinationPath, CustomDllUtility.AssemblyDirectory+"\\Samples");
+
 
                             string sourceFilePath = Path.Combine(destDirectory, Directory.GetDirectories(destDirectory)[0]);
                             string destinationFilePath = Path.Combine(destDirectory, version);
