@@ -1,5 +1,4 @@
-﻿
-﻿using Neuron.Esb.Administration;
+﻿﻿using Neuron.Esb.Administration;
 using Peregrine.Application.Domain.Models;
 using Peregrine.Application.Service.Core;
 using System;
@@ -33,7 +32,7 @@ namespace Peregrine.Application.Service.Services
         /// Get List of Recent files.
         /// </summary>
         /// <returns></returns>
-        IList<Sample> GetSampleSolutionsList();
+        Task<IList<Sample>> GetSampleSolutionsList();
         //List<string> GetSampleSolutionsList();
     }
     #endregion
@@ -53,13 +52,13 @@ namespace Peregrine.Application.Service.Services
         /// <summary>
         /// Get Sample Solutions list items.
         /// </summary>
-        public IList<Sample> GetSampleSolutionsList()
+        public async Task<IList<Sample>> GetSampleSolutionsList()
         {
-            PrepareSamplesList();
+            await PrepareSamplesList();
             return Samples;
         }
 
-        private async void PrepareSamplesList()
+        private async Task<string> PrepareSamplesList()
         {
             if (Samples == null) 
             {
@@ -69,7 +68,7 @@ namespace Peregrine.Application.Service.Services
                 var manifestFile = Path.Combine(sampleFolderVersion,  "NeuronSamples.xml");
                 if(!Directory.Exists(sampleFolderVersion))
                 {
-                    await CloneVersion(samplesRootFolder, version);
+                    var Temp = await CloneVersion(samplesRootFolder, version);
                 }
 
                 // Ensure the sammples manifest file exists.
@@ -79,7 +78,7 @@ namespace Peregrine.Application.Service.Services
                     {
                         _logger.Error($"Sample Manifest Not Found. The samples dialog cannot open because the samples manifest file is not present at {manifestFile}");
                     }
-                    return;
+                    return "";
                 }
 
                 // Open the samples manifest file and load its contents.
@@ -92,7 +91,7 @@ namespace Peregrine.Application.Service.Services
                     {
                         _logger.Error($"Sample Not Present. The samples dialog cannot open because there are no samples defined in the manifest file {manifestFile}");
                     }
-                    return;
+                    return "";
                 }
 
                 var samplesPath = Path.Combine(CustomDllUtility.AssemblyDirectory, "Samples");
@@ -127,6 +126,7 @@ namespace Peregrine.Application.Service.Services
                     }
                 }
             }
+            return "";
         }
 
         /// <summary>
@@ -146,16 +146,6 @@ namespace Peregrine.Application.Service.Services
 
                     if (response.IsSuccessStatusCode)
                     {
-                        //var contentDispositionHeader = response.Content.Headers.ContentDisposition;
-                        //var newContentDispositionHeader = new System.Net.Http.Headers.ContentDispositionHeaderValue(contentDispositionHeader.DispositionType);
-                        //response.Content.Headers.ContentDisposition.FileName = $"{version}.zip";
-
-                        // Set the desired filename
-                        //newContentDispositionHeader.FileName = $"{version}.zip";
-
-                        // Update the Content-Disposition header in the response headers
-                        //response.Content.Headers.ContentDisposition = newContentDispositionHeader;
-
                         using (Stream contentStream = await response.Content.ReadAsStreamAsync())
                         {
                             string filename = response.Content.Headers.ContentDisposition.FileName;
@@ -174,7 +164,6 @@ namespace Peregrine.Application.Service.Services
                             
 
                             // Extract the ZIP file
-                            // ZipFile.ExtractToDirectory(destinationPath, "D:\\shivam\\github\\clone-repos-version");
                             ZipFile.ExtractToDirectory(destinationPath, CustomDllUtility.AssemblyDirectory+"\\Samples");
 
                             string fileName = response.Content.Headers.ContentDisposition.FileName;
@@ -182,30 +171,6 @@ namespace Peregrine.Application.Service.Services
                             string destinationFilePath = Path.Combine(destDirectory, version);
                             Directory.Move(sourceFilePath, destinationFilePath);
 
-                            //string extractPath = Path.Combine(destDirectory,version);
-                            //ZipFile.ExtractToDirectory(destinationPath, extractPath);
-
-                            //string firstFolder = Directory.GetDirectories(destDirectory).First();
-                            //string sourceDirectory = firstFolder;
-                            //string targetDirectory = destDirectory;
-
-                            //// Move folders
-                            //string[] directories = Directory.GetDirectories(sourceDirectory);
-                            //foreach (string directory in directories)
-                            //{
-                            //    string folderName = Path.GetFileName(directory);
-                            //    string destinationFolder = Path.Combine(targetDirectory, folderName);
-                            //    Directory.Move(directory, destinationFolder);
-                            //}
-
-                            //// Move files
-                            //string[] files = Directory.GetFiles(sourceDirectory);
-                            //foreach (string file in files)
-                            //{
-                            //    string fileName = Path.GetFileName(file);
-                            //    string destinationFile = Path.Combine(targetDirectory, fileName);
-                            //    File.Move(file, destinationFile);
-                            //}
                             // Delete the ZIP file
                             File.Delete(destinationPath);
 
@@ -222,7 +187,6 @@ namespace Peregrine.Application.Service.Services
             catch(Exception ex)
             {
                 throw ex;
-                //return String.Format("Fail to clone Version {0}", version);
             }
         }
     }
