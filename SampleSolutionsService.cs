@@ -1,3 +1,4 @@
+﻿
 ﻿using Neuron.Esb.Administration;
 using Peregrine.Application.Domain.Models;
 using Peregrine.Application.Service.Core;
@@ -60,7 +61,7 @@ namespace Peregrine.Application.Service.Services
 
         private async void PrepareSamplesList()
         {
-            if (Samples == null)
+            if (Samples == null) 
             {
                 string version = ConfigurationManager.AppSettings["Version"];
                 string samplesRootFolder = Path.Combine(CustomDllUtility.AssemblyDirectory, "Samples");
@@ -145,15 +146,15 @@ namespace Peregrine.Application.Service.Services
 
                     if (response.IsSuccessStatusCode)
                     {
-                        var contentDispositionHeader = response.Content.Headers.ContentDisposition;
-                        var newContentDispositionHeader = new System.Net.Http.Headers.ContentDispositionHeaderValue(contentDispositionHeader.DispositionType);
-                        response.Content.Headers.ContentDisposition.FileName = $"{version}.zip";
+                        //var contentDispositionHeader = response.Content.Headers.ContentDisposition;
+                        //var newContentDispositionHeader = new System.Net.Http.Headers.ContentDispositionHeaderValue(contentDispositionHeader.DispositionType);
+                        //response.Content.Headers.ContentDisposition.FileName = $"{version}.zip";
 
                         // Set the desired filename
-                        newContentDispositionHeader.FileName = $"{version}.zip";
+                        //newContentDispositionHeader.FileName = $"{version}.zip";
 
                         // Update the Content-Disposition header in the response headers
-                        response.Content.Headers.ContentDisposition = newContentDispositionHeader;
+                        //response.Content.Headers.ContentDisposition = newContentDispositionHeader;
 
                         using (Stream contentStream = await response.Content.ReadAsStreamAsync())
                         {
@@ -176,8 +177,8 @@ namespace Peregrine.Application.Service.Services
                             // ZipFile.ExtractToDirectory(destinationPath, "D:\\shivam\\github\\clone-repos-version");
                             ZipFile.ExtractToDirectory(destinationPath, CustomDllUtility.AssemblyDirectory+"\\Samples");
 
-
-                            string sourceFilePath = Path.Combine(destDirectory, Directory.GetDirectories(destDirectory)[0]);
+                            string fileName = response.Content.Headers.ContentDisposition.FileName;
+                            string sourceFilePath = Path.Combine(destDirectory, Path.GetFileNameWithoutExtension(fileName));
                             string destinationFilePath = Path.Combine(destDirectory, version);
                             Directory.Move(sourceFilePath, destinationFilePath);
 
