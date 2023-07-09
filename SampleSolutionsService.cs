@@ -33,7 +33,6 @@ namespace Peregrine.Application.Service.Services
         /// </summary>
         /// <returns></returns>
         Task<IList<Sample>> GetSampleSolutionsList();
-        //List<string> GetSampleSolutionsList();
     }
     #endregion
 
@@ -43,7 +42,6 @@ namespace Peregrine.Application.Service.Services
     public class SampleSolutionsService : ISampleSolutionsService
     {
         private static List<Sample> Samples { get; set; }
-        //private static List<string> Samples { get; set; }
         protected static readonly ILog _logger = LogManager.GetLogger("Peregrine.Application.Service");
         public SampleSolutionsService()
         {
@@ -64,12 +62,17 @@ namespace Peregrine.Application.Service.Services
             {
                 string version = ConfigurationManager.AppSettings["Version"];
                 string samplesRootFolder = Path.Combine(CustomDllUtility.AssemblyDirectory, "Samples");
-                string sampleFolderVersion = Path.Combine(samplesRootFolder, version);
-                var manifestFile = Path.Combine(sampleFolderVersion,  "NeuronSamples.xml");
-                if(!Directory.Exists(sampleFolderVersion))
+                var manifestFile = Path.Combine(samplesRootFolder, "NeuronSamples.xml");
+                if (!String.IsNullOrWhiteSpace(version))
                 {
-                    var Temp = await CloneVersion(samplesRootFolder, version);
+                    string sampleFolderVersion = Path.Combine(samplesRootFolder, version);
+                    manifestFile = Path.Combine(sampleFolderVersion, "NeuronSamples.xml");
+                    if (!Directory.Exists(sampleFolderVersion))
+                    {
+                        var Temp = await CloneVersion(samplesRootFolder, version);
+                    }
                 }
+                
 
                 // Ensure the sammples manifest file exists.
                 if (!File.Exists(manifestFile))
@@ -78,7 +81,7 @@ namespace Peregrine.Application.Service.Services
                     {
                         _logger.Error($"Sample Manifest Not Found. The samples dialog cannot open because the samples manifest file is not present at {manifestFile}");
                     }
-                    return "";
+                    throw new Exception($"Sample Manifest Not Found. The samples dialog cannot open because the samples manifest file is not present at {manifestFile}");
                 }
 
                 // Open the samples manifest file and load its contents.
@@ -91,7 +94,7 @@ namespace Peregrine.Application.Service.Services
                     {
                         _logger.Error($"Sample Not Present. The samples dialog cannot open because there are no samples defined in the manifest file {manifestFile}");
                     }
-                    return "";
+                    throw new Exception($"Sample Not Present. The samples dialog cannot open because there are no samples defined in the manifest file {manifestFile}");
                 }
 
                 var samplesPath = Path.Combine(CustomDllUtility.AssemblyDirectory, "Samples");
@@ -148,7 +151,6 @@ namespace Peregrine.Application.Service.Services
                     {
                         using (Stream contentStream = await response.Content.ReadAsStreamAsync())
                         {
-                            string filename = response.Content.Headers.ContentDisposition.FileName;
                             string zipFileName = "Samples.zip";
                             string cloneToPath = Path.GetTempPath();
                             if (!Directory.Exists(cloneToPath))
@@ -156,13 +158,10 @@ namespace Peregrine.Application.Service.Services
                                 Directory.CreateDirectory(cloneToPath);
                             }
                             string destinationPath = Path.Combine(cloneToPath, zipFileName);
-
                             using (FileStream fileStream = File.Create(destinationPath))
                             {
                                 await contentStream.CopyToAsync(fileStream);
                             }
-                            
-
                             // Extract the ZIP file
                             ZipFile.ExtractToDirectory(destinationPath, CustomDllUtility.AssemblyDirectory+"\\Samples");
 
@@ -175,12 +174,15 @@ namespace Peregrine.Application.Service.Services
                             File.Delete(destinationPath);
 
                             return String.Format("Version {0} cloned successfully", version);
-
                         }
                     }
                     else
                     {
-                        return ($"Failed to download version {version}. Version not found Status code: {response.StatusCode}");
+                        if (_logger != null)
+                        {
+                            _logger.Error($"Failed to download version {version}. Version not found Status code: {response.StatusCode}");
+                        }
+                        throw new Exception($"Failed to download version {version}. Version not found Status code: {response.StatusCode}");
                     }
                 }
             }
