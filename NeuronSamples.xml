@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NeuronSamples>
 
-  <!-- Adapters -->
+  <!-- Adapters HB -->
 
   <Sample tree     = "Adapters"
           name     = "Exchange and POP3 Adapters"
