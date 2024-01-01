@@ -4,6 +4,17 @@
   <!-- Adapters -->
 
   <Sample tree     = "Adapters"
+          name     = "Exchange and POP3 Adapters"
+          desc     = "This sample demonstrates using the Exchange and POP3 Adapters to retrieve emails from a mail server and publish them to the ESB."
+          config   = "ExchangeAdapter"
+          folder   = ""
+          solution = ""
+          help     = "https://www.peregrineconnect.com/documentation-kb/receiving-email-with-the-exchange-and-pop3-adapters/"
+          setup    = "0"
+          clients  = "0"
+         />
+
+  <Sample tree     = "Adapters"
         name       = "Dynamics CRM XRM Adapter"
         desc       = "This sample demonstrates using the Dynamics CRM XRM Adapter to perform operations on CRM entities, such as create, delete, change the state of an entity and perform a Fetch XML query."
         config     = "DynamicsCrm2013SubscriptionAdapter"
@@ -14,6 +25,16 @@
         clients    = "1"
          />
 
+  <Sample tree     = "Adapters"
+          name     = "FTP Adapter"
+          desc     = "This sample demonstrates using the FTP Adapter to upload or download files via FTP."
+          config   = "FtpAdapter"
+          folder   = ""
+          solution = ""
+          help     = "https://www.peregrineconnect.com/documentation-kb/exchanging-files-with-the-ftp-adapter/"
+          setup    = "0"
+          clients  = "0"
+         />
   <Sample tree     = "Adapters"
           name     = "ODBC Adapter"
           desc     = "There are two ways to integrate with databases in Neuron ESB.  The first way is to use the ODBC adapter included with Neuron ESB.  This supports polling, inserting,updating and querying any database using an ODBC Driver/DSN.  The second way to integrate with databases is to use any of the database process steps – ODBC, Store, Table Query and XML Query.  The later three steps are restricted to only Microsoft SQL Server.  The ODBC adapter can be used to integrate with any ODBC datasource.  This sample demonstrates how to integrate with Microsoft SQL Server using the ODBC adapter."
@@ -58,6 +79,17 @@
            />
   
   <!-- Client API/Subscriptions -->
+
+  <Sample tree     = "Client API/Subscriptions"
+          name     = "Filter By Object"
+          desc     = "The Filter samples demonstrate message routing through Subscriber topic subscriptions and conditions.  When routing by topics, messages are routed to parties that subscribe to a particular topic or subtopic.  Sometimes a particular party may want to only receive messages based on some type of condition, such as a value based on an XPATH lookup.  In the Filter by Object sample, the subscribing parties filter the messages they subscribe to by adding a condition on the topic subscription where the body matches a specific object type."
+          config   = "FilterByObject"
+          folder   = "ClientAPI\Subscriptions\FilterByObject"
+          solution = "FilterByObject.sln"
+          help     = "https://www.peregrineconnect.com/documentation-kb/subscriptions/"
+          setup    = "0"
+          clients  = "0"
+          />
 		  
   <Sample tree     = "Client API/Subscriptions"
           name     = "Filter By Subtopic"
