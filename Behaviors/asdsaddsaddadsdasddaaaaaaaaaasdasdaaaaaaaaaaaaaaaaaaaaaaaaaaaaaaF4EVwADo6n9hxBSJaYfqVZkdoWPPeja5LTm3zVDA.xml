@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<ESBBehavior xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>7cc3f0c6-c5c4-4595-bc09-f3168682b8bc</Id>
+  <Version>f14b97c7-fce8-457b-85ac-4026d40b291b</Version>
+  <BusinessFlows />
+  <ProcessFlows />
+  <Description />
+  <Name>asdsaddsaddadsdasddaaaaaaaaaasdasdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaF4EVwADo6n9hxBSJaYfqVZkdoWPPeja5LTm3zVDA</Name>
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <BindingXml>&lt;note&gt;
+&lt;to&gt;Tove&lt;/to&gt;
+&lt;from&gt;Jani&lt;/from&gt;
+&lt;heading&gt;Reminder&lt;/heading&gt;
+&lt;body&gt;Don't forget me this weekend!&lt;/body&gt;
+&lt;/note&gt;</BindingXml>
+  <Properties />
+  <Zone>Enterprise</Zone>
+</ESBBehavior>

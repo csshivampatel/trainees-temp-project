@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ESBMessagePipelineStorage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>cbffe268-418b-4a9c-8627-7055e7cf1fcd</Id>
+  <Version>9051e56a-d971-4289-b2a7-695af90d038a</Version>
+  <BusinessFlows />
+  <ProcessFlows />
+  <Description />
+  <Name>Database Step</Name>
+  <Group />
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <Category />
+  <IsEncrypted>false</IsEncrypted>
+  <PipelineBlob />
+  <IsProcessFlow>false</IsProcessFlow>
+</ESBMessagePipelineStorage>

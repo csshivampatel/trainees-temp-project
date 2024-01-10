@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<ESBSubscriber xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>03562d11-4bc2-467d-8d75-9da89ee7175c</Id>
+  <Version>0de742c4-8e1a-413c-b8e0-80606394d183</Version>
+  <BusinessFlows />
+  <ProcessFlows />
+  <Description />
+  <Name>Party2</Name>
+  <Group />
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <Bindings />
+  <SubscriberId>Party2</SubscriberId>
+  <ClientGroup />
+  <Zone>Enterprise</Zone>
+  <Enabled>true</Enabled>
+  <Subscriptions>
+    <Subscription>
+      <TopicName>gCTr1sIbNtrIqQk7mmjFbGQO5Gg7Gw6iFp63bO3pFMh6S7xI</TopicName>
+      <TopicId>2ef55ffa-be75-4bd0-bd5a-d2da2aa98168</TopicId>
+      <CanRead>true</CanRead>
+      <CanWrite>false</CanWrite>
+      <MatchPatterns />
+      <MatchMessagePatterns />
+      <SubscriptionType>Topic</SubscriptionType>
+    </Subscription>
+  </Subscriptions>
+  <ACL />
+  <Anonymous>true</Anonymous>
+  <AllowMultipleInstances>true</AllowMultipleInstances>
+  <MessagePipelines />
+  <LogActivity>false</LogActivity>
+  <UseUniqueWmiCounterName>false</UseUniqueWmiCounterName>
+</ESBSubscriber>

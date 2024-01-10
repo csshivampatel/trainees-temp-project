@@ -1,0 +1,336 @@
+<?xml version="1.0"?>
+<ESBEndpoint xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>df6f0135-8fb3-40f2-891f-c0a65a0f2689</Id>
+  <Version>73e0a253-2545-4889-9ab2-fba62ced5f06</Version>
+  <BusinessFlows />
+  <ProcessFlows />
+  <Description />
+  <Name>MFiles</Name>
+  <Group />
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <Bindings />
+  <FarmSingleInstance>false</FarmSingleInstance>
+  <Enabled>false</Enabled>
+  <Zone>Enterprise</Zone>
+  <IncludeMetadata>true</IncludeMetadata>
+  <AdapterName>M-Files</AdapterName>
+  <AdapterAssembly>Neuron.Esb.Adapters.MFilesAdapter.dll</AdapterAssembly>
+  <AdapterMessageDirection>DatagramReceiver</AdapterMessageDirection>
+  <AdapterClass>Neuron.Esb.Adapters.MFilesAdapter</AdapterClass>
+  <AdapterMode>Publish</AdapterMode>
+  <ProcessMode>false</ProcessMode>
+  <ClientProcessMode>None</ClientProcessMode>
+  <ProcessList />
+  <ServiceRateEnable>false</ServiceRateEnable>
+  <Properties>
+    <NameValuePair>
+      <Name>MFilesUrl</Name>
+      <Value>http://192.168.2.67/M-Files/REST</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>OAuthProvider</Name>
+      <Value>M-Files</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SendTimeout</Name>
+      <Value>60</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ProxyServer</Name>
+      <Value>SystemDefault</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ProxyAddress</Name>
+      <Value>http://localhost</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ProxyPort</Name>
+      <Value>8080</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>UseCustomProxyCredentials</Name>
+      <Value>false</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>StoredCredential</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>NumFilesToDownload</Name>
+      <Value>100</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ReceiveClass</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>PublishClassId</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>PublishClassName</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>PublishClassPath</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>PublishVaultName</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>PublishVaultToken</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>PublishVaultGuid</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>FileSpec</Name>
+      <Value>*.*</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>DeleteOnGet</Name>
+      <Value>true</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>EnableTimestampCompare</Name>
+      <Value>false</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>CheckWindow</Name>
+      <Value>1.00:00:00</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ArchiveOnGet</Name>
+      <Value>false</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ArchiveClass</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ArchiveClassId</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ArchiveClassName</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ArchiveClassPath</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ArchiveVaultName</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ArchiveVaultToken</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ArchiveVaultGuid</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>OverwriteArchive</Name>
+      <Value>true</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>MetadataOnly</Name>
+      <Value>false</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>PublishOnNoData</Name>
+      <Value>false</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>RemoveBOM</Name>
+      <Value>false</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>NumFilesToDownloadQuery</Name>
+      <Value>100</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ReceiveClassQuery</Name>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>PublishClassIdQuery</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>PublishClassNameQuery</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>PublishClassPathQuery</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>PublishVaultNameQuery</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>PublishVaultTokenQuery</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>PublishVaultGuidQuery</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>FileSpecQuery</Name>
+      <Value>*.*</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>DeleteOnGetQuery</Name>
+      <Value>True</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>EnableTimestampCompareQuery</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>CheckWindowQuery</Name>
+      <Value>1.00:00:00</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ArchiveOnGetQuery</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ArchiveClassQuery</Name>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ArchiveClassIdQuery</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ArchiveClassNameQuery</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ArchiveClassPathQuery</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ArchiveVaultNameQuery</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ArchiveVaultTokenQuery</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ArchiveVaultGuidQuery</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>OverwriteArchiveQuery</Name>
+      <Value>True</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>QueryMetadataOnly</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>PublishOnNoDataQuery</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>RemoveBOMQuery</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SendClass</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SubscribeClassId</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SubscribeClassName</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SubscribeClassPath</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SubscribeVaultName</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SubscribeVaultToken</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SubscribeVaultGuid</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>UniqueFileName</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>Overwrite</Name>
+      <Value>True</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>Rename</Name>
+      <Value>True</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>CreateSharedLink</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SetSharedLinkExpiration</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SharedLinkExpires</Name>
+      <Value>1.00:00:00</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>APIVaultName</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>PublishTopic</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>PollingInterval</Name>
+      <Value>10</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>AuditOnFailurePublish</Name>
+      <Value>false</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ErrorMode</Name>
+      <Value>Error</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ErrorHandling</Name>
+      <Value>StopPollingOnError</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ShowAdvance</Name>
+      <Value>false</Value>
+    </NameValuePair>
+  </Properties>
+  <AdapterBindings />
+  <PartyId />
+  <RunAs />
+  <AdapterPolicy>Default</AdapterPolicy>
+  <PoolSize>1</PoolSize>
+  <ProcessingThreads>1</ProcessingThreads>
+</ESBEndpoint>

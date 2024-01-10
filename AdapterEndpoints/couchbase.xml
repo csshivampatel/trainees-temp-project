@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<ESBEndpoint xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>86afb8aa-5992-4a13-8769-8b9e2196d105</Id>
+  <Version>cee3f8b2-9305-4ddf-b68d-b0daf1d9ed7c</Version>
+  <BusinessFlows />
+  <ProcessFlows />
+  <Description />
+  <Name>couchbase</Name>
+  <Group />
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <Bindings />
+  <FarmSingleInstance>false</FarmSingleInstance>
+  <Enabled>true</Enabled>
+  <Zone>Enterprise</Zone>
+  <IncludeMetadata>true</IncludeMetadata>
+  <AdapterName>Couchbase</AdapterName>
+  <AdapterAssembly>Neuron.Esb.Adapters.CouchbaseAdapter.dll</AdapterAssembly>
+  <AdapterMessageDirection>DatagramReceiver</AdapterMessageDirection>
+  <AdapterClass>Neuron.Esb.Adapters.CouchbaseAdapter</AdapterClass>
+  <AdapterMode>Publish</AdapterMode>
+  <ProcessMode>false</ProcessMode>
+  <ClientProcessMode>None</ClientProcessMode>
+  <ProcessList />
+  <ServiceRateEnable>false</ServiceRateEnable>
+  <Properties>
+    <NameValuePair>
+      <Name>ShowAdvance</Name>
+      <Value>true</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>VerifyConnect</Name>
+      <Value>false</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>Transactional</Name>
+      <Value>Required</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>TransactionTimeout</Name>
+      <Value>60</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>CommandTimeout</Name>
+      <Value>30</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>EnforceTypedParams</Name>
+      <Value>true</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SqlCheckingEnabled</Name>
+      <Value>false</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ConnectionString</Name>
+      <Value>11bD845FFgE5Eq/jb7h/FnDsAePRXnDPrkaWPigYqNAjHyVCjR9FS4toZeSObReU7kKtwngcOzjhv0BKBObCU0fJM1R5vtKHmQdKHS/rkMUGg92P93TDNwroXGCHMRidM1379RnExoxpNWsTdbNoCc9NqARjlBiB7ZChQ12LUhyuTiBng05P0g+0oF87pIIfGbN381/ss8N9wlxaYVBB497xU4kuRuSJV6jf+a6ZKogsoyHoEQuQoMMZYbklviAQMdd62+RWXHQzBYFGyfiulg==</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ProxyServer</Name>
+      <Value>SystemDefault</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ProxyAddress</Name>
+      <Value>http://localhost</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ProxyPort</Name>
+      <Value>8080</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>UseCustomProxyCredentials</Name>
+      <Value>false</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>StoredCredential</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SelectParameters</Name>
+      <Value>Neuron.Esb.Adapters.Couchbase.ParameterCollection</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>UpdateDeleteParameters</Name>
+      <Value>Neuron.Esb.Adapters.Couchbase.ParameterCollection</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SendTopic</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SchemaRecordIdForSelectStatement</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SchemaRecordIdForUpdateDeleteStatement</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SelectCollection</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>UpdateDeleteCollection</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>PollingInterval</Name>
+      <Value>10</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>CommandType</Name>
+      <Value>Text</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SelectStatement</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>UpdateDeleteStatement</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>TableDirectCollectionName</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ContentType</Name>
+      <Value>XML</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>RootNodeName</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>RootNodeNameSpace</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>RowNodeName</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>RowCollectionName</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>GenerateSchema</Name>
+      <Value>false</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>AuditOnFailurePublish</Name>
+      <Value>false</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>LimitRows</Name>
+      <Value>-1</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>DeleteTable</Name>
+      <Value>false</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ErrorMode</Name>
+      <Value>Error</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ErrorHandling</Name>
+      <Value>StopPollingOnError</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>PublishOnNoData</Name>
+      <Value>false</Value>
+    </NameValuePair>
+  </Properties>
+  <AdapterBindings />
+  <PartyId />
+  <RunAs />
+  <AdapterPolicy>Default</AdapterPolicy>
+  <PoolSize>1</PoolSize>
+  <ProcessingThreads>1</ProcessingThreads>
+</ESBEndpoint>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<EsbAvailabilityGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>8c8bf20f-6ea6-4636-bf07-ec199c67697f</Id>
+  <Version>61b4fbde-a094-4d87-8eda-a644e1ac17e5</Version>
+  <BusinessFlows />
+  <ProcessFlows />
+  <Description>Peregrine Scheduler</Description>
+  <Name>Peregrine Scheduler</Name>
+  <IsSystemObject>true</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <IsScheduler>true</IsScheduler>
+  <Category />
+  <RunAs />
+  <IsEnabled>true</IsEnabled>
+  <DeploymentGroups>
+    <EsbAvailabilityGroupDeploymentGroupMapping>
+      <DeploymentGroup>cs20231</DeploymentGroup>
+      <Servers>
+        <DeploymentServer>
+          <ServerName>cs20231</ServerName>
+          <Role>Primary</Role>
+          <RetryCount>2</RetryCount>
+          <RetryInterval>5</RetryInterval>
+          <IsEnabled>true</IsEnabled>
+          <AllocatedCores>0</AllocatedCores>
+          <AllocatedMemory>0</AllocatedMemory>
+        </DeploymentServer>
+      </Servers>
+    </EsbAvailabilityGroupDeploymentGroupMapping>
+  </DeploymentGroups>
+</EsbAvailabilityGroup>

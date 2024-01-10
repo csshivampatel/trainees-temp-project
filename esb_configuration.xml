@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<ESBConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>132</Version>
+  <EnvironmentName>Test New Solution</EnvironmentName>
+  <NeuronBuildVersion>4.0.0.0</NeuronBuildVersion>
+  <DesignerBuildVersion>1.0.0.0</DesignerBuildVersion>
+  <ApplicationName>Test New Application</ApplicationName>
+  <ApplicationId>71736b7a-80be-4957-9cde-532b40110032</ApplicationId>
+  <ZoneName>Enterprise</ZoneName>
+  <ChangeList>
+    <Additions />
+    <Revisions>
+      <string>Edit,*,process,Container Fragment</string>
+    </Revisions>
+    <Deletions />
+    <LastModifiedBy />
+    <LastModifiedDate>2024-01-03T06:01:40.2030293Z</LastModifiedDate>
+    <Comments>Edited process named 'Container Fragment' in *"</Comments>
+  </ChangeList>
+  <NeuronEnvironmentVariables />
+  <ProcessFolders />
+  <InstanceName />
+  <Zones />
+  <Topics />
+  <Subscribers />
+  <Services />
+  <WorkflowDefinitions />
+  <WorkflowHosts />
+  <AvailabilityGroups />
+  <OAuthProviders />
+  <ESBMessagePipelines />
+  <Schemas>
+    <item>
+      <key>
+        <string>Xml Schema1</string>
+      </key>
+      <value>
+        <ESBSchema>
+          <Id>d82fb520-f9c3-4a76-a2d0-a3de99ee849f</Id>
+          <Version>5b426ce5-44e3-4106-a0df-c20435408931</Version>
+          <BusinessFlows />
+          <ProcessFlows />
+          <Description />
+          <Name>Xml Schema1</Name>
+          <Group />
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>true</IsPrivate>
+          <ValidateWithService>false</ValidateWithService>
+          <Storing>false</Storing>
+          <ShortName>Xml Schema1</ShortName>
+          <FullName>Xml Schema1</FullName>
+          <Xsd />
+        </ESBSchema>
+      </value>
+    </item>
+  </Schemas>
+  <JsonSchemas />
+  <XmlDocs>
+    <item>
+      <key>
+        <string>MVBCKo9mnu4WPwoSQBGmIWsmJoag3gdqNpVbeEzBwiK2xVzyeHv</string>
+      </key>
+      <value>
+        <ESBXmlDoc>
+          <Id>30ad3bd4-c581-4aa1-a707-96f0ed20f88e</Id>
+          <Version>c2e1a712-0ce0-425d-bc27-d41bb295174e</Version>
+          <BusinessFlows />
+          <ProcessFlows />
+          <Description />
+          <Name>MVBCKo9mnu4WPwoSQBGmIWsmJoag3gdqNpVbeEzBwiK2xVzyeHv</Name>
+          <Group>General</Group>
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>false</IsPrivate>
+          <Storing>false</Storing>
+          <XmlVersion />
+          <SourceUri />
+          <Xml />
+        </ESBXmlDoc>
+      </value>
+    </item>
+  </XmlDocs>
+  <TextDocs />
+  <JsonDocs />
+  <SwaggerDocs />
+  <WsdlDocuments />
+  <Xslts />
+  <DataMappers>
+    <item>
+      <key>
+        <string>DataMapper1</string>
+      </key>
+      <value>
+        <ESBDataMapper>
+          <Id>6dd0c2f7-1036-4f23-a361-3b3c83fed5c4</Id>
+          <Version>a0ddd476-b8b5-441a-9fb8-4f6649fd4e8f</Version>
+          <BusinessFlows />
+          <ProcessFlows />
+          <Description />
+          <Name>DataMapper1</Name>
+          <Group />
+          <IsSystemObject>false</IsSystemObject>
+          <IsPrivate>true</IsPrivate>
+          <Storing>false</Storing>
+          <SourceType>None</SourceType>
+          <TargetType>None</TargetType>
+          <Text />
+          <AdmFile />
+          <GZFile />
+        </ESBDataMapper>
+      </value>
+    </item>
+  </DataMappers>
+  <BusinessEvents />
+  <Deployments />
+  <MessagePatterns />
+  <Bridges />
+  <Databases />
+  <Keys />
+  <Workflows />
+  <Applications />
+  <BusinessFlows />
+  <ProcessFlows />
+  <Bindings />
+  <ServiceRoutingTables />
+  <Behaviors />
+  <Adapters />
+  <Credentials />
+  <ServicePolicies />
+  <AdapterPolicies />
+  <Endpoints />
+  <AccessControlLists />
+  <Administrators />
+  <IsEncrypted>false</IsEncrypted>
+</ESBConfiguration>

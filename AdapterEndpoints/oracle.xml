@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<ESBEndpoint xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>09fede7d-30c6-4f41-9139-c962334093b0</Id>
+  <Version>4b28f245-86fe-4dc9-a0ec-55fa49384dda</Version>
+  <BusinessFlows />
+  <ProcessFlows />
+  <Description />
+  <Name>oracle</Name>
+  <Group>General</Group>
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <Bindings />
+  <FarmSingleInstance>false</FarmSingleInstance>
+  <Enabled>true</Enabled>
+  <Zone>Enterprise</Zone>
+  <AvailabilityGroupId />
+  <IncludeMetadata>true</IncludeMetadata>
+  <AdapterName>Oracle</AdapterName>
+  <AdapterAssembly>Neuron.Esb.Adapters.OracleAdapter.dll</AdapterAssembly>
+  <AdapterMessageDirection>DatagramReceiver</AdapterMessageDirection>
+  <AdapterClass>Neuron.Esb.Adapters.OracleAdapter</AdapterClass>
+  <AdapterMode>Publish</AdapterMode>
+  <ProcessMode>false</ProcessMode>
+  <ClientProcessMode>Messaging</ClientProcessMode>
+  <ProcessList />
+  <ServiceRateEnable>false</ServiceRateEnable>
+  <Properties>
+    <NameValuePair>
+      <Name>ConnectionString</Name>
+      <Value>FH7HushLMgSd7ksh8VfYU4GlNIFSapiuKuNnytOeN6dvBsRFZJZpThsjIIbIyQ8Cd/ma/0/8yjiEgGt2aio6TZxkTCKi4VUbhqGNW7aHmN8=</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>VerifyConnect</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>Transactional</Name>
+      <Value>Required</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>IsolationLevelString</Name>
+      <Value>ReadCommitted</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>TransactionTimeout</Name>
+      <Value>60</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ConnectionTimeout</Name>
+      <Value>15</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>CommandTimeout</Name>
+      <Value>30</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>EnforceTypedParams</Name>
+      <Value>True</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SqlEnabled</Name>
+      <Value>True</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SqlCheckingEnabled</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SendTopic</Name>
+      <Value>Topic1</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>PollingInterval</Name>
+      <Value>10</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>CommandType</Name>
+      <Value>TableDirect</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SelectStatement</Name>
+      <Value>INSERT INTO employees (id, first_name, last_name, date_of_birth, department) VALUES (4, 'John', 'Doe', '1990-05-15', 'IT');</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>SelectParameters</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>UpdateDeleteStatement</Name>
+      <Value>UPDATE employees SET first_name = 'Jane', last_name = 'Smith', date_of_birth = '1985-08-20', department = 'HR' WHERE id = 1;</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>UpdateDeleteParameters</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>TableDirectName</Name>
+      <Value>employees</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ContentType</Name>
+      <Value>XML</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ForXmlClause</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>RootNodeName</Name>
+      <Value>Root</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>RootNodeNameSpace</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>RowNodeName</Name>
+      <Value>Row</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>RowCollectionName</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>GenerateSchema</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>LimitRows</Name>
+      <Value>-1</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>UseDataAdapter</Name>
+      <Value>True</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>DataReaderBehavior</Name>
+      <Value>Default</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>DeleteTable</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>PublishOnNoData</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ErrorMode</Name>
+      <Value>Error</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>ErrorHandling</Name>
+      <Value>StopPollingOnError</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>QueryRootNodeName</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>QueryRowNodeName</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>QueryRootNodeNameSpace</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>QueryGenerateSchema</Name>
+      <Value>False</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>QueryRowCollectionName</Name>
+      <Value />
+    </NameValuePair>
+    <NameValuePair>
+      <Name>QueryLimitRows</Name>
+      <Value>-1</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>UseDataAdapterQuery</Name>
+      <Value>True</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>DataReaderBehaviorQuery</Name>
+      <Value>Default</Value>
+    </NameValuePair>
+    <NameValuePair>
+      <Name>BatchSize</Name>
+      <Value>-1</Value>
+    </NameValuePair>
+  </Properties>
+  <AdapterBindings />
+  <PartyId>Party1</PartyId>
+  <RunAs />
+  <AdapterPolicy>Default</AdapterPolicy>
+  <PoolSize>1</PoolSize>
+  <ProcessingThreads>1</ProcessingThreads>
+</ESBEndpoint>

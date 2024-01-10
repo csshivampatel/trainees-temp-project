@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ESBDatabase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>cbff809b-6de1-4a73-b1b6-b526ec0d4647</Id>
+  <Version>c52ecd83-2426-4582-a63c-41b0df6fc727</Version>
+  <BusinessFlows />
+  <ProcessFlows />
+  <Description />
+  <Name>DESKTOP-KHDEJI9.employes</Name>
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <Bindings />
+  <UseNeuronDbImage>false</UseNeuronDbImage>
+  <BypassChecks>false</BypassChecks>
+  <UseAlternateSettings>false</UseAlternateSettings>
+  <DbContainerHostPort>1433</DbContainerHostPort>
+  <DbContainerHostname />
+  <ContainerConnectionString>Data Source=;Initial Catalog=employes;Integrated Security=False;User ID=sa;Password=33jain33</ContainerConnectionString>
+  <CatalogName>employes</CatalogName>
+  <ConnectionString>Data Source=.;Initial Catalog=employes;Integrated Security=False;User ID=sa;Password=33jain33</ConnectionString>
+  <Zone>(All Zones)</Zone>
+  <DatabaseType>SQLServer</DatabaseType>
+</ESBDatabase>

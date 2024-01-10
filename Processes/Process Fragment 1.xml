@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ESBMessagePipelineStorage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>62d9c8fb-e6ea-4f99-92f5-76beff269ae0</Id>
+  <Version>ae67af30-0b0e-43bd-839b-a7d5da095ae7</Version>
+  <BusinessFlows />
+  <ProcessFlows />
+  <Description />
+  <Name>Process Fragment 1</Name>
+  <Group />
+  <IsSystemObject>false</IsSystemObject>
+  <IsPrivate>false</IsPrivate>
+  <Category />
+  <IsEncrypted>false</IsEncrypted>
+  <PipelineBlob>&lt;ESBMessagePipeline xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.neuronesb.com/pipelines/"&gt;&lt;AuditStepAdded&gt;StepNotAdded&lt;/AuditStepAdded&gt;&lt;Category i:nil="true" /&gt;&lt;Description i:nil="true" /&gt;&lt;DisplayAudit&gt;true&lt;/DisplayAudit&gt;&lt;ExceptionStepAdded&gt;StepNotAdded&lt;/ExceptionStepAdded&gt;&lt;GlobalProperties xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"&gt;&lt;d2p1:KeyValueOfstringanyType&gt;&lt;d2p1:Key&gt;NeuronProcess&lt;/d2p1:Key&gt;&lt;d2p1:Value xmlns:d4p1="http://www.w3.org/2001/XMLSchema" i:type="d4p1:string"&gt;Process&lt;/d2p1:Value&gt;&lt;/d2p1:KeyValueOfstringanyType&gt;&lt;/GlobalProperties&gt;&lt;Name&gt;Process Fragment 1&lt;/Name&gt;&lt;ProcessType&gt;ProcessFragment&lt;/ProcessType&gt;&lt;Properties xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;ReferencedAssemblies xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" /&gt;&lt;Steps&gt;&lt;ESBMessagePipelineStep xmlns:d3p1="http://schemas.neuronesb.com/pipelines/esb/" i:type="d3p1:ExecuteAdapterPipelineStep"&gt;&lt;Bindings xmlns:d4p1="http://schemas.datacontract.org/2004/07/Neuron.ComponentModel" /&gt;&lt;BreakPoint&gt;Disable&lt;/BreakPoint&gt;&lt;Disable&gt;false&lt;/Disable&gt;&lt;Id&gt;se1109fde-f07d-43d8-ac93-ce7d167c8186&lt;/Id&gt;&lt;Name&gt;Execute Adapter&lt;/Name&gt;&lt;Uniquename /&gt;&lt;d3p1:AdapterName&gt;PostgresQuery&lt;/d3p1:AdapterName&gt;&lt;d3p1:AdapterPoolTimeout&gt;PT1M&lt;/d3p1:AdapterPoolTimeout&gt;&lt;d3p1:MaxAdapterInstances&gt;100&lt;/d3p1:MaxAdapterInstances&gt;&lt;d3p1:Timeout&gt;PT1M&lt;/d3p1:Timeout&gt;&lt;/ESBMessagePipelineStep&gt;&lt;/Steps&gt;&lt;/ESBMessagePipeline&gt;</PipelineBlob>
+  <IsProcessFlow>false</IsProcessFlow>
+</ESBMessagePipelineStorage>
