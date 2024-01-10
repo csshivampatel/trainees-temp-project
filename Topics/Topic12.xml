@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <ESBTopic xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Id>87107c58-2184-4251-b83e-3f23321de8e4</Id>
-  <Version>2547922a-cd4b-4810-99af-65a4a6539720</Version>
+  <Id>8149cbbb-04a0-4442-a5b7-8bd30b427347</Id>
+  <Version>f66a8dd7-ba4b-4ed1-aea7-ffb30eb2d6af</Version>
   <BusinessFlows />
   <ProcessFlows />
-  <Description />
-  <Name>Topic1</Name>
+  <Description>test</Description>
+  <Name>Topic12</Name>
   <Group />
   <IsSystemObject>false</IsSystemObject>
   <IsPrivate>false</IsPrivate>
@@ -38,7 +38,7 @@
     </NameValuePair>
     <NameValuePair>
       <Name>ServicePort</Name>
-      <Value>50010</Value>
+      <Value>50011</Value>
     </NameValuePair>
     <NameValuePair>
       <Name>AllowOutputBatching</Name>
@@ -94,15 +94,15 @@
     </NameValuePair>
     <NameValuePair>
       <Name>ClientPoolSize</Name>
-      <Value>1000</Value>
+      <Value>100</Value>
     </NameValuePair>
     <NameValuePair>
       <Name>LogNoRecipient</Name>
-      <Value>false</Value>
+      <Value>True</Value>
     </NameValuePair>
     <NameValuePair>
       <Name>InactivityTimeOut</Name>
-      <Value>100</Value>
+      <Value>10</Value>
     </NameValuePair>
   </ChannelProperties>
   <AuditMessages>false</AuditMessages>
